@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form method="post" onsubmit="enviar(event)" id="formLogin">
+    <!-- en label indicamos a que id debe hacer referencia-->
+    <label for="inputUsuario"> Usuaio: </label>
+    <input type="text" id="inputUsuario" name="usuario"required>
+    <label for="inputPassword"> Contraseña: </label>
+    <input type="text" id="inputPassword" name="password">
+    <button type="submit">Enviar</button>
+</form>
+
+<script>
+
+    function enviar(evento) {
+
+        evento.preventDefault();
+        fetch('api/v1.0/sesion', {
+            method : 'post',
+            body : new FormData(document.getElementById('formLogin'))
+        }).then(function (respuesta) {
+            if(respuesta.status === 200) {
+               location.href = './app';
+            } else {
+
+            }
+        })
+    }
+</script>
+
+</body>
+</html>
