@@ -4,7 +4,7 @@
 $bbdd_server = 'localhost';
 $bbdd_user = 'root';
 $bbdd_password = '';
-$bbdd = 'control_ventas';
+$bbdd = 'bd_tgc';
 
 $conexion = mysqli_connect($bbdd_server,$bbdd_user,$bbdd_password,$bbdd);
 
