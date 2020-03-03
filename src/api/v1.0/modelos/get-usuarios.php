@@ -1,6 +1,6 @@
 <?php
 
-$sql = 'SELECT * FROM `cliente`';
+$sql = 'SELECT * FROM `usuarios`';
 $res = mysqli_query($conexion, $sql);
 
 while ($fila = mysqli_fetch_assoc($res)) {
