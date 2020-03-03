@@ -29,8 +29,8 @@
         }).then(function (respuesta) {
             if(respuesta.status === 200) {
                location.href = './app';
-            } else {
-
+            } else if(respuesta.status === 403){
+                alert("Su usuario no dispone de permiso para acceder a esta página");
             }
         })
     }

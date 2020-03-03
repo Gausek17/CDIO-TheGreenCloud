@@ -17,7 +17,8 @@ $salida = array();
 $http_code= 404;
 
 //LINEA DEBUG
-echo "LO QUE HACE ES: modelos/$operacion-$recurso.php\n";
 //Con el @ omitimos los mensajes de error en la pagina
 @include "modelos/$operacion-$recurso.php";
-@include "vistas/$vista.php";
+if ($recurso != 'sesion'){
+    @include "vistas/$vista.php";
+}

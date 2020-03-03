@@ -1,29 +1,35 @@
 <?php
-
+echo var_dump($_POST);
 if (isset($_POST['password']) && $_POST['password'] != '' && isset($_POST['usuario']) && $_POST['usuario'] != '') {
 
     //---------------BD
-    $sql = 'SELECT * FROM `cliente`';
+    $sql = 'SELECT usuario.id_usuario, usuario.nombre, usuario.mail, usuario.password, usuario.id_cliente, roles.nombre as rol, roles.id_rol
+FROM usuario
+INNER JOIN roles ON roles.id_rol=usuario.id_rol';
     $res = mysqli_query($conexion, $sql);
 
-    while ($fila = mysqli_fetch_assoc($res)) {
-        array_push($salida, $fila);
-    }
-    $usuarioEncontrado = false;
-    $contraTemp = '';
-    foreach ($salida as $fila){
-        echo "USUARIO: ".$fila["nombre"]." y contraseña:".$fila["password"];
+
+
+    foreach ($res as $fila){
         if ($fila['nombre']== $_POST['usuario']){
-            $usuarioEncontrado = true;
-            $contraTemp=$fila['password'];
+            $_SESSION_TMP['usuario'] = $fila;
         }
     }
-    if ($usuarioEncontrado == true){
-        $password=$contraTemp;
+    if (isset( $_SESSION_TMP['usuario']) == true){
+
+        $password=$_SESSION_TMP['usuario']['password'];
         if ($_POST['password'] == $password) {
             session_start();
             $_SESSION['registrado'] = 'ok';
-            http_response_code(200);
+            $_SESSION['usuario'] = $_SESSION_TMP['usuario'];
+            if ($_SESSION['usuario']['id_rol'] == 1){
+                http_response_code(200);
+            }else{
+                http_response_code(403);
+            }
+
+        }else{
+            http_response_code(401);
         }
     }else{
         http_response_code(401);
