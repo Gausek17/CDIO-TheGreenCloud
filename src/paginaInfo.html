@@ -5,111 +5,31 @@
     <title>The Green Cloud || Información</title>
     
     <!-- para que sea responsive-->
-    <meta name="viewport"  content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"  content="width=device-width, initial-scale=1, shrink-to-fit=si">
     <!-- para que sea compatible con edge-->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    
-    <!-- empezamos con el css-->
-    <style>
-        .nav {
-            background-color: orange;
-            display: flex;
-            justify-content: space-between;
-              
-        }
-        .logo {
-            height: 100px;
-            
-        }
-        
-        #iniciasesion{
-            
-            margin: 40px;
-        }
-        h1 {
-            font-size: 50px;
-        }
-        .pag1 {
-            background-color: crimson;
-        }
-        .pag2{
-             background-color: aqua;
-        }
-        .pag3{
-            background-color: salmon;
-        }
-        .innova {
-          display: flex;
-          background-image: url=("../imagenes/59363_p.jpg");
-          flex-wrap: wrap;
-            justify-content: space-around;
-            
-        }
-        #nadie-innova {
-            text-align: center;
-        }
-        .texto-innova {
-           margin-top: 5 
-        }
-        .cuadro-texto-pag1 {
-            background-color: grey;
-            margin: 1rem;
-            padding: 1rem;
-            border: 1.5px solid black;
-            text-align: center;
-            width: 450px;
-           font-size: 30px;
-            
-            
-        }
-        .contenido-pag2 {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .titulo-ofrecer {
-            background-color: plum;
-            text-align: center;
-            margin: 0px auto;
-        }
-        .imagen {
-            height: 300px;
-            width: 500px;
-        }
-        .cta {
-            margin: 0px auto;
-        }
-        .titulo-acerca {
-            text-align: center;
-            background-color: white;
-        }
-        .contenido-pag3 {
-            display: flex;
-            flex-wrap: wrap
-        }
-        .footer {
-            background-color: black;
-            color: white;
-        }
-    </style>
+   <link rel="stylesheet" href="css/estiloinfo.css">    
+   
     
     
 </head>
 <body>
- <nav class="nav">
+ <nav >
+     <section class="nav">
       
-       <img src="../docs/imagenes/logoGTI.svg" alt="logo de GTI" class="logo">
+       <img src="imagenes/logoGTI.svg" alt="logo de GTI" class="logo">
        
-       <button onclick="location.href='index.html'" type="submit" id="iniciasesion">Inicia Sesion</button>
+       <button onclick="location.href='#'" type="submit" id="iniciasesion">Inicia Sesión</button>
        
-      
+    </section>
       
    </nav>
   <section class="pag1">
    
    <section class="innova">
        <section class="izq1">  
-       <h1 id="nadie-innova">NADIE INNOVA COMO NOSOTROS</h1>
-       <button onclick="location.href='index.html'" type="submit" id="iniciasesion">REGÍSTRATE</button>
+       <h1 id="nadie-innova">NADIE<br> <p id="palabra-innova">INNOVA</p> COMO NOSOTROS</h1>
+       <button onclick="location.href='#'" type="submit" class="registrate1">REGÍSTRATE</button>
        </section>
        <section class="der1">
           <div class="cuadro-texto-pag1">
@@ -122,43 +42,46 @@
   </section>
    <section class="pag2">
        <section class="titulo-ofrecer">
-           <h2>¿Qué <br>ofrecemos?</h2>
+           <h2 class="titulo-ofrecemos">¿Qué ofrecemos?</h2>
        </section>
        <section class="contenido-pag2">
        <section class="izq2">
-           <h3>Lista de Características</h3>
-           <ul>
-               <li>Ofrecemos mayor seguridad y control sobre tu campo</li>
-               <li>Contamos con sensores que muestran medidas exactas y en tiempo real</li>
-               <li>acilitamos la toma de decisiones</li>
-               <li>Control de productividad de tus campos</li>
+          <!-- <h3 class="nuestrascaracteristicas">¿Qué nos diferencia?</h3> -->
+           <ul class="lista">
+               <li class="elemento-lista">Mayor <span class="palabrasmoradas">seguridad</span> y <span class="palabrasmoradas">control</span>   sobre tu campo.</li>
+               <li class="elemento-lista" >Contamos con sensores que muestran medidas <span class="palabrasmoradas">exactas</span> y en <span class="palabrasmoradas">tiempo real.</span></li>
+               <li class="elemento-lista">Facilitamos la toma de <span class="palabrasmoradas">decisiones</span></li>
+               <li class="elemento-lista">Control de <span class="palabrasmoradas">productividad</span> de tus campos</li>
            </ul>
-           <button onclick="location.href='index.html'" type="submit" >REGÍSTRATE</button>
+           <button onclick="location.href='#'" type="submit" class="registrate1">REGÍSTRATE</button>
        </section>
            <section class="der2">
-           <img src="../docs/imagenes/fieldview.jpg" alt="hombre con ipad"
-           class="imagen">
+           <img src="imagenes/info/fieldview.jpg" alt="hombre con ipad"
+           class="imagen" id="ipad">
            </section>
        </section>
        
        
    </section>
    <section class="pag3">
-       <section class="titulo-acerca"><h2>Acerca de The Green Cloud</h2></section>
+       <h2 class="titulo-acerca">Acerca de Nosotros</h2>
        <section class="contenido-pag3">
            <section class="izq3">
-               <p>The Green Cloud es una empresa que busca la modernización de los campos y el salto de calidad en la vida de los agricultores. Lo que empezó siendo un proyecto de estudiantes de la Universidad Politécnica de Valencia , ha acabado convirtiéndose en lo que somos hoy en dia.Podrá contactar con nosotros fácilmente gracias a nuestro correo electrónico :  informacion@thegreencloud.com , si necesita mas información acerca de nuestros servicios.</p>
-               <button onclick="location.href='index.html'" type="submit" >REGÍSTRATE</button>
+              <section class="cuadro-texto-pag3">
+               <p>The Green Cloud es una empresa que busca la modernización de los campos y el salto de calidad en la vida de los agricultores. Lo que empezó siendo un proyecto de estudiantes de la Universidad Politécnica de Valencia , ha acabado convirtiéndose en lo que somos hoy en dia.Podrá contactar con nosotros fácilmente gracias a nuestro correo electrónico : informacion@thegreencloud.com, si necesita mas información acerca de nuestros servicios.</p>
+               </section>
            </section>
            
            <section class="der3">
-               <img src="../docs/imagenes/60867_p.jpg" alt="imagen de trigo" class="imagen">
+               <img src="imagenes/info/WhatsApp%20Image%202020-03-03%20at%2019.05.07%20(1).jpeg" alt="imagen de trigo" class="imagen">
            </section>
        </section>
    </section>
    <footer >
        <section class="footer">
-           hola soy el footer
+          <h3 id="tgc-final">The Green Cloud <br>All rights reserved</h3>
+          <h3 id="correo">Contacto: <br>informacion@thegreencloud.com</h3>
+          <img class="upv" src="/imagenes/marca_UPV_principal_color300.png" alt="logo upv">
        </section>
    </footer>
    
