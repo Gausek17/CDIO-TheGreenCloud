@@ -63,7 +63,7 @@
             font-family: "Trebuchet MS"
         }
         .pag1 {
-  background-image: url("../imagenes/info/1034525.jpg");
+  background-image: url("/imagenes/info/1034525.jpg");
         /* margin: 0 40px;  */ 
             
  }
@@ -75,11 +75,12 @@
             font-family: "Trebuchet MS";
         }
         .pag3{
-             background-image: url("../imagenes/info/1020219.jpg");
+            background-image: url(/imagenes/info/1034525.jpg);
+            /*margin: 0 40px;*/
             
         }
-        .contenido-pag3{
-             
+        .contenidos-pag3{
+    background-image: url("https://s1.1zoom.me/b5264/113/Winter_Sunrises_and_sunsets_Forests_Sky_Snow_538223_1920x1080.jpg");
             margin-top: 100px;
 }
         .innova {
