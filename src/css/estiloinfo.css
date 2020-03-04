@@ -186,7 +186,6 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            align-items: center;
             /*margin: 0 40px;*/
         }
 .upv {
@@ -198,7 +197,4 @@
 }
 #tgc-final {
     padding: 20px
-}
-.contacto{
-    margin-left: 10px;
 }
