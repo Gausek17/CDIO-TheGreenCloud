@@ -1,3 +1,23 @@
+        #miBoton {
+   
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  color: white; 
+  cursor: pointer; 
+  padding: 15px;
+  font-size: 18px; 
+  height: 60px;
+  border-radius: 20px;      
+              
+}
+        #miBoton:hover {
+  background-color: plum;
+            color: black;
+}
         .nav {
             
             display: flex;
@@ -18,12 +38,11 @@
             color: purple;
             margin-top: auto;
             margin-bottom: auto;
-            text-decoration: underline;
+            
         }
         .palabrasmoradas {
             color: purple;
-        }
-        
+        }  
         #iniciasesion{
                    
             width: 125px;
@@ -37,7 +56,7 @@
             font-size: 15px;
             text-align: center;
             margin-top: 23px;
-            font-family: "Constantia", serif;
+            font-family: "Trebuchet MS", serif;
             color: #ffffff;
     background: -webkit-linear-gradient(#b114a3, #571c52);
     background: -o-linear-gradient(#b114a3, #571c52);
@@ -48,6 +67,10 @@
             margin-right: 20px;
         
         }
+        #iniciasesion:hover{
+            background: radial-gradient(#CC46D6,#E776EF);
+            color:black;
+        }
         .registrate1 {
             margin-left: 125px;
             margin-bottom: 40px;
@@ -55,9 +78,15 @@
             border-radius: 5%;
             height: 50px;
             width: 200px;
-            background: radial-gradient(#CC46D6,#E776EF);
-            font-family: "Verdana";
+            background: linear-gradient(#b114a3, #571c52);
+            color:white;
+            font-family: "Trebuchet MS";
+            font-size: 20px;
         }
+        .registrate1:hover{
+    background:radial-gradient(#CC46D6,#E776EF);
+    color: black;
+}
         h1 {
             font-size: 50px;
             font-family: "Trebuchet MS"
@@ -67,10 +96,9 @@
         /* margin: 0 40px;  */ 
             
  }
-.pag2{
+        .pag2{
    /* margin: 0 40px;*/
-}
-        
+}      
         .lista{
             font-family: "Trebuchet MS";
         }
@@ -96,26 +124,30 @@
             margin-left: 20px;
             margin-right: 20px;
         }
-        .texto-innova {
-           margin-top: 5;
-            color: black;
-            
-            
-        }
+        
         .cuadro-texto-pag1 {
             background-color: grey;
             margin: 1rem;
             padding: 1rem;
-            border: 1.5px solid black;
+            
             text-align: center;
             width: 450px;
            font-size: 30px;
-            opacity: 50%;
+            opacity: 70%;
             border-radius: 5%;
             
             
             
+            
         }
+        .texto-innova {
+            margin-top: 5;
+            
+            opacity: 100%;
+            
+            
+        }
+         
         .contenido-pag2 {
             display: flex;
             flex-wrap: wrap;
@@ -146,10 +178,10 @@
         .imagen {
             height: 350px;
             width: 550px;
+            border-radius: 20px;
             
             
         }
-
         .titulo-acerca {
             text-align: center;
             /*background-color: plum;*/
@@ -160,7 +192,7 @@
             
             
         }
-.cuadro-texto-pag3 {
+        .cuadro-texto-pag3 {
             
             margin: 1rem;
             padding: 1rem;
@@ -189,13 +221,39 @@
             flex-wrap: wrap;
             /*margin: 0 40px;*/
         }
-.upv {
+        .upv {
     width: 230px;
     height: 100px;
 }
-#correo{
+        #correo{
     text-align: center
 }
-#tgc-final {
+        #tgc-final {
     padding: 20px
+<<<<<<< HEAD
 }
+=======
+}
+        .contacto{
+    margin-left: 10px;
+}
+@media(max-width:590px){
+            /*que sea en columna*/
+             .cuadro-texto-pag1{
+                 width: 400px;
+             }
+             #ipad {
+                 width: 400px;
+             }
+             .cuadro-texto-pag3{
+                 width: 400px;
+                 font-size: 25px;
+             }
+             #wasap-img {
+                width: 400px;
+            }
+             
+             
+        }
+        
+>>>>>>> develop
