@@ -65,6 +65,7 @@ p {
     border: 2px solid #6e0765;
     float: right;
     margin-right: 20px;
+    cursor: pointer;
 
 }
 #iniciasesion:hover{
@@ -82,6 +83,7 @@ p {
     color:white;
     font-family: "Trebuchet MS";
     font-size: 20px;
+    cursor: pointer;
 }
 .registrate1:hover{
     background:radial-gradient(#CC46D6,#E776EF);
@@ -93,6 +95,7 @@ h1 {
 }
 .pag1 {
     background-image: url("../imagenes/info/1034525.jpg");
+    background-size: cover;
     /* margin: 0 40px;  */
 
 }
@@ -104,7 +107,7 @@ h1 {
 }
 .pag3{
     background-image: url("../imagenes/info/1020219.jpg");
-
+    background-size: cover;
 }
 .contenido-pag3{
 
