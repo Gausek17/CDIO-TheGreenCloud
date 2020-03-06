@@ -3,12 +3,12 @@
 //------------------------------------------
 
 //Conectar con el boton:
-mybutton = document.getElementById("miBoton");
-
+boton = document.getElementById('miBoton');
+console.log(boton);
 // Que el boton se muestre una vez bajes una cierta distancia
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction(boton)};
 
-function scrollFunction() {
+function scrollFunction(mybutton) {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
