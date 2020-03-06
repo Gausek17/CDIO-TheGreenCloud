@@ -7,16 +7,34 @@
     <link rel="stylesheet" href="css/estilo-login.css">
 </head>
 <body>
-   <form action="validacion.php" method="post">
-     <h2>Iniciar Sesión</h2>
-       <input type="text" placeholder="&#128272; Usuario" name="usuario">
-       <input type="password" placeholder="&#128272; Contraseña" name="contraseña">
-       <input type="submit" value="Iniciar">
-    </form>
-    <footer>
-       <section class="footer">
-          <p>®The Green Cloud</p>
-       </section>
-   </footer>
+<form  method="post" onsubmit="enviar(event)" id="formLogin">
+    <h2>Iniciar Sesión</h2>
+    <article id="textoError" class="textoError">Usuario o contraseña incorrectos</article>
+    <input type="text" placeholder="&#128272; Usuario" name="usuario" required>
+    <input type="password" placeholder="&#128272; Contraseña" name="password">
+    <input type="submit" value="Iniciar">
+</form>
+<footer>
+    <section class="footer">
+        <a href="index.html"><p>®The Green Cloud</p></a>
+    </section>
+</footer>
+<script>
+    function enviar(evento){
+        evento.preventDefault();
+        fetch('api/v1.0/sesion', {
+            method : 'post',
+            body : new FormData(document.getElementById('formLogin'))
+        }).then(function (respuesta) {
+            if(respuesta.status === 200) {
+                location.href = './app';
+            } else if(respuesta.status === 403){
+                alert("Su usuario no dispone de permiso para acceder a esta página.");
+            }else{
+                document.getElementById("textoError").style.display ='block';
+            }
+        })
+    }
+</script>
 </body>
 </html>
