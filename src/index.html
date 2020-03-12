@@ -1,217 +1,378 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <title>The Green Cloud | Inicio</title>
-    <meta name="viewport" content="width=device-widht, initial-scale=1, shrink-to-fit=no">
-    <!--controla como mostrar la página en pantalla; le estoy diciendo que mi página cuando se abra, será igual de ancho que mi dispositivo; cuando mi página se vea, estará a escala 1; se ajusta a los que utilizan safari (u otros sistema de navegación) en versión antigua-->
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!--para que sea compatible con internet explorer edge-->
-    <style type="text/css">
-        .pag1 {
-            justify-content: space-around;
-            background-image: url(imagenes/index/campo.svg);
-            background-repeat : no-repeat;
-            background-size: cover;
+    <title>Landing Page</title>
+    <style>
+        /*@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);*/
+        #miBoton {
 
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 18px;
+    height: 60px;
+    border-radius: 20px;
+
+}
+        *{
+            font-family: "Trebuchet MS"
         }
-
-        .boton1 {
-            width: 125px;
-            font-size: 0.8em;
+        .header{
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            height: 80px
+        }
+        
+        #identificate {
+            border-radius: 10px;
+            padding: 10px;
+            margin-right: 17px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: 1.5px solid purple;
+            background-color: plum;
+            font-weight: 700;
+            font-family: "Trebuchet MS";
+            font-size: 20px;
+            width: auto;
+            /*width: 200px;*/
+            
+        }
+        #identificate:hover{
+            background-color: blueviolet;
+            color: white;
+            border: 1.5px solid white;
+            
+        }
+        
+        .landing{
+            background-image: url(../src/imagenes/index/Campo2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            border: 1.5px solid black;
+            margin: 0px auto;
+            
+            
+        }
+        .modernizacion {
+            font-size: 60px;
+            text-align: center;
+            -webkit-text-stroke: 1px black;
+            color: white;
+            font-family: "Trebuchet MS";
+        }
+        .contactanos{
+            padding: 20px;
+            padding-left: 50px;
+            padding-right: 50px;
+            margin: 50px auto;
+            border-radius: 20px;
+            border: 1.5px solid purple;
+            background-color: plum;
+            font-weight: 700; 
+            font-size: 20px;
+            font-family: "Trebuchet MS";
+            margin-bottom: 60px;
+        }
+        .contactanos:hover{
+            background-color: blueviolet;
+            color: white;
+            border: 1px solid blueviolet ;
+            
+            
+        }
+        #flecha {
+            margin:40px auto;
+            height: 90px
+        }
+        .morado{
+            background-color: plum;
+            margin: 0px auto;
+           
+        }
+        h2{
+            padding: 20px;
+            border: 0px;
+            text-decoration:none;    
+        }
+       
+        .enlace{
+            text-decoration: none;
+            color: black;
+        }
+        .palabras-moradas{
+            color: purple;
+        }
+        .titulo2{
+            text-align: center;
+            font-size: 80px
+        }
+        .caracteristicas{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .car1{
+            background-color: plum;
+            display: flex;
+            justify-content: flex-start;
+            padding: 20px;
+            margin-left: 60px;
+            
+            
+        }
+        #trigo {
+            width: 200px;
+        }
+        .car2{
+            background-color: plum;
             display: flex;
             justify-content: flex-end;
-            text-decoration: none;
-            padding: 10px;
-            font-weight: 600;
-            font-size: 20px;
-            font-family: "Constantia", serif;
-            color: #ffffff;
-            background: linear-gradient(#b114a3, #571c52);
-            border-radius: 6px;
-            border: 2px solid #6e0765;
-            float: right;
-            margin-right: 20px;
-            margin-top: 23px;
-            cursor: pointer;
+            padding: 20px;
+            margin-right: 60px;
+            
         }
-
-        .boton1:hover {
-            background: plum;
-            color: black;
+        #sensor{
+            width: 200px
         }
-
-        .boton2 {
-            /*margin-top: 150px;*/
-            margin-bottom: 170px;
-
-
-            height: auto;
-            width: 160px;
-            font-size: 0.8em;
-            text-decoration: none;
-            padding: 10px;
-            font-weight: 30;
-            font-size: 30px;
-            font-family: "Trebuchet MS";
-            color: #ffffff;
-            background: linear-gradient(#b114a3, #571c52);
-            border-radius: 15px;
-            border: 2px solid #6e0765;
-            cursor: pointer;
-            /*position: absolute;
-            max-width: 100%;
-            top: 500px;
-            right: 550px;*/
-        }
-
-        .boton2:hover {
-            background: plum;
-            color: black;
-        }
-
-
-        .imagen1 {
+        .car3{
+            background-color: plum;
             display: flex;
-            flex-wrap: wrap;
-            max-width: 100%;
-            height: auto;
+            justify-content: flex-start;
+            padding: 20px;
+            margin-left: 60px;
         }
-
-        .flecha {
-            height: 70px;
-            width: 100px;
-            max-width: 50%;
-            position: absolute;
-            top: 750px;
-            right: 620px;
+        #ipad{
+            width: 200px
         }
-
-        .piedepagina {
-            font-family: 'Open Sans', sans-serif;
-            color: white;
-            width: 100%;
+        .descripcion-caracteristica{
+            padding: 0px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        
+        
+        p{
+            font-size: 40px;
+        }
+        h3{
+            font-style: italic;
+            font-size: 40px
+        }
+        ul {
+            text-align: left;
+            
+        }
+        ul li {
+            font-size: 30px;
             padding: 1rem;
-            margin: 0 auto;
-            font-size: 0.8em;
+        }
+        .que_ofrecemos{
+            display: flex;
+            margin-top: 100px;
+            flex-direction: column;
+            align-items: center;
+        }
+        .palabras_moradas{
+            color: purple;
+        }
+        .duda {
+            display:flex;
+            flex-direction: column;
+            margin-top: 100px;
+        }
+        
+        .footer{
+            background-color: #272525;
+            text-align: center;
+            padding: 10px;
             display: flex;
             justify-content: space-between;
-            background-color: black;
             align-items: center;
-
         }
-
-        .piedepagina .contacto p {
-            margin-left: 20px;
-            margin-right: 20px;
-            font-size: 0.8rem;
+        h4 {
+            color: aliceblue;
+            font-size: 40px;
         }
-
-        .piedepagina .contacto h3 {
-            margin-left: 20px;
+        footer p{
+            color: aliceblue;
+            font-size: 20px
+            
         }
-
-        .contacto p {
-            font-size: 16px;
+        .izq_footer {
+            text-align: left;
+            margin-left: 30px;
+           
+            
         }
-
-        .piedepagina h3 {
-            font-size: 18px;
+        
+        
+         @media(max-width:620px) {
+             header a  img {
+                 width: 280px;
+             }
+            #identificate{
+                padding-left: 25px;
+                padding-right: 25px; 
+                text-align: center;
+                font-size: 15px;
+                
+            }
+            .contactanos{
+                padding-left: 25px;
+                padding-right: 25px; 
+                text-align: center;
+                font-size: 15px;
+                
+            }
+            .modernizacion{
+                font-size: 50px;
+                
+                
+            }
+            #flecha{
+                height: 70px;
+            }
+             .titulo2 {
+                 font-size: 50px;
+             }
+             .caracteristicas{
+                 align-items: center;
+             }
+             .descripcion-caracteristica{
+                 font-size:25px
+             }
+             #trigo{
+                 width: 120px
+             }
+             #sensor{
+                 width: 120px
+             }
+             #ipad{
+                 width: 120px
+             }
+             h4 {
+                 
+                 font-size: 25px;
+                 text-align: center
+             }
+             ul li {
+            font-size: 20px;
+            padding: 1rem;
         }
-
-        .piedepagina .btn {
-            height: 50px;
-            width: 50px;
-            padding: 0px;
-            background-color: white;
-            border: 2.4px solid black;
-            border-radius: 50%;
-            color: black;
-            font-size: 2rem;
-            text-align: center;
+             .footer{
+                 flex-direction: column;
+                 align-items: center;
+                 
+             }
+             footer p {
+                 text-align: center;
+             }
+             
+            
         }
-
-        .piedepagina .btn:hover {
-            background-color: black;
-            color: white;
-            align-self: flex-end;
-        }
-
-        .piedepagina h3 {
-            margin-bottom: 20px;
-        }
-
-        .titulo {
-            margin-top: 0px;
-            padding-top: 150px;
-            max-height: 50%;
-            color: white;
-            margin-left: 20px;
-            margin-right: 20px;
-            /*bottom: 200px;*/
-            text-align: center;
-            font-weight: 400;
-            font-size: 5vw;
-            font-family: "Trebuchet MS";
-            text-align: center;
-        }
-
-        .espacio_vacio {
-            width: 200px;
-            height: 100px;
-        }
-        header{
-           border: 1px solid black;
-        }
-
+        
     </style>
 </head>
-
-
-
-
 <body>
-<header>
-
-    <a href="index.html"><img style="width:250px; height:100px; justify-content: flex-start;" src="imagenes/logoGTI.svg"></a>
-    <a href="login.html" class="boton1">Identificarse</a>
-</header>
-
-
-    <!-- Parte central -->
-    <section class="pag1">
-        <!--<img class="imagen1" src="imagenes/campo.svg"> -->
-        <h1 class="titulo">¡La modernización para tu campo ya está aquí!</h1>
-        <center><button class="boton2" onclick="window.location.href='paginaInfo.html'">Únete <br>ahora</button>
-            <!--<a href="#info"><img class="flecha" src="imagenes/index/flecha.gif"></a></center>
-            Flecha comentada (añadir más adelante)-->
-            </center>
-
-
+   <img src="../src/imagenes/index/2026659.svg" alt="flecha hacia arriba" onclick="topFunction()" id="miBoton" title="Ir arriba">
+    <header class="header">
+	<a href="index.html"><img  src="imagenes/logoGTI.svg"></a>
+	<button id="identificate" onclick="location.href='login.html'">Identificate</button>
+    </header>
+    <section class="landing">
+        <h1 class="modernizacion">¡LA MODERNIZACIÓN <br>DE TU CAMPO YA ESTA AQUÍ!</h1>
+        
+        <button class="contactanos" onclick="location.href='contacto.html'">CONTÁCTANOS</button>
+        
+        <a href="#mi-ancla"><img  id="flecha" src="../src/imagenes/index/417-4174810_flechas-hacia-abajo-png.png"></a>
+        
     </section>
-    <!--<article class="espacio_vacio">
-    </article>-->
-
-
+    
+    <section class="morado"> 
+    <a href="#" name="mi-ancla" class="enlace"><h2 class="titulo2">NADIE<br> <span class="palabras-moradas">INNOVA</span> <br>COMO NOSOTROS</h2></a>
+    <section class="caracteristicas">
+        <section class="car1">
+            <p class="descripcion-caracteristica">
+                Gracias a nuestra<br>
+                tecnología<br>
+                podrá monitorizar<br>
+                su campo.
+            </p>
+            <img src="../src/imagenes/index/wheat.svg" id="trigo" alt="imagen primera caracteristica">
+        </section>
+        <section class="car2">
+            
+            <img src="../src/imagenes/index/sensor.svg" id="sensor" alt="imagen primera caracteristica">
+            <p class="descripcion-caracteristica">
+                Nuestros    
+                servicios se <br>
+                basan en la <br>
+                instalación de una<br>
+                red de sensores<br>
+                inteligentes
+            </p>
+            
+        </section>
+        <section class="car3">
+            <p class="descripcion-caracteristica">
+                Estos transfieren <br>
+                diferentes tipos <br>
+                de datos a <br> 
+                su dispositivo <br>
+                ¿Sencillo Verdad?
+            </p>
+            <img src="../src/imagenes/index/application.svg" alt="trigo" id="ipad">
+        </section>
+        <section class="que_ofrecemos">
+           <h3>¿QUÉ OFRECEMOS?</h3>
+           <ul>
+               <li>Mayor <span class="palabras_moradas">seguridad</span> y <span class="palabras_moradas">control </span>control sobre tu campo.</li>
+               <li>Contamos con sensores que muestran medidas 
+      <span class="palabras_moradas">exactas</span> y en <span class="palabras_moradas">tiempo real</span>.</li>
+               <li>Facilitamos la toma de <span class="palabras_moradas">decisiones</span></li>
+               <li>Control de <span class="palabras_moradas">productividad</span> de tus campos</li>
+           </ul>
+        </section>
+        <section class="duda">
+              <h3>¿Tienes alguna duda?</h3>
+              <button class="contactanos" onclick="location.href='login.html'">CONTÁCTANOS</button>
+        </section>
+        
+    </section>
+    
+    </section>
+    <footer class="footer">
+        <section class="izq_footer">
+            <h4>INFORMACIÓN</h4>
+            <p>
+E. Politécnica Superior de Gandia, C/ Paranimf, 1, Edificio F <br>
+46730 Grau de Gandia, Valencia<br>
+Teléfono: 962 84 93 33<br>
+Mail: informacion@thegreencloud.com
+</p>
+        </section>
+        <section class="der_footer">
+            <a href="index.html" ><img  src="../src/imagenes/logoGTI.svg" ></a>
+        </section>
+    </footer>
+    
+        
+    
+    <script src="../src/js/backToTop.js"></script>
 </body>
-
-
-<!-- footer -->
-<footer class="piedepagina">
-    <article class="contacto">
-        <h3>Información</h3>
-        <p>E. Politécnica Superior de Gandia, C/ Paranimf, 1, Edificio F <br>
-            46730 Grau de Gandia, Valencia<br>
-            Teléfono: 962 84 93 33<br>
-            Mail: informacion@thegreencloud.com</p>
-    </article>
-    <article>
-        <img style="width:250px; height:100px; margin-right: 20px; margin-bottom: 23px;" src="imagenes/marca_UPV_principal_color300.png">
-    </article>
-</footer>
-
-
-
-
 </html>
