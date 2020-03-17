@@ -1,24 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Iniciar Sesión</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <link rel="stylesheet" href="css/estilo-login.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <!-- script para los iconos -->
+    <link rel="stylesheet" type="text/css" href="css/estilo_login.css">
 </head>
 <body>
-<form  method="post" onsubmit="enviar(event)" id="formLogin">
-    <h2>Iniciar Sesión</h2>
-    <article id="textoError" class="textoError">Usuario o contraseña incorrectos</article>
-    <input type="text" placeholder="&#128272; Usuario" name="usuario" required>
-    <input type="password" placeholder="&#128272; Contraseña" name="password">
-    <input type="submit" value="Iniciar">
-</form>
-<footer>
-    <section class="footer">
-        <a href="index.html"><p>®The Green Cloud</p></a>
+<div class="container">
+    <section class="login">
+        <img src="imagenes/logoGTI.svg" alt="Logo GTI" class="logoGTI">
+        <section class="sectionCentral">
+            <section class="sectIzq">
+                <img src="imagenes/login/personaGestion.png" alt="Imagen Login" class="imagenLogin">
+            </section>
+            <section class="sectDer">
+                <p>Para continuar, inicie sesión:</p>
+                <p id="textoError" class="textoError">Usuario o contraseña incorrectos</p>
+                <form  method="post" onsubmit="enviar(event)" id="formLogin">
+                    <div class="divUsuario">
+                        <img src="imagenes/login/mail.png" alt="" class="logoUsuario">
+                        <input  class="inputUsuario" type="text" placeholder="Email" name="usuario" required>
+                    </div>
+                    <div class="divPassword">
+                        <img src="imagenes/login/password.png" alt="" class="logoPassword">
+                        <input  class="inputPassword" type="password" placeholder="Contraseña" name="password">
+                    </div>
+
+                    <input type="submit" value="Iniciar sesión" class="botonIniciar">
+                </form>
+            </section>
+
+
+
+        </section>
+        <p class="textoConcato">¿Aún no eres miembro?</p>
+        <button class="botonContacto">Contacta con nosotros</button>
+
     </section>
-</footer>
+
+</div>
 <script>
     function enviar(evento){
         evento.preventDefault();
@@ -36,5 +60,8 @@
         })
     }
 </script>
+
+
 </body>
 </html>
+
