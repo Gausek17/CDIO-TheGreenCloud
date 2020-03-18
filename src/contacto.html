@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>The Green Cloud | Formulario contacto</title>
+
+    <meta name="viewport" content="width=device-widht, initial-scale=1, shrink-to-fit=no">
+    <!--controla como mostrar la página en pantalla; le estoy diciendo que mi página cuando se abra, será igual de ancho que mi dispositivo; cuando mi página se vea, estará a escala 1; se ajusta a los que utilizan safari (u otros sistema de navegación) en versión antigua-->
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--para que sea compatible con internet explorer edge-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <style>
+        .header {
+            border: 0px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #identificate {
+            border-radius: 10px;
+            padding: 10px;
+            margin-right: 17px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: 1.5px solid purple;
+            background-color: plum;
+            font-weight: 700;
+            font-family: "Trebuchet MS";
+            font-size: 20px;
+            width: auto;
+            /*width: 200px;*/
+        }
+
+        #identificate:hover {
+            background-color: blueviolet;
+            color: white;
+            border: 1.5px solid white;
+
+        }
+
+        .form {
+            background: #778899;
+
+        }
+
+        .form-control {
+            width: 60%;
+            border: 1px dotted #999;
+            border-radius: 5px;
+        }
+
+        .form-control:focus {
+            border: 3px solid #555;
+        }
+
+        body {
+            border: 1px solid black;
+            justify-content: center;
+            
+        }
+
+        .contacto {
+            background: #778899;
+            justify-content: center;
+            margin: auto;
+            max-width: 500px;
+            padding: 30px;
+            border: 7px #7c017c;
+            border-radius: 20px;
+        }
+
+        .input,
+        .btn_submit,
+        .btn_reset {
+            background-color: plum;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: 1px dotted #999;
+            border-radius: 8px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+
+        }
+
+        .botonloca {
+            width: 300px;
+
+        }
+
+        .botonemail {
+            width: 300px;
+            height: 100px;
+        }
+
+        @media(max-width:620px) {
+            header a img {
+                width: 280px;
+            }
+
+            #identificate {
+                padding-left: 25px;
+                padding-right: 25px;
+                text-align: center;
+                font-size: 15px;
+            }
+        }
+
+        .localizacion {
+            font-size: 12px;
+            max-width: 500px;
+        }
+
+        .telefono {
+            font-size: 12px;
+            max-width: 500px;
+        }
+
+        .mail {
+            font-size: 12px;
+            max-width: 500px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html"><img src="imagenes/logoGTI.svg"></a>
+        <button id="identificate" onclick="location.href='login.html'">Identificate</button>
+    </header>
+
+    <section class="form">
+
+        <form class="contacto">
+
+            <h1 style="color: white">
+                Contacta con nosotros si tiene alguna duda
+            </h1>
+
+            <div class="form-group">
+
+                <label style="color: white">Nombre y apellidos</label><br>
+
+                <input class="form-control" type="text" name="Nombre_y_apellidos" placeholder="Escribe tu nombre y apellidos">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <br><label style="color: white">Empresa</label><br>
+
+                <input class="form-control" type="text" name="Empresa" placeholder="Escribe tu empresa">
+
+            </div>
+
+            <div class="form-group">
+
+                <br><label style="color: white">Teléfono</label><br>
+
+                <input class="form-control" type="tel" name="Teléfono" placeholder="Escribe tu número de teléfono">
+
+            </div>
+
+            <div class="form-group">
+
+                <br><label style="color: white">Correo electrónico</label><br>
+
+                <input class="form-control" type="email" name="email" placeholder="Escribe tu correo electrónico">
+
+            </div>
+
+            <div class="form-group">
+
+                <br><label style="color: white">Consulta</label><br>
+                <input class="form-control" type="text" name="consulta" placeholder="Escribe tu consulta" style="padding: 50px 0px">
+
+            </div>
+
+
+            <div class="btn_form">
+                <br><input class="btn_submit" type="submit" value="Enviar">
+                <input class="btn_reset" type="reset" value="Limpiar">
+            </div>
+
+        </form>
+    </section>
+    <footer class="footer">
+        <section class="botonloca">
+
+            <a href="imagenes/footer/localizacion.png"><img style="width:40px; height:30px; justify-content: space-around;" src="imagenes/footer/localizacion.png"></a>
+
+            <p class="localizacion">
+
+                E. Politécnica Superior de Gandia,<br> C/ Paranimf, 1, Edificio F <br>
+                46730 Grau de Gandia, Valencia
+
+            </p>
+        </section>
+
+        <section class="botonemail">
+            <a href="imagenes/footer/email.png"><img style="width:30px; height:30px; justify-content: space-around;" src="imagenes/footer/email.png"></a><br><br>
+
+            <a class="mail" href="mailto: informacion@thegreencloud.com">informacion@thegreencloud</a>
+        </section>
+
+        <section class="botontelefono">
+            <a href="imagenes/footer/telefono.png"><img style="width:40px; height:30px; justify-content: space-around;" src="imagenes/footer/telefono.png"></a><br><br>
+
+            <a class="telefono" href="tel: +34962849333
+            ">962 84 93 33</a>
+
+        </section>
+
+    </footer>
+
+</body>
