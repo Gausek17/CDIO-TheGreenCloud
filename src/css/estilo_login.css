@@ -1,10 +1,8 @@
 *{
     font-family: "Trebuchet MS";
-
 }
 body{
     margin: 0 auto;
-
 }
 
 .container{
@@ -158,6 +156,7 @@ body{
 p{
     text-align: center;
 }
+
 .textoConcato{
     padding-top: 2rem;
     font-size: 1.05rem;
