@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    
+
     <title>Landing Page</title>
-    
+
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!--para que sea compatible con internet explorer edge-->
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         /*@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);*/
@@ -118,14 +118,9 @@
         .morado {
             background-color: plum;
             margin: 0px auto;
-
+            border: 1px solid black;
         }
 
-        h2 {
-            padding: 20px;
-            border: 0px;
-            text-decoration: none;
-        }
 
         .enlace {
             text-decoration: none;
@@ -197,10 +192,7 @@
             font-size: 40px;
         }
 
-        h3 {
-            font-style: italic;
-            font-size: 40px
-        }
+
 
         ul {
             text-align: left;
@@ -229,13 +221,41 @@
             margin-top: 100px;
         }
 
+        .footer {
+            display: flex;
+            justify-content: center;
+            margin-top: 0px;
+            border: 1px solid black;
 
-        h4 {
-            color: aliceblue;
-            font-size: 40px;
+        }
+
+        .botonloca {
+            width: 300px;
+
+        }
+
+        .botonemail {
+            width: 300px;
+            height: 100px;
         }
 
 
+        .localizacion {
+            font-size: 12px;
+            max-width: 500px;
+        }
+
+        .telefono {
+            font-size: 12px;
+            max-width: 500px;
+            color: black;
+        }
+
+        .mail {
+            font-size: 12px;
+            max-width: 500px;
+            color: black;
+        }
 
 
         @media(max-width:620px) {
@@ -261,8 +281,6 @@
 
             .modernizacion {
                 font-size: 50px;
-
-
             }
 
             #flecha {
@@ -293,50 +311,10 @@
                 width: 120px
             }
 
-            h4 {
-
-                font-size: 25px;
-                text-align: center
-            }
-
             ul li {
                 font-size: 20px;
                 padding: 1rem;
             }
-
-            .footer {
-                display: flex;
-                justify-content: center;
-                margin-top: 15px;
-
-            }
-
-            .botonloca {
-                width: 300px;
-
-            }
-
-            .botonemail {
-                width: 300px;
-                height: 100px;
-            }
-
-
-            .localizacion {
-                font-size: 12px;
-                max-width: 500px;
-            }
-
-            .telefono {
-                font-size: 12px;
-                max-width: 500px;
-            }
-
-            .mail {
-                font-size: 12px;
-                max-width: 500px;
-            }
-
 
         }
 
@@ -427,7 +405,7 @@
         </section>
 
         <section class="botonemail">
-            <a href="imagenes/footer/email.png"><img style="width:30px; height:30px; justify-content: space-around;" src="imagenes/footer/email.png"></a><br><br>
+            <a href="imagenes/footer/email.png"><img style="width:30px; height:30px; justify-content: space-around; " src="imagenes/footer/email.png"></a><br><br>
 
             <a class="mail" href="mailto: informacion@thegreencloud.com">informacion@thegreencloud</a>
         </section>
