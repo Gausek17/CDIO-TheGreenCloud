@@ -4,6 +4,13 @@
 body{
     margin: 0 auto;
 }
+.iconMenu{
+    display: none;
+    width: 50px;
+    height: 55px;
+    margin-top: 0.7rem;
+    margin-left: 0.5rem;
+}
 
 .container{
 
@@ -58,7 +65,6 @@ ul li{
     display: flex;
     align-items: center;
     margin: 1rem;
-    border: 4px solid black;
     border-radius: 20px;
     padding: 0.25rem;
 }
@@ -80,6 +86,8 @@ ul li a{
     text-decoration: none;
     margin-left: 1rem;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
 }
 .divContenido{
     width: 100%;
@@ -116,6 +124,9 @@ ul li a{
 .divTextoPersona{
     color: white;
     margin-right: 15px;
+}
+.navUsuarios{
+    border: 4px solid black;
 }
 
 .divPerson{
@@ -168,7 +179,11 @@ ul li a{
     border-radius: 10px;
     box-shadow: inset 0 0 10px #797979;
 }
+.iconNuevoUsuario{
+    margin-top: 1rem;
+}
 
+/*------RESPONSIVE----------*/
 @media only screen and (max-width:900px){
     nav{
         display: none;
@@ -179,4 +194,114 @@ ul li a{
     .divPanelActual{
         border-radius: 15px;
     }
+    .container{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .iconMenu{
+        display: block;
+    }
+    .logoGTI{
+        display: none;
+    }
+    .iconUseer{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .iconUserPerson{
+        margin-right: 0.5rem;
+        width:60px ;
+        height: 60px;
+    }
+    .iconNuevoUsuario{
+        width: 65px;
+        height: 65px;
+        margin-right: 1rem;
+    }
+    .iconEditUser{
+        width: 40px;
+        height: 40px;
+    }
+    .iconDeleteUser{
+        width: 40px;
+        height: 40px;
+    }
+    .divContenidoUser{
+        padding: 0.5rem;
+    }
+    .iconUseer{
+        width: 65px;
+        height: 65px;
+
+    }
+
+
+    header{
+        margin-bottom: 0.5rem;
+    }
+
+}
+.textNav{
+    margin-left: 0.7rem;
+}
+
+
+/*------MENU LATERAL ----------*/
+
+
+.sidenav {
+    height: 100%;
+    width: 0; /*se cambia con JS */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #800053; /* Black*/
+    overflow-x: hidden;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.headerMenu{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1rem;
+
+}
+.menuTextAdmin{
+    font-size: 1.5rem;
+}
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    transition: 0.3s;
+}
+/* When you mouse over the navigation links, change their color */
+.itemMenu:hover {
+   background-color: rgba(0,0,0,0.5);
+}
+
+.itemMenu{
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.menuText{
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    right: 25px;
+    font-size:3rem;
+    margin-left: 50px;
 }
