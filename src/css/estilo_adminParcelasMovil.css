@@ -42,6 +42,19 @@ header{
     width: 75px;
     height: 75px;
 }
+.seleccion{ 
+    margin-left: 10px;
+}
+
+.seleccion select{
+    background-color: #800053;
+    color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
 
 .textAdmin{
     margin: 0;
@@ -87,11 +100,7 @@ nav{
 .despegable{
     position: absolute;
 }
-#select{
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-}
+
 .delete{
     cursor: pointer;
     background-color: #800053;
