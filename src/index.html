@@ -12,6 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         /*@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);*/
+        body {
+            margin-right: 7.5rem;
+            margin-left: 7.5rem;
+        }
         #miBoton {
 
             position: fixed;
@@ -74,7 +78,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            border: 1.5px solid black;
+            /*border: 1.5px solid black;*/
             margin: 0px auto;
 
 
@@ -322,7 +326,7 @@
 </head>
 
 <body>
-    <img src="../src/imagenes/index/2026659.svg" alt="flecha hacia arriba" onclick="topFunction()" id="miBoton" title="Ir arriba">
+    <img src="../src/imagenes/index/arrow.svg" alt="flecha hacia arriba" onclick="topFunction()" id="miBoton" title="Ir arriba">
     <header class="header">
         <a href="index.html"><img src="imagenes/logoGTI.svg"></a>
         <button id="identificate" onclick="location.href='login.html'">Identificate</button>

@@ -21,6 +21,7 @@
         <div class="divUsuario">
             <p id="textNombreUsuario">Nombre Usuario</p>
             <img src="../imagenes/iconUser.png" alt="Icono Usuario" class="iconUseer">
+            <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion" >
         </div>
     </header>
     <div class="divCentral">
