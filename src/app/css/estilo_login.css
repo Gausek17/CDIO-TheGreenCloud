@@ -1,0 +1,164 @@
+*{
+    font-family: "Trebuchet MS";
+}
+body{
+    margin: 0 auto;
+}
+
+.container{
+    background-image: linear-gradient(to right, #000000 , #800053);
+    height: 100vh;
+    display: flex;
+    padding-left:1.5rem;
+    padding-right: 1.5rem;
+    align-items: center;
+}
+.login{
+    padding: 2rem;
+    background-color: white;
+    border-radius: 20px;
+    margin: 0.5rem auto;
+    display: flex;
+    flex-direction: column;
+
+}
+.imagenLogin{
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+}
+.sectionCentral{
+    display: flex;
+    align-items: center;
+
+}
+.sectDer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+.sectIzq{
+    display: flex;
+}
+
+
+.botonIniciar{
+    background-color: #800053;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+#formLogin{
+    display: flex;
+    flex-direction: column;
+
+}
+.divUsuario{
+    background-color: #D7D7D7;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.7rem;
+
+}
+
+.logoUsuario{
+    width:1.5rem;
+    margin-right: 1rem;
+}
+.inputUsuario{
+
+    background-color: #D7D7D7;
+    border: none;
+    font-size: 1.15rem;
+    color: #423f3e;
+}
+.inputUsuario:focus{
+    border: none;
+    outline: none;
+}
+
+
+.divPassword{
+    background-color: #D7D7D7;
+    margin: 0.5rem auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.7rem;
+
+
+}
+.logoPassword{
+    width:1.5rem;
+    margin-right: 1rem;
+}
+.inputPassword{
+    background-color: #D7D7D7;
+    border: none;
+    font-size: 1.15rem;
+    color: #423f3e;
+}
+
+.inputPassword:focus{
+    border: none;
+    outline: none;
+}
+.textoError{
+    display: none;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.75rem;
+}
+.botonContacto{
+    background-color: white;
+    border-radius: 10px;
+    color: #423f3e;
+    border: 1px solid #423f3e;
+    padding: 0.75rem;
+
+    font-size: 1.05rem;
+    width: fit-content;
+    margin: 1rem auto;
+    margin-bottom: 0;
+}
+@media(max-width:650px){
+    .imagenLogin{
+        display: none;
+    }
+    .sectionCentral{
+        justify-content: center;
+    }
+    .sectDer{
+        margin-right: 0;
+    }
+    .inputPassword{
+        font-size: 1rem;
+    }
+    .inputUsuario{
+        font-size: 1rem;
+    }
+    .logoGTI{
+        width: 100%;
+        height: auto;
+    }
+}
+
+p{
+    text-align: center;
+}
+
+.textoConcato{
+    padding-top: 2rem;
+    font-size: 1.05rem;
+    border-top: 1px solid #D7D7D7;
+}

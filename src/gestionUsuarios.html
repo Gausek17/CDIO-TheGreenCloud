@@ -43,60 +43,121 @@
                 <img src="imagenes/admin/iconAddUser.png" alt="Añadir usuario" class="iconNuevoUsuario">
                 <p> Añadir usuario</p>
             </div>
-            <div class="divContenidoUser">
+            <div class="divContenidoUser" id="listaUsuarios">
 
-                <div class="divPerson">
-                    <img src="imagenes/admin/iconUser-white.png" alt="usurio" class="iconUserPerson">
-                    <div class="divTextoPersona">
-                        <p class="textCorreo">jorge@tgc.es</p>
-                        <p class="textNombre"> JorgeGonzalez</p>
-                    </div>
-                    <img src="imagenes/admin/iconEdit-white.png" alt="Editar usuario" class="iconEditUser">
-                    <img src="imagenes/admin/iconDelete-white.png" alt="Elimina usuario" class="iconDeleteUser">
-                </div>
-                <div class="divPerson">
-                    <img src="imagenes/admin/iconUser-white.png" alt="usurio" class="iconUserPerson">
-                    <div class="divTextoPersona">
-                        <p class="textCorreo">jorge@tgc.es</p>
-                        <p class="textNombre"> JorgeGonzalez</p>
-                    </div>
-                    <img src="imagenes/admin/iconEdit-white.png" alt="Editar usuario" class="iconEditUser">
-                    <img src="imagenes/admin/iconDelete-white.png" alt="Elimina usuario" class="iconDeleteUser">
-                </div>
-                <div class="divPerson">
-                    <img src="imagenes/admin/iconUser-white.png" alt="usurio" class="iconUserPerson">
-                    <div class="divTextoPersona">
-                        <p class="textCorreo">jorge@tgc.es</p>
-                        <p class="textNombre"> JorgeGonzalez</p>
-                    </div>
-                    <img src="imagenes/admin/iconEdit-white.png" alt="Editar usuario" class="iconEditUser">
-                    <img src="imagenes/admin/iconDelete-white.png" alt="Elimina usuario" class="iconDeleteUser">
-                </div>
-                <div class="divPerson">
-                    <img src="imagenes/admin/iconUser-white.png" alt="usurio" class="iconUserPerson">
-                    <div class="divTextoPersona">
-                        <p class="textCorreo">jorge@tgc.es</p>
-                        <p class="textNombre"> JorgeGonzalez</p>
-                    </div>
-                    <img src="imagenes/admin/iconEdit-white.png" alt="Editar usuario" class="iconEditUser">
-                    <img src="imagenes/admin/iconDelete-white.png" alt="Elimina usuario" class="iconDeleteUser">
-                </div>
-
-                <div class="divPerson">
-                    <img src="imagenes/admin/iconUser-white.png" alt="usurio" class="iconUserPerson">
-                    <div class="divTextoPersona">
-                        <p class="textCorreo">jorge@tgc.es</p>
-                        <p class="textNombre"> JorgeGonzalez</p>
-                    </div>
-                    <img src="imagenes/admin/iconEdit-white.png" alt="Editar usuario" class="iconEditUser">
-                    <img src="imagenes/admin/iconDelete-white.png" alt="Elimina usuario" class="iconDeleteUser">
-                </div>
             </div>
         </div>
     </div>
 </div>
 
 <script>
+    /* Nada más cargar la página, que se ejecute la función que rellena la lista de usuarios */
+    //esto debería estar en onload() 
+    rellenarListaUsuarios();
+
+    /* Coger los datos de la base de datos y llamar a la función crearElementosListaUsuarios para que se creen dinámicamente */
+    function rellenarListaUsuarios(){
+        //console.log(":D");
+        fetch('api/v1.0/modelos/get-usuarios.php', { //revisar para usar el htaccess/index.php
+            method : 'get',
+        }).then(function (respuesta) {
+            return respuesta.json();
+        }).then(function(json){
+
+            console.log(json);
+            crearElementosListaUsuarios(json);
+        })
+    
+    }
+
+    function crearElementosListaUsuarios(json){
+        /*
+                <div class="divPerson">
+                    <img src="imagenes/admin/iconUser-white.png" alt="usurio" class="iconUserPerson">
+                    <div class="divTextoPersona">
+                        <p class="textCorreo">jorge@tgc.es</p>
+                        <p class="textNombre"> JorgeGonzalez</p>
+                    </div>
+                    <img src="imagenes/admin/iconEdit-white.png" alt="Editar usuario" class="iconEditUser">
+                    <img src="imagenes/admin/iconDelete-white.png" alt="Elimina usuario" class="iconDeleteUser">
+                </div>
+        */
+        var listaUsuarios = document.getElementById("listaUsuarios");
+        for(var i = 0; i < json.length; i++){
+
+            var userDiv = document.createElement('div');
+            userDiv.classList.add("divPerson");
+
+            var imgUser = document.createElement('img');
+            imgUser.src = "imagenes/admin/iconUser-white.png";
+            imgUser.alt = "logo usuario";
+            imgUser.classList.add("iconUserPerson");
+
+            var divTextoPersona = document.createElement('div');
+            divTextoPersona.classList.add("divTextoPersona");
+
+            var textCorreo = document.createElement('p');
+            textCorreo.classList.add("textCorreo");
+            textCorreo.innerHTML = json[i]['mail'];
+
+            var textNombre = document.createElement('p');
+            textNombre.classList.add("textNombre");
+            textNombre.innerHTML = json[i]['nombre'];
+
+            divTextoPersona.append(textCorreo);
+            divTextoPersona.append(textNombre);
+
+            var imgEditar = document.createElement('img');
+            imgEditar.src = "imagenes/admin/iconEdit-white.png";
+            imgEditar.alt = "Editar usuario";
+            imgEditar.classList.add("iconEditUser");
+
+            var imgDelete = document.createElement('img');
+            imgDelete.src = "imagenes/admin/iconDelete-white.png";
+            imgDelete.alt = "Eliminar usuario";
+            imgDelete.classList.add("iconDeleteUser");
+            var id = json[i]['id_usuario'];
+            imgDelete.addEventListener('click', function(){popupEliminar(id)});
+
+            userDiv.append(imgUser)
+            userDiv.append(divTextoPersona);
+            userDiv.append(imgEditar);
+            userDiv.append(imgDelete);
+
+            listaUsuarios.append(userDiv);
+        }
+    }
+
+    //Primero pregunta si se quiere eliminar
+    function popupEliminar(id){
+        if(confirm("Este usuario y todos sus datos se perderán para siempre.\n ¿Desea continuar?")){
+            eliminarUsuario(id);//Si acepta, se elimina
+        }
+    }
+
+    function eliminarUsuario(id){
+        //Llamada al "servidor" (archivo php encargado de borrar el registro)
+        fetch('api/v1.0/modelos/delete-usuario.php?id='+id, {
+            method : 'get',
+            //body : new FormData(document.getElementById('formLogin'))
+        }).then(function (respuesta) {
+            if(respuesta.status === 200) { //Si se borra
+                console.log("Usuario borrado.")
+                limpiarLista(); 
+                rellenarListaUsuarios();
+            } else if(respuesta.status === 403){
+                console.log("Su usuario no dispone de permiso.");
+            }else{
+                console.log("No se ha borrado el registro.");
+                
+            }
+        })
+    }
+
+    function limpiarLista(){
+        document.getElementById("listaUsuarios").innerHTML = "";
+    }
+
     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
     function openNav() {
         document.getElementById("mySidenav").style.width = "300px";
