@@ -57,7 +57,6 @@
             font-size: 20px;
             width: auto;
             /*width: 200px;*/
-
         }
 
         #identificate:hover {
@@ -76,8 +75,6 @@
             align-items: center;
             border: 1.5px solid black;
             margin: 0px auto;
-
-
         }
 
         .modernizacion {
@@ -148,8 +145,6 @@
             justify-content: flex-start;
             padding: 20px;
             margin-left: 60px;
-
-
         }
 
         #trigo {
@@ -162,7 +157,6 @@
             justify-content: flex-end;
             padding: 20px;
             margin-right: 60px;
-
         }
 
         #sensor {
@@ -222,41 +216,50 @@
         }
 
         .footer {
-            display: flex;
-            justify-content: center;
-            margin-top: 0px;
+
             border: 1px solid black;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
 
         }
 
-        .botonloca {
-            width: 300px;
+        div.localizacion {
+            display: flex;
+            margin-right: 19px;
+        }
+
+        img.localizacion {
+            display: flex;
+            margin-left: 10px;
+        }
+
+        img.mail {
+            display: flex;
+            margin-top: 25px;
+            margin-right: 10px;
+            margin-left: 100px;
+        }
+
+        a.mail {
+            display: flex;
+            margin-right: 100px;
+            margin-left: 10px;
+            color: black;
 
         }
 
-        .botonemail {
-            width: 300px;
-            height: 100px;
+        div.telefono {
+            display: flex;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
-
-        .localizacion {
-            font-size: 12px;
-            max-width: 500px;
-        }
-
-        .telefono {
-            font-size: 12px;
-            max-width: 500px;
+        a.telefono {
+            display: flex;
+            margin-right: 100px;
             color: black;
         }
-
-        .mail {
-            font-size: 12px;
-            max-width: 500px;
-            color: black;
-        }
-
 
         @media(max-width:620px) {
             header a img {
@@ -392,33 +395,51 @@
 
     </section>
     <footer class="footer">
-        <section class="botonloca">
 
-            <a href="imagenes/footer/localizacion.png"><img style="width:40px; height:30px; justify-content: space-around;" src="imagenes/footer/localizacion.png"></a>
 
-            <p class="localizacion">
-
-                E. Politécnica Superior de Gandia,<br> C/ Paranimf, 1, Edificio F <br>
-                46730 Grau de Gandia, Valencia
-
-            </p>
+        <section>
+            <div class="localizacion">
+                <img class="localizacion" style="width:30px; height:30px; justify-content: space-around;" src="imagenes/footer/loca.png">
+            </div>
         </section>
 
-        <section class="botonemail">
-            <a href="imagenes/footer/email.png"><img style="width:30px; height:30px; justify-content: space-around; " src="imagenes/footer/email.png"></a><br><br>
 
-            <a class="mail" href="mailto: informacion@thegreencloud.com">informacion@thegreencloud</a>
+        <section>
+            <div class="localizacion">
+                <p class="localizacion" style="font-size: 15px;">E. Politécnica Superior de Gandia,<br> C/ Paranimf, 1, Edificio F <br>46730 Grau de Gandia, Valencia</p>
+            </div>
         </section>
 
-        <section class="botontelefono">
-            <a href="imagenes/footer/telefono.png"><img style="width:40px; height:30px; justify-content: space-around;" src="imagenes/footer/telefono.png"></a><br><br>
 
-            <a class="telefono" href="tel: +34962849333
+        <section>
+            <div class="mail">
+                <img class="mail" style="width:30px; height:30px; justify-content: space-around; " src="imagenes/footer/arroba.png"><br><br>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="mail">
+                <a class="mail" href="mailto: informacion@thegreencloud.com">informacion@thegreencloud</a>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="telefono">
+                <img class="telefono" style="width:39px; height:30px; justify-content: space-around;" src="imagenes/footer/telefono.png"><br><br>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="telefono">
+                <a class="telefono" href="tel: +34962849333
             ">962 84 93 33</a>
-
+            </div>
         </section>
-
     </footer>
+
 
 
 
