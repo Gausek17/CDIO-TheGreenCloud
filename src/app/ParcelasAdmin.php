@@ -18,7 +18,7 @@
 
     </div>
     <header>
-        <img src="../imagenes/logoGTI.svg" alt="Logo GTI" class="logoGTI">
+        <a href="index.html"><img class="logoGTI" src="../imagenes/logoGTI.svg"></a>
         <img onclick="openNav()" src="../imagenes/admin/iconMenu.png" alt="Menu" class="iconMenu">
         <div class="divUsuario">
             <p id="textNombreUsuario">Nombre Usuario</p>
