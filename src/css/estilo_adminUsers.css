@@ -4,6 +4,10 @@
 body{
     margin: 0 auto;
 }
+
+.cerrar_sesion{
+    width: 30px;
+}
 .iconMenu{
     display: none;
     width: 50px;

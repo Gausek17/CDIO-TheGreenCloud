@@ -1,0 +1,382 @@
+*{
+    font-family: "Trebuchet MS";
+}
+body{
+    margin: 0 auto;
+}
+.cerrar_sesion{
+    width: 30px;
+}
+.iconMenu{
+    display: none;
+    width: 50px;
+    height: 55px;
+    margin-top: 0.7rem;
+    margin-left: 0.5rem;
+}
+.delete{
+    cursor: pointer;
+    background-color: #800053;
+    color: white;
+    border-radius: 46px 46px 46px 46px;
+    border: 2px solid black;
+    
+    padding: 1rem;
+    
+}
+.delete:hover{
+    background-color: rgba(169, 69, 206, 0.72);
+    color: black;
+}
+.button{
+   align-content: space-between;
+    padding: 1rem;
+    margin-left: 17px;
+}
+
+.container{
+
+    align-items: center;
+    margin-right: 7.5rem;
+    margin-left: 7.5rem;
+    margin-bottom: 1.5rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+
+}
+.divCentral{
+    height: 100%;
+    display: flex;
+    border-radius: 15px;
+}
+.divUsuario{
+
+    display: flex;
+    align-items: center;
+}
+.iconUseer{
+    margin-left: 2rem;
+    margin-right: 0.75rem;
+    width: 75px;
+    height: 75px;
+}
+
+.textAdmin{
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    text-align: center;
+}
+nav{
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    width: 350px;
+    background-color:#800053;
+    display: table-cell;
+
+}
+.boton{
+    border-radius: 200px 200px 200px 200px;
+    border: none;
+    margin-left: 10px;
+}
+.lista a{
+    color: black;
+    display: block;
+    padding: 12px;
+}
+.lista{
+    background-color: #d9c0fc;
+    display: none;
+    width: 180px;
+    position: absolute;
+    z-index: 100;
+}
+.lista a:hover{
+    background-color: #f1f1f1;
+}
+.desplegable:hover .lista{
+    display: block;
+    
+}
+.despegable{
+    position: absolute;
+}
+.seleccion{ 
+    margin-left: 10px;
+}
+
+.seleccion select{
+    background-color: #800053;
+    color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+
+ul{
+    padding: 0;
+}
+ul li{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 20px;
+    padding: 0.25rem;
+}
+.iconParcelas{
+    height: 90px;
+    width: 90px;
+}
+.iconGestionUsuarios{
+    width: 100px;
+    height: auto;
+}
+
+.iconGestionUsuariosSelected{
+    width: 69px;
+    height: auto;
+    margin-right: 10px;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+.divContenido{
+    width: 100%;
+}
+.divPanelActual{
+    border-top-right-radius: 15px;
+    border-bottom: 2px solid white;
+    font-size: 1.2rem;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #800053;
+}
+.divContenidoUser{
+    padding: 1.5rem;
+    height: 580px;
+    overflow: auto;
+
+}
+
+.divNuevoUsuario{
+    display: flex;
+    align-items: center;
+
+}
+.iconNuevoUsuario{
+    width: 75px;
+    height: auto;
+    padding-left: 2.5rem;
+    padding-bottom: 0.5rem;
+}
+.divTextoPersona{
+    color: white;
+    margin-right: 15px;
+}
+.navParcela{
+    border: 4px solid black;
+}
+
+.divPerson{
+    display: flex;
+    background-color: #797979;
+    border-radius: 15px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.iconUserPerson{
+    margin-right: 1rem;
+    width:75px ;
+    height: 75px;
+}
+.iconDeleteUser{
+    width:50px ;
+    height: 50px;
+}
+.iconEditUser{
+    width: 50px;
+    height: 50px;
+}
+  #map{
+    width: inherit;
+    height: inherit;
+    border: solid 3px black;
+    margin-right: 30px;
+    margin-left: 170px;
+
+}
+
+/*SCROL BARR*/
+
+.divContenidoUser::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.divContenidoUser::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.divContenidoUser::-webkit-scrollbar-button:increment,.divContenidoUser::-webkit-scrollbar-button {
+    display: none;
+}
+
+.divContenidoUser::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.divContenidoUser::-webkit-scrollbar-thumb {
+    background-color: #800053;
+    border-radius: 20px;
+}
+
+.divContenidoUser::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #797979;
+}
+.iconNuevoUsuario{
+    margin-top: 1rem;
+}
+
+/*------RESPONSIVE----------*/
+@media only screen and (max-width:900px){
+    nav{
+        display: none;
+    }
+    .divContenidoUser{
+        overflow: inherit;
+    }
+    .divPanelActual{
+        border-radius: 15px;
+    }
+    .container{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .iconMenu{
+        display: block;
+    }
+    .logoGTI{
+        display: none;
+    }
+    .iconUseer{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    #map{
+    width: inherit;
+    height: inherit;
+    border: solid 3px black;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+
+}
+  
+
+}
+
+@media only screen and (max-width: 450px) {
+    .iconUserPerson{
+        margin-right: 0.5rem;
+        width:60px ;
+        height: 60px;
+    }
+    .iconNuevoUsuario{
+        width: 65px;
+        height: 65px;
+        margin-right: 1rem;
+    }
+    .iconEditUser{
+        width: 40px;
+        height: 40px;
+    }
+    .iconDeleteUser{
+        width: 40px;
+        height: 40px;
+    }
+    .divContenidoUser{
+        padding: 0.5rem;
+    }
+    .iconUseer{
+        width: 65px;
+        height: 65px;
+
+    }
+
+
+    header{
+        margin-bottom: 0.5rem;
+    }
+
+}
+.textNav{
+    margin-left: 0.7rem;
+}
+
+
+/*------MENU LATERAL ----------*/
+
+
+.sidenav {
+    height: 100%;
+    width: 0; /*se cambia con JS */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #800053; /* Black*/
+    overflow-x: hidden;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.headerMenu{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1rem;
+
+}
+.menuTextAdmin{
+    font-size: 1.5rem;
+}
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    transition: 0.3s;
+}
+/* When you mouse over the navigation links, change their color */
+.itemMenu:hover {
+   background-color: rgba(0,0,0,0.5);
+}
+
+.itemMenu{
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.menuText{
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}

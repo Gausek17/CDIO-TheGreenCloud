@@ -1,0 +1,89 @@
+*{
+    margin:2px;
+    padding: 0;
+    font-family: "Trebuchet MS";
+    box-sizing: border-box;
+}
+
+body{
+    background: #af98b7;
+    display: flex;
+    min-height: 100vh;
+}
+
+form{
+    margin: auto;
+    width: 50%;
+    max-width: 500px;
+    background-image: url("../imagenes/login/fondologin.png");
+
+    border-color: black;
+    padding: 30px;
+    border: 7px #7c017c;
+    border-radius: 20px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #10001a;
+    border: black;
+}
+
+input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 30px 0;
+    font-size: 20px;
+    border: 7px purple;
+}
+
+input[type="submit"] {
+    background: linear-gradient(#950dea, rgba(247, 123, 247, 0.55));
+    border: 3px black;
+    color: black;
+    opacity: 0.85;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 0;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    align-self: flex-end;
+
+}
+.textoError{
+    background-color: red;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    display: none;
+}
+
+
+input[type="submit"]:hover {
+    opacity: 1;
+}
+input[type="submit"]:active {
+    transform: scale(0.9);
+}
+
+@media (max-width:768px) {
+    form {
+        width: 90%;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

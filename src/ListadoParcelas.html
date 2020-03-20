@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdminSection</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo-parcelas.css">
+</head>
+<body>
+<header>
+    <img src="imagenes/logoGTI.svg" alt="Logo GTI" class="logoGTI">
+    <div class="divUsuario">
+        <p id="textNombreUsuario">Nombre Usuario</p>
+        <img src="imagenes/iconUser.png" alt="Icono Usuario" class="iconUseer">
+    </div>
+</header>
+<div class="container">
+    <div class="divCentral">
+        <nav>
+            <p class="textAdmin">Admin Panel</p>
+            <ul>
+                <li class="fields"><img src="imagenes/parcelas/IconoCampo-White.png" alt="Imagen Campo" class="iconParcelas">
+                       <a href="#">Parcelas</a></li>
+                <li class="users"><img src="imagenes/parcelas/groupIcon-White.png" alt="Gestión Usuarios" class="iconGestionUsuarios"><a href="#">Gestión Usuarios</a></li>
+            </ul>
+        </nav>
+        <div class="divContenido">
+            <div class="divPanelActual">
+                <img src="imagenes/parcelas/IconoCampo-White.png" alt="Gestión Usuarios" class="iconGestionUsuariosSelected"> Parcelas
+            </div>
+            <div class="divNuevoUsuario">
+                <img src="imagenes/parcelas/icono-maps.png" alt="Añadir usuario" class="iconNuevoUsuario">
+                <p><u>Seleccione la parcela</u></p>
+                <div class="desplegable">
+                    <button class="boton"><img src="imagenes/boton.png" id="select"></button>
+                    <div class="lista">
+                        <a href="#">Parcela de trigo</a>
+                        <a href="#">Parcela de maíz</a>
+                        <a href="#"
+                        >Parcela de melocotones</a>
+                        <a href="#">Parcela de limones</a>
+                    </div>
+                </div>
+            </div>
+            <div class="divContenidoUser">
+<div id="map">
+
+</div>
+
+<script>
+    var infoWindow;
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 38.9965055, lng: -0.1674364},
+            zoom: 15,
+            mapTypeId: 'hybrid',
+            styles: [
+                {
+                    featureType: 'poi',
+                    stylers: [{visibility: 'off'}]
+                },
+                {
+                    featureType: 'transit',
+                    stylers: [{visibility: 'off'}]
+                }
+            ],
+            mapTypeControl: false,
+            streetViewControl: false,
+            rotateControl: false,
+        });
+        map.setTilt(0);
+        function cargarPosiciones() {
+            fetch('data/posiciones.json').then(function (r) {
+                return r.json();
+
+            }).then(function (json) {
+                json.forEach(function (posicion) {
+
+                        var marker = new google.maps.Marker({
+                            position:posicion,
+                            label: posicion.id+"",
+                            animation: google.maps.Animation.DROP,
+                            map: map
+                        });
+                        marker.addListener('click', function () {
+                            infoWindow.setContent("Posicion: "+ posicion.id);
+                            infoWindow.open(map, marker);
+                        })
+
+                })
+
+            })
+        }
+
+
+        function cargarParcelas(){
+            fetch('data/parcelas.json').then(function (r) {
+                    return r.json();
+            }).then(function (json) {
+                let bounds = new google.maps.LatLngBounds();
+
+                json.forEach(function (pos) {
+                    let polygon = new google.maps.Polygon({
+                        paths: pos.vertices,
+                        strokeColor: "#ff8000",
+                        strokeOpacity: 0.8,
+                        strokeWeight: 2,
+                        fillColor: pos.color,
+                        fillOpacity: 0.35,
+                        map: map
+                    });
+                    polygon.getPath().getArray().forEach(function (v) {
+                        bounds.extend(v);
+                    });
+                    polygon.addListener('click', function () {
+                        infoWindow.setContent( document.getElementById("lorem"));
+                        infoWindow.open(map, polygon);
+                    })
+                });
+                map.fitBounds(bounds);
+            })
+        }
+        infoWindow = new google.maps.InfoWindow();
+        cargarParcelas();
+        cargarPosiciones();
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer>
+</script>
+                
+   
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
