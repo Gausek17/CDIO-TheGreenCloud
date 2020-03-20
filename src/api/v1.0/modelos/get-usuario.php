@@ -1,7 +1,5 @@
 <?php
-session_start();
-$idCliente = $_SESSION['usuario']['id_cliente'];
-$sql = 'SELECT * FROM `usuario` where id_cliente='.$idCliente;
+$sql = 'SELECT * FROM `usuario` where id_usuario='.$id;
 $res = mysqli_query($conexion, $sql);
 
 while ($fila = mysqli_fetch_assoc($res)) {

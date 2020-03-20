@@ -1,5 +1,4 @@
 <?php
-echo var_dump($_POST);
 if (isset($_POST['password']) && $_POST['password'] != '' && isset($_POST['usuario']) && $_POST['usuario'] != '') {
 
     //---------------BD
@@ -7,8 +6,6 @@ if (isset($_POST['password']) && $_POST['password'] != '' && isset($_POST['usuar
 FROM usuario
 INNER JOIN roles ON roles.id_rol=usuario.id_rol';
     $res = mysqli_query($conexion, $sql);
-
-
 
     foreach ($res as $fila){
         if ($fila['nombre']== $_POST['usuario']){
@@ -23,22 +20,18 @@ INNER JOIN roles ON roles.id_rol=usuario.id_rol';
             $_SESSION['registrado'] = 'ok';
             $_SESSION['usuario'] = $_SESSION_TMP['usuario'];
             if ($_SESSION['usuario']['id_rol'] == 1){
-                http_response_code(200);
+                $http_code = 200;
             }else{
-                http_response_code(403);
+                $http_code = 403;
             }
 
         }else{
-            http_response_code(401);
+            $http_code = 401;
         }
     }else{
-        http_response_code(401);
+        $http_code = 401;
     }
 } else {
-
-
-    http_response_code(400);
+    $http_code = 400;
 }
-
-
 

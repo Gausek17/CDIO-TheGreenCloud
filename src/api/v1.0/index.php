@@ -13,12 +13,19 @@ $operacion = strtolower($_SERVER['REQUEST_METHOD']);
 
 $vista = 'json';
 $salida = array();
+
+
 //Por defecto se supondra que no existe el archivo, por lo que no entra al archivo y no se le cambia el estado
 $http_code= 404;
-
+$id = -1;
 //LINEA DEBUG
 //Con el @ omitimos los mensajes de error en la pagina
-@include "modelos/$operacion-$recurso.php";
-if ($recurso != 'sesion'){
-    @include "vistas/$vista.php";
+
+if (strpos($recurso, '&') !== false) {
+    $id = str_replace("usuario&", "", $recurso);
+    $recurso = str_replace("&".$id, "", $recurso);
 }
+
+@include "modelos/$operacion-$recurso.php";
+@include "vistas/$vista.php";
+

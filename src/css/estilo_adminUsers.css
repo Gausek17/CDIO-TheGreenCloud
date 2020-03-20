@@ -13,7 +13,6 @@ body{
 }
 
 .container{
-
     align-items: center;
     margin-right: 7.5rem;
     margin-left: 7.5rem;
@@ -103,11 +102,16 @@ ul li a{
     align-items: center;
     background-color: #800053;
 }
+.divContenidoUserNuevo{
+    display: none;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.25rem;
+}
 .divContenidoUser{
     padding: 1.5rem;
-    height: 580px;
+    height: 570px;
     overflow: auto;
-
 }
 
 .divNuevoUsuario{
@@ -115,21 +119,44 @@ ul li a{
     align-items: center;
 
 }
+.formNuevoUsuario{
+
+}
 .iconNuevoUsuario{
     width: 75px;
     height: auto;
     padding-left: 2.5rem;
-    padding-bottom: 0.5rem;
+   margin-bottom: 0.7rem;
+}
+.iconNuevoUsuario:hover{
+    cursor: pointer;
 }
 .divTextoPersona{
     color: white;
-    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.divTextoNuevaPersona{
+    color: white;
+    display: flex;
+    flex-direction: column;
 }
 .navUsuarios{
     border: 4px solid black;
 }
 
 .divPerson{
+    display: flex;
+    background-color: #797979;
+    border-radius: 15px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.divNuevaPersona{
     display: flex;
     background-color: #797979;
     border-radius: 15px;
@@ -147,9 +174,15 @@ ul li a{
     width:50px ;
     height: 50px;
 }
+.iconDeleteUser:hover{
+    cursor: pointer;
+}
 .iconEditUser{
     width: 50px;
     height: 50px;
+}
+.iconEditUser:hover{
+    cursor: pointer;
 }
 
 /*SCROL BARR*/
@@ -182,6 +215,25 @@ ul li a{
 .iconNuevoUsuario{
     margin-top: 1rem;
 }
+.iconAceptarCancelNuevo{
+    width: 50px;
+    height: 50px;
+}
+.iconAceptarCancelNuevo:hover{
+    cursor: pointer;
+}
+
+.iconAceptarCancel{
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+.iconAceptarCancel:hover{
+    cursor: pointer;
+}
+
+
 
 /*------RESPONSIVE----------*/
 @media only screen and (max-width:900px){
@@ -209,6 +261,7 @@ ul li a{
         margin-bottom: 1rem;
     }
 
+
 }
 
 @media only screen and (max-width: 450px) {
@@ -230,6 +283,11 @@ ul li a{
         width: 40px;
         height: 40px;
     }
+    .iconAceptarCancel{
+
+        width: 40px;
+        height: 40px;
+    }
     .divContenidoUser{
         padding: 0.5rem;
     }
@@ -237,6 +295,22 @@ ul li a{
         width: 65px;
         height: 65px;
 
+    }
+    .textNombre{
+        font-size: 1rem;
+        width: 9rem;
+    }
+    .textCorreo{
+        font-size: 1rem;
+        width: 9rem;
+    }
+    .divNuevaPersona{
+        flex-direction: column;
+    }
+    .divTextoNuevaPersona{
+        color: white;
+        display: flex;
+        width: 10rem;
     }
 
 
@@ -297,6 +371,32 @@ ul li a{
 .menuText{
     font-size: 1.2rem;
     padding-left: 1rem;
+}
+.textCorreo{
+
+    font-size: 1.2rem;
+    border: 0;
+    background: transparent;
+}
+.textCorreo:disabled{
+    color: white;
+}
+.textNombre{
+    font-size: 1.5rem;
+    border: 0;
+    background: transparent;
+    margin-bottom: 0.5rem;
+}
+.textNombre:disabled{
+    color: white;
+}
+.textNombre:enabled{
+    color: white;
+    background: #423f3e;
+}
+.textCorreo:enabled{
+    color: white;
+    background: #423f3e;
 }
 
 /* Position and style the close button (top right corner) */
