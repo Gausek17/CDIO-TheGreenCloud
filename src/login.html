@@ -39,7 +39,6 @@
         </section>
         <p class="textoConcato">¿Aún no eres miembro?</p>
         <button class="botonContacto" onclick="window.location.href='Contacto.html'">Contacta con nosotros</button>
-
     </section>
 
 </div>
@@ -54,7 +53,7 @@
                 console.log(respuesta)
                location.href = './app';
             } else if(respuesta.status === 403){
-                alert("Su usuario no dispone de permiso para acceder a esta página.");
+                location.href = './app/ParcelasUser.php';
             }else{
                 document.getElementById("textoError").style.display ='block';
             }

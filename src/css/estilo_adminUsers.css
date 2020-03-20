@@ -4,9 +4,16 @@
 body{
     margin: 0 auto;
 }
+.logoGTI:hover{
+    cursor: pointer;
+}
 
 .cerrar_sesion{
     width: 30px;
+    
+}
+.cerrar_sesion:hover{
+    cursor: pointer;
 }
 .iconMenu{
     display: none;
@@ -254,12 +261,13 @@ ul li a{
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
-    .iconMenu{
-        display: block;
-    }
     .logoGTI{
         display: none;
     }
+    .iconMenu{
+        display: block;
+    }
+
     .iconUseer{
         margin-top: 1rem;
         margin-bottom: 1rem;

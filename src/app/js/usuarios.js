@@ -13,8 +13,6 @@ let ModeloUsuarios = {
         fetch('../api/v1.0/usuarios').then(function (respuesta) {
             return respuesta.json();
         }).then((datosJson) =>{
-            console.log("------------------")
-            console.log(this);
             this.datosUsuarios = datosJson;
             this.controlador.representarUsurios();
 
@@ -70,7 +68,10 @@ let ControladorUsuarios = {
         this.vista.representar(this.modelo.datos);
     },
     representarUsurios: function () {
-        this.vista.representarUsurios(this.modelo.datosUsuarios);
+        if (this.vista.divUsuarios !=null){
+            this.vista.representarUsurios(this.modelo.datosUsuarios);
+        }
+
     }
 };
 

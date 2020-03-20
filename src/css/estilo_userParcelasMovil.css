@@ -4,8 +4,14 @@
 body{
     margin: 0 auto;
 }
+.logoGTI:hover{
+    cursor: pointer;
+}
 .cerrar_sesion{
     width: 30px;
+}
+.cerrar_sesion:hover{
+    cursor: pointer;
 }
 .iconMenu{
     display: none;

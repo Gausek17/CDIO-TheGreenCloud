@@ -3,8 +3,7 @@
 $servidor='localhost';
 $usuario='root';
 $password='';
-$db='sprint2';
-$conexion = mysqli_connect('localhost','root','','sprint2');
-
+$db='bd_tgc';
+$conexion = mysqli_connect($servidor,$usuario,$password,$db);
 
 ?>

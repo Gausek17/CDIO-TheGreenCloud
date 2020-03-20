@@ -6,8 +6,17 @@ body{
     
     margin: 0 auto;
 }
+.logoGTI:hover{
+    cursor: pointer;
+}
 .cerrar_sesion{
     width: 30px;
+}
+.cerrar_sesion:hover{
+    cursor: pointer;
+}
+.iconNuevoUsuario:hover{
+    cursor: pointer;
 }
 .iconMenu{
     display: none;
@@ -29,6 +38,7 @@ header{
     justify-content: space-between;
 
 }
+
 .divCentral{
     height: 100%;
     display: flex;
@@ -324,7 +334,9 @@ ul li a{
         height: 65px;
 
     }
-
+    .divNuevoUsuario{
+        flex-direction: column;
+    }
 
     header{
         margin-bottom: 0.5rem;

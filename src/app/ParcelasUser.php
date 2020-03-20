@@ -5,23 +5,24 @@
     <title>AdminSection</title>
     <link rel="stylesheet" type="text/css" href="../css/estilo_userParcelasMovil.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="js/sesion.js"></script>
 </head>
 <body>
 
 <div class="container" id="container">
     <div id="mySidenav" class="sidenav">
         <div class="headerMenu"><span class="menuTextAdmin">User Panel</span><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
-            <a href="#" class="itemMenu"><img src="../imagenes/admin/IconoCampo-White.png" alt="imagenCampo" class="iconParcelas"><span class="menuText">Parcelas</span></a>
+            <a href="ParcelasUser.php" class="itemMenu"><img src="../imagenes/admin/IconoCampo-White.png" alt="imagenCampo" class="iconParcelas"><span class="menuText">Parcelas</span></a>
 
         
     </div>
     <header>
-         <a href="index.html"><img class="logoGTI" src="../imagenes/logoGTI.svg"></a>
+        <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
         <img onclick="openNav()" src="../imagenes/admin/iconMenu.png" alt="Menu" class="iconMenu">
         <div class="divUsuario">
             <p id="textNombreUsuario">Nombre Usuario</p>
             <img src="../imagenes/iconUser.png" alt="Icono Usuario" class="iconUseer">
-            <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion" >
+            <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion" onclick="deleteSesion()" >
         </div>
     </header>
     <div class="divCentral">
@@ -46,11 +47,15 @@
                  <label ><select id="parcela" onchange="dibujarParcelas()"  >
             <option selected="selected"  value="-10" onclick="removeLine()">Todos</option>
             <?php
-            include 'conexion.php';
-            
-            $consulta='SELECT * from parcela p
+            include '../api/includes/conexion.php';
+            session_start();
+            $id = $_SESSION['usuario']['id_usuario'];
+            $consulta="SELECT p.id_parcela as id_parcela, p.color as color, p.id_campo as id_campo, p.nombre as nombre, c.id_coordenada as id_coordenda, c.latitud as latitud, c.longitud as longitud from parcela p
                            INNER JOIN coordenadas c 
-                           ON p.id_parcela = c.id_parcela';
+                           ON p.id_parcela = c.id_parcela
+                           INNER JOIN campo
+                           on campo.id_campo= p.id_campo
+                           WHERE campo.id_cliente='$id'";
             $ejecutar=mysqli_query($conexion,$consulta);
 
 
@@ -62,8 +67,6 @@
                 $idNuevo = $opciones['id_parcela'];
 
                 if ($idInicial==$idNuevo){
-
-
                     $coord= (object) [
                         'lat' => $opciones['latitud'],
                         'lng' => $opciones['longitud']
@@ -110,10 +113,6 @@
 
 
                 <option value="<?= htmlspecialchars(json_encode($object))?>"> <?php echo $opciones['nombre'];} ?> </option>
-
-
-
-
 
             <?php
 
@@ -312,6 +311,18 @@
         }
         document.getElementById("panelActual").style.opacity = "1";
     }
+
+    function deleteSesion() {
+        fetch('../api/v1.0/sesion',{method:'delete'}).then(
+            function(respuesta) {
+                if(respuesta.status === 200) location.href = '..';
+            })
+    }
+</script>
+<script src="js/usuarios.js"></script>
+<script>
+    VistaSelectorUsuios.iniciar("textNombreUsuario", "null");
+    ControladorUsuarios.iniciar();
 </script>
 </body>
 </html>

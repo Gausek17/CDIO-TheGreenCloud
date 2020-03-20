@@ -5,25 +5,23 @@
     <title>AdminSection</title>
     <link rel="stylesheet" type="text/css" href="../css/estilo_adminParcelasMovil.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="js/sesion.js"></script>
 </head>
 <body>
 
 <div class="container" id="container">
     <div id="mySidenav" class="sidenav">
         <div class="headerMenu"><span class="menuTextAdmin">Admin Panel</span><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
-            <a href="#" class="itemMenu"><img src="../imagenes/admin/IconoCampo-White.png" alt="imagenCampo" class="iconParcelas"><span class="menuText">Parcelas</span></a>
-
-            <a href="#" class="itemMenu"><img src="../imagenes/admin/groupIcon-White.png" alt="Imagen Usuarios" class="iconGestionUsuarios"><span class="menuText">Gestión Usuarios</span></a>
-
-
+            <a href="ParcelasAdmin.php" class="itemMenu"><img src="../imagenes/admin/IconoCampo-White.png" alt="imagenCampo" class="iconParcelas"><span class="menuText">Parcelas</span></a>
+            <a href="Index.html" class="itemMenu"><img src="../imagenes/admin/groupIcon-White.png" alt="Imagen Usuarios" class="iconGestionUsuarios"><span class="menuText">Gestión Usuarios</span></a>
     </div>
     <header>
-        <a href="index.html"><img class="logoGTI" src="../imagenes/logoGTI.svg"></a>
+        <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
         <img onclick="openNav()" src="../imagenes/admin/iconMenu.png" alt="Menu" class="iconMenu">
         <div class="divUsuario">
             <p id="textNombreUsuario">Nombre Usuario</p>
             <img src="../imagenes/iconUser.png" alt="Icono Usuario" class="iconUseer">
-            <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion" >
+            <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion" onclick="deleteSesion()" >
         </div>
     </header>
     <div class="divCentral">
@@ -33,7 +31,7 @@
                 <li class="navParcela">
                        <a href="#" class="itemNav"><img src="../imagenes/admin/IconoCampo-White.png" alt="Imagen Campo" class="iconParcelas"><span class="textNav">Parcela</span></a></li>
                 <li class="navUsuarios">
-                    <a href="#" class="itemNav"><img src="../imagenes/admin/groupIcon-White.png" alt="Gestión Usuarios" class="iconGestionUsuarios"><span class="textNav">Gestión Usuarios</span></a></li>
+                    <a href="Index.html" class="itemNav"><img src="../imagenes/admin/groupIcon-White.png" alt="Gestión Usuarios" class="iconGestionUsuarios"><span class="textNav">Gestión Usuarios</span></a></li>
             </ul>
         </nav>
         <div class="divContenido">
@@ -41,17 +39,22 @@
                 <img src="../imagenes/parcelas/IconoCampo-White.png" alt="Gestión Usuarios" class="iconGestionUsuariosSelected"> Parcelas
             </div>
             <div class="divNuevoUsuario">
+
                 <img src="../imagenes/parcelas/icono-maps.png" alt="Añadir usuario" class="iconNuevoUsuario">
                 <p><u>Seleccione la parcela</u></p>
                <section class="seleccion">
                  <label ><select id="parcela" onchange="dibujarParcelas()"  >
             <option selected="selected"  value="-10" onclick="removeLine()">Todos</option>
             <?php
-            include 'conexion.php';
-            
-            $consulta='SELECT * from parcela p
+            include '../api/includes/conexion.php';
+            session_start();
+            $id = $_SESSION['usuario']['id_usuario'];
+            $consulta="SELECT p.id_parcela as id_parcela, p.color as color, p.id_campo as id_campo, p.nombre as nombre, c.id_coordenada as id_coordenda, c.latitud as latitud, c.longitud as longitud from parcela p
                            INNER JOIN coordenadas c 
-                           ON p.id_parcela = c.id_parcela';
+                           ON p.id_parcela = c.id_parcela
+                           INNER JOIN campo
+                           on campo.id_campo= p.id_campo
+                           WHERE campo.id_cliente='$id'";
             $ejecutar=mysqli_query($conexion,$consulta);
 
 
@@ -129,11 +132,6 @@
                  </section>  
                    
                 <section class="button">
-                <!--<button class="delete">Limpiar Mapa</button>
-                <div class="borrado">
-                    <a href="#"
-                        ></a>
-                </div>-->
                 <input class="delete" type="button" onclick="removeLine();" value="LIMPIAR MAPA">
                 </section>
             </div>
@@ -300,7 +298,7 @@
         for (let i = 0; i<lista.length; i++){
             lista[i].style.opacity = "0.5";
         }
-        document.getElementById("panelActual").style.opacity = "0.5";
+
     }
 
     /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
@@ -311,8 +309,20 @@
         for (let i = 0; i<lista.length; i++){
             lista[i].style.opacity = "1";
         }
-        document.getElementById("panelActual").style.opacity = "1";
+
     }
+    function deleteSesion() {
+        fetch('../api/v1.0/sesion',{method:'delete'}).then(
+            function(respuesta) {
+                if(respuesta.status === 200) location.href = '..';
+            })
+    }
+</script>
+
+<script src="js/usuarios.js"></script>
+<script>
+    VistaSelectorUsuios.iniciar("textNombreUsuario", "null");
+    ControladorUsuarios.iniciar();
 </script>
 </body>
 </html>
