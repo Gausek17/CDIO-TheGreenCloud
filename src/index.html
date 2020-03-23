@@ -11,9 +11,26 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        body {
-            margin-right: 7.5rem;
-            margin-left: 7.5rem;
+        
+     #identificate {
+            border-radius: 10px;
+            padding: 10px;
+            border: 1.5px solid purple;
+            background-color: plum;
+            font-weight: 700;
+            font-family: "Trebuchet MS";
+            font-size: 20px;
+            margin-right: 50PX;
+            padding-left: 20px;
+            padding-right: 20px; 
+            
+    }
+
+        #identificate:hover {
+            background-color: blueviolet;
+            color: white;
+            border: 1.5px solid white;
+
         }
         
 .footer-distributed{
@@ -146,8 +163,8 @@
  
 @media (max-width: 880px) {
     body {
-        margin-right: 1rem;
-        margin-left: 1rem;
+       /* margin-right: 1rem;
+        margin-left: 1rem;*/
     }
  
 	.footer-distributed .footer-left,
@@ -196,27 +213,7 @@
             height: 80px
         }
 
-        #identificate {
-            border-radius: 10px;
-            padding: 10px;
-            margin-right: 17px;
-            padding-left: 50px;
-            padding-right: 50px;
-            border: 1.5px solid purple;
-            background-color: plum;
-            font-weight: 700;
-            font-family: "Trebuchet MS";
-            font-size: 20px;
-            width: auto;
-            /*width: 200px;*/
-        }
-
-        #identificate:hover {
-            background-color: blueviolet;
-            color: white;
-            border: 1.5px solid white;
-
-        }
+        
 
         .landing {
             background-image: url(imagenes/index/Campo2.jpg);
@@ -401,17 +398,21 @@
         }
 
         @media(max-width:620px) {
-            body {
-                margin-right: 0;
-                margin-left: 0;
+            body{
+                width: 100%;
+                align-content: center;
+                padding-right: 0px;
+                margin-right: 0px;
+                
+                
             }
             header a img {
                 width: 280px;
             }
 
             #identificate {
-                padding-left: 25px;
-                padding-right: 25px;
+               
+                
                 text-align: center;
                 font-size: 15px;
 
@@ -476,6 +477,64 @@
             }
 
         }
+        @media(max-width:400px){
+            .gti-logo{
+                width: 140px;
+                
+            }
+            body{
+                width: 100%;
+                align-content: center;
+                padding-right: 0px;
+                margin-right: 0px;
+                
+                
+            }
+            header{
+              
+            }
+            #identificate{
+                display: block;
+                width: 70px;
+                font-size: 10px;
+                font-size: 8px;
+                padding-left: 14px;
+                margin-right: 10px;
+                
+                
+            }
+            .modernizacion {
+            font-size: 40px;
+            
+        }
+            .contactanos{
+                width: 120px;
+                font-size: 11px;
+            }
+            .titulo2{
+                font-size: 40px;
+            }
+            #trigo{
+                80px;
+            }
+            #sensor{
+                width: 80px;
+                
+                
+            }
+            .car2{
+                margin-left: 100px;
+            }
+            #ipad{
+                80px;
+            }
+            .footer-distributed h3{
+	            color:  #ffffff;
+	            font: normal 25px 'Cookie', cursive;
+	            margin: 0;
+            }
+            
+        }
 
     </style>
 </head>
@@ -483,7 +542,7 @@
 <body>
     <img src="imagenes/index/arrow.svg" alt="flecha hacia arriba" onclick="topFunction()" id="miBoton" title="Ir arriba">
     <header class="header">
-        <a href="index.html"><img src="imagenes/logoGTI.svg"></a>
+        <a href="index.html"><img class="gti-logo" src="imagenes/logoGTI.svg"></a>
         <button id="identificate" onclick="location.href='login.html'">Identificate</button>
     </header>
     <section class="landing">
