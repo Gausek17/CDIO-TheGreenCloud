@@ -1,11 +1,8 @@
 <?php
 session_start();
 if (isset($_SESSION['registrado']) && $_SESSION['registrado'] == 'ok') {
-    if ($_SESSION['usuario']['id_rol'] == "1"){
-        $http_code = 200;
-    }else{
-        $http_code = 403;
-    }
+    array_push($salida, $_SESSION["usuario"]);
+    $http_code = 200;
 } else {
     $http_code = 401;
 }

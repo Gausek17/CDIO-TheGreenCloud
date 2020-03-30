@@ -21,6 +21,8 @@ $id = -1;
 //LINEA DEBUG
 //Con el @ omitimos los mensajes de error en la pagina
 
+
+//Comprobamos si la peticion contiene el caracter &, lo que implica que en la peticion habra una id
 if (strpos($recurso, '&') !== false) {
     $id = str_replace("usuario&", "", $recurso);
     $recurso = str_replace("&".$id, "", $recurso);

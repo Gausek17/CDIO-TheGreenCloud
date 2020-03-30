@@ -7,6 +7,7 @@ FROM usuario
 INNER JOIN roles ON roles.id_rol=usuario.id_rol';
     $res = mysqli_query($conexion, $sql);
 
+
     foreach ($res as $fila){
         if ($fila['nombre']== $_POST['usuario']){
             $_SESSION_TMP['usuario'] = $fila;
@@ -19,11 +20,9 @@ INNER JOIN roles ON roles.id_rol=usuario.id_rol';
             session_start();
             $_SESSION['registrado'] = 'ok';
             $_SESSION['usuario'] = $_SESSION_TMP['usuario'];
-            if ($_SESSION['usuario']['id_rol'] == 1){
-                $http_code = 200;
-            }else{
-                $http_code = 403;
-            }
+            array_push($salida, $_SESSION['usuario'] );
+
+            $http_code = 200;
 
         }else{
             $http_code = 401;

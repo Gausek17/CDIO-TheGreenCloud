@@ -19,8 +19,6 @@ if ($id == 0){
 
 
 $res = mysqli_query($conexion, $sql);
-echo $sql;
-var_dump($res);
 if($res==true){
     $http_code= 200;
 }else{
