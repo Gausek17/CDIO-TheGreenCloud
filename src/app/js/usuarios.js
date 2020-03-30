@@ -2,7 +2,7 @@ let ModeloUsuarios = {
     datos : [],
     datosUsuarios:[],
     cargar : function () {
-        fetch('../api/v1.0/current').then(function (respuesta) {
+        fetch('../api/v1.0/sesion').then(function (respuesta) {
             return respuesta.json();
         }).then((datosJson) =>{
 
@@ -30,7 +30,6 @@ let VistaSelectorUsuios = {
         this.divUsuarios = document.getElementById(divID);
     },
     representar : function (datos) {
-                console.log(datos);
                 this.nombreUsuario.innerHTML = "Bienvenido "+datos[0].nombre;
     },
     representarUsurios : function (datos) {
@@ -109,7 +108,9 @@ function aceptar(id){
         method : 'post',
         body : formData
     }).then(function (respuesta) {
-        console.log(respuesta.status);
+        if(respuesta.status !== 200){
+            window.alert("Se ha producido un error a la hora de modificar el usuario.");
+        }
     });
 
 }
@@ -150,6 +151,7 @@ function nuevoUser() {
     formData.append("password",document.getElementById("nuevaPassword").value);
     //Se supone que solo pueden registraser trbajadores de campo
     formData.append("id_rol","2");
+    //Se hace la peticion con id_Usuario 0, por lo que implica que se creara un usuario
     fetch('../api/v1.0/usuario&0', {
         method : 'post',
         body : formData
@@ -158,7 +160,7 @@ function nuevoUser() {
             ControladorUsuarios.iniciar();
             cancelarNuevoUser();
         }else{
-            alert("Se ha producido un error con el insert.")
+            alert("Se ha producido un error a la hora de crear el usuario.")
         }
     });
     

@@ -1,0 +1,116 @@
+nav{
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    width: 350px;
+    background-color:#800053;
+    display: table-cell;
+
+}
+ul{
+    padding: 0;
+}
+ul li{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 20px;
+    padding: 0.25rem;
+}
+.iconParcelas{
+    height: 90px;
+    width: 90px;
+}
+.iconGestionUsuarios{
+    width: 100px;
+    height: auto;
+}
+
+.iconGestionUsuariosSelected{
+    width: 69px;
+    height: auto;
+}
+.iconMediciones{
+    width: 69px;
+    height: auto;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width:900px) {
+    nav {
+        display: none;
+    }
+    .logoGTI {
+        display: none;
+    }
+
+    .iconMenu {
+        display: block;
+    }
+
+}
+
+.textNav{
+    margin-left: 0.7rem;
+}
+
+/*------MENU LATERAL ----------*/
+
+
+.sidenav {
+    height: 100%;
+    width: 0; /*se cambia con JS */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #800053; /* Black*/
+    overflow-x: hidden;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.headerMenu{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1rem;
+
+}
+.menuTextAdmin{
+    font-size: 1.5rem;
+}
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    transition: 0.3s;
+}
+/* When you mouse over the navigation links, change their color */
+.itemMenu:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.itemMenu{
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.menuText{
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    right: 25px;
+    font-size:3rem;
+    margin-left: 50px;
+}

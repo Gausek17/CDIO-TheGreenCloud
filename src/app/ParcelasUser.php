@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>AdminSection</title>
-    <link rel="stylesheet" type="text/css" href="../css/estilo_userParcelasMovil.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_parcelas.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="js/sesion.js"></script>
 </head>
@@ -11,35 +12,27 @@
 
 <div class="container" id="container">
     <div id="mySidenav" class="sidenav">
-        <div class="headerMenu"><span class="menuTextAdmin">User Panel</span><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
-            <a href="ParcelasUser.php" class="itemMenu"><img src="../imagenes/admin/IconoCampo-White.png" alt="imagenCampo" class="iconParcelas"><span class="menuText">Parcelas</span></a>
-
-        
+        <!-- Nav generado en js-->
     </div>
     <header>
         <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
-        <img onclick="openNav()" src="../imagenes/admin/iconMenu.png" alt="Menu" class="iconMenu">
+        <img onclick="openNav()" src="../imagenes/menu/iconMenu.png" alt="Menu" class="iconMenu">
         <div class="divUsuario">
             <p id="textNombreUsuario">Nombre Usuario</p>
             <img src="../imagenes/iconUser.png" alt="Icono Usuario" class="iconUseer">
             <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion" onclick="deleteSesion()" >
         </div>
     </header>
-    <div class="divCentral">
-        <nav>
-            <p class="textAdmin">User Panel</p>
-            <ul>
-                <li class="navParcela">
-                       <a href="#" class="itemNav"><img src="../imagenes/admin/IconoCampo-White.png" alt="Imagen Campo" class="iconParcelas"><span class="textNav">Parcela</span></a></li>
-                
-            </ul>
+    <div class="divCentral" id="classCentral">
+        <nav id="navGeneral">
+            <!-- Nav generado en js-->
         </nav>
         <div class="divContenido">
             <div class="divPanelActual">
                 <img src="../imagenes/parcelas/IconoCampo-White.png" alt="Gestión Usuarios" class="iconGestionUsuariosSelected"> Parcelas
             </div>
-            <div class="divNuevoUsuario">
-                <img src="../imagenes/parcelas/icono-maps.png" alt="Añadir usuario" class="iconNuevoUsuario">
+            <div class="divSeleccionParcela">
+                <img src="../imagenes/parcelas/icono-maps.png" alt="Selección Parcela" class="iconSeleccionParcela">
                 <p><u>Seleccione la parcela</u></p>
                 
                    
@@ -289,40 +282,20 @@
     </div>
 
 
-<script>
-    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "300px";
-        document.body.style.backgroundColor = "rgba(0,0,0,0.7)"
-        var lista = document.getElementsByClassName("divPerson");
-        for (let i = 0; i<lista.length; i++){
-            lista[i].style.opacity = "0.5";
-        }
-        document.getElementById("panelActual").style.opacity = "0.5";
-    }
-
-    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.body.style.backgroundColor = "white";
-        var lista = document.getElementsByClassName("divPerson");
-        for (let i = 0; i<lista.length; i++){
-            lista[i].style.opacity = "1";
-        }
-        document.getElementById("panelActual").style.opacity = "1";
-    }
-
-    function deleteSesion() {
-        fetch('../api/v1.0/sesion',{method:'delete'}).then(
-            function(respuesta) {
-                if(respuesta.status === 200) location.href = '..';
-            })
-    }
-</script>
 <script src="js/usuarios.js"></script>
+<script src="js/menuUser.js"></script>
+<script src="js/sideNav.js"></script>
+
 <script>
     VistaSelectorUsuios.iniciar("textNombreUsuario", "null");
     ControladorUsuarios.iniciar();
+
+    VistaMenu.setNav("navGeneral");
+    VistaMenu.crearNav();
+
+    VistaMenu.setSideNav("mySidenav");
+    VistaMenu.crearSideNav();
+
 </script>
 </body>
 </html>

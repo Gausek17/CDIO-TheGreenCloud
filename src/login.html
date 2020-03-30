@@ -8,6 +8,7 @@
     <title>Login</title>
     <!-- script para los iconos -->
     <link rel="stylesheet" type="text/css" href="css/estilo_login.css">
+    <script src="js/sesionLogin.js"></script>
 </head>
 
 <body>
@@ -42,24 +43,31 @@
             <button class="botonContacto" onclick="window.location.href='Contacto.html'">Contacta con nosotros</button>
         </section>
 
-    </div>
-    <script>
-        function enviar(evento) {
-            evento.preventDefault();
-            fetch('api/v1.0/sesion', {
-                method: 'post',
-                body: new FormData(document.getElementById('formLogin'))
-            }).then(function(respuesta) {
-                if (respuesta.status === 200) {
-                    console.log(respuesta)
-                    location.href = './app';
-                } else if (respuesta.status === 403) {
-                    location.href = './app/ParcelasUser.php';
-                } else {
-                    document.getElementById("textoError").style.display = 'block';
-                }
-            })
-        }
+</div>
+<script>
+    function enviar(evento){
+        evento.preventDefault();
+        fetch('api/v1.0/sesion', {
+            method : 'post',
+            body : new FormData(document.getElementById('formLogin'))
+        }).then(function (respuesta) {
+
+            if(respuesta.status === 200) {
+                //Si la respuesta es correcta, obtnemos una objtos json par saber si el usurio es admin o no
+                respuesta.json().then(value =>{
+                    if(value[0].id_rol === "1"){
+                        location.href='./app';
+                    }else{
+                        location.href='./app/ParcelasUser.php';
+                    }
+                });
+
+            }else {
+                document.getElementById("textoError").style.display ='block';
+            }
+        });
+    }
+</script>
 
     </script>
 

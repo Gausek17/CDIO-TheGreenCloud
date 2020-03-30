@@ -1,0 +1,267 @@
+*{
+    font-family: "Trebuchet MS";
+}
+
+body{
+    
+    margin: 0 auto;
+}
+.logoGTI:hover{
+    cursor: pointer;
+}
+.cerrar_sesion{
+    width: 30px;
+}
+.cerrar_sesion:hover{
+    cursor: pointer;
+}
+
+.iconMenu{
+    display: none;
+    width: 50px;
+    height: 55px;
+    margin-top: 0.7rem;
+    margin-left: 0.5rem;
+}
+
+.container{
+
+    align-items: center;
+    margin-right: 7.5rem;
+    margin-left: 7.5rem;
+    margin-bottom: 1.5rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.divCentral{
+    height: 100%;
+    display: flex;
+    border-radius: 15px;
+}
+.divUsuario{
+
+    display: flex;
+    align-items: center;
+}
+.iconUseer{
+    margin-left: 2rem;
+    margin-right: 0.75rem;
+    width: 75px;
+    height: 75px;
+}
+.seleccion{ 
+    margin-left: 10px;
+}
+
+.seleccion select{
+    background-color: #800053;
+    color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+
+.textAdmin{
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    text-align: center;
+}
+nav{
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    width: 350px;
+    background-color:#800053;
+    display: table-cell;
+
+}
+.boton{
+    border-radius: 200px 200px 200px 200px;
+    border: none;
+    margin-left: 10px;
+}
+.lista a{
+    color: black;
+    display: block;
+    padding: 12px;
+}
+.lista{
+    background-color: #d9c0fc;
+    display: none;
+    width: 180px;
+    position: absolute;
+    z-index: 100;
+}
+.lista a:hover{
+    background-color: #f1f1f1;
+}
+.desplegable:hover .lista{
+    display: block;
+    
+}
+.despegable{
+    position: absolute;
+}
+
+.delete{
+    cursor: pointer;
+    background-color: #800053;
+    color: white;
+    border-radius: 46px 46px 46px 46px;
+    border: 2px solid black;
+    
+    padding: 1rem;
+    
+}
+.delete:hover{
+    background-color: rgba(169, 69, 206, 0.72);
+    color: black;
+}
+.button{
+   align-content: space-between;
+    padding: 1rem;
+    margin-left: 17px;
+}
+.iconGestionUsuariosSelected{
+    width: 69px;
+    height: auto;
+    margin-right: 10px;
+}
+.iconSeleccionParcela{
+    width: 75px;
+    height: auto;
+    padding-left: 2.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.divSeleccionParcela{
+    display: flex;
+    align-items: center;
+
+}
+
+.divContenido{
+    width: 100%;
+}
+.divPanelActual{
+    border-top-right-radius: 15px;
+    border-bottom: 2px solid white;
+    font-size: 1.2rem;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #800053;
+}
+.divContenidoUser{
+    padding: 1.5rem;
+    height: 580px;
+    overflow: auto;
+
+}
+
+.navParcela{
+    border: 4px solid black;
+}
+
+#map{
+    width: inherit;
+    height: inherit;
+    border: solid 3px black;
+    margin-right: 30px;
+    margin-left: 170px;
+
+}
+
+/*SCROL BARR*/
+
+.divContenidoUser::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.divContenidoUser::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.divContenidoUser::-webkit-scrollbar-button:increment,.divContenidoUser::-webkit-scrollbar-button {
+    display: none;
+}
+
+.divContenidoUser::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.divContenidoUser::-webkit-scrollbar-thumb {
+    background-color: #800053;
+    border-radius: 20px;
+}
+
+.divContenidoUser::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #797979;
+}
+/*------RESPONSIVE----------*/
+@media only screen and (max-width:900px){
+    .divContenidoUser{
+        overflow: inherit;
+    }
+    .divPanelActual{
+        border-radius: 15px;
+    }
+    .container{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .iconUseer{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    #map{
+    width: inherit;
+    height: inherit;
+    border: solid 3px black;
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+  
+
+}
+@media only screen and (max-width: 450px) {
+
+    .divContenidoUser{
+        padding: 0.5rem;
+    }
+    .iconUseer{
+        width: 65px;
+        height: 65px;
+
+    }
+    .iconSeleccionParcela{
+        padding-left: 0;
+        width: 55px;
+        margin-right: 0.5rem;
+    }
+    .button{
+        margin-left: 0;
+        padding-left: 0.5rem;
+    }
+    .divSeleccionParcela{
+       flex-direction: column;
+    }
+
+    header{
+        margin-bottom: 0.5rem;
+    }
+
+}
