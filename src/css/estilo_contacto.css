@@ -1,0 +1,264 @@
+        .header {
+            border: 0px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #identificate {
+            border-radius: 10px;
+            padding: 10px;
+            margin-right: 17px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: 1.5px solid purple;
+            background-color: plum;
+            font-weight: 700;
+            font-family: "Trebuchet MS";
+            font-size: 20px;
+            width: auto;
+            cursor: pointer;
+            /*width: 200px;*/
+        }
+
+        #identificate:hover {
+            background-color: blueviolet;
+            color: white;
+            border: 1.5px solid white;
+        }
+
+        .form {
+            background: #e8d9f2;
+            border: 0px solid black;
+        }
+
+        .form-group {
+            color: white;
+        }
+
+        .form-control {
+            width: 60%;
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 0.7rem;
+        }
+
+        .form-control:focus {
+            border: 3px solid #555;
+        }
+
+        body {
+            justify-content: center;
+        }
+
+        .contacto {
+            background: #642164;
+            justify-content: center;
+            margin: auto;
+            max-width: 500px;
+            padding: 30px;
+            border: 3px solid black;
+            border-radius: 20px;
+            color: white;
+        }
+
+        #consult {
+            font-family: "Trebuchet MS";
+            border: 2px solid black;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .input,
+        .btn_submit,
+        .btn_reset {
+            background-color: #270b3b;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+
+        .btn_submit:hover {
+            background-color: #d080d0;
+            color: black;
+        }
+
+        .btn_reset:hover {
+            background-color: #d080d0;
+            color: black;
+        }
+
+        #phone {
+            margin-top: 9px;
+        }
+
+
+        @media (max-height:800px) {
+            header {
+                padding-top: 40px;
+            }
+        }
+
+        .footer-distributed {
+            background-color: #2c292f;
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+            padding: 50px 50px 60px 50px;
+        }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* Footer left */
+
+        .footer-distributed .footer-left {
+            width: 30%;
+        }
+
+        .footer-distributed h3 {
+            color: #ffffff;
+            font: normal 36px 'Cookie', cursive;
+            margin: 0;
+        }
+
+
+        .footer-distributed h3 span {
+            color: #d080d0;
+        }
+
+        /* Footer links */
+
+        .footer-distributed .footer-links {
+            color: #ffffff;
+            margin: 20px 0 12px;
+        }
+
+        .footer-distributed .footer-links a {
+            display: inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .footer-distributed .footer-company-name {
+            color: #8f9296;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        /* Footer Center */
+
+        .footer-distributed .footer-center {
+            width: 35%;
+        }
+
+
+        .footer-distributed .footer-center i {
+            background-color: #33383b;
+            color: #ffffff;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+
+        .footer-distributed .footer-center i.fa-envelope {
+            font-size: 17px;
+            line-height: 38px;
+        }
+
+        .footer-distributed .footer-center p {
+            display: inline-block;
+            color: #ffffff;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-center p span {
+            display: block;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .footer-distributed .footer-center p a {
+            color: #a082a0;
+            text-decoration: none;
+        }
+
+
+        /* Footer Right */
+
+        .footer-distributed .footer-right {
+            width: 30%;
+        }
+
+        .footer-distributed .footer-company-about {
+            line-height: 20px;
+            color: #92999f;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-company-about span {
+            display: block;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+
+        /* Here is the code for Responsive Footer */
+        /* You can remove below code if you don't want Footer to be responsive */
+
+        @media (max-width: 880px) {
+
+
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .footer-distributed .footer-center i {
+                margin-left: 0;
+            }
+        }
+
+        @media(max-width:620px) {
+            header a img {
+                width: 280px;
+            }
+
+            #identificate {
+                padding-left: 25px;
+                padding-right: 25px;
+                text-align: center;
+                font-size: 15px;
+            }
+
+            .footer-distributed h3 {
+                font-size: 1.5rem;
+            }
+        }
