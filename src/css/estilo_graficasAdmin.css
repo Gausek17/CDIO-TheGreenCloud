@@ -117,20 +117,22 @@ body {
 
 .seleccion {
     margin: 5px;
+    margin-left: 20px;
+    margin-top: 15px;
 }
 
 .checkbox{
-    margin-top: 10px;
+    margin-top: 45px;
     display:flex;
     padding: 1rem;
     font-family: "Trebuchet MS";
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .cajas{
-    margin-right: 1rem;
-    margin-top: 20px;
+    margin-right: 50px;
+    margin-top: 25px;
     margin-left: 5px;
 }
 
@@ -430,7 +432,7 @@ ul li a {
 }
 
 /*------RESPONSIVE----------*/
-@media only screen and (max-width:900px) {
+@media only screen and (max-width:900px) { /* Ipad */
     nav {
         display: none;
     }
@@ -466,10 +468,14 @@ ul li a {
     }
 
     .seleccion select {
-        
+        margin-top: 30px;
+        margin-left: 40px;
     }
     .checkbox {
         display: flex;
+        font-size: 18px;
+        margin-left: 80px;
+        margin-top: 15px;
     }
     .dos-primeras{
         display: flex;
@@ -483,11 +489,19 @@ ul li a {
         display: flex;
 
     }
-
+    #humedad{
+        margin-left: 35px;
+    }
+    #salinidad{
+        margin-left: 35px;
+    }
+    .cajas{
+        margin-top: 35px;
+    }
     
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 450px) { /* Iphone */
     .iconUserPerson {
         margin-right: 0.5rem;
         width: 60px;
@@ -530,6 +544,10 @@ ul li a {
 
     .seleccion select {
         margin-left: 0px;
+        margin-top: 0px;
+        width: 150px;
+        height: 60px;
+        font-size: 15px;
     }
 
     .textNav {
@@ -540,9 +558,11 @@ ul li a {
         padding: 0;
         margin-top:0 ;
         display: flex;
+        margin-left: 0px;
+        margin-top: 20px;
     }
     .seleccion select {
-
+        margin-top: 20px;
     }
     .divContenidoGraficas{
         flex-direction: column;
@@ -570,6 +590,16 @@ ul li a {
      .dos-segundas{
          flex-direction: row;
      }
+    #salinidad{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    #temperatura{
+        margin-right: 10px;
+    }
+    #humedad{
+        margin-left: 10px;
+    }
 
 }
 
