@@ -1,4 +1,6 @@
-* 
+*{
+    font-family: "Trebuchet MS";
+}
 
 label.lbl {
     /*margin-left: 15px;*/
@@ -123,10 +125,11 @@ body {
     padding: 1rem;
     font-family: "Trebuchet MS";
     text-align: center;
+    justify-content: space-between;
 }
 
 .cajas{
-    margin-right: px;
+    margin-right: 1rem;
     margin-top: 20px;
     margin-left: 5px;
 }
@@ -378,6 +381,21 @@ ul li a {
     height: 50px;
 }
 
+.dos-primeras{
+    display: flex;
+
+}
+.dos-segundas{
+    display: flex;
+}
+.elementSensores{
+    display: flex;
+    justify-content: center;
+}
+.divContenidoGraficas{
+    display: flex;
+    flex-direction: row;
+}
 /*SCROL BARR*/
 
 .divContenidoUser::-webkit-scrollbar {
@@ -451,7 +469,7 @@ ul li a {
         
     }
     .checkbox {
-        
+        display: flex;
     }
     .dos-primeras{
         display: flex;
@@ -460,6 +478,10 @@ ul li a {
     .dos-segundas{
         display: flex;
         flex-direction: column;
+    }
+    .elementSensores{
+        display: flex;
+
     }
 
     
@@ -507,7 +529,7 @@ ul li a {
     }
 
     .seleccion select {
-        margin-left: 300px;
+        margin-left: 0px;
     }
 
     .textNav {
@@ -515,12 +537,39 @@ ul li a {
     }
 
     .checkbox {
+        padding: 0;
+        margin-top:0 ;
         display: flex;
     }
     .seleccion select {
-        
-    }
 
+    }
+    .divContenidoGraficas{
+        flex-direction: column;
+    }
+    .seleccion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .elementSensores{
+        flex-direction: column;
+        align-items: center;
+        font-size: 13px;
+    }
+     .elementSensores h3{
+         margin: 0;
+     }
+
+     .cajas{
+         margin: 0.5rem 0 0 0;
+     }
+     .dos-primeras{
+         flex-direction: row;
+     }
+     .dos-segundas{
+         flex-direction: row;
+     }
 
 }
 

@@ -28,13 +28,14 @@
             <!-- Nav generado en js-->
         </nav>
         <div class="divContenido">
-            <div class="divPanelActual">
-                <img src="../imagenes/parcelas/IconoCampo-White.png" alt="Gestión Usuarios" class="iconGestionUsuariosSelected"> Parcelas
+            <div class="panelActual" id="panelActual">
+                <img src="../imagenes/parcelas/IconoCampo-White.png" alt="Gestión Usuarios" class="iconParcelasSelected"> Parcelas
             </div>
             <div class="divSeleccionParcela">
-
-                <img src="../imagenes/parcelas/icono-maps.png" alt="Añadir usuario" class="iconSeleccionParcela">
-                <p><u>Seleccione la parcela</u></p>
+                <div class = "divTextSeleccionParcela">
+                    <img src="../imagenes/parcelas/icono-maps.png" alt="Añadir usuario" class="iconSeleccionParcela">
+                    <p class="textSeleccionParcela">Seleccione una parcela:</p>
+                </div>
                <section class="seleccion">
                  <label ><select id="parcela" onchange="dibujarParcelas()"  >
             <option selected="selected"  value="-10" onclick="removeLine()">Todos</option>
@@ -125,7 +126,7 @@
                  </section>  
                    
                 <section class="button">
-                <input class="delete" type="button" onclick="removeLine();" value="LIMPIAR MAPA">
+                <input class="delete" type="button" onclick="removeLine();" value="Limpiar Mapa">
                 </section>
             </div>
             
