@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-04-2020 a las 16:51:11
+-- Tiempo de generación: 01-04-2020 a las 17:16:11
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.1
 
@@ -39,7 +39,7 @@ CREATE TABLE `campo` (
 --
 
 INSERT INTO `campo` (`id_campo`, `nombre`, `id_cliente`) VALUES
-(1, 'Campo Prueba', 1);
+(1, 'Campo ', 1);
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,7 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id_cliente`, `nombre`, `telefono`, `mail`, `password`) VALUES
-(1, 'Bancal', '655 555 555', 'bancal@bancales.es', '1234');
+(1, 'Bancal', '655 555 555', 'bancales@bancal.es', '1234');
 
 -- --------------------------------------------------------
 
@@ -80,12 +80,14 @@ CREATE TABLE `coordenadas` (
 --
 
 INSERT INTO `coordenadas` (`id_coordenada`, `latitud`, `longitud`, `id_parcela`) VALUES
-(1, 40.3399, 127.51, 1),
-(2, 35.2654, 120.274, 1),
-(3, 20.3275, 170.388, 1),
-(4, 10.2739, 50.6325, 2),
-(5, 12.8489, 56.9844, 2),
-(6, 14.5438, 60.3895, 2);
+(1, 63.8298, -22.6958, 1),
+(2, 63.8298, -22.6981, 1),
+(3, 63.8283, -22.6982, 1),
+(4, 63.8281, -22.6933, 1),
+(5, 63.8251, -22.7042, 2),
+(6, 63.826, -22.6991, 2),
+(7, 63.825, -22.6971, 2),
+(8, 63.8239, -22.703, 2);
 
 -- --------------------------------------------------------
 
@@ -222,8 +224,8 @@ CREATE TABLE `parcela` (
 --
 
 INSERT INTO `parcela` (`id_parcela`, `color`, `id_campo`, `nombre`) VALUES
-(1, '#ff8000', 1, 'Parcela prueba'),
-(2, '#3b83bd', 1, 'Parcela prueba 2');
+(1, '#ff8000', 1, 'Parcela de Patatas'),
+(2, '#3b83bd', 1, 'Parcela de Zanahorias');
 
 -- --------------------------------------------------------
 
@@ -298,8 +300,12 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `mail`, `password`, `id_cliente`, `id_rol`) VALUES
-(1, 'admin', 'admin@bancal.es', '1234', 1, 1),
-(2, 'jorge', 'jorge@bancales.es', '1234', 1, 2);
+(1, 'Admin', 'admin@bancal.es', '1234', 1, 1),
+(2, 'Jorgex', 'jorge@bancales.es', '1234', 1, 2),
+(8, 'Daniel', 'daniel@bancal.es', '1234', 1, 2),
+(15, 'Sergi', 'sergi@bancal.es', '123', 1, 2),
+(17, 'Alberto', 'alberto@bancal.es', '123', 1, 2),
+(18, 'Javi', 'javi@bancal.es', '1234', 1, 2);
 
 --
 -- Índices para tablas volcadas
@@ -330,7 +336,8 @@ ALTER TABLE `coordenadas`
 --
 ALTER TABLE `medicion`
   ADD PRIMARY KEY (`id_medicion`),
-  ADD KEY `fk_medicion_parcela` (`id_parcela`);
+  ADD KEY `fk_medicion_parcela` (`id_parcela`),
+  ADD KEY `fk_medicion_sonda` (`id_sonda`);
 
 --
 -- Indices de la tabla `parcela`
@@ -356,7 +363,8 @@ ALTER TABLE `roles`
 -- Indices de la tabla `sonda`
 --
 ALTER TABLE `sonda`
-  ADD PRIMARY KEY (`id_sonda`);
+  ADD PRIMARY KEY (`id_sonda`),
+  ADD KEY `fk_sonda_parcela` (`id_parcela`);
 
 --
 -- Indices de la tabla `usuario`
@@ -386,13 +394,13 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `coordenadas`
 --
 ALTER TABLE `coordenadas`
-  MODIFY `id_coordenada` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_coordenada` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `medicion`
 --
 ALTER TABLE `medicion`
-  MODIFY `id_medicion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=372;
+  MODIFY `id_medicion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
 -- AUTO_INCREMENT de la tabla `parcela`
@@ -416,7 +424,7 @@ ALTER TABLE `sonda`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Restricciones para tablas volcadas
@@ -438,7 +446,34 @@ ALTER TABLE `coordenadas`
 -- Filtros para la tabla `medicion`
 --
 ALTER TABLE `medicion`
-  ADD CONSTRAINT `fk_medicion_parcela` FOREIGN KEY (`id_parcela`) REFERENCES `parcela` (`id_parcela`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_medicion_parcela` FOREIGN KEY (`id_parcela`) REFERENCES `parcela` (`id_parcela`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_medicion_sonda` FOREIGN KEY (`id_sonda`) REFERENCES `sonda` (`id_sonda`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `parcela`
+--
+ALTER TABLE `parcela`
+  ADD CONSTRAINT `fk_parcela_campo` FOREIGN KEY (`id_campo`) REFERENCES `campo` (`id_campo`);
+
+--
+-- Filtros para la tabla `permisos_usuarios`
+--
+ALTER TABLE `permisos_usuarios`
+  ADD CONSTRAINT `pk_parcela_usuario` FOREIGN KEY (`id_parcela`) REFERENCES `parcela` (`id_parcela`),
+  ADD CONSTRAINT `pk_usuario_parcela` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`);
+
+--
+-- Filtros para la tabla `sonda`
+--
+ALTER TABLE `sonda`
+  ADD CONSTRAINT `fk_sonda_parcela` FOREIGN KEY (`id_parcela`) REFERENCES `parcela` (`id_parcela`);
+
+--
+-- Filtros para la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD CONSTRAINT `fk_usuario_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id_cliente`),
+  ADD CONSTRAINT `fk_usuario_roles` FOREIGN KEY (`id_rol`) REFERENCES `roles` (`id_rol`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
