@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-04-2020 a las 17:16:11
+-- Tiempo de generación: 02-04-2020 a las 16:15:28
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.1
 
@@ -60,7 +60,8 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id_cliente`, `nombre`, `telefono`, `mail`, `password`) VALUES
-(1, 'Bancal', '655 555 555', 'bancales@bancal.es', '1234');
+(1, 'Bancal', '655 555 555', 'bancales@bancal.es', '1234'),
+(3, 'AlCampo', '666 666 666', 'alcampo.gerente@alcampo.es', '1234');
 
 -- --------------------------------------------------------
 
@@ -305,7 +306,11 @@ INSERT INTO `usuario` (`id_usuario`, `nombre`, `mail`, `password`, `id_cliente`,
 (8, 'Daniel', 'daniel@bancal.es', '1234', 1, 2),
 (15, 'Sergi', 'sergi@bancal.es', '123', 1, 2),
 (17, 'Alberto', 'alberto@bancal.es', '123', 1, 2),
-(18, 'Javi', 'javi@bancal.es', '1234', 1, 2);
+(18, 'Javi', 'javi@bancal.es', '1234', 1, 2),
+(19, 'Admin', 'admin@alcampo.es', '1234', 3, 1),
+(20, 'Carlos', 'carlos@alcampo.es', '1234', 3, 2),
+(21, 'Admin', 'admin@alcampo.es', '1234', 3, 1),
+(22, 'Carlos', 'carlos@alcampo.es', '1234', 3, 2);
 
 --
 -- Índices para tablas volcadas
@@ -388,7 +393,7 @@ ALTER TABLE `campo`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `coordenadas`
@@ -424,7 +429,7 @@ ALTER TABLE `sonda`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Restricciones para tablas volcadas

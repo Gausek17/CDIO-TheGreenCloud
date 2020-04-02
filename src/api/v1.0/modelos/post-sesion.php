@@ -9,7 +9,7 @@ INNER JOIN roles ON roles.id_rol=usuario.id_rol';
 
 
     foreach ($res as $fila){
-        if ($fila['nombre']== $_POST['usuario']){
+        if ($fila['mail']== $_POST['usuario']){
             $_SESSION_TMP['usuario'] = $fila;
         }
     }
