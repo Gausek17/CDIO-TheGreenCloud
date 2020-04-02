@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/estilo_graficasAdmin.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="js/usuarios.js"></script>
+
     <script src="js/sesion.js"></script>
 </head>
 
@@ -16,10 +16,7 @@
 
     <div class="container" id="container">
         <div id="mySidenav" class="sidenav">
-            <div class="headerMenu"><span class="menuTextAdmin">Admin Panel</span><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
-            <a href="ParcelasAdmin.php" class="itemMenu"><img src="../imagenes/menu/IconoCampo-White.png" alt="imagenCampo" class="iconParcelas"><span class="menuText">Parcelas</span></a>
-            <a href="index.html" class="itemMenu"><img src="../imagenes/menu/groupIcon-White.png" alt="Imagen Usuarios" class="iconGestionUsuarios"><span class="menuText">Gestión Usuarios</span></a>
-
+            <!-- Nav generado en js-->
         </div>
         <header>
             <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
@@ -32,17 +29,8 @@
             </div>
         </header>
         <div class="divCentral">
-            <nav>
-                <p class="textAdmin">User Panel</p>
-                <ul>
-                    <li class="navParcela">
-                        <a href="ParcelasAdmin.php" class="itemNav"><img src="../imagenes/menu/IconoCampo-White.png" alt="Imagen Campo" class="iconParcelas"><span class="textNav">Parcelas</span></a></li>
-                    <li class="navMediciones">
-                        <a href="graficasUser.html" class="itemNav"><img src="../imagenes/graficas/sensor.png" class="iconMediciones"><span class="textNav">Mediciones</span></a>
-                    </li>
-                    <li class="navUsuarios">
-                        <a href="index.html" class="itemNav"><img src="../imagenes/menu/groupIcon-White.png" alt="Gestión Usuarios" class="iconGestionUsuarios"><span class="textNav">Gestión Usuarios</span></a></li>
-                </ul>
+            <nav id="navGeneral">
+                <!-- Nav generado en js-->
             </nav>
             <div class="divContenido">
                 <div class="divPanelActual" id="panelActual">
@@ -51,9 +39,9 @@
 
                 <div class="divContenidoGraficas">
                     <section class="seleccion">
-                        <label><select id="mediciones">
-                                <option selected="selected" value="-10" onclick="removeLine()">Parcela 1</option>
-                            </select>
+                        <label><select id="selectParcelas" onchange="pintarGraficas()">
+
+                        </select>
                         </label>
                     </section>
 
@@ -105,25 +93,30 @@
                     <canvas id="chartSalinidad"></canvas>
 
 
-
-
-
                 </div>
             </div>
         </div>
 
     </div>
+    <script src="js/usuarios.js"></script>
+    <script src="js/menuUser.js"></script>
     <script src="js/sideNav.js"></script>
+    <script src="js/mediciones.js"></script>
+    <script src="js/parcelas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
     <script>
         VistaSelectorUsuios.iniciar("textNombreUsuario", "null");
         ControladorUsuarios.iniciar();
 
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js">
-    </script>
-    <script src="js/mediciones.js">
-    </script>
-    <script>
+        VistaMenu.setNav("navGeneral");
+        VistaMenu.crearNav();
+
+        VistaMenu.setSideNav("mySidenav");
+        VistaMenu.crearSideNav();
+
+        VistaParcelasSelect.iniciar("selectParcelas");
+        ControladorSelectParcelas.iniciar();
+
         VistaMediciones.iniciar("chartTemperatura","chartLuminosidad","chartHumedad","chartSalinidad");
         controladorMediciones.iniciar();
 

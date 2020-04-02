@@ -38,7 +38,12 @@ let ControladorSelectParcelas = {
 function actualizarSelect() {
     var stringPersonas='';
     var data = ModeloParcelaSelect.datos;
-    var idUsuario = document.getElementById("selectUsurios").value;
+    var idUsuario;
+    if (document.getElementById("selectUsurios") == null){
+        idUsuario = ModeloUsuarios.datos[0].id_usuario;
+    }else{
+        idUsuario = document.getElementById("selectUsurios").value;
+    }
 
     for (var i = data.length-1; i>=0;i--){
         if (data[i].id_usuario == idUsuario){

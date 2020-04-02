@@ -38,9 +38,11 @@
                     <p class="textSeleccionParcela">Seleccione una parcela:</p>
                 </div>
                <section class="seleccion">
-                   <label><select id="usuario">
+                  <!--
+                  <label><select id="usuario">
                            <option selected="selected" value="-10">Seleccione un usuario</option>
                        </select></label>
+                  -->
 
                    <label ><select id="parcela" onchange="dibujarParcelas()"  >
             <option selected="selected"  value="-10" onclick="removeLine()">Todos</option>
@@ -51,9 +53,9 @@
             $consulta="SELECT p.id_parcela as id_parcela, p.color as color, p.id_campo as id_campo, p.nombre as nombre, c.id_coordenada as id_coordenda, c.latitud as latitud, c.longitud as longitud from parcela p
                            INNER JOIN coordenadas c 
                            ON p.id_parcela = c.id_parcela
-                           INNER JOIN campo
-                           on campo.id_campo= p.id_campo
-                           WHERE campo.id_cliente='$id'";
+                           INNER JOIN permisos_usuarios pu
+                           ON pu.id_parcela=p.id_parcela
+                           WHERE pu.id_usuario='$id'";
             $ejecutar=mysqli_query($conexion,$consulta);
 
 
@@ -258,8 +260,6 @@
                 listaFinal.push(objeto);
             }
             return listaFinal;
-
-
         }
 
         for(var i =0 ;i<listaBuena.length;i++){

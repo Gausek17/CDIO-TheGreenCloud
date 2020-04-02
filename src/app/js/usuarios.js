@@ -145,24 +145,29 @@ function modoNuevoUser() {
     document.getElementById("divContenidoUserNuevo").style.display  = "block";
 }
 function nuevoUser() {
-    var formData = new FormData();
-    formData.append("nombre", document.getElementById("nuevoNombre").value);
-    formData.append("mail", document.getElementById("nuevoCorreo").value);
-    formData.append("password",document.getElementById("nuevaPassword").value);
-    //Se supone que solo pueden registraser trbajadores de campo
-    formData.append("id_rol","2");
-    //Se hace la peticion con id_Usuario 0, por lo que implica que se creara un usuario
-    fetch('../api/v1.0/usuario&0', {
-        method : 'post',
-        body : formData
-    }).then(function (respuesta) {
-        if (respuesta.status===200){
-            ControladorUsuarios.iniciar();
-            cancelarNuevoUser();
-        }else{
-            alert("Se ha producido un error a la hora de crear el usuario.")
-        }
-    });
+    if (document.getElementById("nuevaPassword").value !== document.getElementById("nuevaPasswordConfirmada").value){
+        alert("La contraseña no conicide con la contraseña de confirmación.")
+    }else{
+        var formData = new FormData();
+        formData.append("nombre", document.getElementById("nuevoNombre").value);
+        formData.append("mail", document.getElementById("nuevoCorreo").value);
+        formData.append("password",document.getElementById("nuevaPassword").value);
+        //Se supone que solo pueden registraser trbajadores de campo
+        formData.append("id_rol","2");
+        //Se hace la peticion con id_Usuario 0, por lo que implica que se creara un usuario
+        fetch('../api/v1.0/usuario&0', {
+            method : 'post',
+            body : formData
+        }).then(function (respuesta) {
+            if (respuesta.status===200){
+                ControladorUsuarios.iniciar();
+                cancelarNuevoUser();
+            }else{
+                alert("Se ha producido un error a la hora de crear el usuario.")
+            }
+        });
+    }
+
     
 }
 function cancelarNuevoUser() {

@@ -3,12 +3,11 @@
 }
 
  .grafica{
-                position: relative;
-                width: 50vw;
-                height: 60vh;
-                margin: 0 auto;
-
-            }
+     position: relative;
+     width: 50vw;
+     height: 60vh;
+     margin: 0 auto;
+ }
  #chartTemperatura {
  position: relative;
  width: 70vw;
