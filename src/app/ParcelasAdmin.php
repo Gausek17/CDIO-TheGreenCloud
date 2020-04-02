@@ -31,13 +31,18 @@
             <div class="panelActual" id="panelActual">
                 <img src="../imagenes/parcelas/IconoCampo-White.png" alt="Gestión Usuarios" class="iconParcelasSelected"> Parcelas
             </div>
+            
             <div class="divSeleccionParcela">
                 <div class = "divTextSeleccionParcela">
                     <img src="../imagenes/parcelas/icono-maps.png" alt="Añadir usuario" class="iconSeleccionParcela">
                     <p class="textSeleccionParcela">Seleccione una parcela:</p>
                 </div>
                <section class="seleccion">
-                 <label ><select id="parcela" onchange="dibujarParcelas()"  >
+                   <label><select id="usuario">
+                           <option selected="selected" value="-10">Seleccione un usuario</option>
+                       </select></label>
+
+                   <label ><select id="parcela" onchange="dibujarParcelas()"  >
             <option selected="selected"  value="-10" onclick="removeLine()">Todos</option>
             <?php
             include '../api/includes/conexion.php';
@@ -124,9 +129,12 @@
 
         </select></label>
                  </section>  
-                   
+                 
+                <section class="no-selectores-header">
                 <section class="button">
                 <input class="delete" type="button" onclick="removeLine();" value="Limpiar Mapa">
+                </section>
+                <section ><a href="graficasAdmin.html" ><img src="../imagenes/parcelas/report.png" alt="icono graficas" class="enlace-graficas"></a></section>
                 </section>
             </div>
             
