@@ -13,7 +13,7 @@ let VistaMenu = {
             <a href="Index.html" class="itemNav"><img src="../imagenes/menu/groupIcon-White.png" alt="Gestión Usuarios" class="iconGestionUsuarios"><span class="textNav">Gestión Usuarios</span></a>
         </li>
         <li class="navMediciones">
-                  <a href="#" class="itemNav"><img src="../imagenes/menu/sensor.png" alt="Imagen Sensor" class="iconMediciones"><span class="textNav">Mediciones</span></a>
+                  <a href="graficasAdmin.html" class="itemNav"><img src="../imagenes/menu/sensor.png" alt="Imagen Sensor" class="iconMediciones"><span class="textNav">Mediciones</span></a>
         </li>
     </ul>`;
     },
@@ -25,7 +25,7 @@ let VistaMenu = {
         this.sideNav.innerHTML = `<div class="headerMenu"><span class="menuTextAdmin">Admin Panel</span><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
             <a href="ParcelasAdmin.php" class="itemMenu"><img src="../imagenes/menu/IconoCampo-White.png" alt="imagenCampo" class="iconParcelas"><span class="menuText">Parcelas</span></a>
             <a href="Index.html" class="itemMenu"><img src="../imagenes/menu/groupIcon-White.png" alt="Imagen Usuarios" class="iconGestionUsuarios"><span class="menuText">Gestión Usuarios</span></a>
-            <a href="#" class="itemMenu"><img src="../imagenes/menu/sensor.png" alt="Imagen Sensor" class="iconMediciones"><span class="menuText">Mediciones</span></a>`;
+            <a href="graficasAdmin.html" class="itemMenu"><img src="../imagenes/menu/sensor.png" alt="Imagen Sensor" class="iconMediciones"><span class="menuText">Mediciones</span></a>`;
     }
 };
 
