@@ -35,7 +35,7 @@ label.lbl {
  }
   #chartHumedad {
 
-    position: relative;
+    position:relative;
     width: 70vw;
     height: 50vh;
     margin-bottom: 1rem;
@@ -480,6 +480,13 @@ ul li a {
 
 /*------RESPONSIVE----------*/
 @media only screen and (max-width:900px) { /* Ipad */
+    .grafica{
+        
+                width: 80vw;
+                
+
+               
+    }
     nav {
         display: none;
     }
@@ -549,6 +556,7 @@ ul li a {
 }
 
 @media only screen and (max-width: 450px) { /* Iphone */
+    
     .iconUserPerson {
         margin-right: 0.5rem;
         width: 60px;
@@ -647,6 +655,44 @@ ul li a {
     #humedad{
         margin-left: 10px;
     }
+    #chartTemperatura {
+ position: relative;
+ width: 90vw;
+ height: 350px!important;
+ margin-bottom: 1rem;
+
+ background-color: orange;
+
+
+ }
+ #chartLuminosidad {
+
+     position: relative;
+     width: 90vw;
+     height: 350px!important;
+    margin-bottom: 1rem;
+
+     background-color: grey;
+
+ }
+  #chartHumedad {
+
+    position: relative;
+    width: 90vw;
+    height: 350px!important;
+    margin-bottom: 1rem;
+    background-color: royalblue;
+
+            }
+            #chartSalinidad {
+
+                position: relative;
+                width: 90vw;
+                height: 350px!important;
+                margin-bottom: 1rem;
+                background-color: #408033;
+
+            }
 
 }
 
