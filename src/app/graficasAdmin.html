@@ -66,15 +66,15 @@
                             <div class="elementSensores">
                                 <h3>Sensor<br>Temperatura</h3>
                                 <section class="cajas">
-                                    <input type="checkbox" id="switch1">
-                                    <label for="switch1" class="lbl"></label>
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchTemperatura" checked>
+                                    <label for="switchTemperatura" class="lbl"></label>
                                 </section>
                             </div>
                             <div class="elementSensores" id="humedad">
                                 <h3>Sensor<br>Humedad</h3>
                                 <section class="cajas">
-                                    <input type="checkbox" id="switch2">
-                                    <label for="switch2" class="lbl"></label>
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchHumedad" checked>
+                                    <label for="switchHumedad" class="lbl"></label>
                                 </section>
                             </div>
 
@@ -83,15 +83,15 @@
                             <div class="elementSensores" id="salinidad">
                                 <h3>Sensor<br>Salinidad</h3>
                                 <section class="cajas">
-                                    <input type="checkbox" id="switch3">
-                                    <label for="switch3" class="lbl"></label>
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchSalinidad" checked>
+                                    <label for="switchSalinidad" class="lbl"></label>
                                 </section>
                             </div>
                             <div class="elementSensores" id="luminosidad">
                                 <h3>Sensor<br>Luminosidad</h3>
                                 <section class="cajas">
-                                    <input type="checkbox" id="switch4">
-                                    <label for="switch4" class="lbl"></label>
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)"  id="switchLuminosidad" checked>
+                                    <label for="switchLuminosidad" class="lbl"></label>
                                 </section>
                             </div>
 
@@ -102,17 +102,37 @@
 
                     </div>
                 </div>
+                <div class="grafica"  id="grafica">
+                    <canvas id="chartTemperatura"></canvas>
+                    <canvas id="chartLuminosidad"></canvas>
+                    <canvas id="chartHumedad"></canvas>
+                    <canvas id="chartSalinidad"></canvas>
 
+
+
+
+
+                </div>
             </div>
         </div>
+
     </div>
+    
     <script src="js/sideNav.js"></script>
     <script>
         VistaSelectorUsuios.iniciar("textNombreUsuario", "null");
         ControladorUsuarios.iniciar();
 
     </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js">
+</script>
+<script src="js/mediciones.js">
+</script>
+<script>
+    VistaMediciones.iniciar("chartTemperatura","chartLuminosidad","chartHumedad","chartSalinidad");
+    controladorMediciones.iniciar();
 
+</script>
 </body>
 
 </html>

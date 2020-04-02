@@ -5,6 +5,53 @@
 label.lbl {
     /*margin-left: 15px;*/
 }
+ .grafica{
+                position: relative;
+                width: 50vw;
+                height: 60vh;
+
+                margin: 0 auto;
+
+            }
+ #chartTemperatura {
+ position: relative;
+ width: 70vw;
+ height: 50vh;
+ margin-bottom: 1rem;
+
+ background-color: orange;
+
+
+ }
+ #chartLuminosidad {
+
+     position: relative;
+     width: 70vw;
+     height: 50vh;
+    margin-bottom: 1rem;
+
+     background-color: grey;
+
+ }
+  #chartHumedad {
+
+    position: relative;
+    width: 70vw;
+    height: 50vh;
+    margin-bottom: 1rem;
+    background-color: royalblue;
+
+            }
+            #chartSalinidad {
+
+                position: relative;
+                width: 70vw;
+                height: 50vh;
+                margin-bottom: 1rem;
+                background-color: #408033;
+
+            }
+
 
 .lbl {
     display: flex;
@@ -17,60 +64,60 @@ label.lbl {
 
 .lbl::after {}
 
-#switch1:checked + .lbl::after {
+#switchTemperatura:checked + .lbl::after {
     content: "✔";
     color: aliceblue;
     font-size: 1.8em;
 }
 
-#switch1:checked + .lbl {
+#switchTemperatura:checked + .lbl {
     background: purple;
 }
 
-#switch1 {
+#switchTemperatura {
     display: none;
 }
 
-#switch2:checked + .lbl::after {
+#switchHumedad:checked + .lbl::after {
     content: "✔";
     color: aliceblue;
     font-size: 1.8em;
 
 }
 
-#switch2:checked + .lbl {
+#switchHumedad:checked + .lbl {
     background: purple;
 }
 
-#switch2 {
+#switchHumedad {
     display: none;
 }
 
-#switch3:checked + .lbl::after {
+#switchSalinidad:checked + .lbl::after {
     content: "✔";
     color: aliceblue;
     font-size: 1.8em;
 }
 
-#switch3:checked + .lbl {
+#switchSalinidad:checked + .lbl {
     background: purple;
 }
 
-#switch3 {
+#switchSalinidad {
     display: none;
 }
 
-#switch4:checked + .lbl::after {
+#switchLuminosidad:checked + .lbl::after {
     content: "✔";
     color: aliceblue;
     font-size: 1.8em;
 }
 
-#switch4:checked + .lbl {
+#switchLuminosidad:checked + .lbl {
     background: purple;
 }
 
-#switch4 {
+#switchLuminosidad {
     display: none;
 }
 
@@ -668,3 +715,36 @@ ul li a {
     font-size: 3rem;
     margin-left: 50px;
 }
+/*SCROL BARR*/
+
+.grafica::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.grafica::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.grafica::-webkit-scrollbar-button:increment,.grafica::-webkit-scrollbar-button {
+    display: none;
+}
+
+.grafica::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.grafica::-webkit-scrollbar-thumb {
+    background-color: #800053;
+    border-radius: 20px;
+}
+
+.grafica::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #797979;
+}
+.grafica{
+    padding: 1.5rem;
+    height: 570px;
+    overflow: auto;
+}
+/*-------------*/

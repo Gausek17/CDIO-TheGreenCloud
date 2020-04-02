@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>AdminSection</title>
+    <title>UserSection</title>
     <link rel="stylesheet" type="text/css" href="../css/estilo_graficasUser.css"S>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -33,7 +33,7 @@
         </header>
         <div class="divCentral">
             <nav>
-                <p class="textAdmin">Admin Panel</p>
+                <p class="textAdmin">User Panel</p>
                 <ul>
                     <li class="navParcela">
                         <a href="ParcelasAdmin.php" class="itemNav"><img src="../imagenes/menu/IconoCampo-White.png" alt="Imagen Campo" class="iconParcelas"><span class="textNav">Parcelas</span></a></li>
@@ -59,18 +59,18 @@
 
                     <div class="checkbox">
                         <div class="dos-primeras">
-                            <div class="elementSensores" id="temperatura">
+                            <div class="elementSensores">
                                 <h3>Sensor<br>Temperatura</h3>
                                 <section class="cajas">
-                                    <input type="checkbox" id="switch1">
-                                    <label for="switch1" class="lbl"></label>
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchTemperatura" checked>
+                                    <label for="switchTemperatura" class="lbl"></label>
                                 </section>
                             </div>
                             <div class="elementSensores" id="humedad">
                                 <h3>Sensor<br>Humedad</h3>
                                 <section class="cajas">
-                                    <input type="checkbox" id="switch2">
-                                    <label for="switch2" class="lbl"></label>
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchHumedad" checked>
+                                    <label for="switchHumedad" class="lbl"></label>
                                 </section>
                             </div>
 
@@ -79,23 +79,39 @@
                             <div class="elementSensores" id="salinidad">
                                 <h3>Sensor<br>Salinidad</h3>
                                 <section class="cajas">
-                                    <input type="checkbox" id="switch3">
-                                    <label for="switch3" class="lbl"></label>
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchSalinidad" checked>
+                                    <label for="switchSalinidad" class="lbl"></label>
                                 </section>
                             </div>
                             <div class="elementSensores" id="luminosidad">
                                 <h3>Sensor<br>Luminosidad</h3>
                                 <section class="cajas">
-                                    <input type="checkbox" id="switch4">
-                                    <label for="switch4" class="lbl"></label>
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)"  id="switchLuminosidad" checked>
+                                    <label for="switchLuminosidad" class="lbl"></label>
                                 </section>
                             </div>
+
+
                         </div>
+
+
+
                     </div>
                 </div>
+                <div class="grafica"  id="grafica">
+                    <canvas id="chartTemperatura"></canvas>
+                    <canvas id="chartLuminosidad"></canvas>
+                    <canvas id="chartHumedad"></canvas>
+                    <canvas id="chartSalinidad"></canvas>
 
+
+
+
+
+                </div>
             </div>
         </div>
+
     </div>
     <script src="js/sideNav.js"></script>
     <script>
@@ -103,7 +119,15 @@
         ControladorUsuarios.iniciar();
 
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js">
+    </script>
+    <script src="js/mediciones.js">
+    </script>
+    <script>
+        VistaMediciones.iniciar("chartTemperatura","chartLuminosidad","chartHumedad","chartSalinidad");
+        controladorMediciones.iniciar();
 
+    </script>
 </body>
 
 </html>
