@@ -292,6 +292,7 @@
 <script src="js/usuarios.js"></script>
 <script src="js/menuAdmin.js"></script>
 <script src="js/sideNav.js"></script>
+<script src="js/usuarios_select.js"></script>
 <script>
     VistaSelectorUsuios.iniciar("textNombreUsuario", "null");
     ControladorUsuarios.iniciar();
@@ -300,6 +301,8 @@
     VistaMenu.crearNav();
     VistaMenu.setSideNav("mySidenav");
     VistaMenu.crearSideNav();
+    VistaSelectUsuarios.iniciar("usuario");
+    ControladorSelectUsuarios.iniciar();
 </script>
 </body>
 </html>
