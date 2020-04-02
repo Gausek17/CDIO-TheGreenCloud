@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-03-2020 a las 18:18:08
+-- Tiempo de generación: 01-04-2020 a las 17:16:11
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.1
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `sprint2`
+-- Base de datos: `bd_tgc`
 --
 
 -- --------------------------------------------------------
@@ -39,7 +39,7 @@ CREATE TABLE `campo` (
 --
 
 INSERT INTO `campo` (`id_campo`, `nombre`, `id_cliente`) VALUES
-(1, 'Campo Prueba', 1);
+(1, 'Campo ', 1);
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,7 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id_cliente`, `nombre`, `telefono`, `mail`, `password`) VALUES
-(1, 'Bancal', '655 555 555', 'bancal@bancales.es', '1234');
+(1, 'Bancal', '655 555 555', 'bancales@bancal.es', '1234');
 
 -- --------------------------------------------------------
 
@@ -80,12 +80,14 @@ CREATE TABLE `coordenadas` (
 --
 
 INSERT INTO `coordenadas` (`id_coordenada`, `latitud`, `longitud`, `id_parcela`) VALUES
-(1, 40.3399, 127.51, 1),
-(2, 35.2654, 120.274, 1),
-(3, 20.3275, 170.388, 1),
-(4, 10.2739, 50.6325, 2),
-(5, 12.8489, 56.9844, 2),
-(6, 14.5438, 60.3895, 2);
+(1, 63.8298, -22.6958, 1),
+(2, 63.8298, -22.6981, 1),
+(3, 63.8283, -22.6982, 1),
+(4, 63.8281, -22.6933, 1),
+(5, 63.8251, -22.7042, 2),
+(6, 63.826, -22.6991, 2),
+(7, 63.825, -22.6971, 2),
+(8, 63.8239, -22.703, 2);
 
 -- --------------------------------------------------------
 
@@ -98,15 +100,111 @@ CREATE TABLE `medicion` (
   `medicion` varchar(40) NOT NULL,
   `fecha` date NOT NULL,
   `hora` time NOT NULL,
-  `id_parcela` int(11) DEFAULT NULL
+  `id_parcela` int(11) DEFAULT NULL,
+  `id_sonda` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `medicion`
 --
 
-INSERT INTO `medicion` (`id_medicion`, `medicion`, `fecha`, `hora`, `id_parcela`) VALUES
-(1, 'de dia', '2020-03-11', '18:10:55', 1);
+INSERT INTO `medicion` (`id_medicion`, `medicion`, `fecha`, `hora`, `id_parcela`, `id_sonda`) VALUES
+(1, '13', '2020-03-11', '01:00:00', 2, 1),
+(2, '12', '2020-03-11', '02:00:00', 2, 1),
+(3, '12', '2020-03-11', '03:00:00', 2, 1),
+(4, '11', '2020-03-11', '04:00:00', 2, 1),
+(5, '14', '2020-03-11', '05:00:00', 2, 1),
+(6, '15', '2020-03-11', '06:00:00', 2, 1),
+(7, '16', '2020-03-11', '07:00:00', 2, 1),
+(8, '17', '2020-03-11', '08:00:00', 2, 1),
+(9, '17', '2020-03-11', '09:00:00', 2, 1),
+(10, '18', '2020-03-11', '10:00:00', 2, 1),
+(11, '21', '2020-03-11', '11:00:00', 2, 1),
+(12, '22', '2020-03-11', '12:00:00', 2, 1),
+(13, '23', '2020-03-11', '13:00:00', 2, 1),
+(14, '23', '2020-03-11', '14:00:00', 2, 1),
+(15, '23', '2020-03-11', '15:00:00', 2, 1),
+(16, '22', '2020-03-11', '16:00:00', 2, 1),
+(17, '23', '2020-03-11', '17:00:00', 2, 1),
+(18, '21', '2020-03-11', '18:00:00', 2, 1),
+(19, '19', '2020-03-11', '19:00:00', 2, 1),
+(20, '18', '2020-03-11', '20:00:00', 2, 1),
+(21, '16', '2020-03-11', '21:00:00', 2, 1),
+(22, '15', '2020-03-11', '22:00:00', 2, 1),
+(23, '14', '2020-03-11', '23:00:00', 2, 1),
+(24, '13', '2020-03-11', '00:00:00', 2, 1),
+(25, '0', '2020-03-11', '01:00:00', 2, 2),
+(26, '0', '2020-03-11', '02:00:00', 2, 2),
+(27, '0', '2020-03-11', '03:00:00', 2, 2),
+(28, '0', '2020-03-11', '04:00:00', 2, 2),
+(29, '0', '2020-03-11', '05:00:00', 2, 2),
+(30, '7', '2020-03-11', '06:00:00', 2, 2),
+(31, '12', '2020-03-11', '07:00:00', 2, 2),
+(32, '19', '2020-03-11', '08:00:00', 2, 2),
+(33, '25', '2020-03-11', '09:00:00', 2, 2),
+(34, '37', '2020-03-11', '10:00:00', 2, 2),
+(35, '54', '2020-03-11', '11:00:00', 2, 2),
+(36, '72', '2020-03-11', '12:00:00', 2, 2),
+(37, '79', '2020-03-11', '13:00:00', 2, 2),
+(38, '81', '2020-03-11', '14:00:00', 2, 2),
+(39, '82', '2020-03-11', '15:00:00', 2, 2),
+(40, '81', '2020-03-11', '16:00:00', 2, 2),
+(41, '72', '2020-03-11', '17:00:00', 2, 2),
+(42, '67', '2020-03-11', '18:00:00', 2, 2),
+(43, '54', '2020-03-11', '19:00:00', 2, 2),
+(44, '37', '2020-03-11', '20:00:00', 2, 2),
+(45, '14', '2020-03-11', '21:00:00', 2, 2),
+(46, '3', '2020-03-11', '22:00:00', 2, 2),
+(47, '0', '2020-03-11', '23:00:00', 2, 2),
+(48, '0', '2020-03-11', '00:00:00', 2, 2),
+(49, '74', '2020-03-11', '01:00:00', 2, 3),
+(50, '77', '2020-03-11', '02:00:00', 2, 3),
+(51, '85', '2020-03-11', '03:00:00', 2, 3),
+(52, '87', '2020-03-11', '04:00:00', 2, 3),
+(53, '84', '2020-03-11', '05:00:00', 2, 3),
+(54, '77', '2020-03-11', '06:00:00', 2, 3),
+(55, '76', '2020-03-11', '07:00:00', 2, 3),
+(56, '76', '2020-03-11', '08:00:00', 2, 3),
+(57, '74', '2020-03-11', '09:00:00', 2, 3),
+(58, '75', '2020-03-11', '10:00:00', 2, 3),
+(59, '66', '2020-03-11', '11:00:00', 2, 3),
+(60, '67', '2020-03-11', '12:00:00', 2, 3),
+(61, '62', '2020-03-11', '13:00:00', 2, 3),
+(62, '63', '2020-03-11', '14:00:00', 2, 3),
+(63, '58', '2020-03-11', '15:00:00', 2, 3),
+(64, '59', '2020-03-11', '16:00:00', 2, 3),
+(65, '53', '2020-03-11', '17:00:00', 2, 3),
+(66, '55', '2020-03-11', '18:00:00', 2, 3),
+(67, '73', '2020-03-11', '19:00:00', 2, 3),
+(68, '75', '2020-03-11', '20:00:00', 2, 3),
+(69, '74', '2020-03-11', '21:00:00', 2, 3),
+(70, '77', '2020-03-11', '22:00:00', 2, 3),
+(71, '81', '2020-03-11', '23:00:00', 2, 3),
+(72, '80', '2020-03-11', '00:00:00', 2, 3),
+(73, '18', '2020-03-11', '01:00:00', 2, 4),
+(74, '17', '2020-03-11', '02:00:00', 2, 4),
+(75, '17', '2020-03-11', '03:00:00', 2, 4),
+(76, '19', '2020-03-11', '04:00:00', 2, 4),
+(77, '17', '2020-03-11', '05:00:00', 2, 4),
+(78, '18', '2020-03-11', '06:00:00', 2, 4),
+(79, '18', '2020-03-11', '07:00:00', 2, 4),
+(80, '18', '2020-03-11', '08:00:00', 2, 4),
+(81, '17', '2020-03-11', '09:00:00', 2, 4),
+(82, '18', '2020-03-11', '10:00:00', 2, 4),
+(83, '17', '2020-03-11', '11:00:00', 2, 4),
+(84, '18', '2020-03-11', '12:00:00', 2, 4),
+(85, '17', '2020-03-11', '13:00:00', 2, 4),
+(86, '17', '2020-03-11', '14:00:00', 2, 4),
+(87, '18', '2020-03-11', '15:00:00', 2, 4),
+(88, '18', '2020-03-11', '16:00:00', 2, 4),
+(89, '17', '2020-03-11', '17:00:00', 2, 4),
+(90, '18', '2020-03-11', '18:00:00', 2, 4),
+(91, '18', '2020-03-11', '19:00:00', 2, 4),
+(92, '18', '2020-03-11', '20:00:00', 2, 4),
+(93, '18', '2020-03-11', '21:00:00', 2, 4),
+(94, '17', '2020-03-11', '22:00:00', 2, 4),
+(95, '18', '2020-03-11', '23:00:00', 2, 4),
+(96, '18', '2020-03-11', '00:00:00', 2, 4);
 
 -- --------------------------------------------------------
 
@@ -126,8 +224,8 @@ CREATE TABLE `parcela` (
 --
 
 INSERT INTO `parcela` (`id_parcela`, `color`, `id_campo`, `nombre`) VALUES
-(1, '#ff8000', 1, 'Parcela prueba'),
-(2, '#3b83bd', 1, 'Parcela prueba 2');
+(1, '#ff8000', 1, 'Parcela de Patatas'),
+(2, '#3b83bd', 1, 'Parcela de Zanahorias');
 
 -- --------------------------------------------------------
 
@@ -177,7 +275,10 @@ CREATE TABLE `sonda` (
 --
 
 INSERT INTO `sonda` (`id_sonda`, `tipoSonda`, `estado`, `id_parcela`) VALUES
-(1, 'Luz', 'Funcional', 1);
+(1, 'Temperatura', 'Funcional', 1),
+(2, 'Luminosidad', 'Funcional', 1),
+(3, 'Humedad', 'Funcional', 1),
+(4, 'Salinidad', 'Funcional', 1);
 
 -- --------------------------------------------------------
 
@@ -199,8 +300,12 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `mail`, `password`, `id_cliente`, `id_rol`) VALUES
-(1, 'admin', 'admin@bancal.es', '1234', 1, 1),
-(2, 'jorge', 'jorge@bancales.es', '1234', 1, 2);
+(1, 'Admin', 'admin@bancal.es', '1234', 1, 1),
+(2, 'Jorgex', 'jorge@bancales.es', '1234', 1, 2),
+(8, 'Daniel', 'daniel@bancal.es', '1234', 1, 2),
+(15, 'Sergi', 'sergi@bancal.es', '123', 1, 2),
+(17, 'Alberto', 'alberto@bancal.es', '123', 1, 2),
+(18, 'Javi', 'javi@bancal.es', '1234', 1, 2);
 
 --
 -- Índices para tablas volcadas
@@ -231,7 +336,8 @@ ALTER TABLE `coordenadas`
 --
 ALTER TABLE `medicion`
   ADD PRIMARY KEY (`id_medicion`),
-  ADD KEY `fk_medicion_parcela` (`id_parcela`);
+  ADD KEY `fk_medicion_parcela` (`id_parcela`),
+  ADD KEY `fk_medicion_sonda` (`id_sonda`);
 
 --
 -- Indices de la tabla `parcela`
@@ -257,7 +363,8 @@ ALTER TABLE `roles`
 -- Indices de la tabla `sonda`
 --
 ALTER TABLE `sonda`
-  ADD PRIMARY KEY (`id_sonda`);
+  ADD PRIMARY KEY (`id_sonda`),
+  ADD KEY `fk_sonda_parcela` (`id_parcela`);
 
 --
 -- Indices de la tabla `usuario`
@@ -287,13 +394,13 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `coordenadas`
 --
 ALTER TABLE `coordenadas`
-  MODIFY `id_coordenada` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_coordenada` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `medicion`
 --
 ALTER TABLE `medicion`
-  MODIFY `id_medicion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_medicion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
 -- AUTO_INCREMENT de la tabla `parcela`
@@ -311,13 +418,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `sonda`
 --
 ALTER TABLE `sonda`
-  MODIFY `id_sonda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_sonda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Restricciones para tablas volcadas
@@ -339,7 +446,8 @@ ALTER TABLE `coordenadas`
 -- Filtros para la tabla `medicion`
 --
 ALTER TABLE `medicion`
-  ADD CONSTRAINT `fk_medicion_parcela` FOREIGN KEY (`id_parcela`) REFERENCES `parcela` (`id_parcela`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_medicion_parcela` FOREIGN KEY (`id_parcela`) REFERENCES `parcela` (`id_parcela`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_medicion_sonda` FOREIGN KEY (`id_sonda`) REFERENCES `sonda` (`id_sonda`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `parcela`

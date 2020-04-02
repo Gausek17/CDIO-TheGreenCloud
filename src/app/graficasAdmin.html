@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AdminSection</title>
+    <link rel="stylesheet" type="text/css" href="../css/estilo_graficasAdmin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="js/usuarios.js"></script>
+    <script src="js/sesion.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container" id="container">
+        <div id="mySidenav" class="sidenav">
+            <div class="headerMenu"><span class="menuTextAdmin">Admin Panel</span><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
+            <a href="ParcelasAdmin.php" class="itemMenu"><img src="../imagenes/menu/IconoCampo-White.png" alt="imagenCampo" class="iconParcelas"><span class="menuText">Parcelas</span></a>
+            <a href="Index.html" class="itemMenu"><img src="../imagenes/menu/groupIcon-White.png" alt="Imagen Usuarios" class="iconGestionUsuarios"><span class="menuText">Gestión Usuarios</span></a>
+
+        </div>
+        <header>
+            <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
+            <!--<img src="imagenes/logoGTI.svg" alt="Logo GTI" class="logoGTI">-->
+            <img onclick="openNav()" src="../imagenes/menu/iconMenu.png" alt="Menu" class="iconMenu">
+            <div class="divUsuario">
+                <p id="textNombreUsuario">Nombre Usuario</p>
+                <img src="../imagenes/iconUser.png" alt="Icono Usuario" class="iconUseer">
+                <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion" onclick="deleteSesion()">
+            </div>
+        </header>
+        <div class="divCentral">
+            <nav>
+                <p class="textAdmin">Admin Panel</p>
+                <ul>
+                    <li class="navParcela">
+                        <a href="ParcelasAdmin.php" class="itemNav"><img src="../imagenes/menu/IconoCampo-White.png" alt="Imagen Campo" class="iconParcelas"><span class="textNav">Parcelas</span></a></li>
+                    <li class="navMediciones">
+                        <a href="graficasUser.html" class="itemNav"><img src="../imagenes/graficas/sensor.png" class="iconMediciones"><span class="textNav">Mediciones</span></a>
+                    </li>
+                    <li class="navUsuarios">
+                        <a href="index.html" class="itemNav"><img src="../imagenes/menu/groupIcon-White.png" alt="Gestión Usuarios" class="iconGestionUsuarios"><span class="textNav">Gestión Usuarios</span></a></li>
+                </ul>
+            </nav>
+            <div class="divContenido">
+                <div class="divPanelActual" id="panelActual">
+                    <img src="../imagenes/graficas/sensor.png" alt="Gestión Usuarios" class="iconGestionUsuariosSelected"> Medidas sensor
+                </div>
+
+                <div class="divContenidoGraficas">
+                    <section class="seleccion">
+                        <label><select id="mediciones">
+                                <option selected="selected" value="-10" onclick="removeLine()">Parcela 1</option>
+                            </select>
+                        </label>
+                        <label><select id="mediciones" id="usuarios">
+                                <option selected="selected" value="-10" onclick="removeLine()">Usuarios</option>
+                            </select>
+                        </label>
+                    </section>
+
+                    <div class="checkbox">
+                        <div class="dos-primeras">
+                            <div class="elementSensores">
+                                <h3>Sensor<br>Temperatura</h3>
+                                <section class="cajas">
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchTemperatura" checked>
+                                    <label for="switchTemperatura" class="lbl"></label>
+                                </section>
+                            </div>
+                            <div class="elementSensores" id="humedad">
+                                <h3>Sensor<br>Humedad</h3>
+                                <section class="cajas">
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchHumedad" checked>
+                                    <label for="switchHumedad" class="lbl"></label>
+                                </section>
+                            </div>
+
+                        </div>
+                        <div class="dos-segundas">
+                            <div class="elementSensores" id="salinidad">
+                                <h3>Sensor<br>Salinidad</h3>
+                                <section class="cajas">
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchSalinidad" checked>
+                                    <label for="switchSalinidad" class="lbl"></label>
+                                </section>
+                            </div>
+                            <div class="elementSensores" id="luminosidad">
+                                <h3>Sensor<br>Luminosidad</h3>
+                                <section class="cajas">
+                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)"  id="switchLuminosidad" checked>
+                                    <label for="switchLuminosidad" class="lbl"></label>
+                                </section>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="grafica"  id="grafica">
+                    <canvas id="chartTemperatura"></canvas>
+                    <canvas id="chartLuminosidad"></canvas>
+                    <canvas id="chartHumedad"></canvas>
+                    <canvas id="chartSalinidad"></canvas>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="js/sideNav.js"></script>
+    <script>
+        VistaSelectorUsuios.iniciar("textNombreUsuario", "null");
+        ControladorUsuarios.iniciar();
+
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js">
+</script>
+<script src="js/mediciones.js">
+</script>
+<script>
+    VistaMediciones.iniciar("chartTemperatura","chartLuminosidad","chartHumedad","chartSalinidad");
+    controladorMediciones.iniciar();
+
+</script>
+</body>
+
+</html>

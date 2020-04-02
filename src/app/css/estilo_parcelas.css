@@ -61,9 +61,10 @@ header{
     background-color: #800053;
     color: white;
     border-radius: 10px;
-    padding: 1rem;
-    border: 2px solid black;
+    padding: 0.75rem;
+    font-weight: bold;
     cursor: pointer;
+    border: 0;
 }
 
 
@@ -116,25 +117,23 @@ nav{
     cursor: pointer;
     background-color: #800053;
     color: white;
-    border-radius: 46px 46px 46px 46px;
-    border: 2px solid black;
-    
+    border-radius: 10px;
+    border: 0;
+    font-weight: bold;
     padding: 1rem;
     
 }
-.delete:hover{
-    background-color: rgba(169, 69, 206, 0.72);
-    color: black;
-}
+
 .button{
    align-content: space-between;
     padding: 1rem;
     margin-left: 17px;
 }
-.iconGestionUsuariosSelected{
-    width: 69px;
+.iconParcelasSelected{
+    width: 53px;
     height: auto;
-    margin-right: 10px;
+
+    margin: 0.5rem;
 }
 .iconSeleccionParcela{
     width: 75px;
@@ -152,7 +151,7 @@ nav{
 .divContenido{
     width: 100%;
 }
-.divPanelActual{
+.panelActual{
     border-top-right-radius: 15px;
     border-bottom: 2px solid white;
     font-size: 1.2rem;
@@ -179,8 +178,14 @@ nav{
     height: inherit;
     border: solid 3px black;
     margin-right: 30px;
-    margin-left: 170px;
 
+}
+.divTextSeleccionParcela{
+    display: flex;
+    align-items: center;
+}
+.textSeleccionParcela{
+    font-weight: bold;
 }
 
 /*SCROL BARR*/
@@ -215,7 +220,7 @@ nav{
     .divContenidoUser{
         overflow: inherit;
     }
-    .divPanelActual{
+    .panelActual{
         border-radius: 15px;
     }
     .container{
