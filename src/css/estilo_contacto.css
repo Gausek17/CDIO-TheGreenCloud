@@ -151,6 +151,10 @@
             color: inherit;
         }
 
+        Tecnologias-Interactivas {
+            font-size: 8px;
+        }
+
         .footer-distributed .footer-company-name {
             color: #8f9296;
             font-size: 14px;
@@ -262,16 +266,18 @@
                 font-size: 1.5rem;
             }
         }
-@media(max-width:400px){
-    header a img {
+
+        @media(max-width:400px) {
+            header a img {
                 width: 150px;
             }
-    #identificate {
+
+            #identificate {
                 width: 150px;
                 padding-left: 5px;
                 padding-right: 5px;
                 padding: 5px;
-        
-        
+
+
             }
-}
+        }
