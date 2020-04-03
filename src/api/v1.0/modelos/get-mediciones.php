@@ -1,9 +1,15 @@
 <?php
 
-$sql = "SELECT * FROM medicion WHERE id_parcela='2'";
+$sql = "SELECT * FROM medicion";
+
 $res = mysqli_query($conexion, $sql);
 
-while ($fila = mysqli_fetch_assoc($res)) {
-    array_push($salida, $fila);
+if($res==true){
+    while ($fila = mysqli_fetch_assoc($res)) {
+        array_push($salida, $fila);
+    }
+    $http_code= 200;
+}else{
+    $http_code= 400;
 }
-$http_code = 200;
+
