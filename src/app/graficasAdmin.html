@@ -6,7 +6,7 @@
     <title>AdminSection</title>
     <link rel="stylesheet" type="text/css" href="../css/estilo_graficasAdmin.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="js/sesion.js"></script>
+    <script src="js/sesion_permisos.js"></script>
 </head>
 
 <body>
@@ -38,12 +38,12 @@
                 <div class="divContenidoGraficas">
                     <section class="seleccion">
 
-                        <label><select id="selectUsurios" onchange="actualizarSelect()">
-
+                        <label><select id="selectUsurios" onchange="actualizarSelectParcelas(pintarGraficas)">
+                                <!-- Listado de usuarios generado en JS-->
                             </select>
                         </label>
                         <label><select id="selectParcelas" onchange="pintarGraficas()">
-
+                            <!-- Listado de parcelas generado en js-->
                         </select>
                         </label>
                     </section>
@@ -104,32 +104,41 @@
         </div>
 
     </div>
-    <script src="js/usuarios.js"></script>
+    <script src="js/usuarioLogin.js"></script>
     <script src="js/sideNav.js"></script>
     <script src="js/menuAdmin.js"></script>
     <script src="js/mediciones.js"></script>
     <script src="js/usuarios_select.js"></script>
-    <script src="js/parcelas.js"></script>
+    <script src="js/parcelas_select.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script>
-
-    VistaSelectorUsuios.iniciar("textNombreUsuario", "null");
-    ControladorUsuarios.iniciar();
-
-
     VistaMenu.setNav("navGeneral");
     VistaMenu.crearNav();
     VistaMenu.setSideNav("mySidenav");
     VistaMenu.crearSideNav();
 
-    VistaSelectUsuarios.iniciar("selectUsurios");
-    ControladorSelectUsuarios.iniciar();
+    VistaUsuarioLogin.iniciar("textNombreUsuario");
+    //Primer callback: Una vez se haya cargado la informacion relativa al usurio (SESION)
+    //se hará un callback a la función para inicir el selector de usuarios
+    ControladorUsuarioLogin.iniciar(iniciarSelectUsuario);
+    function iniciarSelectUsuario(){
+        VistaSelectUsuarios.iniciar("selectUsurios");
+        //Segundo callback : Una vez se haya inciado el select de usuarios,
+        //se cargara la informacion de las parcelas (según el usuario seleccionado)
+        ControladorSelectUsuarios.iniciar(iniciarSelectParcelas);
+    }
+    function iniciarSelectParcelas(){
+        VistaParcelasSelect.iniciar("selectParcelas");
+        //Tercer callback: Un vez se hayan inciado la infomacion relativa a las parcelas
+        //se pintaran las gráficas de la parcela seleccionada
+        ControladorSelectParcelas.iniciar(iniciarGraficas);
+    }
+    function iniciarGraficas(){
+        VistaMediciones.iniciar("chartTemperatura","chartLuminosidad","chartHumedad","chartSalinidad");
+        controladorMediciones.iniciar();
+        pintarGraficas();
 
-    VistaParcelasSelect.iniciar("selectParcelas");
-    ControladorSelectParcelas.iniciar();
-
-    VistaMediciones.iniciar("chartTemperatura","chartLuminosidad","chartHumedad","chartSalinidad");
-    controladorMediciones.iniciar();
+    }
 
 
 </script>
