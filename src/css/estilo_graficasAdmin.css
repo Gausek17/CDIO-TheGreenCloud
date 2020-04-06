@@ -8,6 +8,40 @@
      height: 60vh;
      margin: 0 auto;
  }
+/*SCROL BARR*/
+
+.grafica::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.grafica::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.grafica::-webkit-scrollbar-button:increment,.grafica::-webkit-scrollbar-button {
+    display: none;
+}
+
+.grafica::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.grafica::-webkit-scrollbar-thumb {
+    background-color: #800053;
+    border-radius: 20px;
+}
+
+.grafica::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #797979;
+}
+.grafica{
+    padding: 1.5rem;
+    height: 570px;
+    overflow: auto;
+}
+/*-------------*/
+
  #chartTemperatura {
  position: relative;
  width: 70vw;
@@ -478,10 +512,8 @@ ul li a {
 /*------RESPONSIVE----------*/
 @media only screen and (max-width:900px) { /* Ipad */
     .grafica{
-        
-                width: 80vw;
-                
-
+        overflow: inherit;
+        width: 80vw;
                
     }
     nav {
@@ -758,36 +790,3 @@ ul li a {
     font-size: 3rem;
     margin-left: 50px;
 }
-/*SCROL BARR*/
-
-.grafica::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
-
-.grafica::-webkit-scrollbar:vertical {
-    width:10px;
-}
-
-.grafica::-webkit-scrollbar-button:increment,.grafica::-webkit-scrollbar-button {
-    display: none;
-}
-
-.grafica::-webkit-scrollbar:horizontal {
-    height: 10px;
-}
-
-.grafica::-webkit-scrollbar-thumb {
-    background-color: #800053;
-    border-radius: 20px;
-}
-
-.grafica::-webkit-scrollbar-track {
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px #797979;
-}
-.grafica{
-    padding: 1.5rem;
-    height: 570px;
-    overflow: auto;
-}
-/*-------------*/
