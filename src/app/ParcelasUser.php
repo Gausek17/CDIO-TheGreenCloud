@@ -15,11 +15,12 @@
         <!-- Nav generado en js-->
     </div>
     <header>
-        <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
+        
         <img onclick="openNav()" src="../imagenes/menu/iconMenu.png" alt="Menu" class="iconMenu">
+        <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
         <div class="divUsuario">
             <p id="textNombreUsuario">Nombre Usuario</p>
-            <img src="../imagenes/iconUser.png" alt="Icono Usuario" class="iconUseer">
+            
             <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion" onclick="deleteSesion()" >
         </div>
     </header>
@@ -125,7 +126,7 @@
                         ></a>
                 </div>-->
                 
-                <input class="delete" type="button" onclick="removeLine();" value="Limpiar Mapa">
+               
                 </section>
                 <section ><a href="graficasAdmin.html" ><img src="../imagenes/parcelas/report.png" alt="icono graficas" class="enlace-graficas"></a></section>
             </div>

@@ -46,12 +46,15 @@ ul li a{
     nav {
         display: none;
     }
-    .logoGTI {
-        display: none;
+    header{
+        align-items: center; 
+        
     }
-
-    .iconMenu {
-        display: block;
+    
+    
+    
+    .divUsuario{
+    
     }
 
 }
