@@ -1,21 +1,15 @@
 let ModeloUsuariosSelect = {
-    datos : [],
     datosUsuarios:[],
-
-    cargar : function () {
-        fetch('../api/v1.0/sesion').then(function (respuesta) {
-            return respuesta.json();
-        }).then((datosJson) =>{
-
-            this.datos = datosJson;
-        });
+    cargar : function (callback) {
 
         fetch('../api/v1.0/usuarios').then(function (respuesta) {
             return respuesta.json();
         }).then((datosJson) =>{
             this.datosUsuarios = datosJson;
             this.controlador.llenarSelectUsuarios();
-
+            if (callback!=null){
+                callback();
+            }
         });
     },
     controlador : {}
@@ -30,28 +24,27 @@ let VistaSelectUsuarios = {
 
     llenarSelectUsuarios : function (datos) {
         var stringPersonas='';
-        var id_usurio = ModeloUsuarios.datos[0].id_usuario;
+        //var id_usurio = ModeloUsuarioLogin.datos[0].id_usuario;
         for (var i = datos.length-1; i>=0;i--){
-            if (id_usurio==datos[i].id_usuario){
-                stringPersonas+=`<option value="${datos[i].id_usuario}" selected="selected">${datos[i].nombre}</option>`;
-            }else{
                 stringPersonas+=`<option value="${datos[i].id_usuario}">${datos[i].nombre}</option>`;
-            }
-
         }
         this.selectUsuarios.innerHTML =stringPersonas;
-       actualizarSelect();
+
+
     }
+
+
 };
 let ControladorSelectUsuarios = {
     modelo : ModeloUsuariosSelect,
     vista : VistaSelectUsuarios,
-    iniciar : function () {
+    iniciar : function (callback) {
         this.modelo.controlador = this;
-        this.modelo.cargar();
+        this.modelo.cargar(callback);
     },
     llenarSelectUsuarios: function () {
         this.vista.llenarSelectUsuarios(this.modelo.datosUsuarios);
+
     }
 };
 

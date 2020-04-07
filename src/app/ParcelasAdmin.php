@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/estilo_parcelas.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="js/sesion.js"></script>
+    <script src="js/sesion_permisos.js"></script>
 </head>
 <body>
 
@@ -133,9 +133,9 @@
                  </section>  
                  
                 <section class="no-selectores-header">
-                <section class="button">
+                <!-- <section class="button">
                 <input class="delete" type="button" onclick="removeLine();" value="Limpiar Mapa">
-                </section>
+                </section> -->
                 <section ><a href="graficasAdmin.html" ><img src="../imagenes/parcelas/report.png" alt="icono graficas" class="enlace-graficas"></a></section>
                 </section>
             </div>
@@ -289,18 +289,20 @@
             </div>
         </div>
     </div>
-<script src="js/usuarios.js"></script>
+<script src="js/usuarioLogin.js"></script>
 <script src="js/menuAdmin.js"></script>
 <script src="js/sideNav.js"></script>
+
 <script src="js/usuarios_select.js"></script>
 <script>
-    VistaSelectorUsuios.iniciar("textNombreUsuario", "null");
-    ControladorUsuarios.iniciar();
+    VistaUsuarioLogin.iniciar("textNombreUsuario");
+    ControladorUsuarioLogin.iniciar();
 
     VistaMenu.setNav("navGeneral");
     VistaMenu.crearNav();
     VistaMenu.setSideNav("mySidenav");
     VistaMenu.crearSideNav();
+
     VistaSelectUsuarios.iniciar("usuario");
     ControladorSelectUsuarios.iniciar();
 </script>

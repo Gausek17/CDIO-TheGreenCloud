@@ -1,22 +1,25 @@
-*{
+* {
     font-family: "Trebuchet MS";
 }
 
-body{
-    
+body {
+
     margin: 0 auto;
 }
-.logoGTI:hover{
-    cursor: pointer;
-}
-.cerrar_sesion{
-    width: 30px;
-}
-.cerrar_sesion:hover{
+
+.logoGTI:hover {
     cursor: pointer;
 }
 
-.iconMenu{
+.cerrar_sesion {
+    width: 30px;
+}
+
+.cerrar_sesion:hover {
+    cursor: pointer;
+}
+
+.iconMenu {
     display: none;
     width: 50px;
     height: 55px;
@@ -24,44 +27,49 @@ body{
     margin-left: 0.5rem;
 }
 
-.container{
+.container {
 
     align-items: center;
     margin-right: 7.5rem;
     margin-left: 7.5rem;
     margin-bottom: 1.5rem;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
 
 }
 
-.divCentral{
+.divCentral {
     height: 100%;
     display: flex;
     border-radius: 15px;
 }
-.divUsuario{
+
+.divUsuario {
 
     display: flex;
     align-items: center;
 }
-.iconUseer{
+
+.iconUseer {
     margin-left: 2rem;
     margin-right: 0.75rem;
     width: 75px;
     height: 75px;
 }
-.seleccion{ 
+
+.seleccion {
     margin-left: 10px;
     display: flex;
 }
-#parcela{
+
+#parcela {
     margin-left: 10px;
 }
 
-.seleccion select{
+.seleccion select {
     background-color: #800053;
     color: white;
     border-radius: 10px;
@@ -70,19 +78,22 @@ header{
     cursor: pointer;
     border: 0;
 }
+
 .enlace-graficas {
     width: 50px;
     border: 1px solid purple;
     border-radius: 10px;
     padding: 0.5rem;
+    margin-left: 50px;
+    margin-top: 10px;
 }
 
-.enlace-graficas:hover{
+.enlace-graficas:hover {
     background-color: lightgray;
 }
 
 
-.textAdmin{
+.textAdmin {
     margin: 0;
     color: white;
     font-size: 2rem;
@@ -91,43 +102,50 @@ header{
     border-right: 2px solid white;
     text-align: center;
 }
-nav{
+
+nav {
     border-radius: 15px;
     border-top-right-radius: 0px;
     width: 350px;
-    background-color:#800053;
+    background-color: #800053;
     display: table-cell;
 
 }
-.boton{
+
+.boton {
     border-radius: 200px 200px 200px 200px;
     border: none;
     margin-left: 10px;
 }
-.lista a{
+
+.lista a {
     color: black;
     display: block;
     padding: 12px;
 }
-.lista{
+
+.lista {
     background-color: #d9c0fc;
     display: none;
     width: 180px;
     position: absolute;
     z-index: 100;
 }
-.lista a:hover{
+
+.lista a:hover {
     background-color: #f1f1f1;
 }
-.desplegable:hover .lista{
+
+.desplegable:hover .lista {
     display: block;
-    
+
 }
-.despegable{
+
+.despegable {
     position: absolute;
 }
 
-.delete{
+.delete {
     cursor: pointer;
     background-color: #800053;
     color: white;
@@ -135,37 +153,40 @@ nav{
     border: 0;
     font-weight: bold;
     padding: 1rem;
-    
+
 }
 
-.button{
-   align-content: space-between;
+.button {
+    align-content: space-between;
     padding: 1rem;
     margin-left: 17px;
 }
-.iconParcelasSelected{
+
+.iconParcelasSelected {
     width: 53px;
     height: auto;
 
     margin: 0.5rem;
 }
-.iconSeleccionParcela{
+
+.iconSeleccionParcela {
     width: 75px;
     height: auto;
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
-.divSeleccionParcela{
+.divSeleccionParcela {
     display: flex;
     align-items: center;
 
 }
 
-.divContenido{
+.divContenido {
     width: 100%;
 }
-.panelActual{
+
+.panelActual {
     border-top-right-radius: 15px;
     border-bottom: 2px solid white;
     font-size: 1.2rem;
@@ -176,29 +197,32 @@ nav{
     align-items: center;
     background-color: #800053;
 }
-.divContenidoUser{
+
+.divContenidoUser {
     padding: 1.5rem;
     height: 580px;
     overflow: auto;
 
 }
 
-.navParcela{
+.navParcela {
     border: 4px solid black;
 }
 
-#map{
+#map {
     width: inherit;
     height: inherit;
     border: solid 3px black;
     margin-right: 30px;
 
 }
-.divTextSeleccionParcela{
+
+.divTextSeleccionParcela {
     display: flex;
     align-items: center;
 }
-.textSeleccionParcela{
+
+.textSeleccionParcela {
     font-weight: bold;
     padding: 5px;
 }
@@ -210,10 +234,11 @@ nav{
 }
 
 .divContenidoUser::-webkit-scrollbar:vertical {
-    width:10px;
+    width: 10px;
 }
 
-.divContenidoUser::-webkit-scrollbar-button:increment,.divContenidoUser::-webkit-scrollbar-button {
+.divContenidoUser::-webkit-scrollbar-button:increment,
+.divContenidoUser::-webkit-scrollbar-button {
     display: none;
 }
 
@@ -230,100 +255,120 @@ nav{
     border-radius: 10px;
     box-shadow: inset 0 0 10px #797979;
 }
-.no-selectores-header{
-        display: flex;
-        align-items: center;
-    }
+
+.no-selectores-header {
+    display: flex;
+    align-items: center;
+}
+
 /*------RESPONSIVE----------*/
-@media only screen and (max-width:900px){
-    .divContenidoUser{
+@media only screen and (max-width:900px) {
+    .divContenidoUser {
         overflow: inherit;
     }
-    .panelActual{
+
+    .panelActual {
         border-radius: 15px;
     }
-    .container{
+
+    .container {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
-    .iconUseer{
+
+    .iconUseer {
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
-    #map{
-    width: inherit;
-    height: inherit;
-    border: solid 3px black;
-    margin-left: 0px;
-    margin-right: 0px;
 
-}
-    .seleccion{
+    #map {
+        width: inherit;
+        height: inherit;
+        border: solid 3px black;
+        margin-left: 0px;
+        margin-right: 0px;
+
+    }
+
+    .seleccion {
         display: flex;
         justify-content: space-between;
     }
-    #parcela{
+
+    #parcela {
         width: 150px;
         font-size: 10px;
-        
+
     }
-    #usuario{
+
+    #usuario {
         width: 150px;
         font-size: 10px;
     }
-    .textSeleccionParcela{
+
+    .textSeleccionParcela {
         font-size: 15px;
     }
-    
-    .enlace-graficas{
-        width:  40px;
+
+    .enlace-graficas {
+        width: 40px;
+        margin-left: 50px;
+        margin-top: 10px;
     }
 
-  
+
 
 }
+
 @media only screen and (max-width: 450px) {
 
-    .divContenidoUser{
+    .divContenidoUser {
         padding: 0.5rem;
     }
-    .iconUseer{
+
+    .iconUseer {
         width: 65px;
         height: 65px;
 
     }
-    .iconSeleccionParcela{
+
+    .iconSeleccionParcela {
         padding-left: 0;
         width: 55px;
         margin-right: 0.5rem;
     }
-    .button{
+
+    .button {
         margin-left: 0;
         padding-left: 0.5rem;
     }
-    
 
-    header{
+
+    header {
         margin-bottom: 0.5rem;
     }
-    .divTextSeleccionParcela{
+
+    .divTextSeleccionParcela {
         margin-top: 5px;
     }
-    .divSeleccionParcela{
+
+    .divSeleccionParcela {
         align-items: center;
         flex-direction: column;
     }
-    .seleccion{
-     display: flex;
-     flex-direction: column;
-     align-content: center;   
-    }    
-    #parcela{
+
+    .seleccion {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    #parcela {
         margin-top: 7px;
         margin-left: 0px;
     }
-   
-    .enlace-graficas{
+
+    .enlace-graficas {
         width: 30px;
     }
 

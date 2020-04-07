@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-    <script src="js/sesion.js"></script>
+    <script src="js/sesion_permisos.js"></script>
 </head>
 
 <body>
@@ -98,15 +98,15 @@
         </div>
 
     </div>
-    <script src="js/usuarios.js"></script>
+    <script src="js/usuarioLogin.js"></script>
     <script src="js/menuUser.js"></script>
     <script src="js/sideNav.js"></script>
     <script src="js/mediciones.js"></script>
-    <script src="js/parcelas.js"></script>
+    <script src="js/parcelas_select.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
     <script>
-        VistaSelectorUsuios.iniciar("textNombreUsuario", "null");
-        ControladorUsuarios.iniciar();
+        VistaUsuarioLogin.iniciar("textNombreUsuario");
+        ControladorUsuarioLogin.iniciar();
 
         VistaMenu.setNav("navGeneral");
         VistaMenu.crearNav();
