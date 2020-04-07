@@ -134,15 +134,15 @@
                  </section>  
                  
                 <section class="no-selectores-header">
-<<<<<<< HEAD
+
                 <section class="button">
                 
                 </section>
-=======
+
                 <!-- <section class="button">
                 <input class="delete" type="button" onclick="removeLine();" value="Limpiar Mapa">
                 </section> -->
->>>>>>> develop
+
                 <section ><a href="graficasAdmin.html" ><img src="../imagenes/parcelas/report.png" alt="icono graficas" class="enlace-graficas"></a></section>
                 </section>
             </div>

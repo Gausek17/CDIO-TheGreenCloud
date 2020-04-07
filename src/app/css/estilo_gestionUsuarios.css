@@ -4,6 +4,10 @@
 body{
     margin: 0 auto;
 }
+#textNombreUsuario{
+    padding: 5px;
+    
+}
 .logoGTI:hover{
     cursor: pointer;
 }
