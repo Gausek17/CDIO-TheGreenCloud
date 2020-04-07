@@ -119,15 +119,20 @@
 
         </select></label>
                  </section>  
-                <section class="button">
-               <!-- <button class="delete">Limpiar Mapa</button>
+                <!-- <section class="button">
+               <button class="delete">Limpiar Mapa</button>
                 <div class="borrado">
                     <a href="#"
                         ></a>
-                </div>-->
+                </div>
                 
+<<<<<<< HEAD
                
                 </section>
+=======
+                <input class="delete" type="button" onclick="removeLine();" value="Limpiar Mapa">
+                </section> -->
+>>>>>>> develop
                 <section ><a href="graficasAdmin.html" ><img src="../imagenes/parcelas/report.png" alt="icono graficas" class="enlace-graficas"></a></section>
             </div>
             
