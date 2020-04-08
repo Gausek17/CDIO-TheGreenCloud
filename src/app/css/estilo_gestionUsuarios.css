@@ -97,6 +97,28 @@ header{
 
 }
 
+.botonAceptar{
+    border: 5px;
+    border-color: black;
+    background-color: #333333;
+    color: white;
+    font-size: 11px;
+    border-radius: 10px;
+    width: 80px;
+    height: 35px;
+    text-align: center;
+   margin-bottom: 0.7rem;
+    margin-right: 10px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.botonAceptar:hover{
+    background-color: black;
+    
+}
+
+
 .iconNuevoUsuario{
     width: 75px;
     height: auto;
@@ -286,6 +308,12 @@ header{
 
     header{
         margin-bottom: 0.5rem;
+    }
+    .botonAceptar{
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
 }
