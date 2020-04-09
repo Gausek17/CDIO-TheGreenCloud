@@ -6,7 +6,7 @@ body{
 }
 
 .container{
-    background-image: linear-gradient(to right, #000000 , #800053);
+    background-color: aliceblue;
     height: 100vh;
     display: flex;
     padding-left:1.5rem;
