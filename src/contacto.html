@@ -15,12 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link rel="stylesheet" type="text/css" href="css/estilo_contacto.css">
-    
-    <script src="js/sesionLogin.js"></script>
-    
-
-   
-
 </head>
 
 <body>
@@ -33,15 +27,15 @@
 
         <form class="contacto">
 
-            <h1>
-                <u>Contacta con nosotros si tienes alguna duda</u>
+            <h1 class="textoConsulta">
+                Contacta con nosotros si tienes alguna duda
             </h1>
 
             <div class="form-group">
 
                 <label>Nombre y apellidos</label><br>
 
-                <input class="form-control" type="text" name="Nombre_y_apellidos" placeholder="Escribe tu nombre y apellidos">
+                <input class="form-control" type="text" name="Nombre_y_apellidos" placeholder="Nombre y apellidos">
 
             </div>
 
@@ -50,7 +44,7 @@
 
                 <br><label>Empresa</label><br>
 
-                <input class="form-control" type="text" name="Empresa" placeholder="Escribe tu empresa">
+                <input class="form-control" type="text" name="Empresa" placeholder="Nombre de empresa">
 
             </div>
 
@@ -58,7 +52,7 @@
 
                 <br><label>Teléfono</label><br>
 
-                <input class="form-control" type="tel" name="Teléfono" placeholder="Escribe tu número de teléfono">
+                <input class="form-control" type="tel" name="Teléfono" pattern="[0-9]{9}" placeholder="Ej:999 999 999">
 
             </div>
 
@@ -66,7 +60,7 @@
 
                 <br><label>Correo electrónico</label><br>
 
-                <input class="form-control" type="email" name="email" placeholder="Escribe tu correo electrónico">
+                <input class="form-control" type="email" name="email" placeholder="Ej:example@example.es    ">
 
             </div>
 
@@ -107,7 +101,7 @@
         <div class="footer-center">
             <div>
                 <i class="fa fa-map-marker"></i>
-                <img src="imagenes/contacto/ubicacion.png" style=width="50px" height="50px" id=" mapita" >
+                <img src="imagenes/contacto/ubicacion.png" style=width="50px" height="50px" id="mapita" >
                 <p><span>E.Politécnica Superior de Gandía<br>
                         C/Paranimf, 1, Edicifio F</span>
                     46730 Grau de Gandia, Valencia</p>

@@ -9,7 +9,6 @@ let ModeloMediciones = {
         }).then((datosJson) =>{
             this.datos = datosJson;
             this.controlador.representarGrafica();
-
         });
     },
     controlador : {}
