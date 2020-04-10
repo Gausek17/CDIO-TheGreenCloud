@@ -21,6 +21,7 @@ let VistaDivUsuarios = {
     representarUsurios : function (datos) {
         var stringPersonas='';
         for (var i = datos.length-1; i>=0;i--){
+
             stringPersonas+=`<div class="divPerson" id="${datos[i].id_usuario}">
                     <img src="../imagenes/admin/iconUser-white.png" alt="usurio" class="iconUserPerson">
                     <div class="divTextoPersona">
@@ -149,8 +150,6 @@ function nuevoUser() {
             }
         });
     }
-
-
 }
 function cancelarNuevoUser() {
     document.getElementById("divNuevoUsuario").style.display  = "flex";

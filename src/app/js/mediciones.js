@@ -8,6 +8,7 @@ let ModeloMediciones = {
             return respuesta.json();
         }).then((datosJson) =>{
             this.datos = datosJson;
+            console.log(datosJson);
             this.controlador.representarGrafica();
         });
     },
