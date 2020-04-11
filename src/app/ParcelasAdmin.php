@@ -35,7 +35,7 @@
             
             <div class="divSeleccionParcela">
                 <div class = "divTextSeleccionParcela">
-                    <img src="../imagenes/parcelas/icono-maps.png" alt="Añadir usuario" class="iconSeleccionParcela">
+                    
                     <p class="textSeleccionParcela">Seleccione una parcela:</p>
                 </div>
                <section class="seleccion">

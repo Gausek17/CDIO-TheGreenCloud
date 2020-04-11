@@ -120,7 +120,7 @@ header{
 
 
 .iconNuevoUsuario{
-    width: 75px;
+    width: 55px;
     height: auto;
     padding-left: 2.5rem;
    margin-bottom: 0.7rem;
@@ -176,10 +176,15 @@ header{
     cursor: pointer;
 }
 .iconEditUser{
-    width: 50px;
-    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: plum;
+    font font-weight: 700;
+    font-size: 15px;
 }
 .iconEditUser:hover{
+    background-color: purple;
+    color: aliceblue;
     cursor: pointer;
 }
 
@@ -252,6 +257,9 @@ header{
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
+    .iconEditUser{
+        padding: 6px;
+    }
 
 
 }
@@ -268,8 +276,10 @@ header{
         margin-right: 1rem;
     }
     .iconEditUser{
-        width: 40px;
-        height: 40px;
+        text-align: center;
+       width: 70px;
+        
+        padding: 5px;
     }
     .iconDeleteUser{
         width: 40px;
@@ -288,6 +298,7 @@ header{
         height: 65px;
 
     }
+   
     .textNombre{
         font-size: 1rem;
         width: 9rem;

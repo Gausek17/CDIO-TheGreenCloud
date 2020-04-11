@@ -17,22 +17,26 @@ ul li{
     padding: 0.25rem;
 }
 .iconParcelas{
-    height: 90px;
-    width: 90px;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+}
+.iconMediciones{
+     padding: 10px;
+    height: 60px;
+    width: 60px;
 }
 .iconGestionUsuarios{
-    width: 100px;
-    height: auto;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
 }
 
 .iconGestionUsuariosSelected{
     width: 69px;
     height: auto;
 }
-.iconMediciones{
-    width: 69px;
-    height: auto;
-}
+
 ul li a{
     color: white;
     text-decoration: none;

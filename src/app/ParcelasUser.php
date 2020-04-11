@@ -34,7 +34,7 @@
             </div>
             <div class="divSeleccionParcela">
                 <div class = "divTextSeleccionParcela">
-                    <img src="../imagenes/parcelas/icono-maps.png" alt="Añadir usuario" class="iconSeleccionParcela">
+                   
                     <p class="textSeleccionParcela">Seleccione una parcela:</p>
                 </div>
                 <section class="seleccion">
@@ -126,13 +126,13 @@
                         ></a>
                 </div>
                 
-<<<<<<< HEAD
+
                
                 </section>
-=======
+
                 <input class="delete" type="button" onclick="removeLine();" value="Limpiar Mapa">
                 </section> -->
->>>>>>> develop
+
                 <section ><a href="graficasAdmin.html" ><img src="../imagenes/parcelas/report.png" alt="icono graficas" class="enlace-graficas"></a></section>
             </div>
             

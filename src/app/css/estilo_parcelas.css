@@ -141,6 +141,7 @@ nav{
     position: absolute;
 }
 
+
 .delete {
     cursor: pointer;
     background-color: #800053;
@@ -159,18 +160,14 @@ nav{
 }
 
 .iconParcelasSelected {
-    width: 53px;
+    padding: 6px;
+    width: 46px;
     height: auto;
 
     margin: 0.5rem;
 }
 
-.iconSeleccionParcela {
-    width: 75px;
-    height: auto;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
-}
+
 
 .divSeleccionParcela {
     display: flex;
@@ -214,6 +211,7 @@ nav{
 }
 
 .divTextSeleccionParcela {
+    margin-left: 40px;
     display: flex;
     align-items: center;
 }
