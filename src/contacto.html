@@ -24,60 +24,66 @@
     </header>
 
     <section class="form">
-
-        <form class="contacto">
-
+        <div class="divTitulo">
             <h1 class="textoConsulta">
                 Contacta con nosotros si tienes alguna duda
             </h1>
+        </div>
 
-            <div class="form-group">
+        <form class="contacto">
+            <div class="contenedorCamposForm">
+                <div class="form-group">
 
-                <label>Nombre y apellidos</label><br>
+                    <label>Nombre y Apellidos:</label><br>
 
-                <input class="form-control" type="text" name="Nombre_y_apellidos" placeholder="Nombre y apellidos">
+                    <input class="form-control" type="text" name="Nombre_y_apellidos" placeholder="Nombre y apellidos" required>
 
+                </div>
+
+
+                <div class="form-group">
+
+                    <br><label>Empresa:</label><br>
+
+                    <input class="form-control" type="text" name="Empresa" placeholder="Nombre de empresa" required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <br><label>Teléfono:</label><br>
+
+                    <input class="form-control" type="tel" name="Teléfono" pattern="[0-9]{9}" placeholder="Ej:999 999 999" required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <br><label>Correo electrónico:</label><br>
+
+                    <input class="form-control" type="email" name="email" placeholder="Ej:example@example.es" required>
+
+                </div>
             </div>
 
+            <div class="contenedorConsulta">
+                <div class="form-group">
 
-            <div class="form-group">
+                    <label class="labelConsulta">Consulta:</label><br>
+                    <div class="divTextArea">
+                        <textarea class="textAreaConsulta" name="consulta" placeholder="Escribe tu consulta" id="consult" required></textarea>
+                    </div>
 
-                <br><label>Empresa</label><br>
+                </div>
 
-                <input class="form-control" type="text" name="Empresa" placeholder="Nombre de empresa">
 
+                <div class="btn_form">
+                    <br>
+                    <input class="btn_reset" type="reset" value="Limpiar">
+                    <input class="btn_submit" type="submit" value="Enviar">
+                </div>
             </div>
 
-            <div class="form-group">
-
-                <br><label>Teléfono</label><br>
-
-                <input class="form-control" type="tel" name="Teléfono" pattern="[0-9]{9}" placeholder="Ej:999 999 999">
-
-            </div>
-
-            <div class="form-group">
-
-                <br><label>Correo electrónico</label><br>
-
-                <input class="form-control" type="email" name="email" placeholder="Ej:example@example.es    ">
-
-            </div>
-
-            <div class="form-group">
-
-                <br><label>Consulta</label><br>
-                <textarea name="consulta" rows="10" cols="50" placeholder="Escribe tu consulta" id="consult"></textarea>
-                <br><br>
-
-
-            </div>
-
-
-            <div class="btn_form">
-                <br><input class="btn_submit" type="submit" value="Enviar">
-                <input class="btn_reset" type="reset" value="Limpiar">
-            </div>
 
         </form>
     </section>
