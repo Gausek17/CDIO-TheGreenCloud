@@ -281,13 +281,6 @@ nav{
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
-    
-    #map{
-    width: inherit;
-    height: inherit;
-    border: solid 3px black;
-    margin-left: 0px;
-    margin-right: 0px;
 
     #map {
         width: inherit;
@@ -309,7 +302,7 @@ nav{
 
     }
 
-    #usuario {
+    #selectUsurios {
         width: 150px;
         font-size: 10px;
     }

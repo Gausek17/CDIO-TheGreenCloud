@@ -126,9 +126,6 @@
 
             endforeach;
             ?>
-            <script>
-                 
-            </script>
 
         </select></label>
                  </section>  

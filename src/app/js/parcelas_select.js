@@ -42,8 +42,8 @@ function actualizarSelectParcelas(callback) {
     var stringPersonas='';
     var data = ModeloParcelaSelect.datos;
     var idUsuario;
-    //Si no ecuentra el select de usuarios quiere decir que esta en la vista usurio
-    //Por tanto siempre devera filtrar por la id de usuario
+    //Si no ecuentra el select de usuarios quiere decir que esta en la vista Usuario
+    //Por tanto siempre devera filtrar por la id de usuario con la que se ha registrado
     if (document.getElementById("selectUsurios") == null){
         idUsuario = ModeloUsuarioLogin.datos[0].id_usuario;
     }else{
@@ -62,4 +62,17 @@ function actualizarSelectParcelas(callback) {
     if (callback!=null){
         callback();
     }
+}
+function getParcela(id_parcela){
+    let parcela;
+    let encontrado = false;
+    let lista = ModeloParcelaSelect.datos;
+
+    for (let i=0; i<lista.length && encontrado===false; i++){
+        if (lista[i].id_parcela === id_parcela){
+            parcela = lista[i];
+            encontrado=true;
+        }
+    }
+    return parcela;
 }
