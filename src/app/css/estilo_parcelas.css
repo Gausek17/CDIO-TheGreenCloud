@@ -274,13 +274,24 @@ nav{
         
     }
     .panelActual{
-        border-radius: 15px;
+        border-radius: 0px;
     }
 
     .container {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
+<<<<<<< Updated upstream
+=======
+    
+    #map{
+    width: inherit;
+    height: inherit;
+    border: solid 3px black;
+    margin-left: 0px;
+    margin-right: 0px;
+    }
+>>>>>>> Stashed changes
 
     #map {
         width: inherit;
