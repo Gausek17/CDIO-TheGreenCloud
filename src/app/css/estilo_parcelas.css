@@ -161,7 +161,7 @@ nav{
 
 .iconParcelasSelected {
     padding: 6px;
-    width: 46px;
+    width: 80px;
     height: auto;
 
     margin: 0.5rem;
@@ -180,15 +180,23 @@ nav{
 }
 
 .panelActual {
-    border-top-right-radius: 15px;
-    border-bottom: 2px solid white;
-    font-size: 1.2rem;
-    width: 100%;
-    color: white;
+    
+
+    display:flex;
+    flex-direction: column;
+}
+.titulo-sin-linea{
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #800053;
+    justify-content: center;
+}
+.titulo-sin-linea p {
+    font-size: 40px;
+}
+#linea-titulo{
+    border: 2px solid black;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
 }
 
 .divContenidoUser {
@@ -281,17 +289,7 @@ nav{
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
-<<<<<<< Updated upstream
-=======
-    
-    #map{
-    width: inherit;
-    height: inherit;
-    border: solid 3px black;
-    margin-left: 0px;
-    margin-right: 0px;
-    }
->>>>>>> Stashed changes
+
 
     #map {
         width: inherit;
@@ -306,6 +304,12 @@ nav{
         display: flex;
         justify-content: space-between;
     }
+    .iconParcelasSelected {
+        width: 60px;
+    }
+    .titulo-sin-linea p {
+    font-size: 35px;
+}
 
     #parcela {
         width: 150px;
@@ -361,6 +365,12 @@ nav{
         width:  30px;
         height: 30px;
     }
+    .iconParcelasSelected {
+        width: 45px;
+    }
+    .titulo-sin-linea p {
+    font-size: 2c5px;
+}
     
     
     .divTextSeleccionParcela{
