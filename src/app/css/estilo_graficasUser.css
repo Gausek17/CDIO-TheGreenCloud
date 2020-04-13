@@ -346,13 +346,7 @@ ul li {
     height: auto;
 }
 
-.iconGestionUsuariosSelected {
-    width: 52px;
-    height: auto;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
+
 
 ul li a {
     color: white;
@@ -367,18 +361,29 @@ ul li a {
     width: 100%;
 }
 
-.divPanelActual {
-    border-top-right-radius: 15px;
-    border-bottom: 2px solid white;
-    font-size: 1.2rem;
-    width: 100%;
-    color: white;
+.panelActual {
+    
+
+    display:flex;
+    flex-direction: column;
+}
+.titulo-sin-linea{
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #800053;
+    justify-content: center;
+}
+.titulo-sin-linea p {
+    font-size: 40px;
 }
 
+.iconSensorSelected {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+}
 .divContenidoUser {
     padding: 1.5rem;
     height: 580px;
@@ -507,10 +512,13 @@ ul li a {
         display: none;
     }
 
-    .iconUseer {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+    .iconSensorSelected{
+        width: 60px;
+        
     }
+    .titulo-sin-linea p {
+    font-size: 35px;
+}
 
     .divNuevoUsuario {
         flex-direction: column;
@@ -576,11 +584,13 @@ ul li a {
         padding: 0.5rem;
     }
 
-    .iconUseer {
-        width: 65px;
-        height: 65px;
-
+    .iconSensorSelected{
+        width: 45px;
+        
     }
+    .titulo-sin-linea p {
+    font-size: 25px;
+}
 
     .divNuevoUsuario {
         flex-direction: column;
