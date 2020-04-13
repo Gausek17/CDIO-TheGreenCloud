@@ -60,6 +60,7 @@ function dibujarParcela(coordenadas, color) {
         fillOpacity: 0.35,
         map: map
     });
+    //
     poligono.getPath().getArray().forEach(function (v) {
         bounds.extend(v);
     });

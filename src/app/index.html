@@ -38,6 +38,14 @@
                 <p> Añadir usuario</p>
             </div>
 
+            <div class="container mt-5">
+                <h1>Buscador</h1>
+                <input type="text" id="buscador" class="form-control my-2">
+                <ul id="resultado">
+                    <li>Usuarios</li>
+                </ul>
+            </div>
+
             <div class="divContenidoUserNuevo" id="divContenidoUserNuevo">
                 <div class="divNuevaPersona" id="divNuevaPersona">
                     <img src="../imagenes/admin/iconAddUser.png" alt="usurio" class="iconUserPerson">
@@ -84,6 +92,8 @@
     VistaMenu.crearNav();
     VistaMenu.setSideNav("mySidenav");
     VistaMenu.crearSideNav();
+
+    document.getElementById("buscador").addEventListener('keyup', filtrar);
 </script>
 
 </body>
