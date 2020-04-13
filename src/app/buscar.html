@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-widht, initial-scale=1, shrink-to-fit=no">
 
     <! Boostrap CSS -->
-        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
 <div class="container mt-5">
-<h1>Buscador</h1>
-<input type="text" id="formulario" class="form-control my-2">
-<button class="btn btn-info mb-2" id="boton">Buscar</button>
-<ul id="resultado">
-<li>Usuarios</li>
-</ul>
+    <h1>Buscador</h1>
+    <input type="text" id="buscador" class="form-control my-2">
+    <button class="btn btn-info mb-2" id="boton">Buscar</button>
+    <ul id="resultado">
+        <li>Usuarios</li>
+    </ul>
 </div>
 
 <script>
@@ -30,44 +30,41 @@
         {nombre: 'Alberto'},
     ]
 
-    const formulario = document.querySelector('#formulario');
+    const buscador = document.querySelector('#buscador');
     const boton = document.querySelector('#boton');
     const resultado = document.querySelector('#resultado')
-    const filtrar = ()=>{
-       //imprime en la consola lo que escribes en el buscador
-        //console.log(formulario.value);
-        resultado.innerHTML='';
-        
-        const texto = formulario.value.toLowerCase();
-        for (let persona of usuarios){
+    let filtrar = () => {
+        //imprime en la consola lo que escribes en el buscador
+        //console.log(buscador.value);
+        resultado.innerHTML = '';
+
+        const texto = buscador.value.toLowerCase();
+        for (let persona of usuarios) {
             let nombre = persona.nombre.toLowerCase();
-            if(nombre.indexOf(texto) !== -1){
+            if (nombre.indexOf(texto) !== -1) {
                 //indexOf te devuelve el elemento si existe
-                resultado.innerHTML +=`
-<li>${persona.nombre}</li>
+                resultado.innerHTML += `<li>${persona.nombre}</li>
 `
             }
-    }
-        if(resultado.innerHTML === ''){
-            resultado.innerHTML +=`
-<li>Usuario no encontrado</li>
+        }
+        if (resultado.innerHTML === '') {
+            resultado.innerHTML += `<li>Usuario no encontrado</li>
 `
         }
     }
-        
-    
+
+
     boton.addEventListener('click', filtrar);
-    formulario.addEventListener('keyup', filtrar);
+    buscador.addEventListener('keyup', filtrar);
     filtrar();
-    
-    </script>
+
+</script>
 
 
-
-    <!-- Carga archivos JS -->
-    <script src="../bootstrap/js/jquery-3.4.1.min.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Carga archivos JS -->
+<script src="../bootstrap/js/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
