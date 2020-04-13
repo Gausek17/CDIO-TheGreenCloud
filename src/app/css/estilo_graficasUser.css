@@ -5,6 +5,7 @@
 label.lbl {
     /*margin-left: 15px;*/
 }
+
 .grafica{
     position: relative;
     width: 50vw;
@@ -13,46 +14,38 @@ label.lbl {
     margin: 0 auto;
 
 }
+
 #chartTemperatura {
     position: relative;
     width: 70vw;
     height: 50vh;
     margin-bottom: 1rem;
-
     background-color: orange;
-
-
 }
-#chartLuminosidad {
 
+#chartLuminosidad {
     position: relative;
     width: 70vw;
     height: 50vh;
     margin-bottom: 1rem;
-
     background-color: grey;
-
 }
-#chartHumedad {
 
+#chartHumedad {
     position: relative;
     width: 70vw;
     height: 50vh;
     margin-bottom: 1rem;
     background-color: royalblue;
-
 }
-#chartSalinidad {
 
+#chartSalinidad {
     position: relative;
     width: 70vw;
     height: 50vh;
     margin-bottom: 1rem;
     background-color: #408033;
-
 }
-
-
 
 .lbl {
     display: flex;
@@ -83,7 +76,6 @@ label.lbl {
     content: "✔";
     color: aliceblue;
     font-size: 1.8em;
-
 }
 
 #switchHumedad:checked + .lbl {
@@ -122,15 +114,11 @@ label.lbl {
     display: none;
 }
 
-
-
-
     {
     font-family: "Trebuchet MS";
 }
 
 body {
-
     margin: 0 auto;
 }
 
@@ -164,10 +152,21 @@ body {
     height: 70px;
 }
 
-.seleccion {
+.seleccion{
+    display: flex;
+    justify-content: center;
+}
+
+.seleccion_parcelas {
     margin: 5px;
     margin-left: 20px;
     margin-top: 15px;
+}
+
+.seleccion_calendar{
+    margin: 5px;
+    margin-left: 30px;
+    margin-top: 20px;
 }
 
 .checkbox{
@@ -207,7 +206,6 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-
 }
 
 .divCentral {
@@ -217,7 +215,6 @@ header {
 }
 
 .divUsuario {
-
     display: flex;
     align-items: center;
 }
@@ -295,7 +292,6 @@ nav {
 
 .desplegable:hover .lista {
     display: block;
-
 }
 
 .despegable {
@@ -308,9 +304,7 @@ nav {
     color: white;
     border-radius: 46px 46px 46px 46px;
     border: 2px solid black;
-
     padding: 1rem;
-
 }
 
 .delete:hover {
