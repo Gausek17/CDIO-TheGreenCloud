@@ -105,13 +105,13 @@ function pintarGraficaLuminosidad(){
     let listaDatosLuminosidad = [];
 
     datos.forEach(element => {
-        if (element.id_sonda == 2) {
+        if (element.tipoDato === "Luminosidad") {
             listaLabelsLuminosidad.push(formateraHora(element.hora))
         }
     });
 
     datos.forEach(element => {
-        if (element.id_sonda == 2) {
+        if (element.tipoDato === "Luminosidad") {
             listaDatosLuminosidad.push(element.medicion)
         }
     });
@@ -201,14 +201,14 @@ function pintarGraficaTemperatura(){
     let listaDatosTemperatura = [];
     
     datos.forEach(element => {
-        if (element.id_sonda == 1) {
+        if (element.tipoDato === "Temperatura") {
             listaLabelsTemperatura.push(formateraHora(element.hora))
 
         }
     });
 
     datos.forEach(element => {
-        if (element.id_sonda == 1) {
+        if (element.tipoDato === "Temperatura") {
             listaDatosTemperatura.push(element.medicion)
         }
     });
@@ -315,13 +315,13 @@ function pintarGraficaHumedad() {
     let listaLabelsHumedad = [];
     let listaDatosHumedad = [];
     datos.forEach(element => {
-      if (element.id_sonda == 3) {
+      if (element.tipoDato === "Humedad") {
             listaLabelsHumedad.push(formateraHora(element.hora))
         }
     });
 
     datos.forEach(element => {
-        if (element.id_sonda == 3) {
+        if (element.tipoDato === "Humedad") {
             listaDatosHumedad.push(element.medicion)
         }
     });
@@ -420,13 +420,13 @@ function pintarGraficaSalinidad() {
 
 
     datos.forEach(element => {
-         if (element.id_sonda == 4) {
+         if (element.tipoDato === "Salinidad") {
             listaLabelsSalinidad.push(formateraHora(element.hora))
         }
     });
 
     datos.forEach(element => {
-        if (element.id_sonda == 4) {
+        if (element.tipoDato === "Salinidad") {
             listaDatosSalinidad.push(element.medicion)
         }
     });
