@@ -272,6 +272,10 @@ nav {
     margin-left: 10px;
 }
 
+.button{
+    border-radius: 5px;
+}
+
 .lista a {
     color: black;
     display: block;
@@ -312,11 +316,7 @@ nav {
     color: black;
 }
 
-.button {
-    align-content: space-between;
-    padding: 1rem;
-    margin-left: 17px;
-}
+
 
 ul {
     padding: 0;
