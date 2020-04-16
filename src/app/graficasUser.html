@@ -6,19 +6,17 @@
     <title>UserSection</title>
     <link rel="stylesheet" type="text/css" href="../app/css/estilo_graficasUser.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
-    <script src="js/sesion_permisos.js">
+    <script src="js/sesion_permisos.js"></script>
+    <script>
         function processData(f1) {
             var v1 = document.getElementById(f1).value;
 
-            alert(v1 + "\n");
-
+            alert("la fecha seleccionada es " + v1 + "\n" );
+        }
     </script>
 </head>
 
 <body>
-
 
     <div class="container" id="container">
         <div id="mySidenav" class="sidenav">
@@ -56,9 +54,9 @@
                         </label>
                     </section>
                     <section class="seleccion_calendar">
-                        <input type="date" name="field1" id="field1" /><br /><br />
+                        <input class="calendar" type="date" name="field1" id="field1" /><br /><br />
 
-                        <input class="button" type="button" onClick="processData('field1')" value="Buscar" />
+                        <input class="button" type="button" onClick="processData('field1')" value="Aceptar" />
                     </section>
                 </div>
 

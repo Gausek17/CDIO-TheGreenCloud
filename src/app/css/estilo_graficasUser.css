@@ -1,4 +1,4 @@
-*{
+* {
     font-family: "Trebuchet MS";
 }
 
@@ -6,7 +6,7 @@ label.lbl {
     /*margin-left: 15px;*/
 }
 
-.grafica{
+.grafica {
     position: relative;
     width: 50vw;
     height: 60vh;
@@ -152,7 +152,7 @@ body {
     height: 70px;
 }
 
-.seleccion{
+.seleccion {
     display: flex;
     justify-content: center;
 }
@@ -163,22 +163,31 @@ body {
     margin-top: 15px;
 }
 
-.seleccion_calendar{
+.seleccion_calendar {
     margin: 5px;
     margin-left: 30px;
     margin-top: 20px;
 }
 
-.checkbox{
+.calendar {
+    border-radius: 5px;
+}
+
+.button {
+    border-radius: 5px;
+    border-bottom-color: black;
+}
+
+.checkbox {
     margin-top: 10px;
-    display:flex;
+    display: flex;
     padding: 1rem;
     font-family: "Trebuchet MS";
     text-align: center;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
-.cajas{
+.cajas {
     margin-right: 50px;
     margin-top: 25px;
     margin-left: 5px;
@@ -226,8 +235,7 @@ header {
     height: 75px;
 }
 
-.seleccion {
-}
+.seleccion {}
 
 .seleccion select {
     background-color: gainsboro;
@@ -272,7 +280,7 @@ nav {
     margin-left: 10px;
 }
 
-.button{
+.button {
     border-radius: 5px;
 }
 
@@ -316,8 +324,6 @@ nav {
     color: black;
 }
 
-
-
 ul {
     padding: 0;
 }
@@ -356,16 +362,18 @@ ul li a {
 }
 
 .panelActual {
-    
 
-    display:flex;
+
+    display: flex;
     flex-direction: column;
 }
-.titulo-sin-linea{
+
+.titulo-sin-linea {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .titulo-sin-linea p {
     font-size: 40px;
 }
@@ -376,8 +384,9 @@ ul li a {
     margin-right: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
-    
+
 }
+
 .divContenidoUser {
     padding: 1.5rem;
     height: 580px;
@@ -431,21 +440,25 @@ ul li a {
     height: 50px;
 }
 
-.dos-primeras{
+.dos-primeras {
     display: flex;
 
 }
-.dos-segundas{
+
+.dos-segundas {
     display: flex;
 }
-.elementSensores{
+
+.elementSensores {
     display: flex;
     justify-content: center;
 }
-.divContenidoGraficas{
+
+.divContenidoGraficas {
     display: flex;
     flex-direction: row;
 }
+
 /*SCROL BARR*/
 
 .divContenidoUser::-webkit-scrollbar {
@@ -480,7 +493,9 @@ ul li a {
 }
 
 /*------RESPONSIVE----------*/
-@media only screen and (max-width:900px) { /* Ipad */
+@media only screen and (max-width:900px) {
+
+    /* Ipad */
     nav {
         display: none;
     }
@@ -506,52 +521,71 @@ ul li a {
         display: none;
     }
 
-    .iconSensorSelected{
+    .iconSensorSelected {
         width: 60px;
-        
     }
+
     .titulo-sin-linea p {
-    font-size: 35px;
-}
+        font-size: 35px;
+    }
 
     .divNuevoUsuario {
         flex-direction: column;
+    }
+
+    .cajas {
+        flex-wrap: wrap;
+    }
+
+    .seleccion_calendar {
+        margin: 5px;
+        margin-left: 30px;
+        margin-top: 80px;
     }
 
     .seleccion select {
         margin-top: 70px;
         margin-left: 40px;
     }
+
     .checkbox {
         display: flex;
         font-size: 18px;
         margin-left: 80px;
     }
-    .dos-primeras{
+
+    .dos-primeras {
         display: flex;
         flex-direction: column;
     }
-    .dos-segundas{
+
+    .dos-segundas {
         display: flex;
         flex-direction: column;
     }
-    .elementSensores{
+
+    .elementSensores {
         display: flex;
 
     }
-    #humedad{
+
+    #humedad {
         margin-left: 35px;
     }
-    #salinidad{
+
+    #salinidad {
         margin-left: 35px;
     }
-    .cajas{
+
+    .cajas {
         margin-top: 35px;
     }
-    
+
 }
 
-@media only screen and (max-width: 450px) { /* Iphone */
+@media only screen and (max-width: 450px) {
+
+    /* Iphone */
     .iconUserPerson {
         margin-right: 0.5rem;
         width: 60px;
@@ -578,13 +612,14 @@ ul li a {
         padding: 0.5rem;
     }
 
-    .iconSensorSelected{
+    .iconSensorSelected {
         width: 45px;
-        
+
     }
+
     .titulo-sin-linea p {
-    font-size: 25px;
-}
+        font-size: 25px;
+    }
 
     .divNuevoUsuario {
         flex-direction: column;
@@ -592,6 +627,12 @@ ul li a {
 
     header {
         margin-bottom: 0.5rem;
+    }
+
+    .seleccion_parcelas {
+        font-size: 12px;
+        margin-left: 10px;
+        margin-top: 15px;
     }
 
     .seleccion select {
@@ -606,50 +647,70 @@ ul li a {
         margin-left: 0.7rem;
     }
 
+    .cajas {
+        flex-wrap: wrap;
+    }
+
     .checkbox {
         padding: 0;
-        margin-top:0 ;
+        margin-top: 0;
         display: flex;
         margin-left: 0px;
         margin-top: 20px;
     }
+
+    .seleccion_calendar {
+        margin: 5px;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
     .seleccion select {
         margin-top: 20px;
     }
-    .divContenidoGraficas{
+
+    .divContenidoGraficas {
         flex-direction: column;
     }
-    .seleccion{
+
+    .seleccion {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .elementSensores{
+
+    .elementSensores {
         flex-direction: column;
         align-items: center;
         font-size: 13px;
     }
-     .elementSensores h3{
-         margin: 0;
-     }
 
-     .cajas{
-         margin: 0.5rem 0 0 0;
-     }
-     .dos-primeras{
-         flex-direction: row;
-     }
-     .dos-segundas{
-         flex-direction: row;
-     }
-    #salinidad{
+    .elementSensores h3 {
+        margin: 0;
+    }
+
+    .cajas {
+        margin: 0.5rem 0 0 0;
+    }
+
+    .dos-primeras {
+        flex-direction: row;
+    }
+
+    .dos-segundas {
+        flex-direction: row;
+    }
+
+    #salinidad {
         margin-right: 10px;
         margin-left: 10px;
     }
-    #temperatura{
+
+    #temperatura {
         margin-right: 10px;
     }
-    #humedad{
+
+    #humedad {
         margin-left: 10px;
     }
 
@@ -720,6 +781,7 @@ ul li a {
     font-size: 3rem;
     margin-left: 50px;
 }
+
 /*SCROL BARR*/
 
 .grafica::-webkit-scrollbar {
@@ -727,10 +789,11 @@ ul li a {
 }
 
 .grafica::-webkit-scrollbar:vertical {
-    width:10px;
+    width: 10px;
 }
 
-.grafica::-webkit-scrollbar-button:increment,.grafica::-webkit-scrollbar-button {
+.grafica::-webkit-scrollbar-button:increment,
+.grafica::-webkit-scrollbar-button {
     display: none;
 }
 
@@ -747,9 +810,11 @@ ul li a {
     border-radius: 10px;
     box-shadow: inset 0 0 10px #797979;
 }
-.grafica{
+
+.grafica {
     padding: 1.5rem;
     height: 570px;
     overflow: auto;
 }
+
 /*-------------*/
