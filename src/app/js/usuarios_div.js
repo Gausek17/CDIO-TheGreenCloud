@@ -23,7 +23,7 @@ let VistaDivUsuarios = {
         for (var i = datos.length - 1; i >= 0; i--) {
             stringPersonas += `<div class="divPerson" id="${datos[i].id_usuario}">
                     
-                  <img src="../imagenes/admin/iconUser-white.png" alt="usurio" class="iconUserPerson">
+                 
                     <div class="divTextoPersona">
                         <input type="text" class="textNombre" id ="textNombre${datos[i].id_usuario}" value="${datos[i].nombre}">
                         <input type="text" class="textCorreo" id ="textCorreo${datos[i].id_usuario}" value="${datos[i].mail}">
@@ -33,7 +33,7 @@ let VistaDivUsuarios = {
                     <button alt = "Editar usuario" class="iconEditUser" id="iconEditar${datos[i].id_usuario}" onclick="editUser(${datos[i].id_usuario})">Editar Usuario </button>
                     
                     <button alt="Aceptar" class="iconAceptarCancel" id="iconAceptar${datos[i].id_usuario}" onclick="aceptar(${datos[i].id_usuario})">Aceptar cambios</button>
-                    <img src="../imagenes/admin/iconDelete-white.png" alt="Elimina usuario" class="iconDeleteUser"  id="iconDelete${datos[i].id_usuario}" onclick="deleteUser(${datos[i].id_usuario})">
+                    <button alt="Elimina usuario" class="iconEditUser"  id="iconDelete${datos[i].id_usuario}" onclick="deleteUser(${datos[i].id_usuario})">Eliminar Usuario </button>
                     <button alt="Cancelar" class="iconAceptarCancel"  id="iconCancel${datos[i].id_usuario}" onclick="cancelar(${datos[i].id_usuario})">Cancelar cambios</button>
                 </div>`;
         }
