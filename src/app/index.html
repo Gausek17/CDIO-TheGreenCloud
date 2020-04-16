@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>AdminSection</title>
+    
+            <! Boostrap CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    
     <link rel="stylesheet" type="text/css" href="css/estilo_gestionUsuarios.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="js/sesion_permisos.js"></script>
+    
+
 
 </head>
 <body>
@@ -38,13 +44,18 @@
                 <p> Añadir usuario</p>
             </div>
 
-            <div class="container mt-5">
-                <h1>Buscador</h1>
-                <input type="text" id="buscador" class="form-control my-2">
+           
+           <!-- Buscador usuarios -->
+           <h6>Introduzca el nombre del usuario que desea buscar</h6>
+            <navbar class="navbar">
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Usuario" aria-label="Buscar" id="buscador">
                 <ul id="resultado">
-                    <li>Usuarios</li>
+                    <li></li>
                 </ul>
-            </div>
+                </form>
+            </navbar>
+            <!-- Finaliza buscador -->
 
             <div class="divContenidoUserNuevo" id="divContenidoUserNuevo">
                 <div class="divNuevaPersona" id="divNuevaPersona">
@@ -61,7 +72,7 @@
                         <label for="nuevaPasswordConfirmada">Confirmar contraseña:</label>
                         <input type="password" class="textCorreo" id ="nuevaPasswordConfirmada">
                     </div>
-                    <div>
+                   <div>
                        <button class="botonAceptar" alt="Aceptar" onclick="nuevoUser()">Confirmar cambios</button>
                         <!-- <img src="../imagenes/admin/iconOk.svg" alt="Aceptar" class="iconAceptarCancelNuevo" onclick="nuevoUser()"> -->
                         <button class="botonAceptar" alt="Cancelar" onclick="cancelarNuevoUser()">Eliminar cambios</button>
@@ -96,5 +107,9 @@
     document.getElementById("buscador").addEventListener('keyup', filtrar);
 </script>
 
+<!-- Carga archivos JS -->
+<script src="../bootstrap/js/jquery-3.4.1.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
