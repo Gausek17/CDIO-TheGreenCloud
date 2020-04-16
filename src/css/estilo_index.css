@@ -480,11 +480,8 @@ a.telefono {
     }
 
     #botonidentificate {
-
-
         border-radius: 8px;
         padding: 7px;
-
         padding-left: 10px;
         padding-right: 10px;
         border: 1px solid purple;
@@ -493,7 +490,6 @@ a.telefono {
         cursor: pointer;
         /*width: 200px;*/
     }
-
 
     .modernizacion {
         font-size: 40px;
@@ -539,5 +535,3 @@ a.telefono {
         margin: 0;
     }
 }
-
-
