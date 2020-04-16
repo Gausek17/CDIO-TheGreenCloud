@@ -95,6 +95,7 @@ function pintarGraficaLuminosidad(){
 
     var data = ModeloMediciones.datos;
     var idParcela = document.getElementById("selectParcelas").value;
+    var fechaSelctor = document.getElementById("field1").value;
 
     data.forEach( element =>{
         if (element.id_parcela == idParcela){
@@ -105,16 +106,17 @@ function pintarGraficaLuminosidad(){
     let listaDatosLuminosidad = [];
 
     datos.forEach(element => {
-        if (element.tipoDato === "Luminosidad") {
+        if (element.tipoDato === "Luminosidad" && element.fecha === fechaSelctor) {
             listaLabelsLuminosidad.push(formateraHora(element.hora))
         }
     });
 
     datos.forEach(element => {
-        if (element.tipoDato === "Luminosidad") {
+        if (element.tipoDato === "Luminosidad" && element.fecha === fechaSelctor) {
             listaDatosLuminosidad.push(element.medicion)
         }
     });
+
 
     let datosMedicionLuminosidad = {
         labels: listaLabelsLuminosidad,
