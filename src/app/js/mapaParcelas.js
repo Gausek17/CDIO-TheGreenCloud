@@ -35,17 +35,24 @@ function dibujarParcelas() {
     var parcela;
     var coordenadas;
 
+
     var listaOpciones = document.getElementById("selectParcelas").options;
     for (var i = 0; i < listaOpciones.length; i++) {
         idParcela = listaOpciones[i].value;
         parcela = getParcela(idParcela);
         coordenadas = getCoordendas(idParcela);
         dibujarParcela(coordenadas.coordenadas, parcela.color);
+         var listaSondas = getSondas(idParcela);
+        dibujarSondas(listaSondas);//Aqui se llama a dibujar las sondas en el mapa
         listaCentro.push(coordenadas);
     }
     //Cambiar setCenter por posicion del Sensor
     map.setCenter(new google.maps.LatLng(listaCentro[0].coordenadas[0].lat,listaCentro[0].coordenadas[0].lng ) );
     map.setZoom(16);
+
+
+
+
 
 }
 
@@ -85,5 +92,20 @@ function cambiarCentro() {
             map.setCenter(new google.maps.LatLng(listaCentro[i].coordenadas[0].lat,listaCentro[i].coordenadas[0].lng ) );
             map.setZoom(16);
         }
+    }
+}
+
+function dibujarSondas(listaSondas) {
+    for(var i = 0 ; i<listaSondas.length;i++){
+
+        var posicion = new google.maps.LatLng(listaSondas[i].lat, listaSondas[i].lng);
+        var titulo = listaSondas[i].nombre;
+        var marker = new google.maps.Marker({
+            map:map,
+            position: posicion,
+            title : titulo
+
+
+        })
     }
 }

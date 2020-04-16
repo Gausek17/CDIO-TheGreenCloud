@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-04-2020 a las 16:24:08
+-- Tiempo de generación: 16-04-2020 a las 18:19:05
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.1
 
@@ -91,10 +91,10 @@ INSERT INTO `coordenadas` (`id_coordenada`, `latitud`, `longitud`, `id_parcela`)
 (6, 63.826, -22.6991, 2),
 (7, 63.825, -22.6971, 2),
 (8, 63.8239, -22.703, 2),
-(9, 64.8113, -22.8168, 3),
-(10, 64.8179, -22.8133, 3),
-(11, 64.8164, -22.8044, 3),
-(12, 64.812, -22.8132, 3),
+(9, 63.8323, -22.689, 3),
+(10, 63.8324, -22.6838, 3),
+(11, 63.8305, -22.6835, 3),
+(12, 63.8306, -22.6889, 3),
 (13, 64.8071, -22.781, 4),
 (14, 64.8091, -22.7761, 4),
 (15, 64.8034, -22.7748, 4),
@@ -515,18 +515,21 @@ CREATE TABLE `sonda` (
   `estado` varchar(30) DEFAULT NULL,
   `id_parcela` int(11) NOT NULL,
   `lat` float NOT NULL,
-  `lng` float NOT NULL
+  `lng` float NOT NULL,
+  `nombre` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `sonda`
 --
 
-INSERT INTO `sonda` (`id_sonda`, `estado`, `id_parcela`, `lat`, `lng`) VALUES
-(1, 'Funcional', 1, 63.828, -22.693),
-(2, 'Funcional', 1, 63.8298, -22.698),
-(3, 'Funcional', 2, 63.8251, -22.7),
-(4, 'Funcional', 3, 64.8155, -22.8113);
+INSERT INTO `sonda` (`id_sonda`, `estado`, `id_parcela`, `lat`, `lng`, `nombre`) VALUES
+(1, 'Funcional', 1, 63.8284, -22.6946, 'Patatas Sudeste'),
+(2, 'Funcional', 1, 63.8296, -22.6975, 'Patatas Noroeste'),
+(3, 'Funcional', 2, 63.8254, -22.6996, 'Zanahorias Norte'),
+(4, 'Funcional', 3, 63.8316, -22.6881, 'Limones Oeste'),
+(5, 'Funcional', 2, 63.8244, -22.7022, 'Zanahorias Suroeste'),
+(6, 'Funcional', 3, 63.8316, -22.6844, 'Limones Este');
 
 -- --------------------------------------------------------
 
@@ -676,7 +679,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `sonda`
 --
 ALTER TABLE `sonda`
-  MODIFY `id_sonda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_sonda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
