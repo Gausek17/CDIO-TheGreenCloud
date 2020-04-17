@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link rel="stylesheet" type="text/css" href="css/estilo_contacto.css">
+    <link rel="stylesheet" href="css/estilo_formalwindow.css">
 </head>
 
 <body>
@@ -80,8 +81,28 @@
                 <div class="btn_form">
                     <br>
                     <input class="btn_reset" type="reset" value="Limpiar">
-                    <input class="btn_submit" type="submit" value="Enviar">
-                </div>
+                    
+                     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Enviar</button>
+
+  <div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-large w3-display-topright">&times;</span>
+        <h2>¡Enviado!</h2>
+      </header>
+      <div class="w3-container">
+        <p>El formulario se ha enviado correctamente.</p>
+       
+      </div>
+      <footer class="w3-container w3-teal">
+        
+      </footer>
+    </div>
+  </div>
+</div>
+            
+              
             </div>
 
 
