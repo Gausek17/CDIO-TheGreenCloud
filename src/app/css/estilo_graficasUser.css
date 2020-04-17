@@ -10,9 +10,7 @@ label.lbl {
     position: relative;
     width: 50vw;
     height: 60vh;
-
     margin: 0 auto;
-
 }
 
 #chartTemperatura {
@@ -249,6 +247,43 @@ header {
     font-family: "Trebuchet MS";
 }
 
+#selectParcelas{
+    background-color: gainsboro;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-family: "Trebuchet MS";
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.calendar {
+    background-color: gainsboro;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-family: "Trebuchet MS";
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+}
+
+.button{
+    padding: 0px 30px;
+    background-color: gainsboro;
+    margin-top: 2px;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 1rem;
+}
 
 .textAdmin {
     margin: 0;
