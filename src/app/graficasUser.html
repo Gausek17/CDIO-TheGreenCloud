@@ -6,13 +6,17 @@
     <title>UserSection</title>
     <link rel="stylesheet" type="text/css" href="../app/css/estilo_graficasUser.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
     <script src="js/sesion_permisos.js"></script>
+    <script>
+        function processData(f1) {
+            var v1 = document.getElementById(f1).value;
+
+            alert("la fecha seleccionada es " + v1 + "\n" );
+        }
+    </script>
 </head>
 
 <body>
-
 
     <div class="container" id="container">
         <div id="mySidenav" class="sidenav">
@@ -34,14 +38,13 @@
             </nav>
             <div class="divContenido">
                 <div class="panelActual" id="panelActual">
-               <div class="titulo-sin-linea">
-                   <img src="../imagenes/graficas/sensor-black.png" alt="icono-sensor"
-                     class="iconSensorSelected"> 
-                     <p>Mediciones</p>
-               </div>
-                
-                     <section id="linea-titulo"></section>
-            </div>
+                    <div class="titulo-sin-linea">
+                        <img src="../imagenes/graficas/sensor-black.png" alt="icono-sensor" class="iconSensorSelected">
+                        <p>Mediciones</p>
+                    </div>
+
+                    <section id="linea-titulo"></section>
+                </div>
 
                 <div class="seleccion">
                     <section class="seleccion_parcelas">
@@ -51,9 +54,9 @@
                         </label>
                     </section>
                     <section class="seleccion_calendar">
-                        <input type="date" name="field1" id="field1" /><br /><br />
+                        <input class="calendar" type="date" name="field1" id="field1" /><br /><br />
 
-                        <input type="button" onClick="processData('field1')" value="Buscar" />
+                        <input class="button" type="button" onClick="processData('field1')" value="Aceptar" />
                     </section>
                 </div>
 

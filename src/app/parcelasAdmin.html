@@ -102,7 +102,11 @@
         VistaParcelasSelect.iniciar("selectParcelas");
         //Tercer callback: Un vez se hayan inciado la infomacion relativa a las parcelas
         //se pintaran las gráficas de la parcela seleccionada
-        ControladorSelectParcelas.iniciar(dibujarParcelas);
+        ControladorSelectParcelas.iniciar(iniciarSondas);
+    }
+    function iniciarSondas() {
+        //cargar MOdelo sondas
+        dibujarParcelas();
     }
 
 </script>

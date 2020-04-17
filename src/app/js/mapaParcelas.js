@@ -47,6 +47,13 @@ function dibujarParcelas() {
     map.setCenter(new google.maps.LatLng(listaCentro[0].coordenadas[0].lat,listaCentro[0].coordenadas[0].lng ) );
     map.setZoom(16);
 
+
+    //DibujarPuntosMapa
+    for (var i = 0; i < listaOpciones.length; i++) {
+        idParcela = listaOpciones[i].value;
+    }
+
+
 }
 
 function dibujarParcela(coordenadas, color) {

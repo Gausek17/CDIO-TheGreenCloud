@@ -47,13 +47,16 @@ let ModeloCoordenadasParcelaSelect = {
                 coordenadas: nuevasCoordenadas
             };
             listaFinal.push(parcela);
+
             this.datosCoordenadas = listaFinal;
+            console.log(listaFinal);
             if (callback != null) {
                 callback();
             }
         });
     }
 };
+
 function getCoordendas(id_parcela) {
     let coordenadas;
     let encontrado = false;
