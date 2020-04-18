@@ -147,9 +147,11 @@
         }
 
         function iniciarGraficas() {
+            setDateToday();
             VistaMediciones.iniciar("chartTemperatura", "chartLuminosidad", "chartHumedad", "chartSalinidad");
             controladorMediciones.iniciar();
             pintarGraficas();
+
 
         }
 
