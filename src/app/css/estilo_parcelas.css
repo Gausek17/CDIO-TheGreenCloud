@@ -5,6 +5,7 @@
 body {
 
     margin: 0 auto;
+    margin-bottom: 0rem;
 }
 
 .logoGTI:hover {
@@ -269,6 +270,7 @@ nav{
    
     .divContenidoUser{
         overflow: inherit;
+        margin-bottom: 0rem;
     }
     .iconMenu {
         display: block;
@@ -288,6 +290,7 @@ nav{
     .container {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
+        margin-bottom: 0rem;
     }
 
 
@@ -297,6 +300,7 @@ nav{
         border: solid 3px black;
         margin-left: 0px;
         margin-right: 0px;
+        margin-bottom: 0rem;
 
     }
 
@@ -339,7 +343,7 @@ nav{
 @media only screen and (max-width: 450px) {
 
     .divContenidoUser {
-        padding: 0.5rem;
+        padding: 0.3rem;
     }
     
     .iconSeleccionParcela{
@@ -375,12 +379,10 @@ nav{
     
     .divTextSeleccionParcela{
         margin-top: 5px;
+        margin-left: 5px;
     }
 
-    .divSeleccionParcela {
-        align-items: center;
-        flex-direction: column;
-    }
+    
 
     .seleccion {
         display: flex;
@@ -395,6 +397,12 @@ nav{
 
     .enlace-graficas {
         width: 30px;
+        margin-left: 5px;
+        
+    }
+    .no-selectores-header{
+        margin-left: 3px;
+        
     }
 
 }
