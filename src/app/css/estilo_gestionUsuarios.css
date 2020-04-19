@@ -27,10 +27,7 @@ body{
     padding: 5px;
     
 }
-.logoGTI{
-    width: 150px;
-    height: auto;
-}
+
 .logoGTI:hover{
     cursor: pointer;
 }
@@ -45,8 +42,8 @@ body{
 }
 .iconMenu{
     display: none;
-    width: 50px;
-    height: 55px;
+    width: 25px;
+    height: 25px;
     margin-top: 0.7rem;
     margin-left: 0.5rem;
 }
@@ -314,6 +311,14 @@ header{
 }
 
 @media only screen and (max-width: 450px) {
+    .logoGTI{
+        padding-top: 10px;
+        width: 140px;
+        height: auto;
+    }
+    #textNombreUsuario{
+        padding: 10px;
+    }
     .iconUserPerson{
         margin-right: 0.5rem;
         width:60px ;
@@ -369,6 +374,9 @@ header{
         color: white;
         display: flex;
         width: 10rem;
+    }
+    .iconMenu {
+        display: block;
     }
 
 

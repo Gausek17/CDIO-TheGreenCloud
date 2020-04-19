@@ -180,11 +180,13 @@ function filtrar() {
 
     let datos = ModeloDivUsuarios.datosUsuarios;
     let texto = document.getElementById("buscador").value.toLowerCase();
-
+    //Lista para desabilitar los usuarios encontrados (por defecto estan en modoEdicion)
+    let listaTmp=[];
 
     for (var i = 0; i < datos.length; i++) {
         let nombre = datos[i].nombre.toLowerCase();
         if (nombre.indexOf(texto) !== -1) {
+            listaTmp.push(datos[i]);
             //indexOf te devuelve el elemento si existe
             stringPersonas += `<div class="divPerson" id="${datos[i].id_usuario}">
                     <div class="divTextoPersona">
@@ -203,5 +205,10 @@ function filtrar() {
     if (stringPersonas === '') {
         stringPersonas += `<p>Usuario no encontrado</p>`
     }
+
     VistaDivUsuarios.divUsuarios.innerHTML = stringPersonas;
+    for (var j = 0; j < listaTmp.length; j++) {
+        document.getElementById("textCorreo" + listaTmp[j].id_usuario).disabled = true;
+        document.getElementById("textNombre" + listaTmp[j].id_usuario).disabled = true;
+    }
 }
