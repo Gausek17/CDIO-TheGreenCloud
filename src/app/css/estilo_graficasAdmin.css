@@ -51,21 +51,15 @@
     width: 70vw;
     height: 50vh;
     margin-bottom: 1rem;
-
     background-color: orange;
-
-
 }
 
 #chartLuminosidad {
-
     position: relative;
     width: 70vw;
     height: 50vh;
     margin-bottom: 1rem;
-
     background-color: grey;
-
 }
 
 #chartHumedad {
@@ -74,19 +68,15 @@
     height: 50vh;
     margin-bottom: 1rem;
     background-color: royalblue;
-
 }
 
 #chartSalinidad {
-
     position: relative;
     width: 70vw;
     height: 50vh;
     margin-bottom: 1rem;
     background-color: #408033;
-
 }
-
 
 .lbl {
     display: flex;
@@ -118,7 +108,6 @@
     content: "✔";
     color: aliceblue;
     font-size: 1.8em;
-
 }
 
 #switchHumedad:checked + .lbl {
@@ -206,11 +195,10 @@ body {
 }
 
 .checkbox {
-    margin-top: 45px;
     display: flex;
+    text-align: center;
     padding: 1rem;
     font-family: "Trebuchet MS";
-    text-align: center;
     justify-content: space-between;
 }
 
@@ -318,7 +306,6 @@ header {
     font-family: "Trebuchet MS";
     margin-top: 15px;
     margin-left: 5px;
-    margin-bottom: 0px;
 }
 
 .button{
@@ -393,9 +380,7 @@ nav {
     color: white;
     border-radius: 46px 46px 46px 46px;
     border: 2px solid black;
-
     padding: 1rem;
-
 }
 
 .delete:hover {
@@ -456,8 +441,6 @@ ul li a {
 }
 
 .panelActual {
-
-
     display: flex;
     flex-direction: column;
 }
@@ -531,10 +514,12 @@ ul li a {
 
 .dos-primeras {
     display: flex;
+    margin-left: 50px;
 }
 
 .dos-segundas {
     display: flex;
+    margin-right: 50px;
 }
 
 .elementSensores {
@@ -587,7 +572,6 @@ ul li a {
     .grafica {
         overflow: inherit;
         width: 80vw;
-
     }
 
     nav {
@@ -615,15 +599,12 @@ ul li a {
         display: none;
     }
 
-
-
     .divNuevoUsuario {
         flex-direction: column;
     }
 
     .iconSensorSelected {
         width: 60px;
-
     }
 
     .titulo-sin-linea p {
@@ -654,7 +635,6 @@ ul li a {
 
     .elementSensores {
         display: flex;
-
     }
 
     #humedad {
