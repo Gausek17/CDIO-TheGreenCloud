@@ -27,6 +27,10 @@ body{
     padding: 5px;
     
 }
+.logoGTI{
+    width: 150px;
+    height: auto;
+}
 .logoGTI:hover{
     cursor: pointer;
 }
@@ -300,6 +304,10 @@ header{
     .iconEditUser{
         padding: 6px;
     }
+    .iconNuevoUsuario{
+        width: 75px;
+        height: 75px;
+    }
 
 
 }
@@ -311,8 +319,8 @@ header{
         height: 60px;
     }
     .iconNuevoUsuario{
-        width: 65px;
-        height: 65px;
+        width: 45px;
+        height: 45px;
         margin-right: 1rem;
     }
     .iconEditUser{
@@ -321,6 +329,7 @@ header{
         padding: 5px;
         margin-right: auto;
         margin-left: 0.7rem;
+        font-size: 10px;
     }
     .iconDeleteUser{
         width: 40px;
@@ -333,6 +342,7 @@ header{
         padding: 5px;
         margin-right: auto;
         margin-left: 0.5rem;
+        font-size: 10px;
     }
     .divContenidoUser{
         padding: 0.5rem;
