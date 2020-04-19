@@ -3,6 +3,7 @@ var infoWindow;
 var poligono;
 var listaPoligonos=[];
 var listaCentro = [];
+var listaMarcadores = [];
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -24,13 +25,17 @@ function initMap() {
         rotateControl: false,
     });
     map.setTilt(0);
+
     iniciarCargaApp();
+
 
     infoWindow = new google.maps.InfoWindow();
 }
 
 function dibujarParcelas() {
     limpiarMapa();
+    limpiarMarcadores();
+
     var idParcela;
     var parcela;
     var coordenadas;
@@ -38,12 +43,14 @@ function dibujarParcelas() {
 
     var listaOpciones = document.getElementById("selectParcelas").options;
     for (var i = 0; i < listaOpciones.length; i++) {
+
         idParcela = listaOpciones[i].value;
         parcela = getParcela(idParcela);
         coordenadas = getCoordendas(idParcela);
         dibujarParcela(coordenadas.coordenadas, parcela.color);
          var listaSondas = getSondas(idParcela);
         dibujarSondas(listaSondas);//Aqui se llama a dibujar las sondas en el mapa
+
         listaCentro.push(coordenadas);
     }
     //Cambiar setCenter por posicion del Sensor
@@ -57,6 +64,7 @@ function dibujarParcelas() {
 }
 
 function dibujarParcela(coordenadas, color) {
+
     let bounds = new google.maps.LatLngBounds();
     poligono = new google.maps.Polygon({
         paths: coordenadas,
@@ -84,6 +92,14 @@ function limpiarMapa() {
     listaCentro = [];
 }
 
+function limpiarMarcadores(){
+    for(var i = 0 ; i < listaMarcadores.length ; i++){
+        listaMarcadores[i].setMap(null);
+    }
+    listaMarcadores = [];
+}
+
+
 function cambiarCentro() {
     var idParcela = document.getElementById("selectParcelas").value;
     for (let i = 0; i<listaCentro.length; i++){
@@ -106,6 +122,18 @@ function dibujarSondas(listaSondas) {
             title : titulo
 
 
-        })
+        });
+        marker.addListener('click', function redireccionar(){
+            //map.setZoom(18);
+            //map.setCenter(marker.getPosition());
+            console.log("hola");
+            if(ModeloUsuarioLogin.datos[0].id_rol){
+                window.location='graficasAdmin.html';
+            }else{
+                window.location='graficasUser.html';
+            }
+
+        } );
+        listaMarcadores.push(marker);
     }
 }
