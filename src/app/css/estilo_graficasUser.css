@@ -120,20 +120,19 @@ body {
     margin: 0 auto;
 }
 
+.container {
+    align-items: center;
+    margin-right: 7.5rem;
+    margin-left: 7.5rem;
+    margin-bottom: 1.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .logoGTI:hover {
-    cursor: pointer;
-}
-
-.cerrar_sesion {
-    padding: 5px;
-    width: 30px;
-}
-
-.cerrar_sesion:hover {
-    cursor: pointer;
-}
-
-.iconNuevoUsuario:hover {
     cursor: pointer;
 }
 
@@ -143,6 +142,15 @@ body {
     height: 55px;
     margin-top: 0.7rem;
     margin-left: 0.5rem;
+}
+
+.cerrar_sesion {
+    padding: 5px;
+    width: 30px;
+}
+
+.cerrar_sesion:hover {
+    cursor: pointer;
 }
 
 .iconMediciones {
@@ -168,12 +176,19 @@ body {
 }
 
 .calendar {
+    background-color: gainsboro;
+    color: black;
     border-radius: 5px;
-}
-
-.button {
-    border-radius: 5px;
-    border-bottom-color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-family: "Trebuchet MS";
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-bottom: 0px;
 }
 
 .checkbox {
@@ -202,19 +217,6 @@ body {
     margin-right: 5px;
 }
 
-.container {
-
-    align-items: center;
-    margin-right: 7.5rem;
-    margin-left: 7.5rem;
-    margin-bottom: 1.5rem;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-}
-
 .divCentral {
     height: 100%;
     display: flex;
@@ -232,8 +234,6 @@ header {
     width: 75px;
     height: 75px;
 }
-
-.seleccion {}
 
 .seleccion select {
     background-color: gainsboro;
@@ -257,31 +257,6 @@ header {
     border: 2px solid black;
     cursor: pointer;
     font-family: "Trebuchet MS";
-
-}
-
-.calendar {
-    background-color: gainsboro;
-    color: black;
-    font-size: 1.3rem;
-    font-weight: 500;
-    border-radius: 10px;
-    padding: 1rem;
-    border: 2px solid black;
-    cursor: pointer;
-    font-family: "Trebuchet MS";
-    margin-top: 15px;
-    margin-left: 5px;
-    margin-bottom: 0px;
-}
-
-.button {
-    padding: 0px 30px;
-    background-color: gainsboro;
-    margin-top: 2px;
-    border-radius: 10px;
-    border: 2px solid black;
-    padding: 1rem;
 }
 
 .textAdmin {
@@ -306,16 +281,6 @@ nav {
 
 .navMediciones {
     border: 4px solid black;
-}
-
-.boton {
-    border-radius: 200px 200px 200px 200px;
-    border: none;
-    margin-left: 10px;
-}
-
-.button {
-    border-radius: 5px;
 }
 
 .lista a {
@@ -571,6 +536,8 @@ ul li a {
 
     .cajas {
         flex-wrap: wrap;
+        margin-top: 35px;
+        margin-right: 10px;
     }
 
     .seleccion_calendar {
@@ -598,6 +565,7 @@ ul li a {
 
     .dos-segundas {
         flex-direction: row;
+        margin-right: 30px;
     }
 
     .elementSensores {
@@ -612,10 +580,12 @@ ul li a {
         margin-left: 35px;
     }
 
-    .cajas {
-        margin-top: 35px;
+    .grafica {
+        padding: 1.5rem;
+        height: 570px;
+        width: 700px;
+        overflow: auto;
     }
-
 }
 
 @media only screen and (max-width: 450px) {
@@ -664,16 +634,27 @@ ul li a {
         margin-bottom: 0.5rem;
     }
 
+    .seleccion {
+        display: flex;
+        justify-content: center;
+    }
+
+
     .seleccion_parcelas {
-        font-size: 12px;
-        margin-left: 10px;
+        font-size: 10px;
+        margin-right: 140px;
         margin-top: 15px;
+        width: 20px;
+        font-size: 5px;
     }
 
     .seleccion_calendar {
+        font-size: 10px;
         margin: 5px;
-        margin-left: 30px;
-        margin-top: 20px;
+        margin-right: 150px;
+        margin-top: 15px;
+        width: 10px;
+        font-size: 5px;
     }
 
     .seleccion select {
@@ -692,6 +673,7 @@ ul li a {
         display: flex;
         flex-wrap: wrap;
         margin: 0.5rem 0 0 0;
+        margin-right: 40px;
     }
 
     .checkbox {
@@ -731,11 +713,13 @@ ul li a {
     .dos-primeras {
         display: flex;
         flex-direction: column;
+        margin-left: 10px;
     }
 
     .dos-segundas {
         display: flex;
         flex-direction: column;
+        margin-right: 10px;
     }
 
     #salinidad {
@@ -835,7 +819,7 @@ ul li a {
 }
 
 .grafica::-webkit-scrollbar:horizontal {
-    height: 10px;
+    height: 20px;
 }
 
 .grafica::-webkit-scrollbar-thumb {
@@ -851,6 +835,7 @@ ul li a {
 .grafica {
     padding: 1.5rem;
     height: 570px;
+    width: 350px;
     overflow: auto;
 }
 
