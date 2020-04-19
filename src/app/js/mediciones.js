@@ -1,4 +1,7 @@
 let miGraficaTemp;
+let miGraficaHum;
+let miGraficaLum;
+let miGraficaSal;
 
 let ModeloMediciones = {
     datos : [],
@@ -95,13 +98,12 @@ function mostrarOcultar(checked, idcanvas) {
 
 function pintarGraficaLuminosidad(){
     var datos = [];
-
     var data = ModeloMediciones.datos;
     var idParcela = document.getElementById("selectParcelas").value;
     var fechaSelctor = document.getElementById("field1").value;
 
     data.forEach( element =>{
-        if (element.id_parcela == idParcela){
+        if (element.id_parcela == idParcela && element.fecha === fechaSelctor){
             datos.push(element);
         }
     });
@@ -179,8 +181,11 @@ function pintarGraficaLuminosidad(){
 
         }
     };
+    if (miGraficaLum != null){
+        miGraficaLum.destroy();
+    }
 
-    let miGraficaLum = new Chart(VistaMediciones.canvasLuminosidad, {
+    miGraficaLum = new Chart(VistaMediciones.canvasLuminosidad, {
         type: 'line',
         data: datosMedicionLuminosidad,
         backgroundColor: 'white',
@@ -192,13 +197,12 @@ function pintarGraficaLuminosidad(){
 
 function pintarGraficaTemperatura(){
     var datos = [];
-
     var data = ModeloMediciones.datos;
     var idParcela = document.getElementById("selectParcelas").value;
     var fechaSelctor = document.getElementById("field1").value;
 
     data.forEach( element =>{
-        if (element.id_parcela == idParcela&& element.fecha === fechaSelctor ){
+        if (element.id_parcela == idParcela && element.fecha === fechaSelctor ){
             datos.push(element);
         }
     });
@@ -214,7 +218,7 @@ function pintarGraficaTemperatura(){
     });
 
     datos.forEach(element => {
-        if (element.tipoDato === "Temperatura") {
+        if (element.tipoDato === "Temperatura" && element.fecha === fechaSelctor) {
             listaDatosTemperatura.push(element.medicion)
         }
     });
@@ -295,8 +299,10 @@ function pintarGraficaTemperatura(){
         }
     };
 
+    if (miGraficaTemp!=null){
+        miGraficaTemp.destroy();
+    }
 
-    miGraficaTemp= null;
     miGraficaTemp = new Chart(VistaMediciones.canvasTemperatura, {
         type: 'line',
         data: datosMedicionTemperatura,
@@ -329,7 +335,7 @@ function pintarGraficaHumedad() {
     });
 
     datos.forEach(element => {
-        if (element.tipoDato === "Humedad") {
+        if (element.tipoDato === "Humedad" && element.fecha === fechaSelctor) {
             listaDatosHumedad.push(element.medicion)
         }
     });
@@ -397,9 +403,11 @@ function pintarGraficaHumedad() {
         }
     };
 
+    if (miGraficaHum!=null){
+        miGraficaHum.destroy();
+    }
 
-
-    let miGraficaHum = new Chart(VistaMediciones.canvasHumedad, {
+     miGraficaHum = new Chart(VistaMediciones.canvasHumedad, {
         type: 'line',
         data: datosMedicionHumedad,
         backgroundColor: 'white',
@@ -435,7 +443,7 @@ function pintarGraficaSalinidad() {
     });
 
     datos.forEach(element => {
-        if (element.tipoDato === "Salinidad") {
+        if (element.tipoDato === "Salinidad" && element.fecha === fechaSelctor) {
             listaDatosSalinidad.push(element.medicion)
         }
     });
@@ -503,7 +511,11 @@ function pintarGraficaSalinidad() {
         }
     };
 
-    let miGraficaSal = new Chart(VistaMediciones.canvasSalinidad, {
+    if (miGraficaSal!= null){
+        miGraficaSal.destroy();
+    }
+
+    miGraficaSal = new Chart(VistaMediciones.canvasSalinidad, {
         type: 'line',
         data: datosMedicionSalinidad,
         backgroundColor: 'white',
@@ -518,7 +530,18 @@ function pintarGraficas() {
     pintarGraficaTemperatura();
     pintarGraficaSalinidad();
 }
-
+function setDateToday() {
+    let date = new Date();
+    let month =(date.getMonth()+1).toString();
+    if (month.length ===1){
+        month = "0"+month;
+    }
+    let day =date.getDate().toString();
+    if (day.length ===1){
+        day = "0"+day;
+    }
+    document.getElementById("field1").value= date.getFullYear()+"-"+month+"-"+day;
+}
 /*
 function pintarGraficas() {
 
