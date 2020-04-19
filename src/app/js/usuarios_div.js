@@ -34,10 +34,13 @@ let VistaDivUsuarios = {
                     
                     <button alt="Aceptar" class="iconAceptarCancel" id="iconAceptar${datos[i].id_usuario}" onclick="aceptar(${datos[i].id_usuario})">Aceptar cambios</button>
                     <button alt="Cancelar" class="iconAceptarCancel"  id="iconCancel${datos[i].id_usuario}" onclick="cancelar(${datos[i].id_usuario})">Cancelar cambios</button>
-                    <button alt="Elimina usuario" class="iconEditUser"  id="iconDelete${datos[i].id_usuario}" onclick="deleteUser(${datos[i].id_usuario})">Eliminar Usuario </button>
+                    <button alt="Elimina usuario" class="iconEditUser"  id="iconDelete${datos[i].id_usuario}" 
+                            onclick="modalConfirmar(${datos[i].id_usuario})">Eliminar Usuario </button>
                     
                 </div>`;
         }
+
+
 
         this.divUsuarios.innerHTML = stringPersonas;
         for (var j = 0; j < datos.length; j++) {
@@ -63,7 +66,6 @@ let ControladorDivUsuarios = {
 
 
 function deleteUser(id) {
-    if (confirm("Este usuario y todos sus datos se perderán para siempre.\n ¿Desea continuar?")) {
         fetch('../api/v1.0/usuario&' + id, {
             method: "delete"
         }).then(function (respuesta) {
@@ -73,7 +75,7 @@ function deleteUser(id) {
                 alert("Se ha producido un error en el proceso de borrar.");
             }
         })
-    }
+
 }
 
 function editUser(id) {

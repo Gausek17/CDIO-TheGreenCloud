@@ -8,11 +8,12 @@
     
     <link rel="stylesheet" type="text/css" href="css/estilo_gestionUsuarios.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
-    <link rel="stylesheet" type="text/css" href="css/estilo_modaldelete.css">
-    
+
+    <link rel="stylesheet" type="text/css" href="../css/estilo_formalwindow.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="js/sesion_permisos.js"></script>
-    
+
 
 
 </head>
@@ -88,10 +89,12 @@
         </div>
     </div>
 </div>
-<div id="divPopup"></div>
+<!-- En el div se generara el PopUp-->
+<div id="divPopup" class="w3-modal w3-animate-opacity"></div>
 <script src="js/usuarioLogin.js"></script>
 <script src="js/sideNav.js"></script>
 <script src="js/menuAdmin.js"></script>
+<script src="js/modalConfirm.js"></script>
 <script src="js/usuarios_div.js"></script>
 <script>
     VistaUsuarioLogin.iniciar("textNombreUsuario");
