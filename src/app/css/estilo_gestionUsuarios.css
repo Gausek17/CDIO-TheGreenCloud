@@ -1,14 +1,20 @@
 /* Navbar */
 .form-control{
     border-color: #800053;
+    margin-left: 15px;
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
-h6{
+h4{
     font-family: "Trebuchet MS";
     padding-left: 1rem;
     padding-top: 1rem;
     margin-top: 10px;
 }
+
 /* ----------------------*/
 
 *{
@@ -196,12 +202,13 @@ header{
     border-color: black;
     background-color: #333333;
     color: white;
-    font-size: 18px;
+    font-size: 12px;
     border-radius: 10px;
-    width: 120px;
-    height: 75px;
+    width: 85px;
+    height: 35px;
     text-align: center;
-    margin-left: 15px;
+    margin-right: 30px;
+    margin-left: 5px;
 }
 .iconEditUser:hover{
     background: black;
@@ -256,13 +263,14 @@ header{
     border-color: black;
     background-color: #333333;
     color: white;
-    font-size: 13px;
+    font-size: 12px;
     border-radius: 10px;
-    width: 100px;
-    height: 55px;
+    width: 85px;
+    height: 35px;
     text-align: center;
     margin-right: 30px;
     margin-left: 5px;
+    
 }
 
 .iconAceptarCancel:hover{
