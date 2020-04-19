@@ -301,12 +301,12 @@ header{
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
-    .iconEditUser{
-        padding: 6px;
-    }
     .iconNuevoUsuario{
         width: 75px;
         height: 75px;
+    }
+    .iconMenu{
+        display: block;
     }
 
 
@@ -318,6 +318,9 @@ header{
         width:60px ;
         height: 60px;
     }
+    .iconMenu{
+        display: block;
+    }
     .iconNuevoUsuario{
         width: 45px;
         height: 45px;
@@ -326,7 +329,6 @@ header{
     .iconEditUser{
         text-align: center;
        width: 70px;
-        padding: 5px;
         margin-right: auto;
         margin-left: 0.7rem;
         font-size: 10px;
@@ -339,7 +341,6 @@ header{
 
         text-align: center;
        width: 64px;
-        padding: 5px;
         margin-right: auto;
         margin-left: 0.5rem;
         font-size: 10px;
