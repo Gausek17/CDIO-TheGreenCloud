@@ -75,6 +75,7 @@
 <script src="js/coordenadas.js"></script>
 <script src="js/parcelas_select.js"></script>
 <script src="js/usuarios_select.js"></script>
+<script src="js/sonda.js"></script>
 <script>
 
     VistaMenu.setNav("navGeneral");
@@ -93,7 +94,12 @@
         VistaParcelasSelect.iniciar("selectParcelas");
         //Tercer callback: Un vez se hayan inciado la infomacion relativa a las parcelas
         //se pintaran las gráficas de la parcela seleccionada
-        ControladorSelectParcelas.iniciar(dibujarParcelas);
+        ControladorSelectParcelas.iniciar(iniciarSondas);
+
+    }
+    function iniciarSondas() {
+        //cargar el modelo de sondas
+        ModeloSonda.cargar(dibujarParcelas);
 
     }
 </script>
