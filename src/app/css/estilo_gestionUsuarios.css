@@ -27,6 +27,24 @@ body{
     padding: 5px;
     
 }
+#linea-titulo {
+    border: 2px solid black;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+}
+.panelActual {
+    display: flex;
+    flex-direction: column;
+}
+.titulo-sin-linea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-sin-linea p {
+    font-size: 40px;
+}
 
 .logoGTI:hover{
     cursor: pointer;
@@ -308,6 +326,12 @@ header{
     .iconMenu{
         display: block;
     }
+    .divPanelActual {
+        border-radius: 0px;
+    }
+    .titulo-sin-linea p {
+        font-size: 35px;
+    }
 
 
 }
@@ -379,6 +403,9 @@ header{
 
     header{
         margin-bottom: 0.5rem;
+    }
+    .titulo-sin-linea p {
+        font-size: 25px;
     }
     
 
