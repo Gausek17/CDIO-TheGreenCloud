@@ -7,6 +7,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="css/estilo_gestionUsuarios.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_graficasAdmin.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="js/sesion_permisos.js"></script>
@@ -33,11 +34,16 @@
     <div class="divCentral">
         <nav id="navGeneral">
             <!-- Nav generado en js-->
-        </nav>
-        <div class="divContenido">
-            <div class="divPanelActual" id="panelActual">
-                <img src="../imagenes/menu/groupIcon-White.png" alt="Gestión Usuarios" class="iconGestionUsuariosSelected"> Gestión Usuarios
-            </div>
+            </nav>
+            <div class="divContenido">
+                <div class="panelActual" id="panelActual">
+                    <div class="titulo-sin-linea">
+                        <img src="../imagenes/menu/groupIcon-Black.png" alt="icono-sensor" class="iconGestionUsuariosSelected">
+                        <p>Gestión de usuarios</p>
+                    </div>
+
+                    <section id="linea-titulo"></section>
+                </div>
             <div class="divNuevoUsuario" id="divNuevoUsuario">
                 <img src="../imagenes/admin/iconAddUser.png" alt="Añadir usuario" class="iconNuevoUsuario" onclick="modoNuevoUser()">
                 <p> Añadir usuario</p>
