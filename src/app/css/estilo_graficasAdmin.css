@@ -154,7 +154,6 @@
 }
 
 body {
-
     margin: 0 auto;
 }
 
@@ -280,7 +279,7 @@ header {
     margin-right: 5px;
 }
 
-#selectParcelas{
+#selectParcelas {
     background-color: gainsboro;
     color: black;
     font-size: 1.3rem;
@@ -308,7 +307,7 @@ header {
     margin-left: 5px;
 }
 
-.button{
+.button {
     padding: 0px 30px;
     background-color: gainsboro;
     margin-top: 2px;
@@ -514,7 +513,7 @@ ul li a {
 
 .dos-primeras {
     display: flex;
-    margin-left: 50px;
+    
 }
 
 .dos-segundas {
@@ -569,6 +568,7 @@ ul li a {
 @media only screen and (max-width:900px) {
 
     /* Ipad */
+
     .grafica {
         overflow: inherit;
         width: 80vw;
@@ -615,26 +615,22 @@ ul li a {
         margin-top: 30px;
         margin-left: 40px;
     }
+    
+    .divContenidoGraficas{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+    }
 
     .checkbox {
         display: flex;
-        font-size: 18px;
-        margin-left: 80px;
-        margin-top: 15px;
-    }
-
-    .dos-primeras {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .dos-segundas {
-        display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        font-size: 15px;
     }
 
     .elementSensores {
         display: flex;
+        justify-content: flex-start;
     }
 
     #humedad {
@@ -713,16 +709,55 @@ ul li a {
         padding: 0;
         margin-top: 0;
         display: flex;
-        margin-left: 0px;
         margin-top: 20px;
     }
 
     .seleccion select {
         margin-top: 20px;
     }
-
-    .divContenidoGraficas {
-        flex-direction: column;
+    
+    .seleccion_usuarios{
+        width: 20px;
+    }
+    
+    .divContenidoGraficas{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .seleccion_parcelas {
+        font-size: 10px;
+        margin-right: 140px;
+        margin-top: 15px;
+        width: 20px;
+        font-size: 5px;
+    }
+   
+    .seleccion_calendar {
+        font-size: 10px;
+        margin: 5px;
+        margin-right: 150px;
+        margin-top: 15px;
+        width: 10px;
+        font-size: 3px;
+    }
+    
+    #selectUsuarios{
+        width: 170px;
+        height: 50px;
+        font-size: 13px;
+    }
+    
+    #selectParcelas{
+        width: 170px;
+        height: 60px;
+        font-size: 13px;
+    }
+    
+    .calendar{
+        width: 150px;
+        height: 20px;
+        font-size: 13px;
     }
 
     .seleccion {
@@ -746,11 +781,14 @@ ul li a {
     }
 
     .dos-primeras {
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
     }
 
     .dos-segundas {
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
     }
 
     #salinidad {
@@ -771,49 +809,35 @@ ul li a {
         width: 90vw;
         height: 350px !important;
         margin-bottom: 1rem;
-
         background-color: orange;
-
-
     }
 
     #chartLuminosidad {
-
         position: relative;
         width: 90vw;
         height: 350px !important;
         margin-bottom: 1rem;
-
         background-color: grey;
-
     }
 
     #chartHumedad {
-
         position: relative;
         width: 90vw;
         height: 350px !important;
         margin-bottom: 1rem;
         background-color: royalblue;
-
     }
 
     #chartSalinidad {
-
         position: relative;
         width: 90vw;
         height: 350px !important;
         margin-bottom: 1rem;
         background-color: #408033;
-
     }
-
 }
 
-
-
 /*------MENU LATERAL ----------*/
-
 
 .sidenav {
     height: 100%;
@@ -836,7 +860,6 @@ ul li a {
     align-items: center;
     justify-content: space-between;
     margin-left: 1rem;
-
 }
 
 .menuTextAdmin {
@@ -844,6 +867,7 @@ ul li a {
 }
 
 /* The navigation menu links */
+
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -868,8 +892,8 @@ ul li a {
     padding-left: 1rem;
 }
 
-
 /* Position and style the close button (top right corner) */
+
 .sidenav .closebtn {
     right: 25px;
     font-size: 3rem;
