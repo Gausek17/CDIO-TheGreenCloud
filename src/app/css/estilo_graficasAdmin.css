@@ -198,7 +198,7 @@ body {
     text-align: center;
     padding: 1rem;
     font-family: "Trebuchet MS";
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .cajas {
@@ -626,12 +626,14 @@ ul li a {
         display: flex;
         flex-direction: row;
         font-size: 15px;
+        justify-content: space-between;
     }
 
     .elementSensores {
         display: flex;
         justify-content: flex-start;
     }
+    
 
     #humedad {
         margin-left: 35px;
