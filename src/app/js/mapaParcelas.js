@@ -35,6 +35,7 @@ function initMap() {
 function dibujarParcelas() {
     limpiarMapa();
     limpiarMarcadores();
+    console.log(ModeloUsuarioLogin.datos[0].id_rol);
 
     var idParcela;
     var parcela;
@@ -114,6 +115,7 @@ function cambiarCentro() {
 
 function dibujarSondas(listaSondas) {
 
+
     for(var i = 0 ; i<listaSondas.length;i++){
 
         var posicion = new google.maps.LatLng(listaSondas[i].lat, listaSondas[i].lng);
@@ -128,8 +130,8 @@ function dibujarSondas(listaSondas) {
         marker.addListener('click', function redireccionar(){
             //map.setZoom(18);
             //map.setCenter(marker.getPosition());
-            console.log("hola");
-            if(ModeloUsuarioLogin.datos[0].id_rol){
+
+            if(ModeloUsuarioLogin.datos[0].id_rol != 2){
                 window.location='graficasAdmin.html';
             }else{
                 window.location='graficasUser.html';

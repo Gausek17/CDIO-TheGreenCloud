@@ -5,7 +5,7 @@
    
     <meta charset="UTF-8">
     <title>UserSection</title>
-    <link rel="stylesheet" type="text/css" href="../app/css/estilo_graficasUser.css">
+    <link rel="stylesheet" type="text/css" href="../app/css/estilo_graficas.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="js/sesion_permisos.js"></script>
 
@@ -41,22 +41,22 @@
                     <section id="linea-titulo"></section>
                 </div>
 
-                <div class="seleccion">
-                    <section class="seleccion_parcelas">
+                <div class="divContenidoGraficas">
+                   
+                    <section>
                         <label><select id="selectParcelas" onchange="pintarGraficas()">
-
                             </select>
                         </label>
                     </section>
-                    <section class="seleccion_calendar">
+                    
+                    <section>
                         <input class="calendar" type="date" name="field1" id="field1"/>
                     </section>
+                    
                 </div>
 
-                <div class="divContenidoGraficas">
+                <div class="checkbox">
 
-
-                    <div class="checkbox">
                         <div class="dos-primeras">
                             <div class="elementSensores">
                                 <h3>Sensor<br>Temperatura</h3>
@@ -96,7 +96,7 @@
 
 
 
-                    </div>
+                    
                 </div>
                 <div class="grafica" id="grafica">
                     <canvas id="chartTemperatura"></canvas>

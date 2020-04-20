@@ -2,16 +2,49 @@
     font-family: "Trebuchet MS";
 }
 
-label.lbl {
-    /*margin-left: 15px;*/
-}
-
 .grafica {
     position: relative;
     width: 50vw;
     height: 60vh;
     margin: 0 auto;
 }
+
+/*SCROL BARR*/
+
+.grafica::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.grafica::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.grafica::-webkit-scrollbar-button:increment,
+.grafica::-webkit-scrollbar-button {
+    display: none;
+}
+
+.grafica::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.grafica::-webkit-scrollbar-thumb {
+    background-color: #800053;
+    border-radius: 20px;
+}
+
+.grafica::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #797979;
+}
+
+.grafica {
+    padding: 1.5rem;
+    height: 570px;
+    overflow: auto;
+}
+
+/*-------------*/
 
 #chartTemperatura {
     position: relative;
@@ -52,6 +85,7 @@ label.lbl {
     background: white;
     border-radius: 10px;
     border: 1px black solid;
+    margin: 0 auto;
 }
 
 .lbl::after {}
@@ -112,12 +146,90 @@ label.lbl {
     display: none;
 }
 
+
+
+
     {
     font-family: "Trebuchet MS";
 }
 
 body {
     margin: 0 auto;
+}
+
+.logoGTI:hover {
+    cursor: pointer;
+}
+
+.cerrar_sesion {
+    padding: 5px;
+    width: 30px;
+}
+
+.cerrar_sesion:hover {
+    cursor: pointer;
+}
+
+.iconNuevoUsuario:hover {
+    cursor: pointer;
+}
+
+.iconMenu {
+    display: none;
+    width: 50px;
+    height: 55px;
+    margin-top: 0.7rem;
+    margin-left: 0.5rem;
+}
+
+.iconMediciones {
+    width: 85px;
+    height: 70px;
+}
+
+.divContenidoGraficas {
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.checkbox {
+    display: flex;
+    text-align: center;
+    padding: 1rem;
+    font-family: "Trebuchet MS";
+    justify-content: center;
+}
+
+.cajas {
+    margin-right: 50px;
+    margin-top: 25px;
+    margin-left: 5px;
+}
+
+.calendar {
+    margin-bottom: 30px;
+}
+
+.button {
+    margin-left: 100px;
+}
+
+#selectParcelas {
+    background-color: gainsboro;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-family: "Trebuchet MS";
+}
+
+.divContenidoGraficas {
+    display: flex;
+    align-items: flex-start;
 }
 
 .container {
@@ -132,91 +244,6 @@ header {
     justify-content: space-between;
 }
 
-.logoGTI:hover {
-    cursor: pointer;
-}
-
-.iconMenu {
-    display: none;
-    width: 50px;
-    height: 55px;
-    margin-top: 0.7rem;
-    margin-left: 0.5rem;
-}
-
-.cerrar_sesion {
-    padding: 5px;
-    width: 30px;
-}
-
-.cerrar_sesion:hover {
-    cursor: pointer;
-}
-
-.iconMediciones {
-    width: 85px;
-    height: 70px;
-}
-
-.seleccion {
-    display: flex;
-    justify-content: center;
-}
-
-.seleccion_parcelas {
-    margin: 5px;
-    margin-left: 20px;
-    margin-top: 23px;
-}
-
-.seleccion_calendar {
-    margin: 5px;
-    margin-left: 30px;
-    margin-top: 20px;
-}
-
-.calendar {
-    background-color: gainsboro;
-    color: black;
-    border-radius: 5px;
-    font-size: 1.3rem;
-    font-weight: 500;
-    border-radius: 10px;
-    padding: 1rem;
-    border: 2px solid black;
-    cursor: pointer;
-    font-family: "Trebuchet MS";
-    margin-top: 15px;
-    margin-left: 5px;
-    margin-bottom: 0px;
-}
-
-.checkbox {
-    margin-top: 10px;
-    display: flex;
-    padding: 1rem;
-    font-family: "Trebuchet MS";
-    text-align: center;
-    justify-content: space-between;
-}
-
-.cajas {
-    margin-right: 50px;
-    margin-top: 25px;
-    margin-left: 5px;
-}
-
-.seleccion select {
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    padding: 1rem;
-    border: 2px solid black;
-    cursor: pointer;
-    margin-top: 15px;
-    margin-right: 5px;
-}
-
 .divCentral {
     height: 100%;
     display: flex;
@@ -224,6 +251,7 @@ header {
 }
 
 .divUsuario {
+
     display: flex;
     align-items: center;
 }
@@ -235,6 +263,8 @@ header {
     height: 75px;
 }
 
+
+
 .seleccion select {
     background-color: gainsboro;
     color: black;
@@ -245,6 +275,8 @@ header {
     border: 2px solid black;
     cursor: pointer;
     font-family: "Trebuchet MS";
+    margin-top: 15px;
+    margin-right: 5px;
 }
 
 #selectParcelas {
@@ -257,6 +289,31 @@ header {
     border: 2px solid black;
     cursor: pointer;
     font-family: "Trebuchet MS";
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.calendar {
+    background-color: gainsboro;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-family: "Trebuchet MS";
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.button {
+    padding: 0px 30px;
+    background-color: gainsboro;
+    margin-top: 2px;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 1rem;
 }
 
 .textAdmin {
@@ -283,6 +340,12 @@ nav {
     border: 4px solid black;
 }
 
+.boton {
+    border-radius: 200px 200px 200px 200px;
+    border: none;
+    margin-left: 10px;
+}
+
 .lista a {
     color: black;
     display: block;
@@ -303,6 +366,7 @@ nav {
 
 .desplegable:hover .lista {
     display: block;
+
 }
 
 .despegable {
@@ -323,6 +387,12 @@ nav {
     color: black;
 }
 
+.button {
+    align-content: space-between;
+    padding: 1rem;
+    margin-left: 17px;
+}
+
 ul {
     padding: 0;
 }
@@ -336,13 +406,24 @@ ul li {
 }
 
 .iconParcelas {
-    height: 90px;
-    width: 90px;
+    height: auto;
+    width: 70px;
+    padding: 5px;
 }
 
 .iconGestionUsuarios {
-    width: 100px;
+    width: 70px;
     height: auto;
+    padding: 5px;
+}
+
+.iconSensorSelected {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
 }
 
 ul li a {
@@ -373,14 +454,6 @@ ul li a {
     font-size: 40px;
 }
 
-.iconSensorSelected {
-    width: 80px;
-    height: auto;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
 #linea-titulo {
     border: 2px solid black;
     margin-left: 3.5rem;
@@ -391,13 +464,11 @@ ul li a {
     padding: 1.5rem;
     height: 580px;
     overflow: auto;
-
 }
 
 .divNuevoUsuario {
     display: flex;
     align-items: center;
-
 }
 
 .iconNuevoUsuario {
@@ -442,7 +513,7 @@ ul li a {
 
 .dos-primeras {
     display: flex;
-    margin-left: 50px;
+    
 }
 
 .dos-segundas {
@@ -497,6 +568,12 @@ ul li a {
 @media only screen and (max-width:900px) {
 
     /* Ipad */
+
+    .grafica {
+        overflow: inherit;
+        width: 80vw;
+    }
+
     nav {
         display: none;
     }
@@ -522,6 +599,10 @@ ul li a {
         display: none;
     }
 
+    .divNuevoUsuario {
+        flex-direction: column;
+    }
+
     .iconSensorSelected {
         width: 60px;
     }
@@ -530,47 +611,29 @@ ul li a {
         font-size: 35px;
     }
 
-    .divNuevoUsuario {
-        flex-direction: column;
-    }
-
-    .cajas {
-        flex-wrap: wrap;
-        margin-top: 35px;
-        margin-right: 10px;
-    }
-
-    .seleccion_calendar {
-        margin: 5px;
-        margin-left: 30px;
-        margin-top: 80px;
-    }
-
     .seleccion select {
-        margin-top: 70px;
+        margin-top: 30px;
         margin-left: 40px;
+    }
+    
+    .divContenidoGraficas{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
     }
 
     .checkbox {
-        padding: 0;
-        margin-top: 0;
         display: flex;
-        margin-left: 0px;
-        margin-top: 20px;
-    }
-
-    .dos-primeras {
         flex-direction: row;
-    }
-
-    .dos-segundas {
-        flex-direction: row;
-        margin-right: 30px;
+        font-size: 15px;
+        justify-content: space-between;
     }
 
     .elementSensores {
         display: flex;
+        justify-content: flex-start;
     }
+    
 
     #humedad {
         margin-left: 35px;
@@ -580,17 +643,15 @@ ul li a {
         margin-left: 35px;
     }
 
-    .grafica {
-        padding: 1.5rem;
-        height: 570px;
-        width: 700px;
-        overflow: auto;
+    .cajas {
+        margin-top: 35px;
     }
+
 }
 
 @media only screen and (max-width: 450px) {
-
     /* Iphone */
+
     .iconUserPerson {
         margin-right: 0.5rem;
         width: 60px;
@@ -634,29 +695,6 @@ ul li a {
         margin-bottom: 0.5rem;
     }
 
-    .seleccion {
-        display: flex;
-        justify-content: center;
-    }
-
-
-    .seleccion_parcelas {
-        font-size: 10px;
-        margin-right: 140px;
-        margin-top: 15px;
-        width: 20px;
-        font-size: 5px;
-    }
-
-    .seleccion_calendar {
-        font-size: 10px;
-        margin: 5px;
-        margin-right: 150px;
-        margin-top: 15px;
-        width: 10px;
-        font-size: 5px;
-    }
-
     .seleccion select {
         margin-left: 0px;
         margin-top: 0px;
@@ -669,25 +707,57 @@ ul li a {
         margin-left: 0.7rem;
     }
 
-    .cajas {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0.5rem 0 0 0;
-        margin-right: 40px;
-    }
-
     .checkbox {
         display: flex;
-        font-size: 18px;
-        margin-left: 80px;
+        margin-top: 20px;
     }
 
     .seleccion select {
         margin-top: 20px;
     }
-
-    .divContenidoGraficas {
-        flex-direction: column;
+    
+    .seleccion_usuarios{
+        width: 20px;
+    }
+    
+    .divContenidoGraficas{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .seleccion_parcelas {
+        font-size: 10px;
+        margin-right: 140px;
+        margin-top: 15px;
+        width: 20px;
+        font-size: 5px;
+    }
+   
+    .seleccion_calendar {
+        font-size: 10px;
+        margin: 5px;
+        margin-right: 150px;
+        margin-top: 15px;
+        width: 10px;
+        font-size: 3px;
+    }
+    
+    #selectUsuarios{
+        width: 170px;
+        height: 50px;
+        font-size: 13px;
+    }
+    
+    #selectParcelas{
+        width: 170px;
+        height: 60px;
+        font-size: 13px;
+    }
+    
+    .calendar{
+        width: 150px;
+        height: 20px;
+        font-size: 13px;
     }
 
     .seleccion {
@@ -713,13 +783,12 @@ ul li a {
     .dos-primeras {
         display: flex;
         flex-direction: column;
-        margin-left: 10px;
+        margin-left: 40px;
     }
 
     .dos-segundas {
         display: flex;
         flex-direction: column;
-        margin-right: 10px;
     }
 
     #salinidad {
@@ -735,12 +804,40 @@ ul li a {
         margin-left: 10px;
     }
 
+    #chartTemperatura {
+        position: relative;
+        width: 90vw;
+        height: 350px !important;
+        margin-bottom: 1rem;
+        background-color: orange;
+    }
+
+    #chartLuminosidad {
+        position: relative;
+        width: 90vw;
+        height: 350px !important;
+        margin-bottom: 1rem;
+        background-color: grey;
+    }
+
+    #chartHumedad {
+        position: relative;
+        width: 90vw;
+        height: 350px !important;
+        margin-bottom: 1rem;
+        background-color: royalblue;
+    }
+
+    #chartSalinidad {
+        position: relative;
+        width: 90vw;
+        height: 350px !important;
+        margin-bottom: 1rem;
+        background-color: #408033;
+    }
 }
 
-
-
 /*------MENU LATERAL ----------*/
-
 
 .sidenav {
     height: 100%;
@@ -763,7 +860,6 @@ ul li a {
     align-items: center;
     justify-content: space-between;
     margin-left: 1rem;
-
 }
 
 .menuTextAdmin {
@@ -771,6 +867,7 @@ ul li a {
 }
 
 /* The navigation menu links */
+
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -795,48 +892,10 @@ ul li a {
     padding-left: 1rem;
 }
 
-
 /* Position and style the close button (top right corner) */
+
 .sidenav .closebtn {
     right: 25px;
     font-size: 3rem;
     margin-left: 50px;
 }
-
-/*SCROL BARR*/
-
-.grafica::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
-
-.grafica::-webkit-scrollbar:vertical {
-    width: 10px;
-}
-
-.grafica::-webkit-scrollbar-button:increment,
-.grafica::-webkit-scrollbar-button {
-    display: none;
-}
-
-.grafica::-webkit-scrollbar:horizontal {
-    height: 20px;
-}
-
-.grafica::-webkit-scrollbar-thumb {
-    background-color: #800053;
-    border-radius: 20px;
-}
-
-.grafica::-webkit-scrollbar-track {
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px #797979;
-}
-
-.grafica {
-    padding: 1.5rem;
-    height: 570px;
-    width: 350px;
-    overflow: auto;
-}
-
-/*-------------*/

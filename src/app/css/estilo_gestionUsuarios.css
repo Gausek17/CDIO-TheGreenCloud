@@ -27,6 +27,24 @@ body{
     padding: 5px;
     
 }
+#linea-titulo {
+    border: 2px solid black;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+}
+.panelActual {
+    display: flex;
+    flex-direction: column;
+}
+.titulo-sin-linea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-sin-linea p {
+    font-size: 40px;
+}
 
 .logoGTI:hover{
     cursor: pointer;
@@ -198,7 +216,7 @@ header{
 .iconDeleteUser:hover{
     cursor: pointer;
 }
-.iconEditUser{
+.iconEditUser1{
     border: 5px;
     border-color: black;
     background-color: #333333;
@@ -211,7 +229,7 @@ header{
     margin-right: 30px;
     margin-left: 5px;
 }
-.iconEditUser:hover{
+.iconEditUser1:hover{
     background: black;
     color: white;
     cursor: pointer;
@@ -249,6 +267,9 @@ header{
 
 .iconNuevoUsuario{
     margin-top: 1rem;
+    width:50px;
+    height: auto;
+    margin-right: 0.5rem;
 }
 .iconAceptarCancelNuevo{
     width: 50px;
@@ -305,6 +326,12 @@ header{
     .iconMenu{
         display: block;
     }
+    .divPanelActual {
+        border-radius: 0px;
+    }
+    .titulo-sin-linea p {
+        font-size: 35px;
+    }
 
 
 }
@@ -327,7 +354,7 @@ header{
         height: 45px;
         margin-right: 1rem;
     }
-    .iconEditUser{
+    .iconEditUser1{
         text-align: center;
        width: 70px;
         margin-right: auto;
@@ -341,7 +368,8 @@ header{
     .iconAceptarCancel{
 
         text-align: center;
-       width: 64px;
+       width: 50px;
+        height: 20px;
         margin-right: auto;
         margin-left: 0.5rem;
         font-size: 10px;
@@ -375,6 +403,9 @@ header{
 
     header{
         margin-bottom: 0.5rem;
+    }
+    .titulo-sin-linea p {
+        font-size: 25px;
     }
     
 
