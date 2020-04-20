@@ -5,7 +5,7 @@ let ModeloSonda = {
             return respuesta.json();
         }).then((datosJson) => {
             this.datosSonda = datosJson;
-
+            callback();
 
         })
     }

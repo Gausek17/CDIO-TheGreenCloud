@@ -27,10 +27,7 @@ body{
     padding: 5px;
     
 }
-.logoGTI{
-    width: 150px;
-    height: auto;
-}
+
 .logoGTI:hover{
     cursor: pointer;
 }
@@ -321,6 +318,10 @@ header{
     .iconMenu{
         display: block;
     }
+    .logoGTI{
+        width: 150px;
+        height: auto;
+    }   
     .iconNuevoUsuario{
         width: 45px;
         height: 45px;
