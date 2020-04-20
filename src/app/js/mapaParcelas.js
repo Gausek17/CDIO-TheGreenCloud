@@ -48,7 +48,8 @@ function dibujarParcelas() {
         parcela = getParcela(idParcela);
         coordenadas = getCoordendas(idParcela);
         dibujarParcela(coordenadas.coordenadas, parcela.color);
-         var listaSondas = getSondas(idParcela);
+        var listaSondas = getSondas(idParcela);
+
         dibujarSondas(listaSondas);//Aqui se llama a dibujar las sondas en el mapa
 
         listaCentro.push(coordenadas);
@@ -112,6 +113,7 @@ function cambiarCentro() {
 }
 
 function dibujarSondas(listaSondas) {
+
     for(var i = 0 ; i<listaSondas.length;i++){
 
         var posicion = new google.maps.LatLng(listaSondas[i].lat, listaSondas[i].lng);
