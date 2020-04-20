@@ -173,15 +173,16 @@ function filtrar() {
     //imprime en la consola lo que escribes en el buscador
     //console.log(formulario.value);
     let stringPersonas = '';
-
+    let listaEncontrados = [];
 
     let datos = ModeloDivUsuarios.datosUsuarios;
     let texto = document.getElementById("buscador").value.toLowerCase();
 
-
     for (var i = 0; i < datos.length; i++) {
+
         let nombre = datos[i].nombre.toLowerCase();
         if (nombre.indexOf(texto) !== -1) {
+            listaEncontrados.push(datos[i]);
             //indexOf te devuelve el elemento si existe
             stringPersonas += `<div class="divPerson" id="${datos[i].id_usuario}">
                     <div class="divTextoPersona">
@@ -201,4 +202,9 @@ function filtrar() {
         stringPersonas += `<p>Usuario no encontrado</p>`
     }
     VistaDivUsuarios.divUsuarios.innerHTML = stringPersonas;
+
+    for (var j = 0; j < listaEncontrados.length; j++) {
+        document.getElementById("textCorreo" + listaEncontrados[j].id_usuario).disabled = true;
+        document.getElementById("textNombre" + listaEncontrados[j].id_usuario).disabled = true;
+    }
 }

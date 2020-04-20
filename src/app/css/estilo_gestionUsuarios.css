@@ -249,6 +249,9 @@ header{
 
 .iconNuevoUsuario{
     margin-top: 1rem;
+    width:50px;
+    height: auto;
+    margin-right: 0.5rem;
 }
 .iconAceptarCancelNuevo{
     width: 50px;
