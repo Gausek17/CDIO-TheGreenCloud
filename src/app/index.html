@@ -8,16 +8,13 @@
     
     <link rel="stylesheet" type="text/css" href="css/estilo_gestionUsuarios.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
-<<<<<<< Updated upstream
-=======
 
-    <link rel="stylesheet" type="text/css" href="../css/estilo_formalwindow.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_formalwindow.css">
     
 
->>>>>>> Stashed changes
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="js/sesion_permisos.js"></script>
-    
+
 
 
 </head>
@@ -29,8 +26,9 @@
         <!-- Nav generado en js-->
     </div>
     <header>
-       <img onclick="openNav()" src="../imagenes/menu/iconMenu.png" alt="Menu" class="iconMenu">
+        <img onclick="openNav()" src="../imagenes/menu/iconMenu.png" alt="Menu" class="iconMenu">
         <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
+
         <div class="divUsuario">
             <p id="textNombreUsuario">Nombre Usuario</p>
             
@@ -93,10 +91,12 @@
         </div>
     </div>
 </div>
-
+<!-- En el div se generara el PopUp-->
+<div id="divPopup" class="w3-modal w3-animate-opacity"></div>
 <script src="js/usuarioLogin.js"></script>
 <script src="js/sideNav.js"></script>
 <script src="js/menuAdmin.js"></script>
+<script src="js/modalConfirm.js"></script>
 <script src="js/usuarios_div.js"></script>
 <script>
     VistaUsuarioLogin.iniciar("textNombreUsuario");

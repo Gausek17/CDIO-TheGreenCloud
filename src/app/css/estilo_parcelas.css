@@ -33,7 +33,8 @@ body {
     align-items: center;
     margin-right: 7.5rem;
     margin-left: 7.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
+   
 }
 
 header {
@@ -281,6 +282,9 @@ nav{
         
         
     }
+    .divCentral{
+        margin-bottom: 0px;
+    }
     .panelActual{
         border-radius: 0px;
     }
@@ -288,15 +292,17 @@ nav{
     .container {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
+        margin-bottom: 0px;
     }
 
 
     #map {
         width: inherit;
-        height: inherit;
+        height: 710px;
         border: solid 3px black;
         margin-left: 0px;
         margin-right: 0px;
+        margin-bottom: 0px;
 
     }
 
@@ -340,6 +346,8 @@ nav{
 
     .divContenidoUser {
         padding: 0.5rem;
+        margin-bottom: 0px;
+        height: 530px;
     }
     
     .iconSeleccionParcela{
@@ -375,17 +383,17 @@ nav{
     
     .divTextSeleccionParcela{
         margin-top: 5px;
+        margin-bottom: 0px;
+        margin-left: 7px;
     }
 
-    .divSeleccionParcela {
-        align-items: center;
-        flex-direction: column;
-    }
+    
 
     .seleccion {
         display: flex;
         flex-direction: column;
         align-content: center;
+        margin-top: 7px;
     }
 
     #parcela {
@@ -395,6 +403,10 @@ nav{
 
     .enlace-graficas {
         width: 30px;
+        margin-left: 2px;
+    }
+    #selectParcelas{
+        margin-top: 5px;
     }
 
 }

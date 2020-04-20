@@ -12,125 +12,149 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!--para que sea compatible con internet explorer edge-->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <link rel="stylesheet" type="text/css" href="css/estilo_contacto.css">
+    <link rel="stylesheet" href="css/estilo_formalwindow.css">
 </head>
 
 <body>
-    <header class="header">
-        <a href="index.html"><img src="imagenes/logoGTI.svg"></a>
-        <button id="identificate" onclick="location.href='login.html'">Identificate</button>
-    </header>
+<header class="header">
+    <a href="index.html"><img src="imagenes/logoGTI.svg"></a>
+    <button id="identificate" onclick="location.href='login.html'">Identificate</button>
+</header>
 
-    <section class="form">
-        <div class="divTitulo">
-            <h1 class="textoConsulta">
-                Contacta con nosotros si tienes alguna duda
-            </h1>
-        </div>
+<section class="form">
+    <div class="divTitulo">
+        <h1 class="textoConsulta">
+            Contacta con nosotros si tienes alguna duda
+        </h1>
+    </div>
 
-        <form class="contacto">
-            <div class="contenedorCamposForm">
-                <div class="form-group">
+    <form class="contacto">
+        <div class="contenedorCamposForm">
+            <div class="form-group">
 
-                    <label>Nombre y Apellidos:</label><br>
+                <label>Nombre y Apellidos:</label><br>
 
-                    <input class="form-control" type="text" name="Nombre_y_apellidos" placeholder="Nombre y apellidos" required>
+                <input class="form-control" type="text" name="Nombre_y_apellidos" placeholder="Nombre y apellidos"
+                       required>
 
-                </div>
-
-
-                <div class="form-group">
-
-                    <br><label>Empresa:</label><br>
-
-                    <input class="form-control" type="text" name="Empresa" placeholder="Nombre de empresa" required>
-
-                </div>
-
-                <div class="form-group">
-
-                    <br><label>Teléfono:</label><br>
-
-                    <input class="form-control" type="tel" name="Teléfono" pattern="[0-9]{9}" placeholder="Ej:999 999 999" required>
-
-                </div>
-
-                <div class="form-group">
-
-                    <br><label>Correo electrónico:</label><br>
-
-                    <input class="form-control" type="email" name="email" placeholder="Ej:example@example.es" required>
-
-                </div>
-            </div>
-
-            <div class="contenedorConsulta">
-                <div class="form-group">
-
-                    <label class="labelConsulta">Consulta:</label><br>
-                    <div class="divTextArea">
-                        <textarea class="textAreaConsulta" name="consulta" placeholder="Escribe tu consulta" id="consult" required></textarea>
-                    </div>
-
-                </div>
-
-
-                <div class="btn_form">
-                    <br>
-                    <input class="btn_reset" type="reset" value="Limpiar">
-                    <input class="btn_submit" type="submit" value="Enviar">
-                </div>
             </div>
 
 
-        </form>
-    </section>
+            <div class="form-group">
 
+                <br><label>Empresa:</label><br>
 
+                <input class="form-control" type="text" name="Empresa" placeholder="Nombre de empresa" required>
 
-    <footer class="footer-distributed">
+            </div>
 
-        <div class="footer-left">
+            <div class="form-group">
 
-            <h3 class="Tecnologias-Interactivas">Tecnologías<span>Interactivas</span></h3>
+                <br><label>Teléfono:</label><br>
 
-            <p class="footer-links">
-                <a href="#">Inicio</a>
+                <input class="form-control" type="tel" name="Teléfono" pattern="[0-9]{9}" placeholder="Ej:999 999 999"
+                       required>
 
-            </p>
+            </div>
 
-            <p class="footer-company-name">© 2020 Escuela Politécnica de Valencia Ltd.</p>
+            <div class="form-group">
+
+                <br><label>Correo electrónico:</label><br>
+
+                <input class="form-control" type="email" name="email" placeholder="Ej:example@example.es" required>
+
+            </div>
         </div>
 
-        <div class="footer-center">
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <img src="imagenes/contacto/ubicacion.png" style=width="50px" height="50px" id="mapita" >
-                <p><span>E.Politécnica Superior de Gandía<br>
+        <div class="contenedorConsulta">
+            <div class="form-group">
+
+                <label class="labelConsulta">Consulta:</label><br>
+                <div class="divTextArea">
+                    <textarea class="textAreaConsulta" name="consulta" placeholder="Escribe tu consulta" id="consult"
+                              required></textarea>
+                </div>
+
+            </div>
+
+
+            <div class="btn_form">
+                <br>
+                <input class="btn_reset" type="reset" value="Limpiar">
+
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">
+                    Enviar
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </form>
+</section>
+
+
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <h3 class="Tecnologias-Interactivas">Tecnologías<span>Interactivas</span></h3>
+
+        <p class="footer-links">
+            <a href="#">Inicio</a>
+
+        </p>
+
+        <p class="footer-company-name">© 2020 Escuela Politécnica de Valencia Ltd.</p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <img src="imagenes/contacto/ubicacion.png" style=width="50px" height="50px" id="mapita">
+            <p><span>E.Politécnica Superior de Gandía<br>
                         C/Paranimf, 1, Edicifio F</span>
-                    46730 Grau de Gandia, Valencia</p>
-            </div>
-
-            <div>
-                <i class="fa fa-phone"></i>
-                <img src="imagenes/contacto/telefono.png" style="width="50px" height="50px"" id="phone">
-                <p><a href="tel:+34962849333">962 84 93 33</a></p>
-            </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <img src="imagenes/contacto/correo.png" style = width= "50px" height="50px" id="mail">
-                <p><a href="mailto:informacio@thegreencloud">informacion@thegreencloud</a></p>
-            </div>
+                46730 Grau de Gandia, Valencia</p>
         </div>
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>Sobre Nosotros</span>
-                Somos una empresa especializada en la monitorización de campos de cultivo, gracias a nuestros sensores remotos usted tendrá en todo momento controlado los parámetros de sus parcelas en cualquier dispositivo con internet.</p>
 
+        <div>
+            <i class="fa fa-phone"></i>
+            <img src="imagenes/contacto/telefono.png" style="width=" 50px" height="50px"" id="phone">
+            <p><a href="tel:+34962849333">962 84 93 33</a></p>
         </div>
-    </footer>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <img src="imagenes/contacto/correo.png" style=width= "50px" height="50px" id="mail">
+            <p><a href="mailto:informacio@thegreencloud">informacion@thegreencloud</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Sobre Nosotros</span>
+            Somos una empresa especializada en la monitorización de campos de cultivo, gracias a nuestros sensores
+            remotos usted tendrá en todo momento controlado los parámetros de sus parcelas en cualquier dispositivo con
+            internet.</p>
+
+    </div>
+</footer>
+<div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4">
+        <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+              class="w3-button w3-large w3-display-topright">&times;</span>
+            <h2>¡Enviado!</h2>
+        </header>
+        <div class="w3-container">
+            <p>El formulario se ha enviado correctamente.</p>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

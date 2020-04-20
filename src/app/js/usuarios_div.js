@@ -33,10 +33,14 @@ let VistaDivUsuarios = {
                     <button alt = "Editar usuario" class="iconEditUser" id="iconEditar${datos[i].id_usuario}" onclick="editUser(${datos[i].id_usuario})">Editar Usuario </button>
                     
                     <button alt="Aceptar" class="iconAceptarCancel" id="iconAceptar${datos[i].id_usuario}" onclick="aceptar(${datos[i].id_usuario})">Aceptar cambios</button>
-                    <button alt="Elimina usuario" class="iconEditUser"  id="iconDelete${datos[i].id_usuario}" onclick="deleteUser(${datos[i].id_usuario})">Eliminar Usuario </button>
                     <button alt="Cancelar" class="iconAceptarCancel"  id="iconCancel${datos[i].id_usuario}" onclick="cancelar(${datos[i].id_usuario})">Cancelar cambios</button>
+                    <button alt="Elimina usuario" class="iconEditUser"  id="iconDelete${datos[i].id_usuario}" 
+                            onclick="modalConfirmar(${datos[i].id_usuario})">Eliminar Usuario </button>
+                    
                 </div>`;
         }
+
+
 
         this.divUsuarios.innerHTML = stringPersonas;
         for (var j = 0; j < datos.length; j++) {
@@ -62,7 +66,6 @@ let ControladorDivUsuarios = {
 
 
 function deleteUser(id) {
-    if (confirm("Este usuario y todos sus datos se perderán para siempre.\n ¿Desea continuar?")) {
         fetch('../api/v1.0/usuario&' + id, {
             method: "delete"
         }).then(function (respuesta) {
@@ -72,7 +75,7 @@ function deleteUser(id) {
                 alert("Se ha producido un error en el proceso de borrar.");
             }
         })
-    }
+
 }
 
 function editUser(id) {
@@ -177,11 +180,13 @@ function filtrar() {
 
     let datos = ModeloDivUsuarios.datosUsuarios;
     let texto = document.getElementById("buscador").value.toLowerCase();
-
+    //Lista para desabilitar los usuarios encontrados (por defecto estan en modoEdicion)
+    let listaTmp=[];
 
     for (var i = 0; i < datos.length; i++) {
         let nombre = datos[i].nombre.toLowerCase();
         if (nombre.indexOf(texto) !== -1) {
+            listaTmp.push(datos[i]);
             //indexOf te devuelve el elemento si existe
             stringPersonas += `<div class="divPerson" id="${datos[i].id_usuario}">
                     <div class="divTextoPersona">
@@ -200,5 +205,10 @@ function filtrar() {
     if (stringPersonas === '') {
         stringPersonas += `<p>Usuario no encontrado</p>`
     }
+
     VistaDivUsuarios.divUsuarios.innerHTML = stringPersonas;
+    for (var j = 0; j < listaTmp.length; j++) {
+        document.getElementById("textCorreo" + listaTmp[j].id_usuario).disabled = true;
+        document.getElementById("textNombre" + listaTmp[j].id_usuario).disabled = true;
+    }
 }
