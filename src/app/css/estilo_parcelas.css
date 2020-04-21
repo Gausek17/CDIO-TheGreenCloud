@@ -349,6 +349,9 @@ nav{
         margin-bottom: 0px;
         height: 530px;
     }
+    #map{
+        height: 550px;
+    }
     
     .iconSeleccionParcela{
         padding-left: 0;

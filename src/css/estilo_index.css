@@ -24,9 +24,10 @@ body {
 
 
 .header {
-    border: 1px solid black;
+    
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .gti-logo {
@@ -36,24 +37,30 @@ body {
 
 .boton {
     float: right;
+    
 }
 
 #botonidentificate {
     position: absolute;
     right: 130px;
-    padding-top: 25px;
+    margin-top: 0px;
+    font-weight: 200;
     float: right;
     border-radius: 8px;
-    padding: 8px;
+    margin-bottom: 5px;
     margin-right: 8px;
+    color: #9943e8;
+    cursor: pointer;
     padding-left: 15px;
     padding-right: 15px;
-    border: 1px solid purple;
-    background-color: #DDB8DD;
-    font-weight: 500;
+    border: 3px solid purple;
+    background-color: #ffffff;
+    font-weight: 900;
     font-size: 13px;
     cursor: pointer;
-    width: auto;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
     /*width: 200px;*/
 }
 
@@ -87,12 +94,13 @@ body {
     padding-right: 50px;
     margin: 50px auto;
     border-radius: 20px;
-    border: 1.5px solid purple;
-    background-color: plum;
+    border: 2px solid #140a24;
+    background-color: #763c76;
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 60px;
     cursor: pointer;
+    color: white;
 }
 
 .contactanos:hover {
@@ -109,7 +117,7 @@ body {
 }
 
 .morado {
-    background-color: plum;
+    background-color: #dacbe8;
     margin: 0px auto;
     border: 1px solid black;
 }
@@ -136,7 +144,7 @@ body {
 }
 
 .car1 {
-    background-color: plum;
+    background-color: #dacbe8;
     display: flex;
     justify-content: flex-start;
     padding: 20px;
@@ -148,7 +156,7 @@ body {
 }
 
 .car2 {
-    background-color: plum;
+    background-color: #dacbe8;
     display: flex;
     justify-content: flex-end;
     padding: 20px;
@@ -156,11 +164,11 @@ body {
 }
 
 #sensor {
-    width: 200px
+    width: 200px;
 }
 
 .car3 {
-    background-color: plum;
+    background-color: #dacbe8;
     display: flex;
     justify-content: flex-start;
     padding: 20px;
@@ -484,10 +492,14 @@ a.telefono {
         padding: 7px;
         padding-left: 10px;
         padding-right: 10px;
-        border: 1px solid purple;
-        background-color: #DDB8DD;
+        width: auto;
+        margin-top: 0px;
         font-size: 10px;
         cursor: pointer;
+        margin-right: 1px;
+        font-weight: 900;
+        
+        
         /*width: 200px;*/
     }
 
@@ -533,5 +545,30 @@ a.telefono {
         color: #ffffff;
         font: normal 25px 'Cookie', cursive;
         margin: 0;
+    }
+    .footer-center p a{
+        margin-left: 15px;
+        margin-bottom: 22px;
+        
+
+    }
+    #phone{
+        margin-top: 19px;
+        margin-left: 90px;
+        
+        
+        
+    }
+    #telf{
+        margin-top: 2px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
+    
+    #mail{
+        margin-top: 19px;
+    }
+    .tlf{
+        text-align: center;
     }
 }

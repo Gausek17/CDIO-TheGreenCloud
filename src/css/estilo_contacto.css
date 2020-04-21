@@ -337,4 +337,26 @@ body {
 
 
     }
+    .footer-distributed h3 {
+        color: #ffffff;
+        font: normal 25px 'Cookie', cursive;
+        margin: 0;
+    }
+    .footer-center p a{
+        
+        
+        align-content: center;
+        
+
+    }
+    #phone{
+        margin-top: 19px;
+        
+        
+    }
+    #mail{
+        margin-top: 19px;
+    }
+    
+    
 }
