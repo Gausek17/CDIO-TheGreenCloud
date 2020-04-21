@@ -359,6 +359,32 @@ a.telefono {
     margin-bottom: 20px;
 }
 
+#phone{
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+}
+.tlf{
+    display: flex;
+    align-items: center;
+}
+#mail{
+    margin-right: 1rem;
+}
+.divMailContacto{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.divUbicacion{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+#texto-mapa{
+    margin-left: 1rem;
+}
 
 
 
@@ -388,6 +414,9 @@ a.telefono {
 
     .footer-distributed .footer-center i {
         margin-left: 0;
+    }
+    .footer-center{
+        margin-left: 115px;
     }
 
 }
@@ -470,6 +499,9 @@ a.telefono {
     .footer-distributed h3 {
         font-size: 2rem;
     }
+    .footer-center{
+        margin-left:0px;
+    }
 
 }
 
@@ -549,26 +581,6 @@ a.telefono {
     .footer-center p a{
         margin-left: 15px;
         margin-bottom: 22px;
-        
+    }
 
-    }
-    #phone{
-        margin-top: 19px;
-        margin-left: 90px;
-        
-        
-        
-    }
-    #telf{
-        margin-top: 2px;
-        margin-right: 20px;
-        margin-bottom: 15px;
-    }
-    
-    #mail{
-        margin-top: 19px;
-    }
-    .tlf{
-        text-align: center;
-    }
 }
