@@ -6,10 +6,10 @@
     height: 35px;
     border-radius: 5px;
     font-size: 15px;
+    padding: 0.5rem;
 }
 
 h4{
-    font-family: "Trebuchet MS";
     padding-left: 1rem;
     padding-top: 1rem;
     margin-top: 10px;
@@ -332,15 +332,19 @@ header{
     .titulo-sin-linea p {
         font-size: 35px;
     }
-
+    .divTextoNuevaPersona{
+        margin-right: 1rem;
+    }
 
 }
 
 @media only screen and (max-width: 450px) {
     .iconUserPerson{
-        margin-right: 0.5rem;
+
         width:60px ;
         height: 60px;
+
+
     }
     .iconMenu{
         display: block;
@@ -356,26 +360,19 @@ header{
     }
     .iconEditUser1{
         text-align: center;
-       width: 70px;
-        margin-right: auto;
-        margin-left: 0.7rem;
-        font-size: 10px;
+        width: auto;
+        height: auto;
+        padding: 0.35rem;
+        margin-left: 5px;
+        margin-right: 0;
     }
     .iconDeleteUser{
         width: 40px;
         height: 40px;
     }
-    .iconAceptarCancel{
 
-        text-align: center;
-       width: 50px;
-        height: 20px;
-        margin-right: auto;
-        margin-left: 0.5rem;
-        font-size: 10px;
-    }
     .divContenidoUser{
-        padding: 0.5rem;
+        padding: 0;
     }
     .iconUseer{
         width: 65px;
@@ -393,11 +390,13 @@ header{
     }
     .divNuevaPersona{
         flex-direction: column;
+        font-size: 1rem;
     }
     .divTextoNuevaPersona{
         color: white;
         display: flex;
-        width: 10rem;
+        align-items: center;
+
     }
 
 
@@ -407,7 +406,23 @@ header{
     .titulo-sin-linea p {
         font-size: 25px;
     }
-    
+
+    .divTextoPersona{
+        padding-left: 0;
+
+    }
+    .iconAceptarCancel{
+        padding: 0.35rem;
+        height: auto;
+        width: auto;
+        margin-right: 0;
+    }
+    .textNuevoUser{
+        width: 250px;
+    }
+    .divTextoNuevaPersona{
+        margin-right: 0;
+    }
 
 }
 
@@ -436,5 +451,20 @@ header{
 .textCorreo:enabled{
     color: white;
     background: #423f3e;
+}
+
+.textNuevoUser{
+    font-size: 1rem;
+    border: 0;
+    background: transparent;
+}
+.textNuevoUser:enabled{
+    color: white;
+    background: #423f3e;
+}
+
+.textNuevoUser{
+    padding: 0.5rem;
+
 }
 

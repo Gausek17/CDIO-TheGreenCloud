@@ -100,24 +100,26 @@ function pintarGraficaLuminosidad(){
     var datos = [];
     var data = ModeloMediciones.datos;
     var idParcela = document.getElementById("selectParcelas").value;
+    var idSonda = document.getElementById("selectSondas").value;
     var fechaSelctor = document.getElementById("field1").value;
-
+//Las mediciones seran filtradas por TipoDato - Fecha - Sonda
     data.forEach( element =>{
-        if (element.id_parcela == idParcela && element.fecha === fechaSelctor){
+        if (element.id_parcela == idParcela && element.fecha === fechaSelctor && element.id_sonda == idSonda){
             datos.push(element);
         }
     });
     let listaLabelsLuminosidad = [];
     let listaDatosLuminosidad = [];
 
+
     datos.forEach(element => {
-        if (element.tipoDato === "Luminosidad" && element.fecha === fechaSelctor) {
+        if (element.tipoDato === "Luminosidad") {
             listaLabelsLuminosidad.push(formateraHora(element.hora))
         }
     });
 
     datos.forEach(element => {
-        if (element.tipoDato === "Luminosidad" && element.fecha === fechaSelctor) {
+        if (element.tipoDato === "Luminosidad") {
             listaDatosLuminosidad.push(element.medicion)
         }
     });
@@ -199,10 +201,11 @@ function pintarGraficaTemperatura(){
     var datos = [];
     var data = ModeloMediciones.datos;
     var idParcela = document.getElementById("selectParcelas").value;
+    var idSonda = document.getElementById("selectSondas").value;
     var fechaSelctor = document.getElementById("field1").value;
 
     data.forEach( element =>{
-        if (element.id_parcela == idParcela && element.fecha === fechaSelctor ){
+        if (element.id_parcela == idParcela && element.fecha === fechaSelctor && element.id_sonda == idSonda){
             datos.push(element);
         }
     });
@@ -211,14 +214,14 @@ function pintarGraficaTemperatura(){
     let listaDatosTemperatura = [];
     
     datos.forEach(element => {
-        if (element.tipoDato === "Temperatura" && element.fecha === fechaSelctor) {
+        if (element.tipoDato === "Temperatura") {
             listaLabelsTemperatura.push(formateraHora(element.hora))
 
         }
     });
 
     datos.forEach(element => {
-        if (element.tipoDato === "Temperatura" && element.fecha === fechaSelctor) {
+        if (element.tipoDato === "Temperatura") {
             listaDatosTemperatura.push(element.medicion)
         }
     });
@@ -245,7 +248,6 @@ function pintarGraficaTemperatura(){
     };
     let opcionesTemperatura = {
         maintainAspectRatio: false,
-
         legend:{
             labels:{
                 fontColor:'white',
@@ -318,10 +320,11 @@ function pintarGraficaHumedad() {
     var datos = [];
     var data = ModeloMediciones.datos;
     var idParcela = document.getElementById("selectParcelas").value;
+    var idSonda = document.getElementById("selectSondas").value;
     var fechaSelctor = document.getElementById("field1").value;
 
     data.forEach( element =>{
-        if (element.id_parcela == idParcela && element.fecha === fechaSelctor){
+        if (element.id_parcela == idParcela && element.fecha === fechaSelctor && element.id_sonda == idSonda){
             datos.push(element);
         }
     });
@@ -329,13 +332,13 @@ function pintarGraficaHumedad() {
     let listaLabelsHumedad = [];
     let listaDatosHumedad = [];
     datos.forEach(element => {
-      if (element.tipoDato === "Humedad" && element.fecha === fechaSelctor) {
+      if (element.tipoDato === "Humedad") {
             listaLabelsHumedad.push(formateraHora(element.hora))
         }
     });
 
     datos.forEach(element => {
-        if (element.tipoDato === "Humedad" && element.fecha === fechaSelctor) {
+        if (element.tipoDato === "Humedad") {
             listaDatosHumedad.push(element.medicion)
         }
     });
@@ -424,10 +427,11 @@ function pintarGraficaSalinidad() {
 
     var data = ModeloMediciones.datos;
     var idParcela = document.getElementById("selectParcelas").value;
+    var idSonda = document.getElementById("selectSondas").value;
     var fechaSelctor = document.getElementById("field1").value;
 
     data.forEach( element =>{
-        if (element.id_parcela == idParcela && element.fecha === fechaSelctor){
+        if (element.id_parcela == idParcela && element.fecha === fechaSelctor && element.id_sonda == idSonda){
             datos.push(element);
         }
     });
@@ -437,13 +441,13 @@ function pintarGraficaSalinidad() {
 
 
     datos.forEach(element => {
-         if (element.tipoDato === "Salinidad" && element.fecha === fechaSelctor) {
+         if (element.tipoDato === "Salinidad") {
             listaLabelsSalinidad.push(formateraHora(element.hora))
         }
     });
 
     datos.forEach(element => {
-        if (element.tipoDato === "Salinidad" && element.fecha === fechaSelctor) {
+        if (element.tipoDato === "Salinidad") {
             listaDatosSalinidad.push(element.medicion)
         }
     });
@@ -524,11 +528,25 @@ function pintarGraficaSalinidad() {
     });
 }
 function pintarGraficas() {
+    //Solo pintaremos las graficas que tenga el checkbox seleccionado
+    let variableCheck = document.getElementById("switchHumedad").checked;
+    if (variableCheck){
+        pintarGraficaHumedad();
+    }
+    variableCheck = document.getElementById("switchLuminosidad").checked;
+    if (variableCheck){
+        pintarGraficaLuminosidad();
+    }
 
-    pintarGraficaHumedad();
-    pintarGraficaLuminosidad();
-    pintarGraficaTemperatura();
-    pintarGraficaSalinidad();
+    variableCheck = document.getElementById("switchTemperatura").checked;
+    if (variableCheck){
+        pintarGraficaTemperatura();
+    }
+    variableCheck = document.getElementById("switchSalinidad").checked;
+    if (variableCheck){
+        pintarGraficaSalinidad();
+    }
+
 }
 function setDateToday() {
     let date = new Date();
@@ -542,346 +560,3 @@ function setDateToday() {
     }
     document.getElementById("field1").value= date.getFullYear()+"-"+month+"-"+day;
 }
-/*
-function pintarGraficas() {
-
-    var datos = [];
-
-    var data = ModeloMediciones.datos;
-    var idParcela = document.getElementById("selectParcelas").value;
-
-    data.forEach( element =>{
-        if (element.id_parcela == idParcela){
-            datos.push(element);
-        }
-    });
-
-
-    let listaLabelsTemperatura = [];
-    let listaLabelsLuminosidad = [];
-    let listaLabelsHumedad = [];
-    let listaLabelsSalinidad = [];
-
-    let listaDatosTemperatura = [];
-    let listaDatosLuminosidad = [];
-    let listaDatosHumedad = [];
-    let listaDatosSalinidad = [];
-
-
-    datos.forEach(element => {
-        if (element.id_sonda == 1) {
-            listaLabelsTemperatura.push(formateraHora(element.hora))
-
-        } else if (element.id_sonda == 2) {
-            listaLabelsLuminosidad.push(formateraHora(element.hora))
-        } else if (element.id_sonda == 3) {
-            listaLabelsHumedad.push(formateraHora(element.hora))
-        } else if (element.id_sonda == 4) {
-            listaLabelsSalinidad.push(formateraHora(element.hora))
-        }
-    });
-
-    datos.forEach(element => {
-        if (element.id_sonda == 1) {
-            listaDatosTemperatura.push(element.medicion)
-        } else if (element.id_sonda == 2) {
-            listaDatosLuminosidad.push(element.medicion)
-        } else if (element.id_sonda == 3) {
-            listaDatosHumedad.push(element.medicion)
-        } else if (element.id_sonda == 4) {
-            listaDatosSalinidad.push(element.medicion)
-        }
-    });
-
-
-    let datosMedicionTemperatura = {
-        labels: listaLabelsTemperatura,
-
-        datasets: [
-            {
-                label: 'Temperatura',
-
-                data: listaDatosTemperatura,
-                pointBorderColor: 'white',
-                backgroundColor: 'orange',
-                borderColor: 'white',
-                lineTension: 0,
-                pointBackgroundColor: 'white',
-
-
-            }
-
-        ]
-    };
-    let opcionesTemperatura = {
-        maintainAspectRatio: false,
-
-        legend:{
-            labels:{
-                fontColor:'white',
-
-            }
-        },
-        scales: {
-            yAxes: [{
-
-                scaleLabel: {
-                    display: true,
-                    labelString: 'Temperatura ºC',
-                    fontColor:"white",
-
-
-                },
-                ticks: {
-                    fontColor: "white",
-
-
-                },
-                gridLines: {
-                    drawOnChartArea: false
-                }
-
-
-            }],
-            xAxes: [{
-
-
-
-                scaleLabel:{
-                    display: true,
-                    labelString:'Hora',
-                    fontColor:"white",
-
-
-                },
-                ticks: {
-                    fontColor: "white",
-
-                },
-                gridLines: {
-                    borderDash: [2, 5],
-                    color: "white",
-                    drawOnChartArea: false
-                }
-
-            }]
-
-        }
-    };
-
-    let datosMedicionLuminosidad = {
-        labels: listaLabelsLuminosidad,
-        datasets: [
-            {
-                label: 'Luminosidad',
-
-                data: listaDatosLuminosidad,
-                pointBorderColor: 'white',
-                backgroundColor: 'grey',
-                borderColor: 'white',
-                lineTension: 0,
-                pointBackgroundColor: 'white',
-
-            }
-
-        ]
-    };
-    let opcionesLuminosidad = {
-        maintainAspectRatio: false,
-        legend:{
-            labels:{
-                fontColor:'white',
-            }
-        },
-        scales: {
-            yAxes: [{
-                scaleLabel: {
-                    display: true,
-                    labelString: '% Luz',
-                    fontColor:"white",
-
-                },
-                ticks: {
-                    fontColor: "white",
-                },
-                gridLines: {
-                    drawOnChartArea: false
-                }
-
-            }],
-            xAxes: [{
-                scaleLabel:{
-                    display: true,
-                    labelString:'Hora',
-                    fontColor:"white",
-                },
-                ticks: {
-                    fontColor: "white",
-                },
-                gridLines: {
-                    borderDash: [2, 5],
-                    color: "white",
-                    drawOnChartArea: false
-                }
-            }]
-
-        }
-    };
-
-    let datosMedicionHumedad = {
-        labels: listaLabelsHumedad,
-
-        datasets: [
-            {
-                label: 'Humedad',
-
-                data: listaDatosHumedad,
-                pointBorderColor: 'white',
-                backgroundColor: 'royalblue',
-                borderColor: 'white',
-                lineTension: 0,
-                pointBackgroundColor: 'white',
-
-
-            }
-
-        ]
-    };
-    let opcionesHumedad = {
-        maintainAspectRatio: false,
-        legend:{
-            labels:{
-                fontColor:'white',
-            }
-        },
-        scales: {
-            yAxes: [{
-                scaleLabel: {
-                    display: true,
-                    labelString: '% Humedad',
-                    fontColor:"white",
-
-                },
-                ticks: {
-                    fontColor: "white",
-                },
-                gridLines: {
-                    drawOnChartArea: false
-                }
-            }],
-            xAxes: [{
-                scaleLabel:{
-                    display: true,
-                    labelString:'Hora',
-                    fontColor:"white",
-                },
-
-
-                ticks: {
-                    fontColor: "white",
-                },
-                gridLines: {
-                    borderDash: [2, 5],
-                    color: "white",
-                    drawOnChartArea: false
-                }
-            }]
-
-        }
-    };
-    let datosMedicionSalinidad = {
-        labels: listaLabelsSalinidad,
-        datasets: [
-            {
-                label: 'Salinidad',
-
-                data: listaDatosSalinidad,
-                pointBorderColor: 'white',
-                backgroundColo:'#408033',
-                borderColor: 'white',
-                lineTension: 0,
-                pointBackgroundColor: 'white',
-
-
-
-            }
-
-        ]
-    };
-    let opcionesSalinidad = {
-        maintainAspectRatio: false,
-
-        legend:{
-            labels:{
-                fontColor:'white',
-            }
-        },
-        scales: {
-            yAxes: [{
-                scaleLabel: {
-                    display: true,
-                    labelString: '% Salinidad',
-                    fontColor:"white",
-
-
-                },
-                ticks: {
-                    fontColor: "white",
-                    beginAtZero:true
-                },
-                gridLines: {
-                    drawOnChartArea: false
-                }
-            }],
-            xAxes: [{
-                scaleLabel:{
-                    display: true,
-                    labelString:'Hora',
-                    fontColor:"white",
-                },
-                ticks: {
-                    fontColor: "white",
-                },
-                gridLines: {
-                    borderDash: [2, 5],
-                    color: "white",
-                    drawOnChartArea: false
-                }
-            }]
-
-        }
-    };
-
-
-    let miGraficaTemp = new Chart(VistaMediciones.canvasTemperatura, {
-        type: 'line',
-        data: datosMedicionTemperatura,
-        backgroundColor: 'white',
-        options: opcionesTemperatura
-
-    });
-    let miGraficaLum = new Chart(VistaMediciones.canvasLuminosidad, {
-        type: 'line',
-        data: datosMedicionLuminosidad,
-        backgroundColor: 'white',
-        options: opcionesLuminosidad
-
-    });
-    let miGraficaHum = new Chart(VistaMediciones.canvasHumedad, {
-        type: 'line',
-        data: datosMedicionHumedad,
-        backgroundColor: 'white',
-        options: opcionesHumedad
-
-    });
-    let miGraficaSal = new Chart(VistaMediciones.canvasSalinidad, {
-        type: 'line',
-        data: datosMedicionSalinidad,
-        backgroundColor: 'white',
-        options: opcionesSalinidad
-
-    });
-
-}
-
- */

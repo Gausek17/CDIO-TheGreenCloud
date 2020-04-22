@@ -5,8 +5,10 @@
 .grafica {
     position: relative;
     width: 50vw;
-    height: 60vh;
     margin: 0 auto;
+    padding: 1.5rem;
+    height: 570px;
+    overflow: auto;
 }
 
 /*SCROL BARR*/
@@ -36,12 +38,6 @@
 .grafica::-webkit-scrollbar-track {
     border-radius: 10px;
     box-shadow: inset 0 0 10px #797979;
-}
-
-.grafica {
-    padding: 1.5rem;
-    height: 570px;
-    overflow: auto;
 }
 
 /*-------------*/
@@ -164,16 +160,12 @@ body {
 
 .iconMenu {
     display: none;
-    width: 25px;
-    height: 35px;
+    width: 35px;
+    height: auto;
     margin-top: 0.7rem;
     margin-left: 0.5rem;
 }
 
-.iconMediciones {
-    width: 85px;
-    height: 70px;
-}
 
 .divContenidoGraficas {
     display: flex;
@@ -186,15 +178,10 @@ body {
 .checkbox {
     display: flex;
     text-align: center;
-    padding: 1rem;
+    margin-bottom: 1rem;
     justify-content: center;
 }
 
-.cajas {
-    margin-right: 50px;
-    margin-top: 25px;
-    margin-left: 5px;
-}
 
 
 
@@ -234,7 +221,8 @@ header {
     border: 2px solid black;
     cursor: pointer;
     margin-top: 15px;
-    margin-right: 5px;
+    margin-right: 1rem;
+
 }
 
 #selectParcelas {
@@ -247,7 +235,20 @@ header {
     border: 2px solid black;
     cursor: pointer;
     margin-top: 15px;
-    margin-right: 5px;
+    margin-right: 1rem;
+}
+
+#selectSondas{
+    background-color: gainsboro;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 1rem;
 }
 
 
@@ -261,8 +262,6 @@ header {
     border: 2px solid black;
     cursor: pointer;
     margin-top: 15px;
-    margin-left: 5px;
-    margin-bottom: 30px;
 }
 
 
@@ -282,49 +281,6 @@ header {
 
 .lista a:hover {
     background-color: #f1f1f1;
-}
-
-.desplegable:hover .lista {
-    display: block;
-
-}
-
-.despegable {
-    position: absolute;
-}
-
-.delete {
-    cursor: pointer;
-    background-color: #800053;
-    color: white;
-    border-radius: 46px 46px 46px 46px;
-    border: 2px solid black;
-    padding: 1rem;
-}
-
-.delete:hover {
-    background-color: rgba(169, 69, 206, 0.72);
-    color: black;
-}
-
-.button {
-    align-content: space-between;
-    padding: 1rem;
-    margin-left: 17px;
-}
-
-
-
-.iconParcelas {
-    height: auto;
-    width: 70px;
-    padding: 5px;
-}
-
-.iconGestionUsuarios {
-    width: 70px;
-    height: auto;
-    padding: 5px;
 }
 
 .iconSensorSelected {
@@ -361,11 +317,6 @@ header {
     margin-right: 3.5rem;
 }
 
-
-
-
-
-
 .dos-primeras {
     display: flex;
     
@@ -373,16 +324,33 @@ header {
 
 .dos-segundas {
     display: flex;
-    margin-right: 50px;
+
 }
 
 .elementSensores {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    margin-right: 2rem;
 }
 
+.textAdmin {
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    text-align: center;
+}
 
+.navMediciones{
+    border: 4px solid black;
+}
 
+.divSelectores{
+    display: flex;
+}
 /*------RESPONSIVE----------*/
 @media only screen and (max-width:900px) {
 
@@ -391,13 +359,6 @@ header {
     .grafica {
         overflow: inherit;
         width: 80vw;
-    }
-    .divContenidoUser {
-        overflow: inherit;
-    }
-
-    .divPanelActual {
-        border-radius: 0px;
     }
 
     .container {
@@ -411,10 +372,6 @@ header {
 
     .logoGTI {
         display: none;
-    }
-
-    .divNuevoUsuario {
-        flex-direction: column;
     }
 
     .iconSensorSelected {
@@ -439,7 +396,7 @@ header {
         display: flex;
         flex-direction: row;
         font-size: 15px;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .elementSensores {
@@ -459,31 +416,33 @@ header {
     .cajas {
         margin-top: 35px;
     }
+    #selectUsurios{
+        margin: 0 ;
+    }
+    #selectParcelas{
+      margin: 0;
+    }
+    #selectSondas{
+        margin: 0;
+    }
+    .calendar{
+        margin: 0;
+    }
+    .divSelectores{
+        margin-top: 1.5rem;
+        justify-content: space-around;
+    }
+    .divContenidoGraficas{
+        display: block;
+    }
+    .cajas {
+        margin: 0.5rem 0 0 0;
+    }
 
 }
 
 @media only screen and (max-width: 450px) {
     /* Iphone */
-
-    .iconUserPerson {
-        margin-right: 0.5rem;
-        width: 60px;
-        height: 60px;
-    }
-
-    .iconEditUser {
-        width: 40px;
-        height: 40px;
-    }
-
-    .iconDeleteUser {
-        width: 40px;
-        height: 40px;
-    }
-
-    .divContenidoUser {
-        padding: 0.5rem;
-    }
 
     .iconSensorSelected {
         width: 45px;
@@ -492,10 +451,6 @@ header {
 
     .titulo-sin-linea p {
         font-size: 25px;
-    }
-
-    .divNuevoUsuario {
-        flex-direction: column;
     }
 
     header {
@@ -510,33 +465,21 @@ header {
         font-size: 15px;
     }
 
-    .textNav {
-        margin-left: 0.7rem;
-    }
-
     .checkbox {
         display: flex;
-        margin-top: 20px;
+        margin-top: 5px;
+        justify-content: space-around;
+    }
+    .grafica{
+        padding: 0;
     }
 
     .seleccion select {
         margin-top: 20px;
     }
     
-    .seleccion_usuarios{
-        width: 20px;
-    }
-    
     .divContenidoGraficas{
         flex-wrap: wrap;
-    }
-    
-    .seleccion_parcelas {
-        font-size: 10px;
-        margin-right: 140px;
-        margin-top: 15px;
-        width: 20px;
-        font-size: 5px;
     }
    
     .seleccion_calendar {
@@ -548,22 +491,34 @@ header {
         font-size: 3px;
     }
     
-    #selectUsuarios{
-        width: 170px;
-        height: 50px;
+    #selectUsurios{
+        width: 150px;
+        height: 40px;
         font-size: 13px;
+        padding: 0.5rem;
     }
     
     #selectParcelas{
-        width: 170px;
-        height: 60px;
+        width: 150px;
+        height: 40px;
         font-size: 13px;
+        padding: 0.5rem;
+
     }
+    #selectSondas{
+        width: 150px;
+        height: 40px;
+        font-size: 13px;
+
+        padding: 0.5rem;
+    }
+
     
     .calendar{
-        width: 150px;
+        width: 130px;
         height: 20px;
         font-size: 13px;
+        padding: 0.5rem;
     }
 
     .seleccion {
@@ -576,25 +531,29 @@ header {
         flex-direction: column;
         align-items: center;
         font-size: 13px;
+        margin-right: 0;
     }
 
     .elementSensores h3 {
         margin: 0;
     }
 
-    .cajas {
-        margin: 0.5rem 0 0 0;
-    }
+
+
 
     .dos-primeras {
         display: flex;
         flex-direction: column;
-        margin-left: 40px;
+    }
+    .calendar{
+        margin-bottom: 0;
+        margin-left: 0;
     }
 
     .dos-segundas {
         display: flex;
         flex-direction: column;
+        margin-right: 0;
     }
 
     #salinidad {
@@ -610,35 +569,6 @@ header {
         margin-left: 10px;
     }
 
-    #chartTemperatura {
-        position: relative;
-        width: 90vw;
-        height: 350px !important;
-        margin-bottom: 1rem;
-        background-color: orange;
-    }
 
-    #chartLuminosidad {
-        position: relative;
-        width: 90vw;
-        height: 350px !important;
-        margin-bottom: 1rem;
-        background-color: grey;
-    }
 
-    #chartHumedad {
-        position: relative;
-        width: 90vw;
-        height: 350px !important;
-        margin-bottom: 1rem;
-        background-color: royalblue;
-    }
-
-    #chartSalinidad {
-        position: relative;
-        width: 90vw;
-        height: 350px !important;
-        margin-bottom: 1rem;
-        background-color: #408033;
-    }
 }

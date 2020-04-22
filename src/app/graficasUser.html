@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>UserSection</title>
     <link rel="stylesheet" type="text/css" href="../app/css/estilo_graficas.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="js/sesion_permisos.js"></script>
 
@@ -42,24 +43,37 @@
                 </div>
 
                 <div class="divContenidoGraficas">
-                   
-                    <section>
-                        <label><select id="selectParcelas" onchange="pintarGraficas()">
+                    <div class="divSelectores">
+                        <section>
+                            <label><select id="selectParcelas" onchange="actualizarSelectSondas(pintarGraficas)">
+                                <!-- Listado de  parcelas generado en js-->
                             </select>
-                        </label>
-                    </section>
-                    
-                    <section>
-                        <input class="calendar" type="date" name="field1" id="field1"/>
-                    </section>
-                    
+                            </label>
+                        </section>
+                        <section>
+                            <label><select id="selectSondas" onchange="pintarGraficas()">
+                                <!-- Listado de sondas generado en js-->
+                            </select>
+                            </label>
+                        </section>
+                    </div>
+                    <div class="divSelectores">
+
+
+                        <section>
+                            <input class="calendar" type="date" name="field1" id="field1" onchange="pintarGraficas()"/>
+                        </section>
+
+                    </div>
+
+
                 </div>
 
                 <div class="checkbox">
 
                         <div class="dos-primeras">
                             <div class="elementSensores">
-                                <h3>Sensor<br>Temperatura</h3>
+                                <h3>Temperatura</h3>
                                 <section class="cajas">
                                     <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchTemperatura" checked>
                                     <label for="switchTemperatura" class="lbl"></label>
@@ -67,7 +81,7 @@
 
                             </div>
                             <div class="elementSensores" id="humedad">
-                                <h3>Sensor<br>Humedad</h3>
+                                <h3>Humedad</h3>
                                 <section class="cajas">
                                     <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchHumedad" checked>
                                     <label for="switchHumedad" class="lbl"></label>
@@ -77,14 +91,14 @@
                         </div>
                         <div class="dos-segundas">
                             <div class="elementSensores" id="salinidad">
-                                <h3>Sensor<br>Salinidad</h3>
+                                <h3>Salinidad</h3>
                                 <section class="cajas">
                                     <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchSalinidad" checked>
                                     <label for="switchSalinidad" class="lbl"></label>
                                 </section>
                             </div>
                             <div class="elementSensores" id="luminosidad">
-                                <h3>Sensor<br>Luminosidad</h3>
+                                <h3>Luminosidad</h3>
                                 <section class="cajas">
                                     <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchLuminosidad" checked>
                                     <label for="switchLuminosidad" class="lbl"></label>
@@ -115,10 +129,9 @@
     <script src="js/sideNav.js"></script>
     <script src="js/mediciones.js"></script>
     <script src="js/parcelas_select.js"></script>
+    <script src="js/sondas_select.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
     <script>
-        VistaUsuarioLogin.iniciar("textNombreUsuario");
-        ControladorUsuarioLogin.iniciar();
 
         VistaMenu.setNav("navGeneral");
         VistaMenu.crearNav();
@@ -126,11 +139,33 @@
         VistaMenu.setSideNav("mySidenav");
         VistaMenu.crearSideNav();
 
-        VistaParcelasSelect.iniciar("selectParcelas");
-        ControladorSelectParcelas.iniciar();
+        VistaUsuarioLogin.iniciar("textNombreUsuario");
+        //Primer callback: Una vez se haya cargado la informacion relativa al usurio (SESION)
+        //se hará un callback a la función para inicir el selector de parcelas
+        ControladorUsuarioLogin.iniciar(iniciarSelectParcelas);
 
-        VistaMediciones.iniciar("chartTemperatura", "chartLuminosidad", "chartHumedad", "chartSalinidad");
-        controladorMediciones.iniciar();
+        function iniciarSelectParcelas() {
+            VistaParcelasSelect.iniciar("selectParcelas");
+            //Segundo callback: Un vez se hayan inciado la infomacion relativa a las parcelas
+            //se cargara el select de las sondas
+            ControladorSelectParcelas.iniciar(iniciarSelectSondas);
+        }
+
+        function iniciarSelectSondas() {
+            VistaSelectSondas.iniciar("selectSondas");
+            //Segundo callback: Un vez se hayan inciado la infomacion relativa a las sondas
+            //se cargara la informacion relativa a las graficas
+            ControladorSondasSelect.iniciar(iniciarGraficas);
+        }
+
+        function iniciarGraficas() {
+            setDateToday();
+            VistaMediciones.iniciar("chartTemperatura", "chartLuminosidad", "chartHumedad", "chartSalinidad");
+            controladorMediciones.iniciar();
+            pintarGraficas();
+
+
+        }
 
     </script>
 </body>
