@@ -538,7 +538,11 @@ header {
         margin: 0;
     }
 
-
+    .logoGTI{
+        display: block;
+        width: 150px;
+        height: auto;
+    }
 
 
     .dos-primeras {
