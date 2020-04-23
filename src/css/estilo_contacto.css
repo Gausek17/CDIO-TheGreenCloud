@@ -22,8 +22,9 @@ body {
     margin-right: 17px;
     padding-left: 50px;
     padding-right: 50px;
+    color: purple;
     border: 1.5px solid purple;
-    background-color: plum;
+    background-color: white;
     font-weight: 700;
     font-size: 20px;
     width: auto;
