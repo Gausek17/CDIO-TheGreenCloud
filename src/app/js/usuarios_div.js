@@ -140,7 +140,7 @@ function modoNuevoUser() {
 
 function nuevoUser() {
     if (document.getElementById("nuevaPassword").value !== document.getElementById("nuevaPasswordConfirmada").value) {
-        alert("La contraseña no conicide con la contraseña de confirmación.")
+        document.getElementById("divPopupContraseña").style.display = "block";
     } else {
         var formData = new FormData();
         formData.append("nombre", document.getElementById("nuevoNombre").value);
