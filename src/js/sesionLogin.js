@@ -5,7 +5,7 @@ fetch('api/v1.0/sesion', {method:'get'}).then(function (respuesta) {
                 if(value[0].id_rol === "1"){
                     location.href='./app';
                 }else if(value[0].id_rol ==="2"){
-                    location.href='./app/ParcelasUser.php';
+                    location.href='./app/parcelasUser.html';
                 }
             });
         }
