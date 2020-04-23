@@ -99,6 +99,20 @@
 </div>
 <!-- En el div se generara el PopUp-->
 <div id="divPopup" class="w3-modal w3-animate-opacity"></div>
+
+<div id="divPopupContraseña" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4">
+        <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('divPopupContraseña').style.display='none'"
+              class="w3-button w3-large w3-display-topright">&times;</span>
+            <h2>Se ha prooducido un error</h2>
+        </header>
+        <div class="w3-container">
+            <p>Las contraseñas no coinciden.</p>
+        </div>
+    </div>
+</div>
+
 <script src="js/usuarioLogin.js"></script>
 <script src="js/sideNav.js"></script>
 <script src="js/menuAdmin.js"></script>
