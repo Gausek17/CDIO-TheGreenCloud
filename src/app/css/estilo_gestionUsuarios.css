@@ -224,19 +224,17 @@ header{
     cursor: pointer;
 }
 .iconEditUser1{
-    border: 5px;
     border-color: black;
     color: white;
     font-size: 12px;
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     text-align: center;
     margin-right: 30px;
     margin-left: 5px;
 }
 .iconEditUser1:hover{
-    background: black;
+    background: grey;
     color: white;
     cursor: pointer;
 }
@@ -341,6 +339,10 @@ header{
     .divTextoNuevaPersona{
         margin-right: 1rem;
     }
+    .iconEditUser1{
+        width: 30px;
+        height: 30px;
+    }
 
 }
 
@@ -366,8 +368,8 @@ header{
     }
     .iconEditUser1{
         text-align: center;
-        width: auto;
-        height: auto;
+        width: 25px;
+        height: 25px;
         padding: 0.35rem;
         margin-left: 5px;
         margin-right: 0;
