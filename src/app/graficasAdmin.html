@@ -46,7 +46,7 @@
                 <div class="divSelectores">
                     <section class="seleccion"><p class="textSeleccionUser">Usuario:</p>
                         <label><select id="selectUsurios"
-                                       onchange="actualizarSelectParcelas(actualizarSelectSondas(pintarGraficas()))">
+                                       onchange="actualizarSelectParcelas(actualizarSelectSondas)">
                             <!-- Listado de usuarios generado en JS-->
                         </select>
                         </label>
@@ -175,7 +175,7 @@
         setDateToday();
         VistaMediciones.iniciar("chartTemperatura", "chartLuminosidad", "chartHumedad", "chartSalinidad");
         controladorMediciones.iniciar();
-        pintarGraficas();
+
 
 
     }
