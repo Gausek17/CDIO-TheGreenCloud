@@ -30,12 +30,11 @@ let VistaDivUsuarios = {
                     </div>
 
 
-                    <button alt = "Editar usuario" class="iconEditUser1" id="iconEditar${datos[i].id_usuario}" onclick="editUser(${datos[i].id_usuario})">Editar Usuario </button>
+                     <img src="../imagenes/admin/iconEdit-white.png" alt="Editar usuario" class="iconEditUser1" id="iconEditar${datos[i].id_usuario}" onclick="editUser(${datos[i].id_usuario})">
                     
                     <button alt="Aceptar" class="iconAceptarCancel" id="iconAceptar${datos[i].id_usuario}" onclick="aceptar(${datos[i].id_usuario})">Aceptar cambios</button>
                     <button alt="Cancelar" class="iconAceptarCancel"  id="iconCancel${datos[i].id_usuario}" onclick="cancelar(${datos[i].id_usuario})">Cancelar cambios</button>
-                    <button alt="Elimina usuario" class="iconEditUser1"  id="iconDelete${datos[i].id_usuario}" 
-                            onclick="modalConfirmar(${datos[i].id_usuario})">Eliminar Usuario </button>
+                    <img src="../imagenes/admin/iconDelete-white.png" alt="Elimina usuario" class="iconEditUser1"  id="iconDelete${datos[i].id_usuario}" onclick="modalConfirmar(${datos[i].id_usuario})">
                     
                 </div>`;
         }
@@ -101,7 +100,10 @@ function aceptar(id) {
     }).then(function (respuesta) {
         if (respuesta.status !== 200) {
             window.alert("Se ha producido un error a la hora de modificar el usuario.");
+        } else {
+            ModeloDivUsuarios.cargar();
         }
+
     });
 
 }
