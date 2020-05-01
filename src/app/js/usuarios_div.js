@@ -101,7 +101,10 @@ function aceptar(id) {
     }).then(function (respuesta) {
         if (respuesta.status !== 200) {
             window.alert("Se ha producido un error a la hora de modificar el usuario.");
+        } else {
+            ModeloDivUsuarios.cargar();
         }
+
     });
 
 }

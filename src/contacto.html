@@ -31,7 +31,7 @@
         </h1>
     </div>
 
-    <form class="contacto" id="formContact">
+    <form class="contacto" id="formContact" onsubmit="validateForm(event)" action="#">
         <div class="contenedorCamposForm">
             <div class="form-group">
 
@@ -84,8 +84,7 @@
             <div class="btn_form">
                 <br>
                 <input class="btn_reset" type="reset" value="Limpiar">
-
-                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">
+                <button class="w3-button w3-black">
                     Enviar
                 </button>
 
@@ -154,5 +153,14 @@
     </div>
 </div>
 </body>
+
+<script>
+    function validateForm(event) {
+        event.preventDefault();
+        document.getElementById('id01').style.display='block';
+        document.getElementById("formContact").reset();
+    }
+
+</script>
 
 </html>
