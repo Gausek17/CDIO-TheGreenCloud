@@ -43,13 +43,13 @@
 
                 <div class="divContenidoGraficas">
                     <div class="divSelectores">
-                        <section>
+                        <section><p class="textSeleccionParcela">Parcela:</p>
                             <label><select id="selectParcelas" onchange="actualizarSelectSondas(pintarGraficas)">
                                 <!-- Listado de  parcelas generado en js-->
                             </select>
                             </label>
                         </section>
-                        <section>
+                        <section><p class="textSeleccionSonda">Sonda:</p>
                             <label><select id="selectSondas" onchange="pintarGraficas()">
                                 <!-- Listado de sondas generado en js-->
                             </select>
@@ -59,7 +59,7 @@
                     <div class="divSelectores">
 
 
-                        <section>
+                        <section><p class="textSeleccionFecha">Fecha:</p>
                             <input class="calendar" type="date" name="field1" id="field1" onchange="pintarGraficas()"/>
                         </section>
 

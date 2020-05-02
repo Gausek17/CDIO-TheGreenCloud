@@ -44,7 +44,7 @@
 
             <div class="divContenidoGraficas">
                 <div class="divSelectores">
-                    <section class="seleccion">
+                    <section class="seleccion"><p class="textSeleccionUser">Usuario:</p>
                         <label><select id="selectUsurios"
                                        onchange="actualizarSelectParcelas(actualizarSelectSondas)">
                             <!-- Listado de usuarios generado en JS-->
@@ -52,22 +52,22 @@
                         </label>
                     </section>
 
-                    <section>
-                        <label><select id="selectParcelas" onchange="actualizarSelectSondas()">
+                    <section><p class="textSeleccionParcela">Parcela:</p>
+                        <label><select id="selectParcelas" onchange="actualizarSelectSondas(pintarGraficas)">
                             <!-- Listado de  parcelas generado en js-->
                         </select>
                         </label>
                     </section>
                 </div>
                 <div class="divSelectores">
-                    <section>
+                    <section><p class="textSeleccionSonda">Sonda:</p>
                         <label><select id="selectSondas" onchange="pintarGraficas()">
                             <!-- Listado de sondas generado en js-->
                         </select>
                         </label>
                     </section>
 
-                    <section>
+                    <section><p class="textSeleccionFecha">Fecha:</p>
                         <input class="calendar" type="date" name="field1" id="field1" onchange="pintarGraficas()"/>
                     </section>
 
