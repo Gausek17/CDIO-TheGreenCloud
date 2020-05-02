@@ -12,7 +12,8 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-.localizacion p{
+
+.localizacion p {
     margin-left: 7px;
 }
 
@@ -55,7 +56,8 @@ body {
     width: 18rem;
     font-size: 1.05rem;
 }
-.textAreaConsulta{
+
+.textAreaConsulta {
     margin-top: 0.25rem;
     border: 2px solid black;
     resize: none;
@@ -66,23 +68,24 @@ body {
     font-size: 1.05rem;
 }
 
-.contenedorCamposForm{
-
+.contenedorCamposForm {
     margin-right: 4rem;
 }
-.contenedorConsulta{
+
+.contenedorConsulta {
     display: flex;
     flex-direction: column;
 }
+
 .btn_form {
     margin: 1rem 0 2rem 0;
     display: flex;
     justify-content: flex-end;
- }
- .form-control:focus {
-
 }
-.form-group label{
+
+.form-control:focus {}
+
+.form-group label {
     font-weight: bold;
     font-size: 1.1rem;
 }
@@ -95,6 +98,7 @@ body {
     justify-content: center;
     display: flex;
 }
+
 .input,
 .btn_submit,
 .btn_reset {
@@ -124,6 +128,7 @@ body {
 #phone {
     margin-top: 9px;
 }
+
 div.localizacion {
     display: flex;
     margin-right: 19px;
@@ -269,34 +274,38 @@ a.telefono {
     margin-bottom: 20px;
 }
 
-#phone{
+#phone {
     height: 50px;
     width: 50px;
     margin-right: 1rem;
     margin-bottom: 7px;
 }
-.tlf{
+
+.tlf {
     display: flex;
     align-items: center;
 }
-#mail{
+
+#mail {
     margin-right: 1rem;
 }
-.divMailContacto{
+
+.divMailContacto {
     margin-top: 1rem;
     display: flex;
     align-items: center;
 }
 
-.divUbicacion{
+.divUbicacion {
     display: flex;
     margin-bottom: 1rem;
 }
 
-#texto-mapa{
+#texto-mapa {
     margin-left: 1rem;
 }
-#mapita{
+
+#mapita {
     margin-right: 1rem;
 }
 
@@ -304,147 +313,145 @@ a.telefono {
 
 
 @media (max-height: 800px) {
-    header {
-        padding-top: 40px;
+
+
+    .footer-distributed {
+        background-color: #2c292f;
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+        font: bold 16px sans-serif;
+        padding: 50px 50px 60px 50px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    /* Footer left */
+
+    .footer-distributed .footer-left {
+        width: 30%;
+    }
+
+    .footer-distributed h3 {
+        color: #ffffff;
+        font: normal 36px 'Cookie', cursive;
+        margin: 0;
+    }
+
+
+    .footer-distributed h3 span {
+        color: #d080d0;
+    }
+
+    /* Footer links */
+
+    .footer-distributed .footer-links {
+        color: #ffffff;
+        margin: 20px 0 12px;
+    }
+
+    .footer-distributed .footer-links a {
+        display: inline-block;
+        line-height: 1.8;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .Tecnologias-Interactivas {
+        font-size: 8px;
+    }
+
+    .footer-distributed .footer-company-name {
+        color: #8f9296;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    /* Footer Center */
+
+    .footer-distributed .footer-center {
+        width: 35%;
+    }
+
+
+    .footer-distributed .footer-center i {
+        background-color: #33383b;
+        color: #ffffff;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 42px;
+        margin: 10px 15px;
+        vertical-align: middle;
+    }
+
+    .footer-distributed .footer-center i.fa-envelope {
+        font-size: 17px;
+        line-height: 38px;
+    }
+
+    .footer-distributed .footer-center p {
+        display: inline-block;
+        color: #ffffff;
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    .footer-distributed .footer-center p span {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    .footer-distributed .footer-center p a {
+        color: #a082a0;
+        text-decoration: none;
+    }
+
+
+    /* Footer Right */
+
+    .footer-distributed .footer-right {
+        width: 30%;
+    }
+
+    .footer-distributed .footer-company-about {
+        line-height: 20px;
+        color: #92999f;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .footer-distributed .footer-company-about span {
+        display: block;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .textoConsulta {
+        text-align: center;
+        border-bottom: 2px solid black;
+        padding: 0 2rem 0.5rem 2rem;
+    }
+
+    .divTitulo {
+        display: flex;
+        margin-bottom: 2rem;
+        justify-content: center;
     }
 }
-
-.footer-distributed {
-    background-color: #2c292f;
-    box-sizing: border-box;
-    width: 100%;
-    text-align: left;
-    font: bold 16px sans-serif;
-    padding: 50px 50px 60px 50px;
-}
-
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right {
-    display: inline-block;
-    vertical-align: top;
-}
-
-/* Footer left */
-
-.footer-distributed .footer-left {
-    width: 30%;
-}
-
-.footer-distributed h3 {
-    color: #ffffff;
-    font: normal 36px 'Cookie', cursive;
-    margin: 0;
-}
-
-
-.footer-distributed h3 span {
-    color: #d080d0;
-}
-
-/* Footer links */
-
-.footer-distributed .footer-links {
-    color: #ffffff;
-    margin: 20px 0 12px;
-}
-
-.footer-distributed .footer-links a {
-    display: inline-block;
-    line-height: 1.8;
-    text-decoration: none;
-    color: inherit;
-}
-
-.Tecnologias-Interactivas {
-    font-size: 8px;
-}
-
-.footer-distributed .footer-company-name {
-    color: #8f9296;
-    font-size: 14px;
-    font-weight: normal;
-    margin: 0;
-}
-
-/* Footer Center */
-
-.footer-distributed .footer-center {
-    width: 35%;
-}
-
-
-.footer-distributed .footer-center i {
-    background-color: #33383b;
-    color: #ffffff;
-    font-size: 25px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 42px;
-    margin: 10px 15px;
-    vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope {
-    font-size: 17px;
-    line-height: 38px;
-}
-
-.footer-distributed .footer-center p {
-    display: inline-block;
-    color: #ffffff;
-    vertical-align: middle;
-    margin: 0;
-}
-
-.footer-distributed .footer-center p span {
-    display: block;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 2;
-}
-
-.footer-distributed .footer-center p a {
-    color: #a082a0;
-    text-decoration: none;
-}
-
-
-/* Footer Right */
-
-.footer-distributed .footer-right {
-    width: 30%;
-}
-
-.footer-distributed .footer-company-about {
-    line-height: 20px;
-    color: #92999f;
-    font-size: 13px;
-    font-weight: normal;
-    margin: 0;
-}
-
-.footer-distributed .footer-company-about span {
-    display: block;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.textoConsulta {
-    text-align: center;
-    border-bottom: 2px solid black;
-    padding: 0 2rem 0.5rem 2rem;
-}
-.divTitulo{
-    display: flex;
-    margin-bottom: 2rem;
-    justify-content: center;
-}
-
 
 @media (max-width: 880px) {
 
@@ -461,29 +468,34 @@ a.telefono {
     }
 
     .footer-distributed .footer-center i {
-        margin-left: 0px;;
+        margin-left: 0px;
+        ;
     }
 
 }
 
 @media (max-width: 620px) {
-    header{
+    header {
         padding: 0;
     }
+
     header a img {
         width: 280px;
     }
 
-    .divTitulo{
-        margin:0;
+    .divTitulo {
+        margin: 0;
     }
-    .form-group{
+
+    .form-group {
         margin-top: 1rem;
     }
-    .textAreaConsulta{
+
+    .textAreaConsulta {
         height: 18rem;
         width: 18.1rem;
     }
+
     #identificate {
         padding-left: 25px;
         padding-right: 25px;
@@ -494,12 +506,14 @@ a.telefono {
     .footer-distributed h3 {
         font-size: 1.5rem;
     }
-    .contacto{
+
+    .contacto {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .contenedorCamposForm{
+
+    .contenedorCamposForm {
         margin: 0;
     }
 }
@@ -521,38 +535,42 @@ a.telefono {
 
 
     }
+
     .footer-distributed h3 {
         color: #ffffff;
         font: normal 25px 'Cookie', cursive;
         margin: 0;
     }
-    .footer-center p a{
-        
-        align-content: center;
-     
-        
 
+    .footer-center p a {
+        align-content: center;
     }
 
-    #mail, #phone{
+    #mail,
+    #phone {
         margin: 0 1rem 0 0;
     }
-    #mapita{
-       margin-right: 1rem;
+
+    #mapita {
+        margin-right: 1rem;
         align-content: center;
     }
-    .localizacion p{
+
+    .localizacion p {
         align-content: center;
     }
-    .divPhone{
+
+    .divPhone {
         margin-top: 1rem;
     }
-    .mailo{
+
+    .mailo {
         margin-top: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .footer-distributed .footer-left,
     .footer-distributed .footer-center,
     .footer-distributed .footer-right {
@@ -560,6 +578,4 @@ a.telefono {
         margin-left: 0;
     }
 
-    
-    
 }

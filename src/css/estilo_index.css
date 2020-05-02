@@ -21,8 +21,6 @@ body {
     border-radius: 20px;
 }
 
-
-
 .header {
     
     display: flex;
@@ -30,45 +28,10 @@ body {
     margin-bottom: 10px;
 }
 
-.gti-logo {
-    height: 120px;
-    float: left;
-}
-
 .boton {
-    float: right;
-    
+    float: right;  
 }
 
-#botonidentificate {
-    position: absolute;
-    right: 130px;
-    margin-top: 0px;
-    font-weight: 200;
-    float: right;
-    border-radius: 8px;
-    margin-bottom: 5px;
-    margin-right: 8px;
-    color: purple;
-    cursor: pointer;
-    padding-left: 15px;
-    padding-right: 15px;
-    border: 3px solid purple;
-    background-color: #ffffff;
-    font-weight: 900;
-    font-size: 13px;
-    cursor: pointer;
-    width: 200px;
-    height: 50px;
-    font-size: 15px;
-    /*width: 200px;*/
-}
-
-#botonidentificate:hover {
-    background-color: blueviolet;
-    color: white;
-    border: 1px solid blueviolet;
-}
 
 .landing {
     background-image: url(../imagenes/index/Campo2.jpg);
@@ -107,8 +70,6 @@ body {
     background-color: blueviolet;
     color: white;
     border: 1px solid blueviolet;
-
-
 }
 
 #flecha {
@@ -388,19 +349,10 @@ a.telefono {
 
 
 
-@media (max-width: 880px) {
+@media (max-width: 800px) {
     body {
         margin-right: 1rem;
         margin-left: 1rem;
-    }
-
-    .gti-logo {
-        height: 100px;
-    }
-
-    #botonidentificate {
-        position: absolute;
-        right: 1.5rem;
     }
 
     .footer-distributed .footer-left,
@@ -428,18 +380,11 @@ a.telefono {
         margin-left: 0;
     }
 
-    header a img {
-        width: 280px;
-    }
-
-
-
     .contactanos {
         padding-left: 25px;
         padding-right: 25px;
         text-align: center;
         font-size: 15px;
-
     }
 
     .modernizacion {
@@ -507,40 +452,11 @@ a.telefono {
 
 @media(max-width:400px) {
 
-    header{
-        justify-content: space-between;
-        margin-bottom: 0;
-        
-    }
+    
     .morado{
         padding: 0.5rem;
     }
-
-
-    .gti-logo {
-        width: 140px;
-    }
-
-    #botonidentificate {
-        border-radius: 8px;
-       margin-right: 5px;
-         padding: 7px;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: auto;
-        margin-top: 0px;
-        margin-bottom: 3rem;
-        font-size: 10px;
-        cursor: pointer;
-        margin-right: 1px;
-        font-weight: 900;
-        display: flex;
-        align-items: center;
-        height: auto;
-       
-        /*width: 200px;*/
-    }
-
+    
     .modernizacion {
         font-size: 40px;
     }
@@ -555,7 +471,6 @@ a.telefono {
     .titulo2 {
         font-size: 40px;
     }
-
 
     #sensor {
         width: 80px;
