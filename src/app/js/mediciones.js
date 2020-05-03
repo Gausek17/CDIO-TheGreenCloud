@@ -13,7 +13,7 @@ let ModeloMediciones = {
             return respuesta.json();
         }).then((datosJson) =>{
             this.datos = datosJson;
-            console.log(datosJson);
+            //console.log(datosJson);
             this.controlador.representarGrafica();
         });
     },
@@ -163,6 +163,7 @@ function pintarGraficaTemperatura(){
     var data = ModeloMediciones.datos;
     var idParcela = document.getElementById("selectParcelas").value;
     var idSonda = document.getElementById("selectSondas").value;
+    var fechaSelector = document.getElementById("fechaInicio").value;
     var fechaInicio = Date.parse(document.getElementById("fechaInicio").value);
     var fechaFin = Date.parse(document.getElementById("fechaFin").value);
 
@@ -170,54 +171,104 @@ function pintarGraficaTemperatura(){
     data.forEach( element =>{
         console.log(typeof (element.fecha));
         fechaMedicion = element.fecha;
-        if (element.id_parcela == idParcela && element.fecha === fechaSelctor && element.id_sonda == idSonda){
+        if (element.id_parcela == idParcela && element.fecha === fechaSelector && element.id_sonda == idSonda){
             datos.push(element);
         }
     });
     
-    let listaLabelsTemperatura = [];
+    let listaLabels = [];
     let listaDatosTemperatura = [];
+    let listaDatosHumedad = [];
+    let listaDatosSalinidad = [];
+    let listaDatosLuminosidad = [];
     
     datos.forEach(element => {
         if (element.tipoDato === "Temperatura") {
-            listaLabelsTemperatura.push(formateraHora(element.hora))
+            listaLabels.push(formateraHora(element.hora))
 
         }
     });
+
 
     datos.forEach(element => {
         if (element.tipoDato === "Temperatura") {
             listaDatosTemperatura.push(element.medicion)
+        }else if (element.tipoDato === "Humedad") {
+            listaDatosHumedad.push(element.medicion)
+        }else if (element.tipoDato === "Salinidad") {
+            listaDatosSalinidad.push(element.medicion)
+        }else if (element.tipoDato === "Luminosidad") {
+            listaDatosLuminosidad.push(element.medicion)
         }
+
     });
 
 
     let datosMedicionTemperatura = {
-        labels: listaLabelsTemperatura,
+        labels: listaLabels,
 
         datasets: [
             {
                 label: 'Temperatura',
 
                 data: listaDatosTemperatura,
-                pointBorderColor: 'white',
-                backgroundColor: 'orange',
-                borderColor: 'white',
+                pointBorderColor: 'red',
+                backgroundColor: 'red',
+                borderColor: 'red',
                 lineTension: 0,
-                pointBackgroundColor: 'white',
+                pointHoverRadius:5,
+                pointBackgroundColor: 'red',
+                fill:false,
 
 
+            },
+            {
+                label: 'Humedad',
+
+                data: listaDatosHumedad,
+                pointBorderColor: 'orange',
+                backgroundColor: 'orange',
+                borderColor: 'orange',
+                lineTension: 0,
+                pointHoverRadius:5,
+                pointBackgroundColor: 'orange',
+                fill:false,
+            },
+            {label: 'Salinidad',
+
+                data: listaDatosSalinidad,
+                pointBorderColor: 'green',
+                backgroundColor: 'green',
+                borderColor: 'green',
+                lineTension: 0,
+                pointBackgroundColor: 'green',
+                pointHoverRadius:5,
+                fill:false,
+            },
+            {
+                label: 'Luminosidad',
+                fontSize:12,
+                data: listaDatosLuminosidad,
+                pointBorderColor: 'purple',
+                backgroundColor: 'purple',
+                borderColor: 'purple',
+                lineTension: 0,
+                pointHoverRadius:5,
+                pointBackgroundColor: 'purple',
+                fill:false,
             }
 
         ]
     };
-    let opcionesTemperatura = {
+    let opcionesGrafica = {
         maintainAspectRatio: false,
         responsive:true,
         legend:{
             labels:{
                 fontColor:'white',
-
+                letterSpacing:10,
+                fontSize:15,
+                fontWeight:350,
             }
         },
         scales: {
@@ -225,7 +276,7 @@ function pintarGraficaTemperatura(){
 
                 scaleLabel: {
                     display: true,
-                    labelString: 'Temperatura ºC',
+                    fontWeight:250,
                     fontColor:"white",
 
 
@@ -247,8 +298,12 @@ function pintarGraficaTemperatura(){
 
                 scaleLabel:{
                     display: true,
-                    labelString:'Hora',
+                    labelString:'Horas',
                     fontColor:"white",
+                    fontWeight:250,
+                    letterSpacing:10,
+                    fontSize:15,
+
 
 
                 },
@@ -275,7 +330,7 @@ function pintarGraficaTemperatura(){
         type: 'line',
         data: datosMedicionTemperatura,
         backgroundColor: 'white',
-        options: opcionesTemperatura
+        options: opcionesGrafica
 
     });
 
@@ -526,5 +581,5 @@ function setDateToday() {
     if (day.length ===1){
         day = "0"+day;
     }
-    document.getElementById("field1").value= date.getFullYear()+"-"+month+"-"+day;
+    document.getElementById("fechaInicio").value= date.getFullYear()+"-"+month+"-"+day;
 }

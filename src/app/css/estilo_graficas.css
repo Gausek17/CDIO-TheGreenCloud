@@ -60,9 +60,10 @@
     width: 80%;
     height: 55vh;
     margin: 1rem auto;
-    background-color: orange;
+    background-color: #009B94;
+    border-radius: 10px;
 }
-
+/*
 .lbl {
     display: flex;
     width: 33px;
@@ -72,7 +73,7 @@
     border: 1px black solid;
     margin: 0 auto;
 }
-
+*/
 body {
     margin: 0 auto;
 }
