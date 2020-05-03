@@ -212,140 +212,7 @@ a.telefono {
     color: black;
 }
 
-.footer-distributed {
-    background-color: #2c292f;
-    box-sizing: border-box;
-    width: 100%;
-    text-align: left;
-    font: bold 16px sans-serif;
-    padding: 50px 50px 60px 50px;
-}
 
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right {
-    display: inline-block;
-    vertical-align: top;
-}
-
-/* Footer left */
-
-.footer-distributed .footer-left {
-    width: 30%;
-}
-
-.footer-distributed h3 {
-    color: #ffffff;
-    font: normal 36px 'Cookie', cursive;
-    margin: 0;
-}
-
-
-.footer-distributed h3 span {
-    color: #d080d0;
-}
-
-/* Footer links */
-
-.footer-distributed .footer-links {
-    color: #ffffff;
-    margin: 20px 0 12px;
-}
-
-.footer-distributed .footer-links a {
-    display: inline-block;
-    line-height: 1.8;
-    text-decoration: none;
-    color: inherit;
-}
-
-.footer-distributed .footer-company-name {
-    color: #8f9296;
-    font-size: 14px;
-    font-weight: normal;
-    margin: 0;
-}
-
-/* Footer Center */
-
-.footer-distributed .footer-center {
-    width: 35%;
-}
-
-
-.footer-distributed .footer-center i.fa-envelope {
-    font-size: 17px;
-    line-height: 38px;
-}
-
-.footer-distributed .footer-center p {
-    display: inline-block;
-    color: #ffffff;
-    vertical-align: middle;
-    margin: 0;
-}
-
-.footer-distributed .footer-center p span {
-    display: block;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 2;
-}
-
-.footer-distributed .footer-center p a {
-    color: #a082a0;
-    text-decoration: none;
-}
-
-
-/* Footer Right */
-
-.footer-distributed .footer-right {
-    width: 30%;
-}
-
-.footer-distributed .footer-company-about {
-    line-height: 20px;
-    color: #92999f;
-    font-size: 13px;
-    font-weight: normal;
-    margin: 0;
-}
-
-.footer-distributed .footer-company-about span {
-    display: block;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#phone{
-    height: 50px;
-    width: 50px;
-    margin-right: 1rem;
-}
-.tlf{
-    display: flex;
-    align-items: center;
-}
-#mail{
-    margin-right: 1rem;
-}
-.divMailContacto{
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.divUbicacion{
-    display: flex;
-    margin-bottom: 1rem;
-}
-
-#texto-mapa{
-    margin-left: 1rem;
-}
 
 
 
@@ -354,23 +221,6 @@ a.telefono {
         margin-right: 1rem;
         margin-left: 1rem;
     }
-
-    .footer-distributed .footer-left,
-    .footer-distributed .footer-center,
-    .footer-distributed .footer-right {
-        display: block;
-        width: 100%;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .footer-distributed .footer-center i {
-        margin-left: 0;
-    }
-    .footer-center{
-        margin-left: 115px;
-    }
-
 }
 
 
@@ -435,24 +285,10 @@ a.telefono {
         font-size: 20px;
         padding: 1rem;
     }
-
-    .footer-distributed {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer-distributed h3 {
-        font-size: 2rem;
-    }
-    .footer-center{
-        margin-left:0px;
-    }
-
 }
 
 @media(max-width:400px) {
 
-    
     .morado{
         padding: 0.5rem;
     }
@@ -493,15 +329,4 @@ a.telefono {
     .car3 .descripcion-caracteristica{
         margin: 0 1rem 0 0;
     }
-
-    .footer-distributed h3 {
-        color: #ffffff;
-        font: normal 25px 'Cookie', cursive;
-        margin: 0;
-    }
-    .footer-center p a{
-        margin-left: 15px;
-        margin-bottom: 22px;
-    }
-
 }
