@@ -38,7 +38,7 @@ let ControladorSelectParcelas = {
     }
 };
 
-function actualizarSelectParcelas(callback) {
+function actualizarSelectParcelas(callback, segundoCallback) {
     var stringPersonas='';
     var data = ModeloParcelaSelect.datos;
     var idUsuario;
@@ -60,7 +60,12 @@ function actualizarSelectParcelas(callback) {
     }
     VistaParcelasSelect.selectUsuarios.innerHTML =stringPersonas;
     if (callback!=null){
-        callback();
+        if (segundoCallback!=null){
+            callback(segundoCallback);
+        }else{
+            callback();
+        }
+
     }
 }
 function getParcela(id_parcela){

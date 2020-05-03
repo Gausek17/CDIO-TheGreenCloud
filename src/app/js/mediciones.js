@@ -57,45 +57,6 @@ let controladorMediciones = {
 
 };
 
-function mostrarOcultar(checked, idcanvas) {
-    var id="";
-    switch (idcanvas) {
-        case "switchTemperatura":
-            id="chartTemperatura";
-            break;
-        case "switchLuminosidad":
-            id="chartLuminosidad";
-            break;
-        case "switchHumedad":
-            id="chartHumedad";
-            break;
-        case "switchSalinidad":
-            id="chartSalinidad";
-            break;
-    }
-    if(checked===true){
-        document.getElementById(id).style.display="block";
-        switch (id) {
-            case "chartTemperatura":
-                pintarGraficaTemperatura();
-                break;
-            case "chartLuminosidad":
-                pintarGraficaLuminosidad();
-                break;
-            case "chartHumedad":
-                pintarGraficaHumedad();
-                break;
-            case "chartSalinidad":
-                pintarGraficaSalinidad();
-                break;
-        }
-    }
-    else {
-        document.getElementById(id).style.display="none";
-    }
-
-}
-
 function pintarGraficaLuminosidad(){
     var datos = [];
     var data = ModeloMediciones.datos;
@@ -202,9 +163,13 @@ function pintarGraficaTemperatura(){
     var data = ModeloMediciones.datos;
     var idParcela = document.getElementById("selectParcelas").value;
     var idSonda = document.getElementById("selectSondas").value;
-    var fechaSelctor = document.getElementById("field1").value;
+    var fechaInicio = Date.parse(document.getElementById("fechaInicio").value);
+    var fechaFin = Date.parse(document.getElementById("fechaFin").value);
 
+    var fechaMedicion;
     data.forEach( element =>{
+        console.log(typeof (element.fecha));
+        fechaMedicion = element.fecha;
         if (element.id_parcela == idParcela && element.fecha === fechaSelctor && element.id_sonda == idSonda){
             datos.push(element);
         }
@@ -248,6 +213,7 @@ function pintarGraficaTemperatura(){
     };
     let opcionesTemperatura = {
         maintainAspectRatio: false,
+        responsive:true,
         legend:{
             labels:{
                 fontColor:'white',
@@ -528,6 +494,8 @@ function pintarGraficaSalinidad() {
     });
 }
 function pintarGraficas() {
+    pintarGraficaTemperatura();
+    /*
     //Solo pintaremos las graficas que tenga el checkbox seleccionado
     let variableCheck = document.getElementById("switchHumedad").checked;
     if (variableCheck){
@@ -546,7 +514,7 @@ function pintarGraficas() {
     if (variableCheck){
         pintarGraficaSalinidad();
     }
-
+*/
 }
 function setDateToday() {
     let date = new Date();
