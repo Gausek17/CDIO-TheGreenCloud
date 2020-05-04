@@ -6,7 +6,8 @@ body {
 
     margin: 0 auto;
 }
-#selectParcelas{
+
+#selectParcelas {
     margin-top: 0px;
 }
 
@@ -37,13 +38,13 @@ body {
     margin-right: 7.5rem;
     margin-left: 7.5rem;
     margin-bottom: 0rem;
-   
+
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .divCentral {
@@ -58,7 +59,7 @@ header {
     align-items: center;
 }
 
-.seleccion{ 
+.seleccion {
     margin-left: 10px;
     display: flex;
 }
@@ -100,16 +101,9 @@ header {
     border-right: 2px solid white;
     text-align: center;
 }
-#textNombreUsuario{
-    padding: 10px;
-}
-nav{
-    border-radius: 15px;
-    border-top-right-radius: 0px;
-    width: 350px;
-    background-color: #800053;
-    display: table-cell;
 
+#textNombreUsuario {
+    padding: 10px;
 }
 
 .boton {
@@ -184,20 +178,23 @@ nav{
 }
 
 .panelActual {
-    
 
-    display:flex;
+
+    display: flex;
     flex-direction: column;
 }
-.titulo-sin-linea{
+
+.titulo-sin-linea {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .titulo-sin-linea p {
     font-size: 40px;
 }
-#linea-titulo{
+
+#linea-titulo {
     border: 2px solid black;
     margin-left: 3.5rem;
     margin-right: 3.5rem;
@@ -211,7 +208,20 @@ nav{
 }
 
 .navParcela {
-    border: 4px solid black;
+    background-color: #035752;
+}
+
+.navUsuarios {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.navUsuarios:hover {
+    background-color: #035752;
+}
+
+.navMediciones:hover {
+    background-color: #035752;
 }
 
 #map {
@@ -227,6 +237,7 @@ nav{
     display: flex;
     align-items: center;
 }
+
 .textSeleccionUsuario {
     font-weight: bold;
     padding: 5px;
@@ -239,8 +250,9 @@ nav{
     padding: 5px;
     margin-left: 2.7rem;
     margin-bottom: 0px;
-    
+
 }
+
 .textSeleccionMediciones {
     font-weight: bold;
     padding: 5px;
@@ -282,27 +294,39 @@ nav{
 }
 
 /*------RESPONSIVE----------*/
-@media only screen and (max-width:900px){
-    
-   
-    .divContenidoUser{
+@media only screen and (max-width:900px) {
+    #a2 {
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+    #b1{
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+
+
+    .divContenidoUser {
         overflow: inherit;
     }
+
     .iconMenu {
         display: block;
         width: 45px;
-        height: 45px;   
-        
+        height: 45px;
+
     }
+
     .logoGTI {
         width: 180px;
-        
-        
+
+
     }
-    .divCentral{
+
+    .divCentral {
         margin-bottom: 0px;
     }
-    .panelActual{
+
+    .panelActual {
         border-radius: 0px;
     }
 
@@ -327,12 +351,14 @@ nav{
         display: flex;
         justify-content: space-between;
     }
+
     .iconParcelasSelected {
         width: 60px;
     }
+
     .titulo-sin-linea p {
-    font-size: 35px;
-}
+        font-size: 35px;
+    }
 
     #parcela {
         width: 150px;
@@ -360,24 +386,33 @@ nav{
 }
 
 @media only screen and (max-width: 450px) {
-    
+    #a2 {
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+    #b1{
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+
     .textSeleccionMediciones {
-    font-weight: bold;
-    padding: 5px;
-    margin-left: 3px;
-        
-}
+        font-weight: bold;
+        padding: 5px;
+        margin-left: 3px;
+
+    }
 
     .divContenidoUser {
         padding: 0.5rem;
         margin-bottom: 0px;
         height: 530px;
     }
-    #map{
+
+    #map {
         height: 550px;
     }
-    
-    .iconSeleccionParcela{
+
+    .iconSeleccionParcela {
         padding-left: 0;
         width: 55px;
         margin-right: 0.5rem;
@@ -391,33 +426,38 @@ nav{
 
     header {
         margin-bottom: 0.5rem;
-        
+
     }
-    .logoGTI{
+
+    .logoGTI {
         width: 140px;
     }
-    .iconMenu{
-        width:  30px;
+
+    .iconMenu {
+        width: 30px;
         height: 30px;
     }
+
     .iconParcelasSelected {
         width: 45px;
     }
+
     .titulo-sin-linea p {
-    font-size: 25px;
-}
-    
-    
-    .divTextSeleccionParcela{
+        font-size: 25px;
+    }
+
+
+    .divTextSeleccionParcela {
         margin-top: 5px;
         margin-bottom: 0px;
         margin-left: 0px;
     }
-    .textSeleccionParcela{
+
+    .textSeleccionParcela {
         margin-bottom: 0px;
     }
 
-    
+
 
     .seleccion {
         display: flex;
@@ -436,11 +476,13 @@ nav{
         width: 30px;
         margin-left: 15px;
     }
-    #selectParcelas{
+
+    #selectParcelas {
         margin-top: 0px;
         margin-left: 2rem;
     }
-    #selectUsurios{
+
+    #selectUsurios {
         margin-left: 2rem;
     }
 

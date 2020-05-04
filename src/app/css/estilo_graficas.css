@@ -7,17 +7,20 @@
     padding: 5px;
     margin-bottom: 1px;
 }
+
 .textSeleccionSonda {
     font-weight: bold;
     padding: 5px;
     margin-bottom: 1px;
 }
+
 .textSeleccionFecha {
     font-weight: bold;
     padding: 5px;
     margin-bottom: 1px;
 }
-.textSeleccionUser{
+
+.textSeleccionUser {
     font-weight: bold;
     padding: 5px;
     margin-bottom: 1px;
@@ -157,7 +160,10 @@ header {
     margin-right: 1rem;
 
 }
-#selectUsurios, #selectParcelas, #selectSondas{
+
+#selectUsurios,
+#selectParcelas,
+#selectSondas {
     background-color: #009B94;
     color: white;
     font-size: 1.3rem;
@@ -208,9 +214,11 @@ header {
     margin-bottom: 0.5rem;
 
 }
-.titulo-sin-linea p{
+
+.titulo-sin-linea p {
     margin: 0;
 }
+
 .divContenido {
     width: 100%;
 }
@@ -254,34 +262,57 @@ header {
     text-align: center;
 }
 
-.navMediciones{
-    border: 4px solid black;
+.navUsuarios {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+
 }
 
-.divSelectores{
+.navUsuarios:hover {
+    background-color: #035752;
+
+}
+
+.navMediciones {
+    background-color: #035752;
+}
+
+.navParcela:hover {
+    background-color: #035752;
+
+}
+
+.divSelectores {
     display: flex;
 }
-.imgDateSelectorUnique, .imgDateSelectorInterval{
+
+.imgDateSelectorUnique,
+.imgDateSelectorInterval {
     height: 50px;
     width: auto;
-    margin-left:1.5rem;
+    margin-left: 1.5rem;
 }
-.imgDateSelectorUnique{
+
+.imgDateSelectorUnique {
     display: none;
 }
-.imgDateSelectorUnique:hover, .imgDateSelectorInterval:hover{
+
+.imgDateSelectorUnique:hover,
+.imgDateSelectorInterval:hover {
     cursor: pointer;
 }
 
-.divSelectorFecha{
+.divSelectorFecha {
     display: flex;
 }
+
 .textSeleccionFechaFin {
     margin: 0;
     font-weight: bold;
     padding: 5px;
 }
-.divFechaFin{
+
+.divFechaFin {
     display: none;
 
 }
@@ -291,9 +322,24 @@ header {
 
     /* Ipad */
 
-    .textSeleccionSonda,.textSeleccionFecha, .textSeleccionUser, .textSeleccionParcela{
-        margin:0;
+    .textSeleccionSonda,
+    .textSeleccionFecha,
+    .textSeleccionUser,
+    .textSeleccionParcela {
+        margin: 0;
     }
+    #a3{
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+    #b2{
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+    #b2:hover{
+        background-color: 
+    }
+
     .grafica {
         overflow: inherit;
         width: 80vw;
@@ -324,8 +370,8 @@ header {
         margin-top: 0px;
         margin-left: 40px;
     }
-    
-    .divContenidoGraficas{
+
+    .divContenidoGraficas {
         align-items: baseline;
         justify-content: space-around;
     }
@@ -341,7 +387,7 @@ header {
         display: flex;
         justify-content: flex-start;
     }
-    
+
 
     #humedad {
         margin-left: 35px;
@@ -354,26 +400,34 @@ header {
     .cajas {
         margin-top: 35px;
     }
-    #selectUsurios{
-        margin: 0 ;
-    }
-    #selectParcelas{
-      margin: 0;
-    }
-    #selectSondas{
+
+    #selectUsurios {
         margin: 0;
     }
-    .calendar{
+
+    #selectParcelas {
         margin: 0;
     }
-    .divSelectores{
+
+    #selectSondas {
+        margin: 0;
+    }
+
+    .calendar {
+        margin: 0;
+    }
+
+    .divSelectores {
         margin-top: 1.5rem;
         justify-content: space-around;
     }
-    .divContenidoGraficas{
+
+    .divContenidoGraficas {
         display: block;
     }
-    .imgDateSelectorInterval, .imgDateSelectorUnique{
+
+    .imgDateSelectorInterval,
+    .imgDateSelectorUnique {
         height: 35px;
         position: absolute;
         margin-left: 220px;
@@ -382,28 +436,46 @@ header {
 }
 
 @media only screen and (max-width: 450px) {
+
     /* Iphone */
-    .container{
+
+    .container {
         margin-bottom: 0;
     }
+    #a3{
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+    #b2{
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+
     .iconSensorSelected {
         width: 45px;
 
     }
-    .divContenidoGraficas{
+
+    .divContenidoGraficas {
         display: flex;
     }
 
     .titulo-sin-linea p {
         font-size: 25px;
     }
-    .divSelectores{
+
+    .divSelectores {
         margin-top: 0;
         margin-bottom: 0.5rem;
     }
-    .textSeleccionSonda,.textSeleccionFecha, .textSeleccionUser, .textSeleccionParcela{
-        margin:0;
+
+    .textSeleccionSonda,
+    .textSeleccionFecha,
+    .textSeleccionUser,
+    .textSeleccionParcela {
+        margin: 0;
     }
+
     header {
         margin-bottom: 0.5rem;
     }
@@ -421,7 +493,8 @@ header {
         margin-top: 5px;
         justify-content: space-around;
     }
-    #grafica{
+
+    #grafica {
         padding: 0;
         width: 95%;
         height: 70vh;
@@ -430,11 +503,11 @@ header {
     .seleccion select {
         margin-top: 20px;
     }
-    
-    .divContenidoGraficas{
+
+    .divContenidoGraficas {
         flex-wrap: wrap;
     }
-   
+
     .seleccion_calendar {
         font-size: 10px;
         margin: 5px;
@@ -443,22 +516,23 @@ header {
         width: 10px;
         font-size: 3px;
     }
-    
-    #selectUsurios{
+
+    #selectUsurios {
         width: 130px;
         height: 40px;
         font-size: 13px;
         padding: 0.5rem;
     }
-    
-    #selectParcelas{
+
+    #selectParcelas {
         width: 150px;
         height: 40px;
         font-size: 13px;
         padding: 0.5rem;
 
     }
-    #selectSondas{
+
+    #selectSondas {
         width: 130px;
         height: 40px;
         font-size: 13px;
@@ -466,8 +540,8 @@ header {
         padding: 0.5rem;
     }
 
-    
-    .calendar{
+
+    .calendar {
         width: 130px;
         height: 24px;
         font-size: 13px;
@@ -491,7 +565,7 @@ header {
         margin: 0;
     }
 
-    .logoGTI{
+    .logoGTI {
         display: block;
         width: 150px;
         height: auto;
@@ -502,7 +576,8 @@ header {
         display: flex;
         flex-direction: column;
     }
-    .calendar{
+
+    .calendar {
         margin-bottom: 0;
         margin-left: 0;
     }
@@ -525,18 +600,22 @@ header {
     #humedad {
         margin-left: 10px;
     }
-    .imgDateSelectorInterval, .imgDateSelectorUnique{
+
+    .imgDateSelectorInterval,
+    .imgDateSelectorUnique {
         height: 35px;
 
         position: absolute;
         margin-left: 150px;
     }
-    .seleccion{
 
-        margin-right:1rem ;
+    .seleccion {
+
+        margin-right: 1rem;
     }
 
-    .imgDateSelectorInterval, .imgDateSelectorUnique{
+    .imgDateSelectorInterval,
+    .imgDateSelectorUnique {
 
         position: absolute;
         margin-left: 150px;
