@@ -115,47 +115,6 @@ body {
     color: black;
 }
 
-#phone {
-    margin-top: 9px;
-}
-
-div.localizacion {
-    display: flex;
-    margin-right: 19px;
-}
-
-img.localizacion {
-    display: flex;
-    margin-left: 10px;
-}
-
-img.mail {
-    display: flex;
-    margin-top: 25px;
-    margin-right: 10px;
-    margin-left: 100px;
-}
-
-a.mail {
-    display: flex;
-    margin-right: 100px;
-    margin-left: 10px;
-    color: black;
-
-}
-
-div.telefono {
-    display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-a.telefono {
-    display: flex;
-    margin-right: 100px;
-    color: black;
-}
-
 
 /*--------------mediaQuery--------------------*/
 

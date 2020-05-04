@@ -1,0 +1,164 @@
+* {
+    font-family: "Trebuchet MS";
+}
+
+body {
+    margin: 20px;
+}
+
+.divTitulo {
+    display: flex;
+    justify-content: center;
+}
+
+.textoConsulta {
+    color: #000080;
+    font-size: 35px;
+}
+
+.Faqs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-right: 15px;
+}
+
+.FuncionamientoGeneral {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 490px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+}
+
+.tituloGeneral {
+    margin-left: 10px;
+    color: #000080;
+    font-size: 27px;
+}
+
+.texto {
+    background-color: #F2F2F2;
+    font-size: 20px;
+}
+
+.textFuncionamiento {
+    margin-left: 10px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    margin-right: 10px;
+}
+
+.ComoFunciona {
+    font-size: 19px;
+}
+
+.Privacidad {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 490px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.textPrivacidad {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.FaqsSegundos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-right: 15px;
+}
+
+.mantenimientoSeguridad {
+    display: flex;
+    justify-content: center;
+    color: #000080;
+    font-size: 20px;
+}
+
+.textRobo {
+    margin-left: 10px;
+    margin-top: 52px;
+    margin-bottom: 52px;
+    margin-right: 10px;
+}
+
+.robo{
+    display: flex;
+    flex-direction: column;
+    width: 490px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.estropea{
+    display: flex;
+    flex-direction: column;
+    width: 490px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+}
+
+.textEstropea{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+/*--------------mediaQuery--------------------*/
+
+
+@media (max-height: 800px) {
+
+    /*-----------Portatil--------------*/
+
+
+    .divTitulo {
+        display: flex;
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 880px) {
+    
+    /*-------------Portatil(mas resolucion)-------*/
+    
+}
+
+@media (max-width: 620px) {
+    
+    /*-------------Ipad------------------*/
+
+    .divTitulo {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+@media (max-width: 400px) {
+    
+    /*--------------Movil-----------------*/
+    
+    .Faqs{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .FaqsSegundos{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
