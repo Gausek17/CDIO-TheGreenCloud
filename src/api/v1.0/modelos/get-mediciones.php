@@ -1,6 +1,7 @@
 <?php
 
-$sql = "SELECT * FROM medicion";
+
+$sql = "SELECT * FROM medicion ORDER by fecha, id_parcela,id_sonda,tipoDato,hora";
 
 $res = mysqli_query($conexion, $sql);
 

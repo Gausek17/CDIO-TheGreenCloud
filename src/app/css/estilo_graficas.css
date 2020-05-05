@@ -110,6 +110,22 @@ body {
     align-items: flex-start;
     flex-direction: row;
 }
+.divContenidoGraficasUser{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.divSelectoresUser{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.divSelectoresUser section {
+
+}
 
 .checkbox {
     display: flex;
@@ -304,6 +320,7 @@ header {
 
 .divSelectorFecha {
     display: flex;
+    align-items: center;
 }
 
 .textSeleccionFechaFin {
@@ -336,9 +353,6 @@ header {
         border: 2px solid black;
         border-radius: 15px;
     }
-    #b2:hover{
-        background-color: 
-    }
 
     .grafica {
         overflow: inherit;
@@ -367,13 +381,14 @@ header {
     }
 
     .seleccion select {
-        margin-top: 0px;
+        margin-top: 0;
         margin-left: 40px;
     }
 
     .divContenidoGraficas {
         align-items: baseline;
         justify-content: space-around;
+
     }
 
     .checkbox {
@@ -419,19 +434,21 @@ header {
 
     .divSelectores {
         margin-top: 1.5rem;
-        justify-content: space-around;
+       display: block;
     }
 
     .divContenidoGraficas {
-        display: block;
+        flex-wrap: wrap;
     }
 
-    .imgDateSelectorInterval,
-    .imgDateSelectorUnique {
-        height: 35px;
-        position: absolute;
-        margin-left: 220px;
-        margin-top: 10px;
+    /*  clases solo de la version USER */
+    .divContenidoGraficasUser {
+       display: block;
+    }
+
+    .divSelectoresUser{
+        justify-content: space-around;
+
     }
 }
 
@@ -518,7 +535,7 @@ header {
     }
 
     #selectUsurios {
-        width: 130px;
+        width: 150px;
         height: 40px;
         font-size: 13px;
         padding: 0.5rem;
@@ -533,7 +550,7 @@ header {
     }
 
     #selectSondas {
-        width: 130px;
+        width: 146px;
         height: 40px;
         font-size: 13px;
 
@@ -604,21 +621,12 @@ header {
     .imgDateSelectorInterval,
     .imgDateSelectorUnique {
         height: 35px;
-
-        position: absolute;
-        margin-left: 150px;
+        margin: 0;
     }
 
     .seleccion {
 
         margin-right: 1rem;
-    }
-
-    .imgDateSelectorInterval,
-    .imgDateSelectorUnique {
-
-        position: absolute;
-        margin-left: 150px;
     }
 
 
