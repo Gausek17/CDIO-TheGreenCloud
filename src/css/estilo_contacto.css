@@ -80,7 +80,7 @@ body {
 .input,
 .btn_submit,
 .btn_reset {
-    background-color: #270b3b;
+    background-color: #009B94;
     border: 0;
     color: white;
     padding: 16px 32px;
@@ -93,7 +93,7 @@ body {
 }
 
 .buttonEnviar{
-    background-color: #270b3b;
+    background-color: #009B94;
     border: 0;
     color: white;
     padding: 16px 32px;
@@ -106,12 +106,12 @@ body {
 }
 
 .btn_submit:hover {
-    background-color: #d080d0;
+    background-color: #81D3F8;
     color: black;
 }
 
 .btn_reset:hover {
-    background-color: #d080d0;
+    background-color: #81D3F8;
     color: black;
 }
 
