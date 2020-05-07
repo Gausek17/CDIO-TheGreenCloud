@@ -2,6 +2,7 @@
     font-family: "Trebuchet MS";
 }
 
+
 .textSeleccionParcela {
     font-weight: bold;
     padding: 5px;
@@ -263,8 +264,8 @@ header {
 }
 
 .navUsuarios {
-    border-right: 2px solid black;
-    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 
 }
 
@@ -275,6 +276,11 @@ header {
 
 .navMediciones {
     background-color: #035752;
+    border: 2px solid black;
+}
+
+.navParcela{
+    border: 2px solid black;
 }
 
 .navParcela:hover {
@@ -331,10 +337,12 @@ header {
     #a3{
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
     #b2{
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
     #b2:hover{
         background-color: 
@@ -445,10 +453,12 @@ header {
     #a3{
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
     #b2{
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
     .iconSensorSelected {
