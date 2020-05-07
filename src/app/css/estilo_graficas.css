@@ -199,9 +199,10 @@ header {
     font-weight: 500;
     border-radius: 10px;
     padding: 0.6rem;
-    border: 0px;
+    border: 0;
     cursor: pointer;
     margin-top: 5px;
+    width: 190px;
 }
 
 
@@ -306,7 +307,8 @@ header {
 .imgDateSelectorInterval {
     height: 50px;
     width: auto;
-    margin-left: 1.5rem;
+    position: absolute;
+    margin-left: 215px;
 }
 
 .imgDateSelectorUnique {
@@ -523,6 +525,7 @@ header {
 
     .divContenidoGraficas {
         flex-wrap: wrap;
+        margin-right: 1rem;
     }
 
     .seleccion_calendar {
@@ -621,7 +624,7 @@ header {
     .imgDateSelectorInterval,
     .imgDateSelectorUnique {
         height: 35px;
-        margin: 0;
+        margin-left: 150px;
     }
 
     .seleccion {
