@@ -6,9 +6,11 @@
     <title>Graficas Admin</title>
     <link rel="stylesheet" type="text/css" href="css/estilo_graficas.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_formalwindow.css">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/ico" href="../imagenes/graficas/favicon.ico">
     <script src="js/sesion_permisos.js"></script>
+
 </head>
 
 <body>
@@ -96,10 +98,13 @@
         </div>
     </div>
 
+
 </div>
+<div id="divPopup" class="w3-modal w3-animate-opacity"></div>
 <script src="js/usuarioLogin.js"></script>
 <script src="js/sideNav.js"></script>
 <script src="js/menuAdmin.js"></script>
+<script src="js/modalConfirm.js"></script>
 <script src="js/mediciones.js"></script>
 <script src="js/usuarios_select.js"></script>
 <script src="js/parcelas_select.js"></script>
@@ -141,20 +146,7 @@
         controladorMediciones.iniciar();
 
     }
-    function changeToDateInterval() {
-        document.getElementById("divFechaFin").style.display="block";
-        document.getElementById("dateIntervalSelector").style.display="none";
-        document.getElementById("dateUniqueSelector").style.display="block";
-        document.getElementById("textSelectorFecha").innerHTML ="Fecha Inicio:";
 
-    }
-    function changeToDateUnique() {
-        document.getElementById("divFechaFin").style.display="none";
-        document.getElementById("dateIntervalSelector").style.display="block";
-        document.getElementById("dateUniqueSelector").style.display="none";
-        document.getElementById("textSelectorFecha").innerHTML ="Fecha:";
-
-    }
 
 </script>
 </body>

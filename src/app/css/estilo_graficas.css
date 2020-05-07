@@ -2,6 +2,7 @@
     font-family: "Trebuchet MS";
 }
 
+
 .textSeleccionParcela {
     font-weight: bold;
     padding: 5px;
@@ -110,6 +111,22 @@ body {
     align-items: flex-start;
     flex-direction: row;
 }
+.divContenidoGraficasUser{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.divSelectoresUser{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.divSelectoresUser section {
+
+}
 
 .checkbox {
     display: flex;
@@ -183,9 +200,10 @@ header {
     font-weight: 500;
     border-radius: 10px;
     padding: 0.6rem;
-    border: 0px;
+    border: 0;
     cursor: pointer;
     margin-top: 5px;
+    width: 190px;
 }
 
 
@@ -263,8 +281,8 @@ header {
 }
 
 .navUsuarios {
-    border-right: 2px solid black;
-    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 
 }
 
@@ -275,6 +293,11 @@ header {
 
 .navMediciones {
     background-color: #035752;
+    border: 2px solid black;
+}
+
+.navParcela{
+    border: 2px solid black;
 }
 
 .navParcela:hover {
@@ -290,7 +313,8 @@ header {
 .imgDateSelectorInterval {
     height: 50px;
     width: auto;
-    margin-left: 1.5rem;
+    position: absolute;
+    margin-left: 215px;
 }
 
 .imgDateSelectorUnique {
@@ -304,6 +328,7 @@ header {
 
 .divSelectorFecha {
     display: flex;
+    align-items: center;
 }
 
 .textSeleccionFechaFin {
@@ -331,13 +356,12 @@ header {
     #a3{
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
     #b2{
         border: 2px solid black;
         border-radius: 15px;
-    }
-    #b2:hover{
-        background-color: 
+        margin: 25px;
     }
 
     .grafica {
@@ -367,13 +391,14 @@ header {
     }
 
     .seleccion select {
-        margin-top: 0px;
+        margin-top: 0;
         margin-left: 40px;
     }
 
     .divContenidoGraficas {
         align-items: baseline;
         justify-content: space-around;
+
     }
 
     .checkbox {
@@ -419,19 +444,21 @@ header {
 
     .divSelectores {
         margin-top: 1.5rem;
-        justify-content: space-around;
+       display: block;
     }
 
     .divContenidoGraficas {
-        display: block;
+        flex-wrap: wrap;
     }
 
-    .imgDateSelectorInterval,
-    .imgDateSelectorUnique {
-        height: 35px;
-        position: absolute;
-        margin-left: 220px;
-        margin-top: 10px;
+    /*  clases solo de la version USER */
+    .divContenidoGraficasUser {
+       display: block;
+    }
+
+    .divSelectoresUser{
+        justify-content: space-around;
+
     }
 }
 
@@ -445,10 +472,12 @@ header {
     #a3{
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
     #b2{
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
     .iconSensorSelected {
@@ -506,6 +535,7 @@ header {
 
     .divContenidoGraficas {
         flex-wrap: wrap;
+        margin-right: 1rem;
     }
 
     .seleccion_calendar {
@@ -518,7 +548,7 @@ header {
     }
 
     #selectUsurios {
-        width: 130px;
+        width: 150px;
         height: 40px;
         font-size: 13px;
         padding: 0.5rem;
@@ -533,7 +563,7 @@ header {
     }
 
     #selectSondas {
-        width: 130px;
+        width: 146px;
         height: 40px;
         font-size: 13px;
 
@@ -604,21 +634,12 @@ header {
     .imgDateSelectorInterval,
     .imgDateSelectorUnique {
         height: 35px;
-
-        position: absolute;
         margin-left: 150px;
     }
 
     .seleccion {
 
         margin-right: 1rem;
-    }
-
-    .imgDateSelectorInterval,
-    .imgDateSelectorUnique {
-
-        position: absolute;
-        margin-left: 150px;
     }
 
 

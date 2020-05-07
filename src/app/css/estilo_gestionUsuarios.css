@@ -67,6 +67,7 @@ h2{
 }
 
 
+
 .cerrar_sesion{
     width: 30px;
 
@@ -201,15 +202,21 @@ header{
 .navUsuarios{
     /*border: 4px solid black; */
     background-color: #035752;
-    border-right: 2px solid black;
-    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 .navUsuarios:hover{
     background-color:#035752;
 }
+.navMediciones{
+    border: 2px solid black;
+}
 
 .navMediciones:hover{
     background-color: #035752;
+}
+.navParcela{
+    border: 2px solid black;
 }
 .navParcela:hover{
     background-color: #035752;
@@ -342,6 +349,7 @@ header{
     #a1{
     border: 2px solid black;
     border-radius: 15px;
+        margin: 25px;
 }
     .divContenidoUser{
         overflow: inherit;
@@ -377,6 +385,10 @@ header{
         width: 30px;
         height: 30px;
     }
+    
+    h2{
+        display: none;
+    }
 
 }
 
@@ -384,6 +396,7 @@ header{
     #a1{
     border: 2px solid black;
     border-radius: 15px;
+        margin: 25px;
 }
     .iconUserPerson{
 
@@ -391,6 +404,10 @@ header{
         height: 60px;
 
 
+    }
+    
+    h2{
+        display: none;
     }
     .iconMenu{
         display: block;

@@ -44,8 +44,8 @@
                     <section id="linea-titulo"></section>
                 </div>
 
-                <div class="divContenidoGraficas">
-                    <div class="divSelectores">
+                <div class="divContenidoGraficasUser">
+                    <div class="divSelectoresUser">
                         <section><p class="textSeleccionParcela">Parcela:</p>
                             <label><select id="selectParcelas" onchange="actualizarSelectSondas(pintarGraficas)">
                                 <!-- Listado de  parcelas generado en js-->
@@ -60,65 +60,31 @@
                         </section>
                     </div>
                     <div class="divSelectores">
+                        <section><p class="textSeleccionFecha" id="textSelectorFecha">Fecha:</p>
+                            <div class="divSelectorFecha">
+                                <input class="calendar" type="date" name="field1" id="fechaInicio" onchange="pintarGraficas()"/>
+                                <img src="../imagenes/graficas/DateEnd.png" onclick="changeToDateInterval()" alt="Intervalo de Fechas" class="imgDateSelectorInterval" id="dateIntervalSelector">
+                            </div>
+                            <div id="divFechaFin" class="divFechaFin">
+                                <p class="textSeleccionFecha">Fecha Fin:</p>
+                                <div class="divSelectorFecha">
+                                    <input class="calendar" type="date" name="fechaFin" id="fechaFin" onchange="pintarGraficas()"/>
+                                    <img src="../imagenes/graficas/DataUnique.png" onclick="changeToDateUnique()" alt="Intervalo de Fechas" class="imgDateSelectorUnique" id="dateUniqueSelector">
+                                </div>
+                            </div>
 
-
-                        <section><p class="textSeleccionFecha">Fecha:</p>
-                            <input class="calendar" type="date" name="field1" id="field1" onchange="pintarGraficas()"/>
                         </section>
 
-                    </div>
 
 
                 </div>
 
-                <div class="checkbox">
 
-                        <div class="dos-primeras">
-                            <div class="elementSensores">
-                                <h3>Temperatura</h3>
-                                <section class="cajas">
-                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchTemperatura" checked>
-                                    <label for="switchTemperatura" class="lbl"></label>
-                                </section>
-
-                            </div>
-                            <div class="elementSensores" id="humedad">
-                                <h3>Humedad</h3>
-                                <section class="cajas">
-                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchHumedad" checked>
-                                    <label for="switchHumedad" class="lbl"></label>
-                                </section>
-                            </div>
-
-                        </div>
-                        <div class="dos-segundas">
-                            <div class="elementSensores" id="salinidad">
-                                <h3>Salinidad</h3>
-                                <section class="cajas">
-                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchSalinidad" checked>
-                                    <label for="switchSalinidad" class="lbl"></label>
-                                </section>
-                            </div>
-                            <div class="elementSensores" id="luminosidad">
-                                <h3>Luminosidad</h3>
-                                <section class="cajas">
-                                    <input type="checkbox" onchange="mostrarOcultar(this.checked,this.id)" id="switchLuminosidad" checked>
-                                    <label for="switchLuminosidad" class="lbl"></label>
-                                </section>
-                            </div>
-
-
-                        </div>
-
-
-
-                    
                 </div>
+
                 <div class="grafica" id="grafica">
-                    <canvas id="chartTemperatura"></canvas>
-                    <canvas id="chartLuminosidad"></canvas>
-                    <canvas id="chartHumedad"></canvas>
-                    <canvas id="chartSalinidad"></canvas>
+                    <canvas id="chart"></canvas>
+
 
 
                 </div>
@@ -162,7 +128,7 @@
 
         function iniciarGraficas() {
             setDateToday();
-            VistaMediciones.iniciar("chartTemperatura", "chartLuminosidad", "chartHumedad", "chartSalinidad");
+            VistaMediciones.iniciar("chart");
             controladorMediciones.iniciar();
             pintarGraficas();
 
