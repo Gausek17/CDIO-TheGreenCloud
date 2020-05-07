@@ -33,12 +33,10 @@ body {
 }
 
 .container {
-
     align-items: center;
     margin-right: 7.5rem;
     margin-left: 7.5rem;
     margin-bottom: 0rem;
-
 }
 
 header {
@@ -50,6 +48,7 @@ header {
 .divCentral {
     height: 100%;
     display: flex;
+    
     border-radius: 15px;
 }
 
@@ -78,14 +77,13 @@ header {
     border: 0;
 }
 
-.enlace-graficas {
-    width: 50px;
-    border: 1px solid purple;
-    border-radius: 10px;
-    padding: 0.5rem;
-    margin-left: 3rem;
-    margin-top: 10px;
+.no-selectores-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
 }
+
+.enlace-graficas {}
 
 .enlace-graficas:hover {
     background-color: lightgray;
@@ -139,7 +137,6 @@ header {
     position: absolute;
 }
 
-
 .delete {
     cursor: pointer;
     background-color: #800053;
@@ -148,7 +145,6 @@ header {
     border: 0;
     font-weight: bold;
     padding: 1rem;
-
 }
 
 .button {
@@ -161,16 +157,12 @@ header {
     padding: 6px;
     width: 80px;
     height: auto;
-
     margin: 0.5rem;
 }
-
-
 
 .divSeleccionParcela {
     display: flex;
     align-items: center;
-
 }
 
 .divContenido {
@@ -178,8 +170,6 @@ header {
 }
 
 .panelActual {
-
-
     display: flex;
     flex-direction: column;
 }
@@ -204,7 +194,6 @@ header {
     padding: 1.5rem;
     height: 580px;
     overflow: auto;
-
 }
 
 .navParcela {
@@ -250,7 +239,6 @@ header {
     padding: 5px;
     margin-left: 2.7rem;
     margin-bottom: 0px;
-
 }
 
 .textSeleccionMediciones {
@@ -299,7 +287,8 @@ header {
         border: 2px solid black;
         border-radius: 15px;
     }
-    #b1{
+
+    #b1 {
         border: 2px solid black;
         border-radius: 15px;
     }
@@ -313,13 +302,10 @@ header {
         display: block;
         width: 45px;
         height: 45px;
-
     }
 
     .logoGTI {
         width: 180px;
-
-
     }
 
     .divCentral {
@@ -363,7 +349,6 @@ header {
     #parcela {
         width: 150px;
         font-size: 10px;
-
     }
 
     #selectUsurios {
@@ -376,21 +361,19 @@ header {
     }
 
     .enlace-graficas {
-        width: 40px;
-        margin-left: 10px;
-        margin-top: 10px;
+        margin-right: 10px;
     }
-
-
-
 }
+
+
 
 @media only screen and (max-width: 450px) {
     #a2 {
         border: 2px solid black;
         border-radius: 15px;
     }
-    #b1{
+
+    #b1 {
         border: 2px solid black;
         border-radius: 15px;
     }
@@ -399,7 +382,6 @@ header {
         font-weight: bold;
         padding: 5px;
         margin-left: 3px;
-
     }
 
     .divContenidoUser {
@@ -423,10 +405,8 @@ header {
         padding-left: 0.5rem;
     }
 
-
     header {
         margin-bottom: 0.5rem;
-
     }
 
     .logoGTI {
@@ -457,8 +437,6 @@ header {
         margin-bottom: 0px;
     }
 
-
-
     .seleccion {
         display: flex;
         flex-direction: column;
@@ -473,8 +451,8 @@ header {
     }
 
     .enlace-graficas {
-        width: 30px;
-        margin-left: 15px;
+        display: flex;
+        justify-content: flex-start;
     }
 
     #selectParcelas {
