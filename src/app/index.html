@@ -103,7 +103,7 @@
 <div id="divPopup" class="w3-modal w3-animate-opacity"></div>
 
 <div id="divPopupContraseña" class="w3-modal w3-animate-opacity">
-    <div class="w3-modal-content w3-card-4">
+    <div class="w3-modal-content w3-card"-4>
         <header class="w3-container w3-teal">
         <span onclick="document.getElementById('divPopupContraseña').style.display='none'"
               class="w3-button w3-large w3-display-topright">&times;</span>
@@ -115,10 +115,26 @@
     </div>
 </div>
 
+<!-- En el div se generara el PopUp2-->
+<div id="divPopup2" class="PopupParcelas"></div>
+
+<div id="divPopupParcelas" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card"-4">
+        <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('divPopupParcelas').style.display='none'"
+              class="w3-button w3-large w3-display-topright">&times;</span>
+            <h2></h2>
+        </header>
+        <div class="w3-container">
+            <p></p>
+        </div>
+    </div>
+</div>
 <script src="js/usuarioLogin.js"></script>
 <script src="js/sideNav.js"></script>
 <script src="js/menuAdmin.js"></script>
 <script src="js/modalConfirm.js"></script>
+<script src="js/modalEdit.js"></script>
 <script src="js/usuarios_div.js"></script>
 <script>
     VistaUsuarioLogin.iniciar("textNombreUsuario");

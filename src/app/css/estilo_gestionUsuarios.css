@@ -246,6 +246,10 @@ header{
 .iconDeleteUser:hover{
     cursor: pointer;
 }
+.iconAsign{
+    width:40px ;
+    height: 40px;
+}
 .iconEditUser1{
     border-color: black;
     color: white;
