@@ -18,15 +18,13 @@ ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-color: black;
-    border: 1rem;
-    border: 2px solid black;
 }
 ul li{
-    display: flex;
     align-items: center;
     padding: 0.25rem;
-    padding-right: 5rem;
+    list-style: none;
+    width: 100%;
+    text-align: center;
 }
 .iconParcelas{
     padding: 10px;
@@ -52,10 +50,8 @@ ul li{
 ul li a{
     color: white;
     text-decoration: none;
-    margin-left: 1rem;
     font-size: 1.2rem;
-    display: flex;
-    align-items: center;
+    display: block;
 }
 
 @media only screen and (max-width:900px) {

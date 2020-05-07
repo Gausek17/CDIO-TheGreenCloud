@@ -6,7 +6,6 @@ body {
 
     margin: 0 auto;
 }
-
 #selectParcelas {
     margin-top: 0px;
 }
@@ -77,10 +76,18 @@ header {
     border: 0;
 }
 
+<<<<<<< Updated upstream
 .no-selectores-header {
     display: flex;
     justify-content: flex-end;
     margin-right: 60px;
+=======
+.enlace-graficas {
+    padding: 0.5rem;
+    margin-left: 3rem;
+    margin-top: 10px;
+    color: darkgrey;
+>>>>>>> Stashed changes
 }
 
 .enlace-graficas {}
@@ -286,11 +293,13 @@ header {
     #a2 {
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
     #b1 {
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
 
@@ -371,11 +380,13 @@ header {
     #a2 {
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
     #b1 {
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
     .textSeleccionMediciones {
