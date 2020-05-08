@@ -19,13 +19,8 @@ ul{
     justify-content: space-around;
     align-items: center;
 }
-ul li{
-    align-items: center;
-    padding: 0.25rem;
-    list-style: none;
-    width: 100%;
-    text-align: center;
-}
+
+
 .iconParcelas{
     padding: 10px;
     height: 60px;
@@ -47,12 +42,7 @@ ul li{
     height: auto;
 }
 
-ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: block;
-}
+
 
 @media only screen and (max-width:900px) {
     nav {
