@@ -67,6 +67,7 @@
     background-color: #009B94;
     border-radius: 10px;
 }
+
 /*
 .lbl {
     display: flex;
@@ -86,7 +87,7 @@ body {
     cursor: pointer;
 }
 
-ul li{
+ul li {
     align-items: center;
     padding: 0.25rem;
     list-style: none;
@@ -94,7 +95,7 @@ ul li{
     text-align: center;
 }
 
-ul li a{
+ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
@@ -128,22 +129,21 @@ ul li a{
     align-items: flex-start;
     flex-direction: row;
 }
-.divContenidoGraficasUser{
+
+.divContenidoGraficasUser {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.divSelectoresUser{
+.divSelectoresUser {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.divSelectoresUser section {
-
-}
+.divSelectoresUser section {}
 
 .checkbox {
     display: flex;
@@ -311,13 +311,22 @@ header {
     border: 2px solid black;
 }
 
-.navParcela{
+.navParcela {
     border: 2px solid black;
 }
 
 .navParcela:hover {
     background-color: #035752;
 
+}
+
+.navNoticias {
+    border: 2px solid black;
+    border-left: none;
+}
+
+.navNoticias:hover {
+    background-color: #035752;
 }
 
 .divSelectores {
@@ -368,21 +377,23 @@ header {
     .textSeleccionParcela {
         margin: 0;
     }
-    #a3{
+
+    #a3 {
         border: 2px solid black;
         border-radius: 15px;
         margin: 25px;
     }
-    #b2{
+
+    #b2 {
         border: 2px solid black;
         border-radius: 15px;
         margin: 25px;
-<<<<<<< Updated upstream
-=======
+        <<<<<<< Updated upstream=======
     }
-    #b2:hover{
-        background-color: 
->>>>>>> Stashed changes
+
+    #b2:hover {
+        background-color:
+            >>>>>>> Stashed changes
     }
 
     .grafica {
@@ -465,7 +476,7 @@ header {
 
     .divSelectores {
         margin-top: 1.5rem;
-       display: block;
+        display: block;
     }
 
     .divContenidoGraficas {
@@ -474,10 +485,10 @@ header {
 
     /*  clases solo de la version USER */
     .divContenidoGraficasUser {
-       display: block;
+        display: block;
     }
 
-    .divSelectoresUser{
+    .divSelectoresUser {
         justify-content: space-around;
 
     }
@@ -490,12 +501,14 @@ header {
     .container {
         margin-bottom: 0;
     }
-    #a3{
+
+    #a3 {
         border: 2px solid black;
         border-radius: 15px;
         margin: 25px;
     }
-    #b2{
+
+    #b2 {
         border: 2px solid black;
         border-radius: 15px;
         margin: 25px;

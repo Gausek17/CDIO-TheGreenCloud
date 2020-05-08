@@ -91,6 +91,13 @@ header {
 .navParcela:hover{
     background-color: #035752;
 }
+.navNoticias{
+    border: 2px solid black;
+    border-left: none;
+}
+.navNoticias:hover{
+    background-color: #035752;
+}
 
 .seleccion {
     margin-left: 10px;
