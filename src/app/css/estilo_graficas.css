@@ -361,11 +361,13 @@ header {
     padding: 5px;
 }
 
-.divFechaFin {
+.divFechaFin, .divFechaFinUser {
     display: none;
 
 }
-
+.divFechaFinUser{
+    margin-left: 5rem;
+}
 /*------RESPONSIVE----------*/
 @media only screen and (max-width:900px) {
 
@@ -388,12 +390,6 @@ header {
         border: 2px solid black;
         border-radius: 15px;
         margin: 25px;
-        <<<<<<< Updated upstream=======
-    }
-
-    #b2:hover {
-        background-color:
-            >>>>>>> Stashed changes
     }
 
     .grafica {
@@ -492,6 +488,10 @@ header {
         justify-content: space-around;
 
     }
+    .divFechaFinUser{
+        margin-left: 0;
+    }
+
 }
 
 @media only screen and (max-width: 450px) {
@@ -674,6 +674,9 @@ header {
     .seleccion {
 
         margin-right: 1rem;
+    }
+    .divContenidoGraficasUser{
+        margin-right: 1.2rem;
     }
 
 
