@@ -200,7 +200,7 @@ header {
     margin-right: 3.5rem;
 }
 
-.divContenidoUser {
+.listadoParcelas {
     padding: 1.5rem;
     height: 580px;
     overflow: auto;
@@ -261,29 +261,29 @@ header {
 
 /*SCROL BARR*/
 
-.divContenidoUser::-webkit-scrollbar {
+.listadoParcelas::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
-.divContenidoUser::-webkit-scrollbar:vertical {
+.listadoParcelas::-webkit-scrollbar:vertical {
     width: 10px;
 }
 
-.divContenidoUser::-webkit-scrollbar-button:increment,
-.divContenidoUser::-webkit-scrollbar-button {
+.listadoParcelas::-webkit-scrollbar-button:increment,
+.listadoParcelas::-webkit-scrollbar-button {
     display: none;
 }
 
-.divContenidoUser::-webkit-scrollbar:horizontal {
+.listadoParcelas::-webkit-scrollbar:horizontal {
     height: 10px;
 }
 
-.divContenidoUser::-webkit-scrollbar-thumb {
+.listadoParcelas::-webkit-scrollbar-thumb {
     background-color: #800053;
     border-radius: 20px;
 }
 
-.divContenidoUser::-webkit-scrollbar-track {
+.listadoParcelas::-webkit-scrollbar-track {
     border-radius: 10px;
     box-shadow: inset 0 0 10px #797979;
 }
@@ -305,7 +305,7 @@ header {
     }
 
 
-    .divContenidoUser {
+    .listadoParcelas {
         overflow: inherit;
     }
 
@@ -402,7 +402,7 @@ header {
 
     }
 
-    .divContenidoUser {
+    .listadoParcelas {
         padding: 0.5rem;
         margin-bottom: 0px;
         height: 530px;

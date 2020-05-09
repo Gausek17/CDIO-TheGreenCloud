@@ -1,14 +1,187 @@
 /* Navbar */
 .form-control{
-    border-color: #800053;
-    margin-left: 15px;
+    border-color: #009B94;
+    margin-left: 25px;
     width: 250px;
     height: 35px;
     border-radius: 5px;
     font-size: 15px;
     padding: 0.5rem;
+    margin-top: 25px;
+}
+.form-control-parcelas{
+    border-color: #009B94;
+    margin-top: 3rem;
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 0.5rem;
+    margin-left: 5rem;
+}
+.contenidoPopupParcelas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
+/*Parcelas*/
+.gestionParcelas{
+    color: white;
+}
+.iconDesasignar{
+    height: 30px;
+    width: 30px;
+    padding: 0.4rem;
+    margin-left: 19rem;
+}
+.iconAsignar{
+    height: 30px;
+    width: 30px;
+    margin-left: 19rem;
+    padding: 0.4rem;
+}
+.divParcelaAsignada{
+    background-color: #63D4B1;
+    margin-right: 7rem;
+    margin-left: 7rem;
+    border: 1px solid #737373;
+    margin-top: 1rem;
+    color: white;
+}
+.divParcelaDesasignada{
+    background-color: #75A698;
+    margin-right: 7rem;
+    margin-left: 7rem;
+    border: 1px solid #737373;
+    margin-top: 1rem;
+    color: white;
+}
+.headerParcelas{
+    background-color:#009B94;
+}
+.buscadorParcela{
+    border: 2px solid #009B94;
+
+}
+.listadoParcelas{
+    margin-left: 15px;
+    font-weight: bold;
+
+}
+.iconLupa{
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+}
+
+.listadoParcelas::-webkit-scrollbar {
+    -webkit-appearance: none;
+
+}
+
+.listadoParcelas::-webkit-scrollbar:vertical {
+    width:10px;
+
+}
+
+.listadoParcelas::-webkit-scrollbar-button:increment,.listadoParcelas::-webkit-scrollbar-button {
+    display: none;
+
+}
+
+.listadoParcelas::-webkit-scrollbar:horizontal {
+    height: 10px;
+
+}
+.menuParcelas{
+    display: flex;
+    align-items: center;
+}
+
+.listadoParcelas::-webkit-scrollbar-thumb {
+    background-color: #009B94;
+    border-radius: 20px;
+
+}
+
+.listadoParcelas::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #797979;
+
+}
+.nameParcela{
+    margin-left: 15px;
+}
+
+.filtrosParcelas{
+    display: none;
+    position: absolute;
+    color: #009B94;
+    background-color:white ;
+    font-weight: bold;
+
+    border: 2px solid #009B94;
+    margin-left: 15rem;
+    cursor: pointer;
+    width: 110px;
+    font-weight: bold;
+}
+.misParcelas{
+    color: white;
+    background-color: #009B94;
+    width: inherit; 
+    border: 0px;
+    cursor: pointer;
+    font-weight: bold;
+    height: inherit;
+
+}
+.todasParcelas{
+    color: white;
+    background-color: #009B94;
+    width: inherit;
+    height: inherit;
+    border: 0px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+.misParcelas:hover{
+    color: #009B94;
+    background-color: white;
+}
+.todasParcelas:hover{
+    color: #009B94;
+    background-color: white;
+}
+
+.desplegarParcelas{
+    color: #009B94;
+    background-color:white ;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #009B94;
+    margin-left: 15rem;
+    cursor: pointer;
+    width: 110px;
+    height: 30px;
+    margin-top:3rem;
+}
+.desplegarParcelas:hover{
+    color: white ;
+    background-color:#009B94 ;
+}
+
+
+
+
+
+
+
+
+/*---------------------*/
 .navbar{
     display: flex;
     justify-content: center;
@@ -143,9 +316,9 @@ header{
     padding-right: 1.5rem;
     padding-top: 0.25rem;
 }
-.divContenidoUser{
+.listadoParcelas{
     padding: 1.5rem;
-    height: 570px;
+    height: 270px;
     overflow: auto;
 }
 
@@ -232,6 +405,11 @@ header{
     margin-bottom: 1rem;
 }
 
+.popupParcelas{
+    justify-content: center;
+}
+
+
 .divNuevaPersona{
     display: flex;
     background-color: #797979;
@@ -256,6 +434,8 @@ header{
 .iconAsign{
     width:40px ;
     height: 40px;
+    cursor: pointer;
+    margin-top: 1px;
 }
 .iconEditUser1{
     border-color: black;
@@ -294,13 +474,15 @@ header{
 }
 
 .divContenidoUser::-webkit-scrollbar-thumb {
-    background-color: #800053;
+    background-color: #009B94;
     border-radius: 20px;
+
 }
 
-.divContenidoUser::-webkit-scrollbar-track {
+    .divContenidoUser::-webkit-scrollbar-track {
     border-radius: 10px;
     box-shadow: inset 0 0 10px #797979;
+
 }
 
 
@@ -351,7 +533,7 @@ header{
     border-radius: 15px;
         margin: 25px;
 }
-    .divContenidoUser{
+    .listadoParcelas{
         overflow: inherit;
     }
     .divPanelActual{
@@ -434,7 +616,7 @@ header{
         height: 40px;
     }
 
-    .divContenidoUser{
+    .listadoParcelas{
         padding: 0;
     }
     .iconUseer{
