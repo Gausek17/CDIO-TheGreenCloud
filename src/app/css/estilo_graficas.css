@@ -67,6 +67,7 @@
     background-color: #009B94;
     border-radius: 10px;
 }
+
 /*
 .lbl {
     display: flex;
@@ -84,6 +85,23 @@ body {
 
 .logoGTI:hover {
     cursor: pointer;
+}
+
+ul li {
+    align-items: center;
+    padding: 0.25rem;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cerrar_sesion {
@@ -111,22 +129,21 @@ body {
     align-items: flex-start;
     flex-direction: row;
 }
-.divContenidoGraficasUser{
+
+.divContenidoGraficasUser {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.divSelectoresUser{
+.divSelectoresUser {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.divSelectoresUser section {
-
-}
+.divSelectoresUser section {}
 
 .checkbox {
     display: flex;
@@ -134,8 +151,6 @@ body {
     margin-bottom: 1rem;
     justify-content: center;
 }
-
-
 
 
 .container {
@@ -296,13 +311,22 @@ header {
     border: 2px solid black;
 }
 
-.navParcela{
+.navParcela {
     border: 2px solid black;
 }
 
 .navParcela:hover {
     background-color: #035752;
 
+}
+
+.navNoticias {
+    border: 2px solid black;
+    border-left: none;
+}
+
+.navNoticias:hover {
+    background-color: #035752;
 }
 
 .divSelectores {
@@ -337,11 +361,13 @@ header {
     padding: 5px;
 }
 
-.divFechaFin {
+.divFechaFin, .divFechaFinUser {
     display: none;
 
 }
-
+.divFechaFinUser{
+    margin-left: 5rem;
+}
 /*------RESPONSIVE----------*/
 @media only screen and (max-width:900px) {
 
@@ -353,12 +379,14 @@ header {
     .textSeleccionParcela {
         margin: 0;
     }
-    #a3{
+
+    #a3 {
         border: 2px solid black;
         border-radius: 15px;
         margin: 25px;
     }
-    #b2{
+
+    #b2 {
         border: 2px solid black;
         border-radius: 15px;
         margin: 25px;
@@ -444,7 +472,7 @@ header {
 
     .divSelectores {
         margin-top: 1.5rem;
-       display: block;
+        display: block;
     }
 
     .divContenidoGraficas {
@@ -453,13 +481,17 @@ header {
 
     /*  clases solo de la version USER */
     .divContenidoGraficasUser {
-       display: block;
+        display: block;
     }
 
-    .divSelectoresUser{
+    .divSelectoresUser {
         justify-content: space-around;
 
     }
+    .divFechaFinUser{
+        margin-left: 0;
+    }
+
 }
 
 @media only screen and (max-width: 450px) {
@@ -469,12 +501,14 @@ header {
     .container {
         margin-bottom: 0;
     }
-    #a3{
+
+    #a3 {
         border: 2px solid black;
         border-radius: 15px;
         margin: 25px;
     }
-    #b2{
+
+    #b2 {
         border: 2px solid black;
         border-radius: 15px;
         margin: 25px;
@@ -640,6 +674,9 @@ header {
     .seleccion {
 
         margin-right: 1rem;
+    }
+    .divContenidoGraficasUser{
+        margin-right: 1.2rem;
     }
 
 

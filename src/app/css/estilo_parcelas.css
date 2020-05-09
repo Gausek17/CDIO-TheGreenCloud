@@ -6,13 +6,29 @@ body {
 
     margin: 0 auto;
 }
-
 #selectParcelas {
     margin-top: 0px;
 }
 
 .logoGTI:hover {
     cursor: pointer;
+}
+
+ul li{
+    align-items: center;
+    padding: 0.25rem;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cerrar_sesion {
@@ -53,10 +69,34 @@ header {
     border-radius: 15px;
 }
 
-.divUsuario {
+.navUsuarios{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.navUsuarios:hover{
+    background-color: #035752;
 
-    display: flex;
-    align-items: center;
+}
+.navMediciones{
+    border: 2px solid black;
+}
+
+.navMediciones:hover{
+    background-color: #035752;
+}
+.navParcela{
+    border: 2px solid black;
+    background-color: #035752;
+}
+.navParcela:hover{
+    background-color: #035752;
+}
+.navNoticias{
+    border: 2px solid black;
+    border-left: none;
+}
+.navNoticias:hover{
+    background-color: #035752;
 }
 
 .seleccion {
@@ -78,6 +118,7 @@ header {
     border: 0;
 }
 
+<<<<<<< Updated upstream
 .enlace-graficas {
     width: 50px;
     border: 1px solid purple;
@@ -85,6 +126,20 @@ header {
     padding: 0.5rem;
     margin-left: 3rem;
     margin-top: 10px;
+=======
+<<<<<<< Updated upstream
+.no-selectores-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+=======
+.enlace-graficas {
+    padding: 0.5rem;
+    margin-left: 3rem;
+    margin-top: 10px;
+    color: darkgrey;
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 }
 
 .enlace-graficas:hover {
@@ -298,10 +353,12 @@ header {
     #a2 {
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
     #b1{
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
 
@@ -389,10 +446,12 @@ header {
     #a2 {
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
     #b1{
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
     .textSeleccionMediciones {

@@ -59,20 +59,21 @@
                             </label>
                         </section>
                     </div>
-                    <div class="divSelectores">
+                    <div class="divSelectoresUser">
                         <section><p class="textSeleccionFecha" id="textSelectorFecha">Fecha:</p>
                             <div class="divSelectorFecha">
                                 <input class="calendar" type="date" name="field1" id="fechaInicio" onchange="pintarGraficas()"/>
                                 <img src="../imagenes/graficas/DateEnd.png" onclick="changeToDateInterval()" alt="Intervalo de Fechas" class="imgDateSelectorInterval" id="dateIntervalSelector">
                             </div>
-                            <div id="divFechaFin" class="divFechaFin">
-                                <p class="textSeleccionFecha">Fecha Fin:</p>
-                                <div class="divSelectorFecha">
-                                    <input class="calendar" type="date" name="fechaFin" id="fechaFin" onchange="pintarGraficas()"/>
-                                    <img src="../imagenes/graficas/DataUnique.png" onclick="changeToDateUnique()" alt="Intervalo de Fechas" class="imgDateSelectorUnique" id="dateUniqueSelector">
-                                </div>
-                            </div>
 
+
+                        </section>
+                        <section id="divFechaFin" class="divFechaFinUser">
+                            <p class="textSeleccionFecha">Fecha Fin:</p>
+                            <div class="divSelectorFecha">
+                                <input class="calendar" type="date" name="fechaFin" id="fechaFin" onchange="pintarGraficas()"/>
+                                <img src="../imagenes/graficas/DataUnique.png" onclick="changeToDateUnique()" alt="Intervalo de Fechas" class="imgDateSelectorUnique" id="dateUniqueSelector">
+                            </div>
                         </section>
 
 

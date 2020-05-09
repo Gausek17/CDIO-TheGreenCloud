@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-05-2020 a las 19:39:51
+-- Tiempo de generación: 09-05-2020 a las 11:44:08
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.1
 
@@ -1696,23 +1696,25 @@ CREATE TABLE `usuario` (
   `mail` varchar(60) NOT NULL,
   `password` varchar(30) NOT NULL,
   `id_cliente` int(11) NOT NULL,
-  `id_rol` int(11) NOT NULL
+  `id_rol` int(11) NOT NULL,
+  `token` varchar(128) DEFAULT NULL,
+  `resetPassword` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nombre`, `mail`, `password`, `id_cliente`, `id_rol`) VALUES
-(1, 'Admin', 'admin@bancal.es', '1234', 1, 1),
-(2, 'Jorge', 'jorge@bancales.es', '1234', 1, 2),
-(8, 'Daniel', 'daniel@bancal.es', '1234', 1, 2),
-(15, 'Sergi', 'sergi@bancal.es', '123', 1, 2),
-(17, 'Alberto', 'alberto@bancal.es', '123', 1, 2),
-(18, 'Javi', 'javi@bancal.es', '1234', 1, 2),
-(20, 'Juan Carlos', 'jcalos@alcampo.es', '1234', 3, 2),
-(21, 'Admin', 'admin@alcampo.es', '1234', 3, 1),
-(22, 'Carlos', 'carlos@alcampo.es', '1234', 3, 2);
+INSERT INTO `usuario` (`id_usuario`, `nombre`, `mail`, `password`, `id_cliente`, `id_rol`, `token`, `resetPassword`) VALUES
+(1, 'Admin', 'thegreencloud.upv@gmail.com', '1234', 1, 1, '6355a08d81cbdbcdb04c34f493b51f7f053bbb20187d1c734a49ec6262afc1e79ceedc98611c57b613d9632cdae0087848b590bb0c20e07fe99de1cc55801337', 0),
+(2, 'Juan Carlos', 'juancarloshr123@gmail.es', '1234', 1, 2, NULL, 0),
+(8, 'Leire', 'leirevm21@gmail.com', '1234', 1, 2, NULL, 0),
+(15, 'Sergi', 'sergisise@gmail.com', '123', 1, 2, NULL, 0),
+(17, 'Alberto', 'albertitovalls97@gmail.com', '123', 1, 2, NULL, 0),
+(18, 'Cristina', 'cristinaverdu2001@gmail.com', '1234', 1, 2, NULL, 0),
+(20, 'Juan Carlos', 'jcalos@alcampo.es', '1234', 3, 2, NULL, 0),
+(21, 'Admin', 'admin@alcampo.es', '1234', 3, 1, NULL, 0),
+(22, 'Carlos', 'carlos@alcampo.es', '1234', 3, 2, NULL, 0);
 
 --
 -- Índices para tablas volcadas

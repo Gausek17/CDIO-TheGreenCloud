@@ -230,13 +230,28 @@ body{
     cursor: pointer;
 }
 
-h2{
+.titulo-admin{
     color: gray;
     height: 50px;
     border-right: 2px solid gray;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+ul li{
+    align-items: center;
+    padding: 0.25rem;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
 }
 
 
@@ -392,6 +407,14 @@ header{
     border: 2px solid black;
 }
 .navParcela:hover{
+    background-color: #035752;
+}
+.navNoticias {
+    border: 2px solid black;
+    border-left: none;
+}
+
+.navNoticias:hover {
     background-color: #035752;
 }
 
@@ -568,7 +591,7 @@ header{
         height: 30px;
     }
     
-    h2{
+    .titulo-admin{
         display: none;
     }
 
@@ -588,7 +611,7 @@ header{
 
     }
     
-    h2{
+    .titulo-admin{
         display: none;
     }
     .iconMenu{
