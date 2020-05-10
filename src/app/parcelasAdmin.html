@@ -5,116 +5,120 @@
     <title>Parcelas Admin</title>
     <link rel="stylesheet" type="text/css" href="css/estilo_parcelas.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/ico" href="../imagenes/parcelas/favicon.ico">
     <script src="js/sesion_permisos.js"></script>
 </head>
+
 <body>
 
-<div class="container" id="container">
-    <div id="mySidenav" class="sidenav">
-        <!-- Nav generado en js-->
-    </div>
-    <header>
-
-        <img onclick="openNav()" src="../imagenes/menu/iconMenu.png" alt="Menu" class="iconMenu">
-        <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
-        <div class="divUsuario">
-            <p id="textNombreUsuario">Nombre Usuario</p>
-
-            <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion"
-                 onclick="deleteSesion()">
+    <div class="container" id="container">
+        <div id="mySidenav" class="sidenav">
+            <!-- Nav generado en js-->
         </div>
-    </header>
-    <nav id="navGeneral">
-        <!-- Nav generado en js-->
-    </nav>
-    <div class="divCentral">
-        <div class="divContenido">
-            <div class="panelActual" id="panelActual">
-                <div class="titulo-sin-linea">
-                    <img src="../imagenes/parcelas/IconoCampo-Black.png" alt="icono-parcelas"
-                         class="iconParcelasSelected">
-                    <p>Parcelas</p>
-                </div>
+        <header>
 
-                <section id="linea-titulo"></section>
+            <img onclick="openNav()" src="../imagenes/menu/iconMenu.png" alt="Menu" class="iconMenu">
+            <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
+            <div class="divUsuario">
+                <p id="textNombreUsuario">Nombre Usuario</p>
+
+                <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion" onclick="deleteSesion()">
             </div>
-            <p class="textSeleccionUsuario">Usuario:</p>
-            <div class="divSeleccionParcela">
-                <div class="divTextSeleccionParcela">
+        </header>
+        <nav id="navGeneral">
+            <!-- Nav generado en js-->
+        </nav>
+        <div class="divCentral">
+            <div class="divContenido">
+                <div class="panelActual" id="panelActual">
+                    <div class="titulo-sin-linea">
+                        <img src="../imagenes/parcelas/IconoCampo-Black.png" alt="icono-parcelas" class="iconParcelasSelected">
+                        <p>Parcelas</p>
+                    </div>
 
+                    <section id="linea-titulo"></section>
 
                 </div>
-                <section class="seleccion">
-                    <label><select id="selectUsurios" onchange="actualizarSelectParcelas(dibujarParcelas)"></select></label>
-                    <p class="textSeleccionParcela">Parcela:</p>
-                    <label><select id="selectParcelas" onchange="cambiarCentro()">
-                    </select></label>
-                </section>
 
-                <section class="no-selectores-header">
-                    <section><a href="graficasAdmin.html"><img src="../imagenes/parcelas/report.png"
-                                                               alt="Icono gráficas" class="enlace-graficas"></a>
+                <div class="divSeleccion">
+
+                    <section class="seleccion">
+                        <section class="seleccionUsuarios">
+                            <p class="textSeleccionUsuario">Usuario:</p>
+                            <label><select id="selectUsurios" onchange="actualizarSelectParcelas(dibujarParcelas)"></select></label>
+                        </section>
+                        <section class="seleccionParcela">
+                            <p class="textSeleccionParcela">Parcela:</p>
+                            <label><select id="selectParcelas" onchange="cambiarCentro()"></select></label>
+                        </section>
+                        <section>
+                            <a href="graficasAdmin.html">
+                                <p class="enlace-graficas">Ver gráficas</p>
+                            </a>
+                        </section>
                     </section>
-                </section>
-            </div>
-
-            <div class="divContenidoUser">
-                <div id="map">
 
                 </div>
+            </div>
+
+        </div>
+
+        <div class="divContenidoUser">
+            <div id="map">
 
             </div>
+
         </div>
     </div>
-</div>
-<script src="js/mapaParcelas.js"></script>
 
-<script src="js/usuarioLogin.js"></script>
 
-<script src="js/menuAdmin.js"></script>
-<script src="js/sideNav.js"></script>
+    <script src="js/mapaParcelas.js"></script>
 
-<script src="js/coordenadas.js"></script>
-<script src="js/parcelas_select.js"></script>
-<script src="js/usuarios_select.js"></script>
-<script src="js/sonda.js"></script>
+    <script src="js/usuarioLogin.js"></script>
 
-<script>
+    <script src="js/menuAdmin.js"></script>
+    <script src="js/sideNav.js"></script>
 
-    VistaMenu.setNav("navGeneral");
-    VistaMenu.crearNav();
-    VistaMenu.setSideNav("mySidenav");
-    VistaMenu.crearSideNav();
-    function iniciarCargaApp(){
-        ModeloCoordenadasParcelaSelect.cargar();
-        VistaUsuarioLogin.iniciar("textNombreUsuario");
-        //Primer callback: Una vez se haya cargado la informacion relativa al usurio (SESION)
-        //se hará un callback a la función para inicir el selector de usuarios
-        ControladorUsuarioLogin.iniciar(iniciarSelectUsuario);
-    }
+    <script src="js/coordenadas.js"></script>
+    <script src="js/parcelas_select.js"></script>
+    <script src="js/usuarios_select.js"></script>
+    <script src="js/sonda.js"></script>
 
-    function iniciarSelectUsuario(){
-        VistaSelectUsuarios.iniciar("selectUsurios");
-        //Segundo callback : Una vez se haya inciado el select de usuarios,
-        //se cargara la informacion de las parcelas (según el usuario seleccionado)
-        ControladorSelectUsuarios.iniciar(iniciarSelectParcelas);
-    }
-    function iniciarSelectParcelas(){
+    <script>
+        VistaMenu.setNav("navGeneral");
+        VistaMenu.crearNav();
+        VistaMenu.setSideNav("mySidenav");
+        VistaMenu.crearSideNav();
 
-        VistaParcelasSelect.iniciar("selectParcelas");
-        //Tercer callback: Un vez se hayan inciado la infomacion relativa a las parcelas
-        //se pintaran las gráficas de la parcela seleccionada
-        ControladorSelectParcelas.iniciar(iniciarSondas);
-    }
-    function iniciarSondas() {
-        //cargar el modelo de sondas
-        ModeloSonda.cargar(dibujarParcelas);
+        function iniciarCargaApp() {
+            ModeloCoordenadasParcelaSelect.cargar();
+            VistaUsuarioLogin.iniciar("textNombreUsuario");
+            //Primer callback: Una vez se haya cargado la informacion relativa al usurio (SESION)
+            //se hará un callback a la función para inicir el selector de usuarios
+            ControladorUsuarioLogin.iniciar(iniciarSelectUsuario);
+        }
 
-    }
+        function iniciarSelectUsuario() {
+            VistaSelectUsuarios.iniciar("selectUsurios");
+            //Segundo callback : Una vez se haya inciado el select de usuarios,
+            //se cargara la informacion de las parcelas (según el usuario seleccionado)
+            ControladorSelectUsuarios.iniciar(iniciarSelectParcelas);
+        }
 
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
-</body>
-</html>
+        function iniciarSelectParcelas() {
+
+            VistaParcelasSelect.iniciar("selectParcelas");
+            //Tercer callback: Un vez se hayan inciado la infomacion relativa a las parcelas
+            //se pintaran las gráficas de la parcela seleccionada
+            ControladorSelectParcelas.iniciar(iniciarSondas);
+        }
+
+        function iniciarSondas() {
+            //cargar el modelo de sondas
+            ModeloSonda.cargar(dibujarParcelas);
+
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+</body></html>

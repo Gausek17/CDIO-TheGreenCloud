@@ -7,10 +7,6 @@ body {
     margin: 0 auto;
 }
 
-#selectParcelas {
-    margin-top: 0px;
-}
-
 .logoGTI:hover {
     cursor: pointer;
 }
@@ -33,18 +29,15 @@ body {
 }
 
 .container {
-
     align-items: center;
     margin-right: 7.5rem;
     margin-left: 7.5rem;
     margin-bottom: 0rem;
-
 }
 
 header {
     display: flex;
     justify-content: space-between;
-
 }
 
 .divCentral {
@@ -54,7 +47,6 @@ header {
 }
 
 .divUsuario {
-
     display: flex;
     align-items: center;
 }
@@ -77,20 +69,6 @@ header {
     cursor: pointer;
     border: 0;
 }
-
-.enlace-graficas {
-    width: 50px;
-    border: 1px solid purple;
-    border-radius: 10px;
-    padding: 0.5rem;
-    margin-left: 3rem;
-    margin-top: 10px;
-}
-
-.enlace-graficas:hover {
-    background-color: lightgray;
-}
-
 
 .textAdmin {
     margin: 0;
@@ -139,7 +117,6 @@ header {
     position: absolute;
 }
 
-
 .delete {
     cursor: pointer;
     background-color: #800053;
@@ -161,16 +138,12 @@ header {
     padding: 6px;
     width: 80px;
     height: auto;
-
     margin: 0.5rem;
 }
-
-
 
 .divSeleccionParcela {
     display: flex;
     align-items: center;
-
 }
 
 .divContenido {
@@ -178,8 +151,6 @@ header {
 }
 
 .panelActual {
-
-
     display: flex;
     flex-direction: column;
 }
@@ -232,6 +203,31 @@ header {
 
 }
 
+.seleccion {
+    display: flex;
+    justify-content: center;
+}
+
+.seleccionUsuarios {
+    margin-right: 10px;
+}
+
+.seleccionParcela {
+    margin-right: 20px;
+}
+
+.enlace-graficas {
+    margin-top: 70px;
+}
+
+.enlace-graficasenUser {
+    margin-top: 70px;
+}
+
+#selectUsuarios {
+    padding: 20px 80px;
+}
+
 .divTextSeleccionParcela {
     margin-left: 40px;
     display: flex;
@@ -240,17 +236,10 @@ header {
 
 .textSeleccionUsuario {
     font-weight: bold;
-    padding: 5px;
-    margin-left: 2.5rem;
-    margin-bottom: 0px;
 }
 
 .textSeleccionParcela {
     font-weight: bold;
-    padding: 5px;
-    margin-left: 2.7rem;
-    margin-bottom: 0px;
-
 }
 
 .textSeleccionMediciones {
@@ -299,7 +288,8 @@ header {
         border: 2px solid black;
         border-radius: 15px;
     }
-    #b1{
+
+    #b1 {
         border: 2px solid black;
         border-radius: 15px;
     }
@@ -349,7 +339,8 @@ header {
 
     .seleccion {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        
     }
 
     .iconParcelasSelected {
@@ -374,23 +365,17 @@ header {
     .textSeleccionParcela {
         font-size: 15px;
     }
-
-    .enlace-graficas {
-        width: 40px;
-        margin-left: 10px;
-        margin-top: 10px;
-    }
-
-
-
 }
+
+
 
 @media only screen and (max-width: 450px) {
     #a2 {
         border: 2px solid black;
         border-radius: 15px;
     }
-    #b1{
+
+    #b1 {
         border: 2px solid black;
         border-radius: 15px;
     }
@@ -399,7 +384,17 @@ header {
         font-weight: bold;
         padding: 5px;
         margin-left: 3px;
+    }
 
+    .textSeleccionParcela {
+        font-weight: bold;
+        padding: 5px;
+        margin-left: 3px;
+    }
+
+    #selectParcelas {
+        margin-top: 8px;
+        font-size: 10px;
     }
 
     .divContenidoUser {
@@ -457,33 +452,22 @@ header {
         margin-bottom: 0px;
     }
 
-
-
     .seleccion {
         display: flex;
-        flex-direction: column;
-        align-content: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
         margin-top: 7px;
-        margin-left: 0px;
-    }
+        margin-left: 10px;
 
-    #parcela {
-        margin-top: 7px;
-        margin-left: 0px;
     }
 
     .enlace-graficas {
-        width: 30px;
-        margin-left: 15px;
+        margin-top: 10px;
+        margin-left: 120px;
     }
 
-    #selectParcelas {
-        margin-top: 0px;
-        margin-left: 2rem;
-    }
-
-    #selectUsurios {
-        margin-left: 2rem;
+    .enlace-graficasenUser {
+        margin-top: 65px;
     }
 
 }
