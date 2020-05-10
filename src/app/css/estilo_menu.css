@@ -7,11 +7,26 @@ nav{
     display: table-cell;
     */
     border-top-right-radius: 0px;
-    width: 100%px;
+    width: 100%;
     background-color:#009B94;
     justify-content: space-around;
     align-items: center;
 
+}
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li {
+    align-items: center;
+    padding: 0.25rem;
+    list-style: none;
+    width: 100%;
+    text-align: center;
 }
 ul{
     padding: 0;

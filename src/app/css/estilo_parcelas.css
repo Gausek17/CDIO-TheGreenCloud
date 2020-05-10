@@ -7,26 +7,12 @@ body {
     margin: 0 auto;
 }
 
+#selectParcelas {
+    margin-top: 0px;
+}
 
 .logoGTI:hover {
     cursor: pointer;
-}
-
-ul li {
-    align-items: center;
-    padding: 0.25rem;
-    list-style: none;
-    width: 100%;
-    text-align: center;
-}
-
-ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .cerrar_sesion {
@@ -47,15 +33,18 @@ ul li a {
 }
 
 .container {
+
     align-items: center;
     margin-right: 7.5rem;
     margin-left: 7.5rem;
     margin-bottom: 0rem;
+
 }
 
 header {
     display: flex;
     justify-content: space-between;
+
 }
 
 .divCentral {
@@ -64,40 +53,10 @@ header {
     border-radius: 15px;
 }
 
-.navUsuarios {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-}
+.divUsuario {
 
-.navUsuarios:hover {
-    background-color: #035752;
-
-}
-
-.navMediciones {
-    border: 2px solid black;
-}
-
-.navMediciones:hover {
-    background-color: #035752;
-}
-
-.navParcela {
-    border: 2px solid black;
-    background-color: #035752;
-}
-
-.navParcela:hover {
-    background-color: #035752;
-}
-
-.navNoticias {
-    border: 2px solid black;
-    border-left: none;
-}
-
-.navNoticias:hover {
-    background-color: #035752;
+    display: flex;
+    align-items: center;
 }
 
 .seleccion {
@@ -119,11 +78,19 @@ header {
     border: 0;
 }
 
-.no-selectores-header {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 60px;
+.enlace-graficas {
+    width: 50px;
+    border: 1px solid purple;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-left: 3rem;
+    margin-top: 10px;
 }
+
+.enlace-graficas:hover {
+    background-color: lightgray;
+}
+
 
 .textAdmin {
     margin: 0;
@@ -181,6 +148,7 @@ header {
     border: 0;
     font-weight: bold;
     padding: 1rem;
+
 }
 
 .button {
@@ -193,12 +161,16 @@ header {
     padding: 6px;
     width: 80px;
     height: auto;
+
     margin: 0.5rem;
 }
+
+
 
 .divSeleccionParcela {
     display: flex;
     align-items: center;
+
 }
 
 .divContenido {
@@ -206,6 +178,8 @@ header {
 }
 
 .panelActual {
+
+
     display: flex;
     flex-direction: column;
 }
@@ -226,10 +200,11 @@ header {
     margin-right: 3.5rem;
 }
 
-.listadoParcelas {
+.divContenidoUser {
     padding: 1.5rem;
     height: 580px;
     overflow: auto;
+
 }
 
 .navParcela {
@@ -254,27 +229,7 @@ header {
     height: inherit;
     border: solid 3px black;
     margin-right: 30px;
-}
 
-.seleccion{
-    display: flex;
-    justify-content: center;
-}
-
-.seleccionUsuarios{
-    margin-right: 10px;
-}
-
-.seleccionParcela{
-    margin-right: 20px;
-}
-
-.enlace-graficas{
-    margin-top: 70px;
-}
-
-#selectUsuarios{
-    padding: 20px 80px;
 }
 
 .divTextSeleccionParcela {
@@ -285,10 +240,17 @@ header {
 
 .textSeleccionUsuario {
     font-weight: bold;
+    padding: 5px;
+    margin-left: 2.5rem;
+    margin-bottom: 0px;
 }
 
 .textSeleccionParcela {
     font-weight: bold;
+    padding: 5px;
+    margin-left: 2.7rem;
+    margin-bottom: 0px;
+
 }
 
 .textSeleccionMediciones {
@@ -299,29 +261,29 @@ header {
 
 /*SCROL BARR*/
 
-.listadoParcelas::-webkit-scrollbar {
+.divContenidoUser::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
-.listadoParcelas::-webkit-scrollbar:vertical {
+.divContenidoUser::-webkit-scrollbar:vertical {
     width: 10px;
 }
 
-.listadoParcelas::-webkit-scrollbar-button:increment,
-.listadoParcelas::-webkit-scrollbar-button {
+.divContenidoUser::-webkit-scrollbar-button:increment,
+.divContenidoUser::-webkit-scrollbar-button {
     display: none;
 }
 
-.listadoParcelas::-webkit-scrollbar:horizontal {
+.divContenidoUser::-webkit-scrollbar:horizontal {
     height: 10px;
 }
 
-.listadoParcelas::-webkit-scrollbar-thumb {
+.divContenidoUser::-webkit-scrollbar-thumb {
     background-color: #800053;
     border-radius: 20px;
 }
 
-.listadoParcelas::-webkit-scrollbar-track {
+.divContenidoUser::-webkit-scrollbar-track {
     border-radius: 10px;
     box-shadow: inset 0 0 10px #797979;
 }
@@ -336,17 +298,14 @@ header {
     #a2 {
         border: 2px solid black;
         border-radius: 15px;
-        margin: 25px;
     }
-
-    #b1 {
+    #b1{
         border: 2px solid black;
         border-radius: 15px;
-        margin: 25px;
     }
 
 
-    .listadoParcelas {
+    .divContenidoUser {
         overflow: inherit;
     }
 
@@ -377,6 +336,7 @@ header {
         margin-bottom: 0px;
     }
 
+
     #map {
         width: inherit;
         height: 710px;
@@ -389,7 +349,7 @@ header {
 
     .seleccion {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .iconParcelasSelected {
@@ -403,6 +363,7 @@ header {
     #parcela {
         width: 150px;
         font-size: 10px;
+
     }
 
     #selectUsurios {
@@ -414,19 +375,24 @@ header {
         font-size: 15px;
     }
 
+    .enlace-graficas {
+        width: 40px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+
+
 }
 
 @media only screen and (max-width: 450px) {
     #a2 {
         border: 2px solid black;
         border-radius: 15px;
-        margin: 25px;
     }
-
-    #b1 {
+    #b1{
         border: 2px solid black;
         border-radius: 15px;
-        margin: 25px;
     }
 
     .textSeleccionMediciones {
@@ -436,7 +402,7 @@ header {
 
     }
 
-    .listadoParcelas {
+    .divContenidoUser {
         padding: 0.5rem;
         margin-bottom: 0px;
         height: 530px;
@@ -456,6 +422,7 @@ header {
         margin-left: 0;
         padding-left: 0.5rem;
     }
+
 
     header {
         margin-bottom: 0.5rem;
@@ -490,6 +457,8 @@ header {
         margin-bottom: 0px;
     }
 
+
+
     .seleccion {
         display: flex;
         flex-direction: column;
@@ -497,9 +466,24 @@ header {
         margin-top: 7px;
         margin-left: 0px;
     }
-    
-    .enlace-graficas{
-        margin-top: 10px;
+
+    #parcela {
+        margin-top: 7px;
+        margin-left: 0px;
+    }
+
+    .enlace-graficas {
+        width: 30px;
+        margin-left: 15px;
+    }
+
+    #selectParcelas {
+        margin-top: 0px;
+        margin-left: 2rem;
+    }
+
+    #selectUsurios {
+        margin-left: 2rem;
     }
 
 }
