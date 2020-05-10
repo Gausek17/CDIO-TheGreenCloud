@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ultimas Noticias</title>
+
+
+    
+    <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_noticias.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/estilo_gestionUsuarios.css">-->
+
+    <link rel="stylesheet" type="text/css" href="css/estilo_formalwindow.css">
+    <link rel="shortcut icon" type="image/ico" href="../imagenes/noticias/favicon.ico">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src="js/sesion_permisos.js"></script>
+
+
+</head>
+<body>
+
+
+<div class="container" id="container">
+    <div id="mySidenav" class="sidenav">
+        <!-- Nav generado en js-->
+    </div>
+    <header>
+
+        <img onclick="openNav()" src="../imagenes/menu/iconMenu.png" alt="Menu" class="iconMenu">
+        <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
+
+        <div class="divUsuario">
+            <p id="textNombreUsuario">Nombre Usuario</p>
+
+            <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion"
+                 onclick="deleteSesion()">
+        </div>
+    </header>
+    <nav id="navGeneral">
+            <!-- Nav generado en js-->
+        </nav>
+    <div class="divContenido">
+        <div class="panelActual" id="panelActual">
+            <div class="titulo-sin-linea">
+                <img src="../imagenes/noticias/newspaper.svg" alt="icono-periodico"
+                     class="icono-periodico">
+                <p>Últimas Noticias</p>
+            </div>
+
+            <section id="linea-titulo"></section>
+        </div>
+    </div>
+    <main class="main">
+    <article class="periodico">
+        <div class="infoSobreWidgetPeriodico">
+        <p class="infoPeriodicoTexto">Las noticias de esta semana las ofrece: </p>
+            <a href="https://www.eldiario.es/canariasahora/agricola/" id="enlaceAlPeriódico"> elDiario.es</a>
+        </div>
+        <iframe  class="widgetPeriodico" src="https://www.eldiario.es/canariasahora/agricola/" ></iframe>
+    </article>
+        <article class="containerWidgetInsta">
+            <h3 id="nuestrasUltimasPublicaciones">Nuestras Últimas Publicaciones</h3>
+            <!-- SnapWidget -->
+            <iframe src="https://snapwidget.com/embed/825057" class="instagramWidget" allowtransparency="true" frameborder="0" scrolling="no"
+                    style="border:none; overflow:hidden;  width:330px; height:566px"></iframe>
+        </article>
+    </main>
+    <div class="containerSecundario">
+    <div class="masInfo">
+        <h2 id="tituloMasInformación">Más Información-Nuestra Timeline</h2>
+    </div>
+
+            <a class="twitter-timeline" data-lang="es" data-width="600" data-height="800" data-theme="light" href="https://twitter.com/TheGreenCloud2?ref_src=twsrc%5Etfw">Tweets by TheGreenCloud2</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+    </div>
+
+</div>
+
+
+
+    <script src="js/usuarioLogin.js"></script>
+<script src="js/sideNav.js"></script>
+<script src="js/menuAdmin.js"></script>
+<script src="js/modalConfirm.js"></script>
+<script src="js/modalAsignarParcelas.js"></script>
+<script src="js/usuarios_div.js"></script>
+<script src="js/parcelas_div.js"></script>
+<script>
+    VistaUsuarioLogin.iniciar("textNombreUsuario");
+    ControladorUsuarioLogin.iniciar();
+
+    VistaDivUsuarios.iniciar("divContenidoUser");
+    ControladorDivUsuarios.iniciar();
+
+    VistaMenu.setNav("navGeneral");
+    VistaMenu.crearNav();
+    VistaMenu.setSideNav("mySidenav");
+    VistaMenu.crearSideNav();
+
+    ModeloParcelasAsignar.cargar();
+
+    document.getElementById("buscador").addEventListener('keyup', filtrar);
+</script>
+
+</body>
+</html>

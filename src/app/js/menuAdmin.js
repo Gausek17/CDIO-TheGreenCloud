@@ -16,7 +16,7 @@ let VistaMenu = {
                   <a href="graficasAdmin.html" class="itemNav"><img src="../imagenes/menu/sensor.png" alt="Imagen Sensor" class="iconMediciones"><span class="textNav">Mediciones</span></a>
         </li>
         <li class="navNoticias">
-                  <a href="graficasAdmin.html" class="itemNav"><img src="../imagenes/noticias/periodico-blanco.png" alt="Imagen Sensor" class="iconNoticias"><span class="textNav">Noticias</span></a>
+                  <a href="noticias.html" class="itemNav"><img src="../imagenes/noticias/periodico-blanco.png" alt="Imagen Sensor" class="iconNoticias"><span class="textNav">Noticias</span></a>
         </li>
     </ul>`;
     },
@@ -29,7 +29,7 @@ let VistaMenu = {
             <a id="a2" href="parcelasAdmin.html" class="itemMenu"><img src="../imagenes/menu/IconoCampo-White.png" alt="imagenCampo" class="iconParcelas"><span class="menuText">Parcelas</span></a>
             <a id="a1" href="index.html" class="itemMenu"><img src="../imagenes/menu/groupIcon-White.png" alt="Imagen Usuarios" class="iconGestionUsuarios" ><span class="menuText">Gestión Usuarios</span></a>
             <a id="a3" href="graficasAdmin.html" class="itemMenu"><img src="../imagenes/menu/sensor.png" alt="Imagen Sensor" class="iconMediciones"><span class="menuText">Mediciones</span></a>
-            <a id="a4" href="#" class="itemMenu"><img src="../imagenes/noticias/periodico-blanco.png" alt="Imagen Noticias" class="iconNoticias"><span class="menuText">Noticias</span></a>
+            <a id="a4" href="noticias.html" class="itemMenu"><img src="../imagenes/noticias/periodico-blanco.png" alt="Imagen Noticias" class="iconNoticias"><span class="menuText">Noticias</span></a>
 `;
     }
 };
