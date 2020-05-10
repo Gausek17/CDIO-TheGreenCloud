@@ -1,37 +1,21 @@
-let VistaDivParcelas = {
-    divParcelas: {},
-    iniciar: function (divID) {
-        this.divParcelas = document.getElementById(divID);
+let ModeloParcelasAsignar = {
+    datos : [],
+    permisosUsuario:[],
+    cargar : function (callback) {
+        fetch('../api/v1.0/parcelasUnicas').then(function (respuesta) {
+            return respuesta.json();
+        }).then((datosJson) =>{
+            this.datos = datosJson;
+        });
+        fetch('../api/v1.0/permisosUsuario').then(function (respuesta) {
+            return respuesta.json();
+        }).then((datosJson) =>{
+            this.permisosUsuario = datosJson;
+        });
     },
-    representarParcelas: function (datos) {
-        var stringParcelas = '';
-        for (var i = datos.length - 1; i >= 0; i--) {
 
-            stringParcelas += `
-                <div class="divParcelaAsignada">
-                    <span>${datos[i].nombre}</span>
-                    <img src="../imagenes/admin/iconDelete-white.png" alt="Elimina usuario" class="iconDesasignar"  id="iconDelete${datos[i].id_parcela}" onclick="desasignarParcela(${datos[i].id_parcela})">
-                </div>`;
-        }
-
-        this.divParcelas.innerHTML = stringParcelas;
-        for (var j = 0; j < datos.length; j++) {
-            document.getElementById("textCorreo" + datos[j].id_usuario).disabled = true;
-            document.getElementById("textNombre" + datos[j].id_usuario).disabled = true;
-        }
-    }
+    controlador : {}
 };
-let ControladorDivParcelas = {
-    vista: VistaDivParcelas,
-    representarUsurios: function () {
-        if (this.vista.divParcelas != null) {
-            this.vista.representarParcelas(ModeloParcelaSelect.datos);
-        }
-
-    }
-};
-
-
 function desasignarParcela(id) {
 
 

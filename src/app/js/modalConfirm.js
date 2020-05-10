@@ -54,7 +54,7 @@ function optionConfirm(id) {
 
 }
 
-//Modal que cuando lo cerreamos vuelve al login
+//Modal que cuando lo cerreamos vuelve al login----------------------------
 function modalAvisoBackToLogin(texto,header) {
     let stringPopUp = `
     <div class="w3-modal-content w3-card-4">

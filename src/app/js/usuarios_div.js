@@ -34,7 +34,7 @@ let VistaDivUsuarios = {
                     
                     <button alt="Aceptar" class="iconAceptarCancel" id="iconAceptar${datos[i].id_usuario}" onclick="aceptar(${datos[i].id_usuario})">Aceptar cambios</button>
                     <button alt="Cancelar" class="iconAceptarCancel"  id="iconCancel${datos[i].id_usuario}" onclick="cancelar(${datos[i].id_usuario})">Cancelar cambios</button>
-                    <img src="../imagenes/menu/IconoCampo-White.png" alt="Editar parcelas" class="iconAsign" id="iconSelectParcelas${datos[i].id_usuario}" onclick="modalEdit(${datos[i].id_usuario})">
+                    <img src="../imagenes/menu/IconoCampo-White.png" alt="Editar parcelas" class="iconAsign" id="iconSelectParcelas${datos[i].id_usuario}" onclick="modalAsignarParcelas(${datos[i].id_usuario})">
                     <img src="../imagenes/admin/iconDelete-white.png" alt="Elimina usuario" class="iconEditUser1"  id="iconDelete${datos[i].id_usuario}" onclick="modalConfirmar(${datos[i].id_usuario})">
                     
                 </div>`;
@@ -200,7 +200,7 @@ function filtrar() {
                     <button alt = "Editar usuario" class="iconEditUser1" id="iconEditar${datos[i].id_usuario}" onclick="editUser(${datos[i].id_usuario})">Editar Usuario </button>
                     
                     <button alt="Aceptar" class="iconAceptarCancel" id="iconAceptar${datos[i].id_usuario}" onclick="aceptar(${datos[i].id_usuario})">Aceptar cambios</button>
-                    <button alt="Editar Parcelas" class="iconEditParcelas"  id="iconParcelas${datos[i].id_usuario}" onclick="modalEdit(${datos[i].id_usuario})"> </button>
+                    <button alt="Editar Parcelas" class="iconEditParcelas"  id="iconParcelas${datos[i].id_usuario}" onclick="modalAsignarParcelas(${datos[i].id_usuario})"> </button>
                     <button alt="Elimina usuario" class="iconEditUser1"  id="iconDelete${datos[i].id_usuario}" onclick="modalConfirmar(${datos[i].id_usuario})">Eliminar Usuario </button>
                     <button alt="Cancelar" class="iconAceptarCancel"  id="iconCancel${datos[i].id_usuario}" onclick="cancelar(${datos[i].id_usuario})">Cancelar cambios</button>
                 </div>`;
@@ -215,4 +215,17 @@ function filtrar() {
         document.getElementById("textCorreo" + listaTmp[j].id_usuario).disabled = true;
         document.getElementById("textNombre" + listaTmp[j].id_usuario).disabled = true;
     }
+}
+
+function getUsuario(id) {
+    let data = ModeloDivUsuarios.datosUsuarios;
+    let user;
+
+    for (let i= 0; i<data.length;i++){
+        if (data[i].id_usuario == id){
+            user = data[i];
+        }
+    }
+
+    return user;
 }

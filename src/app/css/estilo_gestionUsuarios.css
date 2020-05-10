@@ -11,13 +11,11 @@
 }
 .form-control-parcelas{
     border-color: #009B94;
-    margin-top: 3rem;
     width: 250px;
     height: 35px;
     border-radius: 5px;
     font-size: 15px;
     padding: 0.5rem;
-    margin-left: 5rem;
 }
 .contenidoPopupParcelas{
     display: flex;
@@ -34,29 +32,31 @@
     height: 30px;
     width: 30px;
     padding: 0.4rem;
-    margin-left: 19rem;
 }
 .iconAsignar{
     height: 30px;
     width: 30px;
-    margin-left: 19rem;
     padding: 0.4rem;
 }
 .divParcelaAsignada{
     background-color: #63D4B1;
-    margin-right: 7rem;
-    margin-left: 7rem;
     border: 1px solid #737373;
     margin-top: 1rem;
     color: white;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .divParcelaDesasignada{
     background-color: #75A698;
-    margin-right: 7rem;
-    margin-left: 7rem;
     border: 1px solid #737373;
     margin-top: 1rem;
     color: white;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .headerParcelas{
     background-color:#009B94;
@@ -66,10 +66,19 @@
 
 }
 .listadoParcelas{
-    margin-left: 15px;
     font-weight: bold;
-
+    height: 150px;
+    overflow: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.containerListadoParcelas{
+    display: flex;
+    justify-content: center;
+}
+
 .iconLupa{
     width: 30px;
     height: 30px;
@@ -96,8 +105,12 @@
 
 }
 .menuParcelas{
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .listadoParcelas::-webkit-scrollbar-thumb {
@@ -123,7 +136,6 @@
     font-weight: bold;
 
     border: 2px solid #009B94;
-    margin-left: 15rem;
     cursor: pointer;
     width: 110px;
     font-weight: bold;
@@ -143,7 +155,7 @@
     background-color: #009B94;
     width: inherit;
     height: inherit;
-    border: 0px;
+    border: 0;
     cursor: pointer;
     font-weight: bold;
 
@@ -163,11 +175,9 @@
     font-weight: bold;
     border-radius: 10px;
     border: 2px solid #009B94;
-    margin-left: 15rem;
     cursor: pointer;
     width: 110px;
     height: 30px;
-    margin-top:3rem;
 }
 .desplegarParcelas:hover{
     color: white ;
@@ -331,7 +341,7 @@ header{
     padding-right: 1.5rem;
     padding-top: 0.25rem;
 }
-.listadoParcelas{
+.divContenidoUser{
     padding: 1.5rem;
     height: 270px;
     overflow: auto;
@@ -478,7 +488,7 @@ header{
 
 
 
-/*SCROL BARR*/
+/*SCROL BARR listado de usuarios*/
 
 .divContenidoUser::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -556,7 +566,7 @@ header{
     border-radius: 15px;
         margin: 25px;
 }
-    .listadoParcelas{
+    .divContenidoUser{
         overflow: inherit;
     }
     .divPanelActual{
@@ -639,7 +649,7 @@ header{
         height: 40px;
     }
 
-    .listadoParcelas{
+    .divContenidoUser{
         padding: 0;
     }
     .iconUseer{

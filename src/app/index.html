@@ -90,7 +90,7 @@
                 </form>
             </navbar>
             <!-- Finaliza buscador -->
-            <div class="listadoParcelas" id="divContenidoUser">
+            <div class="divContenidoUser" id="divContenidoUser">
                 <!-- Listado de Usuarios-->
             </div>
         </div>
@@ -116,7 +116,7 @@
 <div id="divPopup2" class="PopupParcelas"></div>
 
 <div id="divPopupParcelas" class="w3-modal w3-animate-opacity">
-    <div class="w3-modal-content w3-card"-4">
+    <div class="w3-modal-content w3-card">
         <header class="w3-container w3-teal">
         <span onclick="document.getElementById('divPopupParcelas').style.display='none'"
               class="w3-button w3-large w3-display-topright">&times;</span>
@@ -133,8 +133,9 @@
 <script src="js/sideNav.js"></script>
 <script src="js/menuAdmin.js"></script>
 <script src="js/modalConfirm.js"></script>
-<script src="js/modalEdit.js"></script>
+<script src="js/modalAsignarParcelas.js"></script>
 <script src="js/usuarios_div.js"></script>
+<script src="js/parcelas_div.js"></script>
 <script>
     VistaUsuarioLogin.iniciar("textNombreUsuario");
     ControladorUsuarioLogin.iniciar();
@@ -146,6 +147,8 @@
     VistaMenu.crearNav();
     VistaMenu.setSideNav("mySidenav");
     VistaMenu.crearSideNav();
+
+    ModeloParcelasAsignar.cargar();
 
     document.getElementById("buscador").addEventListener('keyup', filtrar);
 </script>
