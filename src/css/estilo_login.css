@@ -1,3 +1,10 @@
+:root{
+    --principal: #009B94; /* color principal */
+    --secundario: #035752; /* para el hover */
+    --fondo: #D8E6F4; /* color para los fondos de las páginas */
+    --letras: #005752; /* color para resaltar las letras */
+}
+
 *{
     font-family: "Trebuchet MS";
 }
@@ -45,7 +52,7 @@ body{
 
 
 .botonIniciar{
-    background-color: #800053;
+    background-color: var(--principal);
     border-radius: 10px;
     color: white;
     border: none;
@@ -56,6 +63,7 @@ body{
 
 .botonIniciar:hover{
     cursor: pointer;
+    background-color: var(--secundario);
 }
 #formLogin{
     display: flex;
