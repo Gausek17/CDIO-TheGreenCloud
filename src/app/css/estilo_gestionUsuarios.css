@@ -28,6 +28,7 @@
 /*Parcelas*/
 .gestionParcelas{
     color: white;
+    text-align: center;
 }
 .iconDesasignar, .iconAsignar{
     height: 30px;
@@ -74,13 +75,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-right: 1rem;
 }
 .containerListadoParcelas{
     display: flex;
     justify-content: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    margin-right: 1rem;
+   
 }
 
 .iconLupa{
@@ -130,6 +132,19 @@
 }
 .nameParcela{
     margin-left: 15px;
+}
+.buttonParcelasNoAsignadas{
+    color: white;
+    background-color: #009B94;
+    width: inherit;
+    height: inherit;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+.buttonParcelasNoAsignadas:hover{
+    color: #009B94;
+    background-color: white;
 }
 
 .filtrosParcelas{
@@ -181,7 +196,7 @@
     border: 2px solid #009B94;
     cursor: pointer;
     width: 110px;
-    height: 30px;
+    height: 40px;
 }
 .desplegarParcelas:hover{
     color: white ;
@@ -689,7 +704,7 @@ header{
 
     }
     .containerListadoParcelas{
-        
+        margin-top: 0.5rem;
     }
 
 
