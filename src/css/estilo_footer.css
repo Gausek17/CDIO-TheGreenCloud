@@ -1,3 +1,9 @@
+:root{
+    --principal: #009B94; /* color principal */
+    --secundario: #035752; /* para el hover */
+    --fondo: #D8E6F4; /* color para los fondos de las páginas */
+    --letras: #005752; /* color para resaltar las letras */
+}
 .footer-distributed {
     background-color: #2c292f;
     box-sizing: border-box;
@@ -27,7 +33,7 @@
 }
 
 .footer-distributed h3 span {
-    color: #d080d0;
+    color: var(--principal);
 }
 
 /*------------------- Footer links ------------*/
@@ -174,7 +180,7 @@
 
 
     .footer-distributed h3 span {
-        color: #d080d0;
+        color: var(--principal);
     }
 
     /*--------------- Footer links ----------------*/
@@ -241,7 +247,7 @@
     }
 
     .footer-distributed .footer-center p a {
-        color: #a082a0;
+        color: white;
         text-decoration: none;
     }
 
