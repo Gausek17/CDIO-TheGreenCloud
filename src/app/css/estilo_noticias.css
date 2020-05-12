@@ -174,7 +174,7 @@ main{
 
     flex: 1;
     margin-right:25px;
-    width: ;
+
     height: 600px;
     width: 80%;
 }
@@ -303,6 +303,9 @@ main{
     }
     .titulo-sin-linea p {
         font-size: 25px;
+    }
+    .periodico{
+        width: 100% ;
     }
 }
 
