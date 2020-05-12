@@ -80,6 +80,7 @@
     justify-content: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
 .iconLupa{
@@ -600,12 +601,34 @@ header{
     border-radius: 15px;
         margin: 25px;
 }
+    .divParcelaAsignada{
+        width: 250px;
+    }
+    .divParcelaDesasignada{
+        width: 250px;
+    }
+    .gestionParcelas{
+        font-size: 1rem;
+    }
+   
     .iconUserPerson{
 
         width:60px ;
         height: 60px;
-
-
+     }
+    .form-control-parcelas{
+        width: 120px;
+    }
+    .desplegarParcelas{
+        
+    }
+    .menuParcelas{
+        display: flex;
+        align-content: space-around;
+        padding-top: 0;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        
     }
     
     .titulo-admin{
@@ -638,6 +661,7 @@ header{
 
     .divContenidoUser{
         padding: 0;
+        margin-top: 1rem;
     }
     .iconUseer{
         width: 65px;
@@ -662,6 +686,9 @@ header{
         display: flex;
         align-items: center;
 
+    }
+    .containerListadoParcelas{
+        
     }
 
 
