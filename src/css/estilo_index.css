@@ -1,21 +1,26 @@
-:root{
-    --principal: #009B94; /* color principal */
-    --secundario: #035752; /* para el hover */
-    --fondo: #D8E6F4; /* color para los fondos de las páginas */
-    --letras: #005752; /* color para resaltar las letras */
+:root {
+    --principal: #009B94;
+    /* color principal */
+    --secundario: #035752;
+    /* para el hover */
+    --fondo: #D8E6F4;
+    /* color para los fondos de las páginas */
+    --letras: #005752;
+    /* color para resaltar las letras */
 }
 
 * {
     font-family: "Trebuchet MS"
 }
+
 body {
     margin: 0 7.5rem 0 7.5rem;
 }
 
-h3{
+h3 {
     font-weight: bold;
     font-size: 30px;
-    
+
 }
 
 #miBoton {
@@ -35,14 +40,14 @@ h3{
 }
 
 .header {
-    
+
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
 .boton {
-    float: right;  
+    float: right;
 }
 
 
@@ -122,9 +127,8 @@ h3{
 .car1 {
     background-color: var(--fondo);
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding: 20px;
-    margin-left: 60px;
 }
 
 #trigo {
@@ -134,21 +138,22 @@ h3{
 .car2 {
     background-color: var(--fondo);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     padding: 20px;
-    margin-right: 60px;
+    margin-right: 80px;
 }
 
 #sensor {
     width: 200px;
+    margin-left: 250px;
+    margin-right: 200px;
 }
 
 .car3 {
     background-color: var(--fondo);
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding: 20px;
-    margin-left: 60px;
 }
 
 #ipad {
@@ -281,7 +286,10 @@ a.telefono {
     }
 
     #sensor {
-        width: 120px
+        width: 120px;
+        margin-left: 150px;
+        margin-right: 100px;
+
     }
 
     #ipad {
@@ -297,9 +305,11 @@ a.telefono {
         margin-left: 0;
         padding: 0;
     }
-    .car2{
+
+    .car2 {
         padding: 0;
     }
+
     ul li {
         font-size: 20px;
         padding: 1rem;
@@ -307,14 +317,14 @@ a.telefono {
 }
 
 @media(max-width:400px) {
-    .descripcion-caracteristica{
+    .descripcion-caracteristica {
         width: 60%;
     }
 
-    .morado{
+    .morado {
         padding: 0.5rem;
     }
-    
+
     .modernizacion {
         font-size: 40px;
         width: 80%;
@@ -333,23 +343,30 @@ a.telefono {
 
     #sensor {
         width: 80px;
+        margin: 0px;
     }
-    .car1{
+
+    .car1 {
         margin-bottom: 3rem;
     }
-    .car1 .descripcion-caracteristica{
+
+    .car1 .descripcion-caracteristica {
         margin: 0 1rem 0 0;
     }
+
     .car2 {
         margin: 0 0 3rem 0;
     }
-    .car2 .descripcion-caracteristica{
+
+    .car2 .descripcion-caracteristica {
         margin: 0 0 0 1rem;
     }
-    .car3{
+
+    .car3 {
         margin-bottom: 3rem;
     }
-    .car3 .descripcion-caracteristica{
+
+    .car3 .descripcion-caracteristica {
         margin: 0 1rem 0 0;
     }
 }
