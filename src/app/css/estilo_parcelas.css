@@ -1,3 +1,7 @@
+:root{
+    --hover: #035752; /* hover del menú */
+}
+
 * {
     font-family: "Trebuchet MS";
 }
@@ -179,20 +183,40 @@ header {
 }
 
 .navParcela {
-    background-color: #035752;
+    background-color: var(--hover);
+}
+.navUsuarios{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
-.navUsuarios {
-    border-right: 2px solid black;
-    border-left: 2px solid black;
+.navUsuarios:hover{
+    background-color:var(--hover);
+}
+.navMediciones{
+    border: 2px solid black;
 }
 
-.navUsuarios:hover {
-    background-color: #035752;
+.navMediciones:hover{
+    background-color: var(--hover);
+}
+.navParcela{
+    border: 2px solid ;
+}
+.navParcela:hover{
+    background-color: var(--hover);
+}
+.navNoticias {
+    border: 2px solid black;
+    border-left: none;
+}
+
+.navNoticias:hover {
+    background-color: var(--hover);
 }
 
 .navMediciones:hover {
-    background-color: #035752;
+    background-color: var(--hover);
 }
 
 #map {
@@ -287,11 +311,13 @@ header {
     #a2 {
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
     #b1 {
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
 
@@ -373,11 +399,13 @@ header {
     #a2 {
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
     #b1 {
         border: 2px solid black;
         border-radius: 15px;
+        margin: 25px;
     }
 
     .textSeleccionMediciones {

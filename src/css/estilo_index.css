@@ -1,8 +1,26 @@
+:root {
+    --principal: #009B94;
+    /* color principal */
+    --secundario: #035752;
+    /* para el hover */
+    --fondo: #D8E6F4;
+    /* color para los fondos de las páginas */
+    --letras: #005752;
+    /* color para resaltar las letras */
+}
+
 * {
     font-family: "Trebuchet MS"
 }
+
 body {
     margin: 0 7.5rem 0 7.5rem;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 30px;
+
 }
 
 #miBoton {
@@ -22,14 +40,14 @@ body {
 }
 
 .header {
-    
+
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
 .boton {
-    float: right;  
+    float: right;
 }
 
 
@@ -47,8 +65,10 @@ body {
 .modernizacion {
     font-size: 60px;
     text-align: center;
-    -webkit-text-stroke: 1px black;
+    border: none;
     color: white;
+    width: 50%;
+    margin-top: 100px;
 }
 
 .contactanos {
@@ -57,9 +77,9 @@ body {
     padding-right: 50px;
     margin: 50px auto;
     border-radius: 20px;
-    border: 0px;
-    background-color: #763c76;
-    font-weight: 700;
+    border: 1px solid black;
+    background-color: var(--principal);
+    font-weight: 600;
     font-size: 20px;
     margin-bottom: 60px;
     cursor: pointer;
@@ -67,9 +87,9 @@ body {
 }
 
 .contactanos:hover {
-    background-color: blueviolet;
     color: white;
-    border: 1px solid blueviolet;
+    background-color: var(--secundario);
+    border: 1px solid black;
 }
 
 #flecha {
@@ -77,8 +97,8 @@ body {
     height: 60px
 }
 
-.morado {
-    background-color: #dacbe8;
+.intro {
+    background-color: var(--fondo);
     margin: 0px auto;
     border: 1px solid black;
 }
@@ -89,8 +109,8 @@ body {
     color: black;
 }
 
-.palabras-moradas {
-    color: purple;
+.palabras-verdes {
+    color: var(--letras);
 }
 
 .titulo2 {
@@ -105,11 +125,10 @@ body {
 }
 
 .car1 {
-    background-color: #dacbe8;
+    background-color: var(--fondo);
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding: 20px;
-    margin-left: 60px;
 }
 
 #trigo {
@@ -117,23 +136,24 @@ body {
 }
 
 .car2 {
-    background-color: #dacbe8;
+    background-color: var(--fondo);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     padding: 20px;
-    margin-right: 60px;
+    margin-right: 80px;
 }
 
 #sensor {
     width: 200px;
+    margin-left: 250px;
+    margin-right: 200px;
 }
 
 .car3 {
-    background-color: #dacbe8;
+    background-color: var(--fondo);
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding: 20px;
-    margin-left: 60px;
 }
 
 #ipad {
@@ -143,8 +163,9 @@ body {
 .descripcion-caracteristica {
     padding: 0px;
     margin-left: 40px;
-    margin-right: 40px;
+    margin-right: 4%;
     font-size: 40px;
+    width: 33%;
 }
 
 
@@ -163,10 +184,11 @@ ul li {
     margin-top: 100px;
     flex-direction: column;
     align-items: center;
+    font-weight: bold;
 }
 
-.palabras_moradas {
-    color: purple;
+.palabras-verdes {
+    color: var(--letras);
 }
 
 .duda {
@@ -239,6 +261,7 @@ a.telefono {
 
     .modernizacion {
         font-size: 50px;
+        width: 80%;
     }
 
     #flecha {
@@ -251,6 +274,7 @@ a.telefono {
 
     .caracteristicas {
         align-items: center;
+        padding: 20px;
     }
 
     .descripcion-caracteristica {
@@ -262,7 +286,10 @@ a.telefono {
     }
 
     #sensor {
-        width: 120px
+        width: 120px;
+        margin-left: 150px;
+        margin-right: 100px;
+
     }
 
     #ipad {
@@ -278,9 +305,11 @@ a.telefono {
         margin-left: 0;
         padding: 0;
     }
-    .car2{
+
+    .car2 {
         padding: 0;
     }
+
     ul li {
         font-size: 20px;
         padding: 1rem;
@@ -288,13 +317,17 @@ a.telefono {
 }
 
 @media(max-width:400px) {
+    .descripcion-caracteristica {
+        width: 60%;
+    }
 
-    .morado{
+    .morado {
         padding: 0.5rem;
     }
-    
+
     .modernizacion {
         font-size: 40px;
+        width: 80%;
     }
 
     .contactanos {
@@ -310,23 +343,30 @@ a.telefono {
 
     #sensor {
         width: 80px;
+        margin: 0px;
     }
-    .car1{
+
+    .car1 {
         margin-bottom: 3rem;
     }
-    .car1 .descripcion-caracteristica{
+
+    .car1 .descripcion-caracteristica {
         margin: 0 1rem 0 0;
     }
+
     .car2 {
         margin: 0 0 3rem 0;
     }
-    .car2 .descripcion-caracteristica{
+
+    .car2 .descripcion-caracteristica {
         margin: 0 0 0 1rem;
     }
-    .car3{
+
+    .car3 {
         margin-bottom: 3rem;
     }
-    .car3 .descripcion-caracteristica{
+
+    .car3 .descripcion-caracteristica {
         margin: 0 1rem 0 0;
     }
 }

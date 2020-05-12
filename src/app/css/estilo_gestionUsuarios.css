@@ -21,23 +21,25 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 
 }
 
 /*Parcelas*/
 .gestionParcelas{
     color: white;
+    text-align: center;
 }
-.iconDesasignar{
+.iconDesasignar, .iconAsignar{
     height: 30px;
     width: 30px;
     padding: 0.4rem;
 }
-.iconAsignar{
-    height: 30px;
-    width: 30px;
-    padding: 0.4rem;
+.iconDesasignar:hover, .iconAsignar:hover{
+    cursor: pointer;
 }
+
+
 .divParcelaAsignada{
     background-color: #63D4B1;
     border: 1px solid #737373;
@@ -73,10 +75,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-right: 1rem;
 }
 .containerListadoParcelas{
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+   
 }
 
 .iconLupa{
@@ -126,6 +132,19 @@
 }
 .nameParcela{
     margin-left: 15px;
+}
+.buttonParcelasNoAsignadas{
+    color: white;
+    background-color: #009B94;
+    width: inherit;
+    height: inherit;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+.buttonParcelasNoAsignadas:hover{
+    color: #009B94;
+    background-color: white;
 }
 
 .filtrosParcelas{
@@ -177,7 +196,7 @@
     border: 2px solid #009B94;
     cursor: pointer;
     width: 110px;
-    height: 30px;
+    height: 40px;
 }
 .desplegarParcelas:hover{
     color: white ;
@@ -240,6 +259,7 @@ body{
     cursor: pointer;
 }
 
+
 .titulo-admin{
     color: gray;
     height: 50px;
@@ -273,7 +293,7 @@ body{
 }
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
 }
@@ -597,12 +617,34 @@ header{
     border-radius: 15px;
         margin: 25px;
 }
+    .divParcelaAsignada{
+        width: 250px;
+    }
+    .divParcelaDesasignada{
+        width: 250px;
+    }
+    .gestionParcelas{
+        font-size: 1rem;
+    }
+   
     .iconUserPerson{
 
         width:60px ;
         height: 60px;
-
-
+     }
+    .form-control-parcelas{
+        width: 120px;
+    }
+    .desplegarParcelas{
+        
+    }
+    .menuParcelas{
+        display: flex;
+        align-content: space-around;
+        padding-top: 0;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        
     }
     
     .titulo-admin{
@@ -635,6 +677,7 @@ header{
 
     .divContenidoUser{
         padding: 0;
+        margin-top: 1rem;
     }
     .iconUseer{
         width: 65px;
@@ -659,6 +702,9 @@ header{
         display: flex;
         align-items: center;
 
+    }
+    .containerListadoParcelas{
+        margin-top: 0.5rem;
     }
 
 
