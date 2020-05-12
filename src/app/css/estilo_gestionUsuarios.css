@@ -62,6 +62,8 @@
 }
 .headerParcelas{
     background-color:#009B94;
+    display: flex;
+    justify-content: center;
 }
 .buscadorParcela{
     border: 2px solid #009B94;
