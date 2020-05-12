@@ -29,16 +29,16 @@
 .gestionParcelas{
     color: white;
 }
-.iconDesasignar{
+.iconDesasignar, .iconAsignar{
     height: 30px;
     width: 30px;
     padding: 0.4rem;
 }
-.iconAsignar{
-    height: 30px;
-    width: 30px;
-    padding: 0.4rem;
+.iconDesasignar:hover, .iconAsignar:hover{
+    cursor: pointer;
 }
+
+
 .divParcelaAsignada{
     background-color: #63D4B1;
     border: 1px solid #737373;
@@ -244,6 +244,7 @@ body{
     cursor: pointer;
 }
 
+
 .titulo-admin{
     color: gray;
     height: 50px;
@@ -277,7 +278,7 @@ body{
 }
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
 }
