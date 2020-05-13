@@ -1,3 +1,14 @@
+:root {
+    --principal: #009B94;
+    /* color principal */
+    --secundario: #035752;
+    /* para el hover */
+    --fondo: #D8E6F4;
+    /* color para los fondos de las páginas */
+    --letras: #005752;
+    /* color para resaltar las letras */
+}
+
 * {
     font-family: "Trebuchet MS";
 }
@@ -15,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #F0F8FF;
+    background-color: var(--fondo);
 }
 
 .textoConsulta{
@@ -80,7 +91,7 @@ body {
 .input,
 .btn_submit,
 .btn_reset {
-    background-color: #009B94;
+    background-color: var(--principal);
     border: 0;
     color: white;
     padding: 16px 32px;
@@ -93,7 +104,7 @@ body {
 }
 
 .buttonEnviar{
-    background-color: #009B94;
+    background-color: var(--principal);
     border: 0;
     color: white;
     padding: 16px 32px;
@@ -106,13 +117,13 @@ body {
 }
 
 .btn_submit:hover {
-    background-color: #81D3F8;
-    color: black;
+    background-color: var(--secundario);
+    color: white;
 }
 
 .btn_reset:hover {
-    background-color: #81D3F8;
-    color: black;
+    background-color: var(--secundario);
+    color: white;
 }
 
 

@@ -1,6 +1,17 @@
+:root {
+    --principal: #009B94;
+    /* color principal */
+    --secundario: #035752;
+    /* para el hover */
+    --fondo: #D8E6F4;
+    /* color para los fondos de las páginas */
+    --letras: #005752;
+    /* color para resaltar las letras */
+}
+
 /* Navbar */
 .form-control{
-    border-color: #009B94;
+    border-color: var(--principal);
     margin-left: 25px;
     width: 250px;
     height: 35px;
@@ -10,7 +21,7 @@
     margin-top: 25px;
 }
 .form-control-parcelas{
-    border-color: #009B94;
+    border-color: var(--principal);
     width: 250px;
     height: 35px;
     border-radius: 5px;
@@ -25,13 +36,15 @@
 }
 
 
-
+/* ---------Fuente común----*/
 *{
     font-family: "Trebuchet MS";
 }
 body{
     margin: 0 auto;
 }
+
+/*---- Header -------*/
 #textNombreUsuario{
     padding: 5px;
 
@@ -106,6 +119,7 @@ header{
 
 }
 
+/*--------Menú------*/
 .divUsuario{
 
     display: flex;
@@ -155,6 +169,8 @@ header{
     margin-bottom: 1rem;
 }
 
+
+/*------Pop up---------*/
 .popupParcelas{
     justify-content: center;
 }
@@ -165,7 +181,8 @@ header{
     width: 100px;
     margin-right: 10px;
 }
-/*seccion que contiene el periodico y intagram*/
+
+/*------Seccion que contiene el periodico e instagram-------*/
 main{
     margin-top: 30px;
     display: flex;
@@ -250,6 +267,8 @@ main{
 
 
 /*------RESPONSIVE----------*/
+
+/*----------Ipad---------*/
 @media only screen and (max-width:900px){
     #a4{
         border: 2px solid black;
@@ -296,7 +315,7 @@ main{
 
 }
 
-
+/*---------Iphone----------*/
 @media only screen and (max-width: 450px) {
     #a4 {
         border: 2px solid black;

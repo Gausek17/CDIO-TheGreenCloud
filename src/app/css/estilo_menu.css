@@ -1,3 +1,14 @@
+:root {
+    --principal: #009B94;
+    /* color principal */
+    --secundario: #035752;
+    /* para el hover */
+    --fondo: #D8E6F4;
+    /* color para los fondos de las páginas */
+    --letras: #005752;
+    /* color para resaltar las letras */
+}
+
 nav{
     /*
     border-radius: 15px;
@@ -8,7 +19,7 @@ nav{
     */
     border-top-right-radius: 0px;
     width: 100%;
-    background-color:#009B94;
+    background-color:var(--principal);
     justify-content: space-around;
     align-items: center;
 
@@ -96,7 +107,7 @@ ul{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #009B94; /* Black*/
+    background-color: var(--principal); /* Black*/
     overflow-x: hidden;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
