@@ -149,6 +149,10 @@ body{
     cursor: pointer;
     background-color: rgba(0,0,0,0.2);
 }
+#volverALogin{
+    color: #0D8BBD;
+    margin-top: 12px;
+}
 @media(max-width:650px){
     .imagenLogin{
         display: none;
