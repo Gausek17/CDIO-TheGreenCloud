@@ -101,7 +101,7 @@ ul li a{
 }
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
 }
@@ -227,6 +227,28 @@ main{
     font-size: 40px;
 }
 
+
+.periodico::-webkit-scrollbar {
+    -webkit-appearance: none;
+
+}
+
+.periodico::-webkit-scrollbar:vertical {
+    width:10px;
+
+}
+
+.periodico::-webkit-scrollbar-button:increment,.periodico::-webkit-scrollbar-button {
+    display: none;
+
+}
+
+.periodico::-webkit-scrollbar:horizontal {
+    height: 10px;
+
+}
+
+
 /*------RESPONSIVE----------*/
 @media only screen and (max-width:900px){
     #a4{
@@ -274,6 +296,7 @@ main{
 
 }
 
+
 @media only screen and (max-width: 450px) {
     #a4 {
         border: 2px solid black;
@@ -281,7 +304,9 @@ main{
         margin: 25px;
     }
 
-
+    .containerWidgetInsta{
+        width: auto;
+    }
 
 
     .iconMenu {
@@ -306,6 +331,7 @@ main{
     }
     .periodico{
         width: 100% ;
+        margin-right: 0;
     }
 }
 

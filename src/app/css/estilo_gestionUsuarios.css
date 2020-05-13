@@ -8,6 +8,7 @@
     font-size: 15px;
     padding: 0.5rem;
     margin-top: 25px;
+    margin-bottom: 1rem;
 }
 .form-control-parcelas{
     border-color: #009B94;
@@ -62,6 +63,8 @@
 }
 .headerParcelas{
     background-color:#009B94;
+    display: flex;
+    justify-content: center;
 }
 .buscadorParcela{
     border: 2px solid #009B94;
