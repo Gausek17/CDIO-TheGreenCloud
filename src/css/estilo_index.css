@@ -9,6 +9,7 @@
     /* color para resaltar las letras */
 }
 
+/*--Fuente común----------*/
 * {
     font-family: "Trebuchet MS"
 }
@@ -16,6 +17,8 @@
 body {
     margin: 0 7.5rem 0 7.5rem;
 }
+
+/*-----Header-----*/
 
 h3 {
     font-weight: bold;
@@ -51,6 +54,7 @@ h3 {
 }
 
 
+/*-----Presentación-------*/
 .landing {
     background-image: url(../imagenes/index/Campo2.jpg);
     background-size: cover;
@@ -58,7 +62,6 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*border: 1.5px solid black;*/
     margin: 0px auto;
 }
 
@@ -97,6 +100,8 @@ h3 {
     height: 60px
 }
 
+/*------Descripcion--------*/
+
 .intro {
     background-color: var(--fondo);
     margin: 0px auto;
@@ -131,9 +136,7 @@ h3 {
     padding: 20px;
 }
 
-#trigo {
-    width: 200px;
-}
+
 
 .car2 {
     background-color: var(--fondo);
@@ -149,11 +152,8 @@ h3 {
     margin-right: 200px;
 }
 
-.car3 {
-    background-color: var(--fondo);
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+#trigo {
+    width: 200px;
 }
 
 #ipad {
@@ -197,6 +197,8 @@ ul li {
     margin-top: 100px;
 }
 
+/*-----Footer-------*/
+
 div.localizacion {
     display: flex;
     margin-right: 19px;
@@ -235,7 +237,7 @@ a.telefono {
 }
 
 
-
+/*---------IPAD------------*/
 @media only screen and (max-width: 800px) {
     body {
        margin-right: 1rem;
@@ -319,6 +321,8 @@ a.telefono {
         padding: 1rem;
     }
 }
+
+/*-------IPHONE---------*/
 
 @media(max-width:400px) {
     .descripcion-caracteristica {

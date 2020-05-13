@@ -1,5 +1,12 @@
-:root{
-    --hover: #035752; /* hover del menú */
+:root {
+    --principal: #009B94;
+    /* color principal */
+    --secundario: #035752;
+    /* para el hover */
+    --fondo: #D8E6F4;
+    /* color para los fondos de las páginas */
+    --letras: #005752;
+    /* color para resaltar las letras */
 }
 
 * {
@@ -65,7 +72,7 @@ header {
 }
 
 .seleccion select {
-    background-color: #009B94;
+    background-color: var(--principal);
     color: white;
     border-radius: 10px;
     padding: 0.75rem;

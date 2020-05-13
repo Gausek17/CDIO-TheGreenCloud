@@ -1,6 +1,17 @@
+:root {
+    --principal: #009B94;
+    /* color principal */
+    --secundario: #035752;
+    /* para el hover */
+    --fondo: #D8E6F4;
+    /* color para los fondos de las páginas */
+    --letras: #005752;
+    /* color para resaltar las letras */
+}
+
 /* Navbar */
 .form-control{
-    border-color: #009B94;
+    border-color: var(--principal);
     margin-left: 25px;
     width: 250px;
     height: 35px;
@@ -11,7 +22,7 @@
     margin-bottom: 1rem;
 }
 .form-control-parcelas{
-    border-color: #009B94;
+    border-color: var(--principal);
     width: 250px;
     height: 35px;
     border-radius: 5px;
@@ -62,12 +73,12 @@
     justify-content: space-around;
 }
 .headerParcelas{
-    background-color:#009B94;
+    background-color: var(--principal);
     display: flex;
     justify-content: center;
 }
 .buscadorParcela{
-    border: 2px solid #009B94;
+    border: 2px solid var(--principal);
 
 }
 .listadoParcelas{
@@ -123,7 +134,7 @@
 }
 
 .listadoParcelas::-webkit-scrollbar-thumb {
-    background-color: #009B94;
+    background-color: var(--principal);
     border-radius: 20px;
 
 }
@@ -138,7 +149,7 @@
 }
 .buttonParcelasNoAsignadas{
     color: white;
-    background-color: #009B94;
+    background-color: var(--principal);
     width: inherit;
     height: inherit;
     border: 0;
@@ -153,18 +164,18 @@
 .filtrosParcelas{
     display: none;
     position: absolute;
-    color: #009B94;
+    color: var(--principal);
     background-color:white ;
     font-weight: bold;
 
-    border: 2px solid #009B94;
+    border: 2px solid var(--principal);
     cursor: pointer;
     width: 110px;
     font-weight: bold;
 }
 .misParcelas{
     color: white;
-    background-color: #009B94;
+    background-color: var(--principal);
     width: inherit; 
     border: 0px;
     cursor: pointer;
@@ -174,7 +185,7 @@
 }
 .todasParcelas{
     color: white;
-    background-color: #009B94;
+    background-color: var(--principal);
     width: inherit;
     height: inherit;
     border: 0;
@@ -183,27 +194,27 @@
 
 }
 .misParcelas:hover{
-    color: #009B94;
+    color: var(--secundario);
     background-color: white;
 }
 .todasParcelas:hover{
-    color: #009B94;
+    color: var(--secundario);
     background-color: white;
 }
 
 .desplegarParcelas{
-    color: #009B94;
+    color: var(--principal);
     background-color:white ;
     font-weight: bold;
     border-radius: 10px;
-    border: 2px solid #009B94;
+    border: 2px solid var(--principal);
     cursor: pointer;
     width: 110px;
     height: 40px;
 }
 .desplegarParcelas:hover{
     color: white ;
-    background-color:#009B94 ;
+    background-color:var(--secundario) ;
 }
 
 
@@ -404,27 +415,28 @@ header{
     flex-direction: column;
 }
 
+/*-------Menú----------*/
 .navUsuarios{
     /*border: 4px solid black; */
-    background-color: #035752;
+    background-color: var(--secundario);
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
 .navUsuarios:hover{
-    background-color:#035752;
+    background-color:var(--secundario);
 }
 .navMediciones{
     border: 2px solid black;
 }
 
 .navMediciones:hover{
-    background-color: #035752;
+    background-color: var(--secundario);
 }
 .navParcela{
     border: 2px solid black;
 }
 .navParcela:hover{
-    background-color: #035752;
+    background-color: var(--secundario);
 }
 .navNoticias {
     border: 2px solid black;
@@ -432,8 +444,9 @@ header{
 }
 
 .navNoticias:hover {
-    background-color: #035752;
+    background-color: var(--secundario);
 }
+/*---------------------------*/
 
 .divPerson{
     display: flex;
@@ -459,6 +472,43 @@ header{
     justify-content: space-between;
     margin-bottom: 1rem;
 }
+
+
+
+
+
+/*SCROL BARR listado de usuarios*/
+
+.divContenidoUser::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.divContenidoUser::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.divContenidoUser::-webkit-scrollbar-button:increment,.divContenidoUser::-webkit-scrollbar-button {
+    display: none;
+}
+
+.divContenidoUser::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.divContenidoUser::-webkit-scrollbar-thumb {
+    background-color: var(--principal);
+    border-radius: 20px;
+
+}
+
+    .divContenidoUser::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #797979;
+
+}
+
+
+/*----------Iconos-----------*/
 .iconUserPerson{
     margin-right: 1rem;
     width:75px ;
@@ -492,41 +542,6 @@ header{
     color: white;
     cursor: pointer;
 }
-
-
-
-/*SCROL BARR listado de usuarios*/
-
-.divContenidoUser::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
-
-.divContenidoUser::-webkit-scrollbar:vertical {
-    width:10px;
-}
-
-.divContenidoUser::-webkit-scrollbar-button:increment,.divContenidoUser::-webkit-scrollbar-button {
-    display: none;
-}
-
-.divContenidoUser::-webkit-scrollbar:horizontal {
-    height: 10px;
-}
-
-.divContenidoUser::-webkit-scrollbar-thumb {
-    background-color: #009B94;
-    border-radius: 20px;
-
-}
-
-    .divContenidoUser::-webkit-scrollbar-track {
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px #797979;
-
-}
-
-
-/*-------------*/
 
 .iconNuevoUsuario{
     margin-top: 1rem;
@@ -567,6 +582,7 @@ header{
 
 
 /*------RESPONSIVE----------*/
+/*------Ipad---------*/
 @media only screen and (max-width:900px){
     #a1{
     border: 2px solid black;
@@ -614,6 +630,7 @@ header{
 
 }
 
+/*---------Iphone--------*/
 @media only screen and (max-width: 450px) {
     #a1{
     border: 2px solid black;
