@@ -17,7 +17,7 @@ function modalAsignarParcelas(id_usuario) {
         <div class="menuParcelas"
         <navbar class="navbarParcela">
                 <form class="form-inline">
-                    <input class="form-control-parcelas mr-sm-2" type="search" placeholder="Parcela" id="buscadorParcela"><img src="../imagenes/admin/lupa.png" alt="buscaParcela" class="iconLupa">
+                    <input class="form-control-parcelas mr-sm-2" type="search" placeholder="Parcela" id="buscadorParcela"><img src="../imagenes/admin/Lupa.png" alt="buscaParcela" class="iconLupa">
                     <input type="hidden" id="id_usuario" name="id_usuario" value ="${id_usuario}" />
                 </form>
             </navbar>

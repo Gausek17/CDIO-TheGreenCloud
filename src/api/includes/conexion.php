@@ -14,7 +14,7 @@ mysqli_query($conexion, 'SET NAMES utf8');
 
 /*Servidor
 $bbdd_server = 'localhost';
-$bbdd_user = 'jcherram_jchherram_user';
+$bbdd_user = 'jchherram_user';
 $bbdd_password = '1vys8T@2';
 $bbdd = 'jcherram_bd_tgc';
 

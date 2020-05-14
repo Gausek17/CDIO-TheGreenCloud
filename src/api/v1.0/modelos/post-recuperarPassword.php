@@ -49,7 +49,7 @@ if (isset($_POST['usuario']) && $_POST['usuario'] != '') {
                 $mail->addAddress($correoRestaurar, $nombre);
                 // Contenido
                 $mail->isHTML(true);                                  // Formato HTML
-                $mail->Subject = "Recuperar contrase&ntilde;a";
+                $mail->Subject = "Recuperar password";
                 $mail->Body    = "Saludos $nombre,<br/>Se ha solicitado un cambio de contraseña para su cuenta.
                                     Para establecer una nueva contrase&ntilde;a acceda al siguiente enlace:<a href='$url'>Recuperar contraseña</a>";
                 $mail->AltBody = "Saludos $nombre,se ha solicitado un cambio de contraseña para su cuenta.
