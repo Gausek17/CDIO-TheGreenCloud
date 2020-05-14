@@ -185,12 +185,11 @@ header {
 .divContenidoUser {
     padding: 1.5rem;
     height: 580px;
-    overflow: auto;
 
 }
 
 .navParcela {
-    background-color: var(--hover);
+    background-color: var(--secundario);
 }
 .navUsuarios{
     border-top: 2px solid black;
@@ -198,20 +197,20 @@ header {
 }
 
 .navUsuarios:hover{
-    background-color:var(--hover);
+    background-color:var(--secundario);
 }
 .navMediciones{
     border: 2px solid black;
 }
 
 .navMediciones:hover{
-    background-color: var(--hover);
+    background-color: var(--secundario);
 }
 .navParcela{
     border: 2px solid ;
 }
 .navParcela:hover{
-    background-color: var(--hover);
+    background-color: var(--secundario);
 }
 .navNoticias {
     border: 2px solid black;
@@ -219,11 +218,11 @@ header {
 }
 
 .navNoticias:hover {
-    background-color: var(--hover);
+    background-color: var(--secundario);
 }
 
 .navMediciones:hover {
-    background-color: var(--hover);
+    background-color: var(--secundario);
 }
 
 #map {
@@ -299,7 +298,7 @@ header {
 }
 
 .divContenidoUser::-webkit-scrollbar-thumb {
-    background-color: #800053;
+    background-color: #035752;
     border-radius: 20px;
 }
 
