@@ -23,10 +23,15 @@ if (isset($_POST['usuario']) && $_POST['usuario'] != '') {
         $nombre = $user['nombre'];
         $token = bin2hex(random_bytes(64));
 
-        //URL LOCAL
-        $url = 'http://'.$_SERVER["SERVER_NAME"].'/CDIO-TheGreenCloud/src/cambiarPassword.php?id_usuario='.$id_usuario.'&token='.$token;
-        //URL SERVER
-        //$url = 'http://'.$_SERVER["SERVER_NAME"].'/cambiarPassword.php?id_usuario='.$id_usuario.'&token='.$token;
+
+        if($server ==0){
+            //URL LOCAL
+            $url = 'http://'.$_SERVER["SERVER_NAME"].'/CDIO-TheGreenCloud/src/cambiarPassword.php?id_usuario='.$id_usuario.'&token='.$token;
+        }else{
+            //URL SERVER
+            $url = 'http://'.$_SERVER["SERVER_NAME"].'/cambiarPassword.php?id_usuario='.$id_usuario.'&token='.$token;
+        }
+
         $sql = "UPDATE usuario
                     SET token = '$token', resetPassword =1
                     WHERE id_usuario='$id_usuario'";
