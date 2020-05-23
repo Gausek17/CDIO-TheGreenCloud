@@ -7,6 +7,23 @@
     <title>Landing Page</title>
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--para el formato del desplegable-->
+    <style>
+        #desplegableNosotros{
+            width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color:black ;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+    </style>
+
+
     <!--para que sea compatible con internet explorer edge-->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,11 +31,12 @@
     <link rel="stylesheet" type="text/css" href="css/estilo_index.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_header.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_footer.css">
+
     <link rel="shortcut icon" type="image/ico" href="imagenes/index/favicon.ico">
 </head>
 
 <body>
-    <img src="imagenes/index/arrow.svg" alt="flecha hacia arriba" onclick="topFunction()" id="miBoton" title="Ir arriba">
+    <img src="imagenes/index/flechaArriba.png" alt="flecha hacia arriba" onclick="topFunction()" id="miBoton" title="Ir arriba">
     
     <header class="header">
        <article>
@@ -35,110 +53,145 @@
 
         <button class="contactanos" onclick="location.href='contacto.html'">CONTÁCTANOS</button>
 
-        <a href="#mi-ancla"><img id="flecha" src="imagenes/index/417-4174810_flechas-hacia-abajo-png.png"></a>
+        <a href="#mi-ancla"><img id="flecha" src="imagenes/index/flechaAbajoNueva.png"></a>
 
     </section>
 
     <section class="intro">
         <a href="#" name="mi-ancla" class="enlace">
-            <h2 class="titulo2">NADIE<br> <span class="palabras-verdes">INNOVA</span> <br>COMO NOSOTROS</h2>
+            <div class="containerTitulo">
+            <h2 class="titulo2">NADIE <span class="palabras-blancas">INNOVA</span> COMO NOSOTROS</h2>
+            </div>
         </a>
-        <section class="caracteristicas">
-            <section class="car1">
-                <p class="descripcion-caracteristica">
-                    Gracias a nuestra
-                    tecnología
-                    podrá monitorizar
-                    su campo.
-                </p>
-                <img src="imagenes/index/wheat.svg" id="trigo" alt="imagen primera caracteristica">
-            </section>
-            <section class="car2">
+        <div class="containerCirculos">
+            <ul class="listaCirculos">
 
-                <img src="imagenes/index/sensor.svg" id="sensor" class="sensor" alt="imagen primera caracteristica">
-                <p class="descripcion-caracteristica">
-                    Nuestros
-                    servicios se 
-                    basan en la 
-                    instalación de una
-                    red de sensores
-                    inteligentes
-                </p>
+                <li class="circulo1">
+                    <img class="imagen_circulo_trigo" src="imagenes/index/wheat.png" alt="imagen_circulo_trigo">
+                    <h3 class="tituloImagenTrigo">Modernidad</h3>
+                    <p class="descripcionImagenTrigo">Gracias a nuestra tecnología podrá monitorizar su campo.
+                    </p>
+                </li>
+                <li class="circulo2">
+                    <img class="imagen_circulo_sensor" src="imagenes/index/sensor.png" alt="imagen_circulo_sensor">
+                    <h3 class="tituloImagenSensor">Tecnología</h3>
+                    <p class="descripcionImagenSensor">Nuestros servicios se basan en la instalación de una red de sensores inteligentes
+                    </p>
+                </li>
+                <li class="circulo3">
+                    <img class="imagen_circulo_reloj" src="imagenes/index/u11.png" alt="imagen_circulo_reloj">
+                    <h3 class="tituloImagenReloj">Comunicación</h3>
+                    <p class="descripcionImagenReloj">Estos transfieren diferentes tipos  de datos a su dispositivo
+                        ¿Sencillo Verdad?</p>
+                </li>
 
-            </section>
-            <section class="car3">
-                <p class="descripcion-caracteristica">
-                    Estos transfieren <br>
-                    diferentes tipos
-                    de datos a 
-                    su dispositivo 
-                    ¿Sencillo Verdad?
-                </p>
-                <img src="imagenes/index/application.svg" alt="trigo" id="ipad">
-            </section>
-            <section class="que_ofrecemos">
-                <h3>¿QUÉ OFRECEMOS?</h3>
-                <ul>
-                    <li>Mayor <span class="palabras-verdes">seguridad</span> y <span class="palabras-verdes">control </span>control sobre tu campo.</li>
-                    <li>Contamos con sensores que muestran medidas
-                        <span class="palabras_verdes">exactas</span> y en <span class="palabras-verdes">tiempo real</span>.</li>
-                    <li>Facilitamos la toma de <span class="palabras-verdes">decisiones</span></li>
-                    <li>Control de <span class="palabras-verdes">productividad</span> de tus campos</li>
-                </ul>
-            </section>
-            <section class="duda">
-                <h3>¿Tienes alguna duda?</h3>
-                <button class="contactanos" onclick="location.href='contacto.html'">CONTÁCTANOS</button>
-            </section>
+            </ul>
+            
+        </div>
+
 
         </section>
 
+    <section class="que_ofrecemos">
+        <div class="containerTitulo">
+            <h2 class="tituloOfecemos">¿Qué ofrecemos?</h2>
+        </div>
+        <ul class="listaOfrecimientos">
+            <li class="noRevertirEnIpad" >
+                <div class="infoOfrecimiento">
+                    <img src="imagenes/index/lock-solid.svg" alt="icono_ofrecimiento_candado" class="iconosOfrecimientos">
+
+                    <p>Mayor <span class="palabras-blancas">seguridad</span> y <span class="palabras-blancas">control</span> sobre tu campo.</p>
+                </div>
+                <img class="imagenOfrecimiento" src="imagenes/index/imagen_seguridad.jpg" alt="imagen_seguridad">
+            </li>
+            <li  class="RevertirEnIpad">
+                <div class="infoOfrecimiento" id="revertirIpad" >
+                    <img src="imagenes/index/question-circle-regular.svg" alt="icono_ofrecimiento_pregunta" class="iconosOfrecimientos">
+                    <p>Facilitamos la toma de <span class="palabras-blancas">decisiones</span></p>
+                </div>
+                <img class="imagenOfrecimiento" src="imagenes/index/imagen_decisones.jpg" alt="imagen_pregunta">
+            </li>
+            <li class="noRevertirEnIpad" >
+                <div class="infoOfrecimiento" >
+                    <img src="imagenes/index/dollar-sign-solid.svg" alt="icono_ofrecimiento_dolar" class="iconosOfrecimientos">
+                    <p>Control de <span class="palabras-blancas">productividad</span> de tus campos</p>
+                </div>
+                <img class="imagenOfrecimiento" src="imagenes/index/productividad-marketing.jpg" alt="imagen_productividad">
+            </li>
+            <li class="RevertirEnIpad" >
+                <div class="infoOfrecimiento" id="revertirIpad2">
+                    <img src="imagenes/index/history-solid.svg" alt="icono_ofrecimiento_reloj" class="iconosOfrecimientos">
+                    <p>Contamos con sensores que muestran medida exactas y en <span class="palabras-blancas">tiempo real</span></p>
+                </div>
+                <img class="imagenOfrecimiento" src="imagenes/index/imagen_termometro.jpg" alt="imagen_medidas">
+            </li>
+        </ul>
+
+    </section>
+    <section class="faqs">
+        <h2 class="tituloFaqs">¿Tienes alguna duda?</h2>
+        <div class="contenidoFaqs">
+            <p class="ofertaFaqs">Consulta nuestra página de <span id="enlaceFaqs" ><a href="Faqs.html">preguntas frecuentes</a></span></p>
+            <img src="imagenes/index/preguntas-892x350_tcm558-548340.png" alt="imagen_faqs">
+        </div>
+    </section>
+    <section class="sobreNosotros">
+        <h2 >Nosotros</h2>
+        <div class="textosNosotros">
+            <h3>Aprende algo mas sobre nosotros</h3>
+            <button id="enlaceMasInfo" onclick="location.href='noticias.html'">Mas Info</button>
+            <!--
+            <div id="desplegableNosotros" style="display: none">
+                <div class="contenidoDesplegable">
+                <p class="textoDesplegable">Somos una empresa especializada en la monitorización de campos de cultivo, gracias a nuestros sensores remotos usted tendrá en todo momento controlado los parámetros de sus parcelas en cualquier dispositivo con internet.</p>
+                <img src="imagenes/index/herramientas-gratuitas-de-monitorizacion-de-servidores-featured.png" class="imagenDesplegable" alt="imagenDesplegable">
+                <button class="contactanos" onclick="location.href='contacto.html'">CONTÁCTANOS</button>
+                </div>
+                -->
+
+
+            </div>
+        </div>
     </section>
 
-    <footer class="footer-distributed">
-
-        <div class="footer-left">
-
-            <h3 class="tituloHeader">Tecnologías<span>Interactivas</span></h3>
-
-            <p class="footer-links">
-                <a href="index.html">Inicio</a>
-            </p>
-            <p class="footer-links">
-                <a href="Faqs.html">Preguntas frecuentes</a>
-            </p>
-
-            <p class="footer-company-name">© 2020 Escuela Politécnica de Valencia Ltd.</p>
+    <footer class="footer">
+        <h2>TECNOLOGÍAS <span>INTERACTIVAS</span></h2>
+        <div class="enlaces">
+            <ul class="listaFooter">
+                <li>
+                    <img src="imagenes/footer/ubicacion.svg" alt="imagen_mapa">
+                    <p>Escuela Politécnica Superior De Gandía</p>
+                </li>
+                <li>
+                    <img src="imagenes/footer/telefono.svg" alt="imagen_telefono">
+                    <p><a href="tel:987987987">987987987</a></p>
+                </li>
+                <li>
+                    <img src="imagenes/footer/email.svg" alt="imagen_correo">
+                    <p><a href="mailto:theGreenCloud@gmail.com">theGreenCloud@gmail.com</a></p>
+                </li>
+            </ul>
         </div>
+        <h3 class="derechosReservados"><a href="http://www.upv.es/" id="a_upv">@ 2020 Escuela Politécnica de  Valencia Ltd</a></h3>
 
-        <div class="footer-center">
-            <div class="divUbicacion">
-                <img src="imagenes/contacto/ubicacion.png" style="width="50px" height="50px"">
-                <p id="texto-mapa"><span>E.Politécnica Superior de Gandía
-                        C/Paranimf, 1, Edicifio F</span>
-                    46730 Grau de Gandia, Valencia</p>
-            </div>
-
-            <div class="tlf">
-                <img src="imagenes/contacto/telefono.png" id="phone">
-                <p id="telf"><a href="tel:+34962849333">962 84 93 33</a></p>
-            </div>
-            <div class="divMailContacto">
-                <img src="imagenes/contacto/correo.png" style="width="50px" height="50px"" id="mail">
-                <p><a href="mailto:informacio@thegreencloud">informacion@thegreencloud</a></p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>Sobre Nosotros</span>
-                Somos una empresa especializada en la monitorización de campos de cultivo, gracias a nuestros sensores remotos usted tendrá en todo momento controlado los parámetros de sus parcelas en cualquier dispositivo con internet.</p>
-
-        </div>
     </footer>
 
 
 
     <script src="js/backToTop.js"></script>
+    <!--
+    <script>
+        function myFunction() {
+            var x = document.getElementById("desplegableNosotros");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    -->
 </body>
 
 </html>

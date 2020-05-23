@@ -1,7 +1,7 @@
 :root{
-    --principal: #009B94; /* color principal */
-    --secundario: #035752; /* para el hover */
-    --fondo: #D8E6F4; /* color para los fondos de las páginas */
+    --principal: #87c232; /* color principal */
+    --secundario: #618930; /* para el hover */
+    --fondo: #333333; /* color para los fondos de las páginas */
     --letras: #005752; /* color para resaltar las letras */
 }
 

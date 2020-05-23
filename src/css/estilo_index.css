@@ -1,11 +1,11 @@
 :root {
-    --principal: #009B94;
+    --principal: #87C232;
     /* color principal */
-    --secundario: #035752;
+    --secundario: #618930;
     /* para el hover */
-    --fondo: #D8E6F4;
+    --fondo: #333333;
     /* color para los fondos de las páginas */
-    --letras: #005752;
+    --letras: white;
     /* color para resaltar las letras */
 }
 
@@ -15,6 +15,7 @@
 
 body {
     margin: 0 7.5rem 0 7.5rem;
+    background-color: #3a3a3a;
 }
 
 h3 {
@@ -44,6 +45,7 @@ h3 {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    background-color: var(--fondo);
 }
 
 .boton {
@@ -69,6 +71,7 @@ h3 {
     color: white;
     width: 50%;
     margin-top: 100px;
+    -webkit-text-stroke: 2px black;
 }
 
 .contactanos {
@@ -96,281 +99,423 @@ h3 {
     margin: 20px auto;
     height: 60px
 }
-
+/*a partir de aqui es codigo de nadie innova como nosotros*/
 .intro {
     background-color: var(--fondo);
     margin: 0px auto;
-    border: 1px solid black;
+
 }
 
 
 .enlace {
     text-decoration: none;
     color: black;
+    background-color: #0D8BBD;
 }
 
-.palabras-verdes {
-    color: var(--letras);
+.palabras-blancas {
+    color: white;
+}
+.containerTitulo{
+    background-color: var(--principal);
+}
+.containerTitulo h2 {
+    padding: 3rem;
+    border-radius: 7px;
 }
 
 .titulo2 {
     text-align: center;
-    font-size: 80px
+    font-size: 50px;
+    margin-bottom: 100px;
 }
-
-.caracteristicas {
+.listaCirculos{
     display: flex;
-    flex-direction: column;
-    text-align: center;
-}
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-bottom: 100px;
 
-.car1 {
-    background-color: var(--fondo);
+
+}
+.listaCirculos li {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-#trigo {
-    width: 200px;
-}
-
-.car2 {
-    background-color: var(--fondo);
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    margin-right: 80px;
-}
-
-#sensor {
-    width: 200px;
-    margin-left: 250px;
-    margin-right: 200px;
-}
-
-.car3 {
-    background-color: var(--fondo);
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-#ipad {
-    width: 200px
-}
-
-.descripcion-caracteristica {
-    padding: 0px;
-    margin-left: 40px;
-    margin-right: 4%;
-    font-size: 40px;
-    width: 33%;
-}
-
-
-ul {
-    text-align: left;
-
-}
-
-ul li {
-    font-size: 30px;
-    padding: 1rem;
-}
-
-.que_ofrecemos {
-    display: flex;
-    margin-top: 100px;
     flex-direction: column;
     align-items: center;
-    font-weight: bold;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.listaCirculos li img {
+    border: 2px solid var(--principal);
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+
+}
+.listaCirculos h3 {
+    color: var(--principal);
+    font-size: 45px;
+    margin: 10px;
+    margin-top: 20px;
+}
+.listaCirculos li p {
+    margin-top: 10px;
+    padding-left: 2rem;
+    padding-right: 2rem ;
+    font-size: 40px;
+    /*font-weight: bold;*/
+    text-align: center;
+    color: white;
 }
 
-.palabras-verdes {
-    color: var(--letras);
+
+
+
+/*a partir de aqui es css de que ofrecemos*/
+.que_ofrecemos{
+    background-color: #757575;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+    border-radius: 7px;
 }
 
-.duda {
+
+.tituloOfecemos{
+    margin: 0px;
+    text-align: center;
+    font-size: 50px;
+    border-radius: 7px;
+}
+.listaOfrecimientos{
+    list-style: none;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.iconosOfrecimientos{
+    width: 65px;
+    height: 65px;
+    padding: 30px;
+
+}
+.infoOfrecimiento{
+    width: 850px;
+}
+.noRevertirEnIpad{
+    flex-direction: column;
+}
+.RevertirEnIpad{
+    flex-direction: column;
+}
+.listaOfrecimientos li{
+ display: flex;
+
+    align-items: center;
+    padding: 3rem;
+
+}
+.listaOfrecimientos li p{
+    font-size: 30px;
+}
+.infoOfrecimiento{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.imagenOfrecimiento{
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+
+}
+
+.palabras-blancas {
+    color: var(white);
+}
+/*a partir de aqui es codigo para faqs*/
+
+.tituloFaqs{
+    margin: 0px;
+    text-align: center;
+    font-size: 30px;
     margin-top: 100px;
 }
-
-div.localizacion {
+.contenidoFaqs{
     display: flex;
-    margin-right: 19px;
+    flex-direction: column;
+    align-items: center;
+    color: white;
 }
-
-img.localizacion {
-    display: flex;
-    margin-left: 10px;
-}
-
-img.mail {
-    display: flex;
-    margin-top: 25px;
-    margin-right: 10px;
-    margin-left: 100px;
-}
-
-a.mail {
-    display: flex;
-    margin-right: 100px;
-    margin-left: 10px;
-    color: black;
+.contenidoFaqs img {
+    width: 550px;
+    /*border-radius: 10px;*/
+    padding: 2rem;
 
 }
-
-div.telefono {
-    display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
+#enlaceFaqs{
+    color: var(--principal);
+    text-decoration: underline ;
+}
+.contenidoFaqs a {
+    color: var(--principal);
 }
 
-a.telefono {
+/*codigo para mas sobre nosotros*/
+
+.sobreNosotros{
     display: flex;
-    margin-right: 100px;
-    color: black;
+    flex-direction: column;
+    align-items: center;
+}
+.sobreNosotros h2{
+    font-size: 35px;
+    margin-bottom: 5px;
+    border: 2px solid var(--principal);
+    padding: 1.5rem;
+    border-radius: 7px;
+    color: white;
+}
+.textosNosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.textosNosotros h3{
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+}
+
+#desplegableNosotros p{
+    color: white;
+}
+#desplegableNosotros img{
+    width: 400px;
+    height: 300px;
+}
+.contenidoDesplegable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#enlaceMasInfo{
+    border: 0px;
+    color: var(--principal);
+    text-decoration: underline;
+    font-size: 20px;
+    background-color: var(--fondo);
+}
+/*codigo para el footer*/
+
+.footer{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #222629;
+}
+.footer h2 {
+    color: white;
+}
+.footer h2 span {
+    color: var(--principal);
+}
+.footer h3 {
+    color: #8f9296;
+    font-size: 12px;
+}
+.enlaces{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+}
+.listaFooter{
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+.listaFooter li {
+    flex: 1 ;
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+}
+.listaFooter li img{
+    width: 80px;
+    height: 80px;
+    padding: 1.5rem;
+}
+.listaFooter li p {
+    color: white;
+}
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+#a_upv{
+    color: #8f9296;
 }
 
 
 
-@media only screen and (max-width: 800px) {
-    body {
-       margin-right: 1rem;
-        margin-left: 1rem;
+
+
+@media(max-width: 900px) {
+    .titulo2 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 100px;
     }
-    #sensor {
-        width: 200px;
-        margin-left: 150px;
-        margin-right: 100px;
+    .listaCirculos li img {
+        border: 2px solid var(--principal);
+        background-color: white;
+        padding: 2rem;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
 
+    }
+    .listaCirculos {
+        align-items: center;
+        flex-direction: row;
+    }
+    .listaCirculos li {
+        margin-top: 0px;
+    }
+    .listaCirculos li p {
+        padding: 0px;
+        font-size: 30px;
+    }
+    /*codigo para que ofrecemos*/
+
+    .infoOfrecimiento{
+        width: 400px;
+    }
+    .listaOfrecimientos li p{
+        font-size: 20px;
+    }
+    .noRevertirEnIpad {
+        flex-direction: row;
+    }
+    .imagenOfrecimiento {
+        width:200px ;
+        height: 120px;
+    }
+    .RevertirEnIpad{
+        flex-direction: row-reverse;
+    }
+    #revertirIpad{
+        flex-direction: row-reverse;
+        width: 400px;
+    }
+    #revertirIpad2{
+        flex-direction: row-reverse;
+        width: 400px;
+    }
+    .footer li {
+        flex-direction: column ;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #miBoton{
+        width: 30px;
     }
 }
 
 
 @media(max-width:620px) {
-    body {
-        margin-right: 0;
-        margin-left: 0;
-    }
 
-    .contactanos {
-        padding-left: 25px;
-        padding-right: 25px;
-        text-align: center;
-        font-size: 15px;
-    }
-
-    .modernizacion {
-        font-size: 50px;
-        width: 80%;
-    }
-
-    #flecha {
-        height: 70px;
-    }
-
-    .titulo2 {
-        font-size: 50px;
-    }
-
-    .caracteristicas {
-        align-items: center;
-        padding: 20px;
-    }
-
-    .descripcion-caracteristica {
-        font-size: 25px
-    }
-
-    #trigo {
-        width: 120px
-    }
-
-    #sensor {
-        width: 120px;
-        margin-left: 150px;
-        margin-right: 100px;
-
-    }
-
-    #ipad {
-        width: 120px
-    }
-
-    .car1 {
-        margin-left: 0;
-        padding: 0;
-    }
-
-    .car3 {
-        margin-left: 0;
-        padding: 0;
-    }
-
-    .car2 {
-        padding: 0;
-    }
-
-    ul li {
-        font-size: 20px;
-        padding: 1rem;
-    }
 }
 
-@media(max-width:400px) {
-    .descripcion-caracteristica {
-        width: 60%;
+@media (max-width: 500px) {
+   .listaCirculos {
+       flex-direction: column;
+   }
+    /*aqui empieza que ofrecemos*/
+    .que_ofrecemos{
+        background-color: #0D8BBD;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        border-radius: 7px;
+    }
+    .listaOfrecimientos p {
+        padding: 10px   ;
+    }
+    .iconosOfrecimientos{
+        width: 40px;
+    }
+    .imagenOfrecimiento {
+        display: none;
+    }
+    #revertirIpad{
+        flex-direction: row;
+        width: 400px;
+    }
+    #revertirIpad2{
+        flex-direction: row;
+        width: 400px;
+    }
+    .infoOfrecimiento{
+        
+    }
+    /* faqs*/
+    .tituloFaqs{
+        font-size: 20px;
+
+    }
+    .contenidoFaqs img {
+        width: 400px;
+    }
+    /*sobre nosotros */
+    .sobreNosotros h2 {
+        font-size: 20px;
+        padding: 10px;
+    }
+    #desplegableNosotros{
+        width: 400px;
+    }
+    #desplegableNosotros img{
+        width: 280px;
+        height: 120px;
+    }
+    #desplegableNosotros p{
+        font-size: 18px;
+    }
+    /*footer */
+    .listaFooter{
+        margin: 0 auto;
+        padding: 0px;
     }
 
-    .morado {
-        padding: 0.5rem;
+    .footer li {
+        padding: .5rem;
+    }
+    .listaFooter li {
+        padding: 5px;
+    }
+    .listaFooter li img {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+    .listaFooter li p{
+        font-size: 10px;
     }
 
-    .modernizacion {
-        font-size: 40px;
-        width: 80%;
-    }
 
-    .contactanos {
-        width: 140px;
-        font-size: 16px;
-        padding-left: 12px;
-        padding-right: 14px;
-    }
 
-    .titulo2 {
-        font-size: 40px;
-    }
 
-    #sensor {
-        width: 80px;
-        margin: 0px;
-    }
-
-    .car1 {
-        margin-bottom: 3rem;
-    }
-
-    .car1 .descripcion-caracteristica {
-        margin: 0 1rem 0 0;
-    }
-
-    .car2 {
-        margin: 0 0 3rem 0;
-    }
-
-    .car2 .descripcion-caracteristica {
-        margin: 0 0 0 1rem;
-    }
-
-    .car3 {
-        margin-bottom: 3rem;
-    }
-
-    .car3 .descripcion-caracteristica {
-        margin: 0 1rem 0 0;
-    }
 }
