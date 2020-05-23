@@ -25,6 +25,14 @@ h3 {
     font-size: 30px;
 
 }
+#maps{
+    width: 50px;
+    height: 50px;
+}
+#mail{
+    width: 50px;
+    height: 50px;
+}
 
 #miBoton {
 
@@ -328,6 +336,9 @@ a.telefono {
     .descripcion-caracteristica {
         width: 60%;
     }
+    .footer-company-about{
+        
+    }
 
     .morado {
         padding: 0.5rem;
@@ -377,4 +388,5 @@ a.telefono {
     .car3 .descripcion-caracteristica {
         margin: 0 1rem 0 0;
     }
+    
 }
