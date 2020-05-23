@@ -1,6 +1,16 @@
+:root {
+    --principal: #87C232;
+    /* color principal */
+    --secundario: #618930;
+    /* para el hover */
+    --fondo: #333333;
+    /* color para los fondos de las páginas */
+    --letras: white;
+    /* color para resaltar las letras */
+}
 /* Navbar */
 .form-control{
-    border-color: #009B94;
+    border-color: #333333;
     margin-left: 25px;
     width: 250px;
     height: 35px;
@@ -10,7 +20,7 @@
     margin-top: 25px;
 }
 .form-control-parcelas{
-    border-color: #009B94;
+    border-color: #333333;
     width: 250px;
     height: 35px;
     border-radius: 5px;
@@ -29,15 +39,17 @@
 *{
     font-family: "Trebuchet MS";
 }
+
 body{
     margin: 0 auto;
+    background-color: #3a3a3a;
 }
 #textNombreUsuario{
     padding: 5px;
 
 }
 #linea-titulo {
-    border: 2px solid black;
+    border: 2px solid white;
     margin-left: 3.5rem;
     margin-right: 3.5rem;
 }
@@ -53,7 +65,9 @@ body{
 
 .titulo-sin-linea p {
     font-size: 40px;
+    color: white;
 }
+
 
 .logoGTI:hover{
     cursor: pointer;
@@ -164,6 +178,7 @@ header{
 .icono-periodico{
     width: 100px;
     margin-right: 10px;
+    color: white;
 }
 /*seccion que contiene el periodico y intagram*/
 main{
@@ -184,7 +199,7 @@ main{
     align-content: center;
 }
 #enlaceAlPeriódico{
-    color: #0D8BBD;
+    color: var(--principal);
 }
 .widgetPeriodico{
     width: 100%;
@@ -197,11 +212,11 @@ main{
     text-align: center;
     flex:.35;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid var(--principal);
 }
 #nuestrasUltimasPublicaciones{
 
-    color: #0D8BBD;
+    color: white;
     padding: 2px;
     margin-top: 0px;
     font-size: 30px;
@@ -289,6 +304,7 @@ main{
     #tituloMasInformación{
         font-size: 30px;
         text-align: center;
+        color: white;
     }
 
 
