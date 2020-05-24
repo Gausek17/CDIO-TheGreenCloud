@@ -80,7 +80,7 @@ h3 {
     text-align: center;
     border: none;
     color: white;
-    width: 50%;
+
     margin-top: 100px;
     -webkit-text-stroke: 2px black;
 }
@@ -108,7 +108,7 @@ h3 {
 
 #flecha {
     margin: 20px auto;
-    height: 60px
+    height: 30px
 }
 /*a partir de aqui es codigo de nadie innova como nosotros*/
 .intro {
@@ -139,6 +139,7 @@ h3 {
     text-align: center;
     font-size: 50px;
     margin-bottom: 100px;
+    margin-top: 0px;
 }
 .listaCirculos{
     display: flex;
@@ -464,9 +465,11 @@ h3 {
        align-items: center;
        justify-content: center;
        text-align: center;
-   }
-   .listaCirculos  {
        padding: 0px;
+   }
+   .listaCirculos li img  {
+       width: 40px;
+       height: 40px;
    }
     .listaCirculos li{
         margin-bottom: 50px;
@@ -481,22 +484,30 @@ h3 {
         margin-right: 0rem;
         border-radius: 7px;
     }
+    .tituloOfecemos{
+        font-size: 30px;
+    }
     .noRevertirEnIpad {
         flex-direction: column;
     }
     .RevertirEnIpad{
         flex-direction:column;
     }
-    .listaOfrecimientos p {
-        padding: 0px   ;
+    .listaOfrecimientos li p {
+        padding: 0px;
+        font-size: 15px;
     }
     .iconosOfrecimientos{
         width: 40px;
-        padding: 15px;
+        padding: 5px;
     }
     .listaOfrecimientos ul li {
         display: flex;
         flex-direction: column;
+
+    }
+    .listaOfrecimientos li {
+        padding: 1.5rem;
     }
     .imagenOfrecimiento {
         /*display: none;*/
@@ -554,6 +565,12 @@ h3 {
     }
     .listaFooter li p{
         font-size: 10px;
+    }
+    #miBoton{
+        width: 30px;
+        padding: 1rem;
+        margin-right: 10px;
+        height: 35px;
     }
 
 

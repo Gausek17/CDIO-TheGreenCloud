@@ -75,6 +75,9 @@ body{
 .logoGTI:hover{
     cursor: pointer;
 }
+.headerNoticias{
+    justify-content: center;
+}
 
 
 
@@ -250,6 +253,7 @@ main{
 #tituloMasInformación{
     display: block;
     font-size: 40px;
+    color: white;
 }
 
 
@@ -271,6 +275,9 @@ main{
 .periodico::-webkit-scrollbar:horizontal {
     height: 10px;
 
+}
+.snapwidget-widget{
+    color: white;
 }
 
 
