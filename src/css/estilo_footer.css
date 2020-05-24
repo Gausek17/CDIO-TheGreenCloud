@@ -54,7 +54,7 @@
     color: #8f9296;
     font-size: 14px;
     font-weight: normal;
-    margin: 0;
+    margin-top: 5rem;
 }
 
 /*---------------- Footer Center ---------------*/
@@ -205,7 +205,7 @@
         color: #8f9296;
         font-size: 14px;
         font-weight: normal;
-        margin: 0;
+        margin-top: 4rem;
     }
 
     /*---------------- Footer Center -----------------*/
@@ -340,6 +340,21 @@
         margin-left: 15px;
         margin-bottom: 22px;
     }
-
+    #maps{
+        width: 35px;
+        height: 35px;
+    }
+    #mail{
+        width: 35px;
+        height: 35px;
+    }
+    #phone{
+        width: 35px;
+        height: 35px;
+    }
+    
+    .footer-company-about{
+        display: none;
+    }
 }
     

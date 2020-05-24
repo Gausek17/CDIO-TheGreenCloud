@@ -1,28 +1,45 @@
+:root {
+    --principal: #009B94;
+    /* color principal */
+    --secundario: #035752;
+    /* para el hover */
+    --fondo: #D8E6F4;
+    /* color para los fondos de las páginas */
+    --letras: #005752;
+    /* color para resaltar las letras */
+}
+
+/*-------Fuente común-------*/
 * {
     font-family: "Trebuchet MS";
 }
 
 
+/*-----Forma de texto------*/
 .textSeleccionParcela {
     font-weight: bold;
     padding: 5px;
     margin-bottom: 1px;
+    color: white;
 }
 
 .textSeleccionSonda {
     font-weight: bold;
     padding: 5px;
     margin-bottom: 1px;
+    color: white;
 }
 
 .textSeleccionFecha {
     font-weight: bold;
     padding: 5px;
     margin-bottom: 1px;
+    color: white;
 }
 
 .textSeleccionUser {
     font-weight: bold;
+    color: white;
     padding: 5px;
     margin-bottom: 1px;
 }
@@ -64,7 +81,8 @@
     width: 80%;
     height: 55vh;
     margin: 1rem auto;
-    background-color: #009B94;
+    margin-top: 2rem;
+    background-color: #99d04b;
     border-radius: 10px;
 }
 
@@ -79,8 +97,11 @@
     margin: 0 auto;
 }
 */
+
+/*------Header--------*/
 body {
     margin: 0 auto;
+    background-color: #474A4F;
 }
 
 .logoGTI:hover {
@@ -91,11 +112,29 @@ body {
     padding: 5px;
     width: 30px;
 }
+.fas.fa-bars{
+    display: none;
+}
 
 .cerrar_sesion:hover {
     cursor: pointer;
 }
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.fas.fa-sign-out-alt{
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+.fas.fa-sign-out-alt:hover{
+    color: gray;
+}
+/*----------------*/
 
+
+/*---------Selectores---------*/
 .iconMenu {
     display: none;
     width: 35px;
@@ -143,10 +182,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .divCentral {
     height: 100%;
@@ -163,7 +199,7 @@ header {
 
 
 .seleccion select {
-    background-color: #009B94;
+    background-color: #0c3943;
     color: white;
     font-size: 1.3rem;
     font-weight: 500;
@@ -179,8 +215,8 @@ header {
 #selectUsurios,
 #selectParcelas,
 #selectSondas {
-    background-color: #009B94;
-    color: white;
+    background-color: #235138;
+    color: #C7D9CD;
     font-size: 1.3rem;
     font-weight: 500;
     border-radius: 10px;
@@ -192,8 +228,8 @@ header {
 }
 
 .calendar {
-    background-color: #009B94;
-    color: white;
+    background-color: #235138;
+    color: #C7D9CD;
     font-size: 1.3rem;
     font-weight: 500;
     border-radius: 10px;
@@ -240,7 +276,7 @@ header {
 }
 
 .panelActual {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -255,7 +291,7 @@ header {
 }
 
 #linea-titulo {
-    border: 2px solid black;
+    border: 2px solid white;
     margin-left: 3.5rem;
     margin-right: 3.5rem;
 }
@@ -278,39 +314,27 @@ header {
     text-align: center;
 }
 
+
+/*------------Menú----------*/
 .navUsuarios {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-right: 1px solid white;
 
 }
 
-.navUsuarios:hover {
-    background-color: #035752;
 
-}
 
 .navMediciones {
-    background-color: #035752;
-    border: 2px solid black;
+   
+    border-right: 1px solid white;
 }
 
 .navParcela {
-    border: 2px solid black;
+    border-right: 1px solid white;
 }
 
-.navParcela:hover {
-    background-color: #035752;
 
-}
 
-.navNoticias {
-    border: 2px solid black;
-    border-left: none;
-}
 
-.navNoticias:hover {
-    background-color: #035752;
-}
 
 .divSelectores {
     display: flex;
@@ -352,6 +376,8 @@ header {
     margin-left: 5rem;
 }
 /*------RESPONSIVE----------*/
+
+/*---------Ipad--------*/
 @media only screen and (max-width:900px) {
 
     /* Ipad */
@@ -362,6 +388,11 @@ header {
     .textSeleccionParcela {
         margin: 0;
     }
+    .panelActual {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
 
     #a3 {
         border: 2px solid black;
@@ -385,12 +416,15 @@ header {
         margin-right: 0.5rem;
     }
 
-    .iconMenu {
-        display: block;
+    .fas.fa-bars{
+        color: white;
+        font-size: 40px;
+        margin-left: 15px;
+        display: flex;
     }
 
     .logoGTI {
-        display: none;
+        width: 110px;
     }
 
     .iconSensorSelected {
@@ -469,6 +503,7 @@ header {
 
     .divSelectoresUser {
         justify-content: space-around;
+        margin-top: 2rem;
 
     }
     .divFechaFinUser{
@@ -477,12 +512,19 @@ header {
 
 }
 
+
+/*-------Iphone---------*/
 @media only screen and (max-width: 450px) {
 
     /* Iphone */
 
     .container {
         margin-bottom: 0;
+    }
+    .panelActual {
+    display: flex;
+    flex-direction: column;
+    color: white;
     }
 
     #a3 {
@@ -504,6 +546,7 @@ header {
 
     .divContenidoGraficas {
         display: flex;
+        margin-top: 2rem;
     }
 
     .titulo-sin-linea p {
@@ -614,8 +657,11 @@ header {
 
     .logoGTI {
         display: block;
-        width: 150px;
+        width: 90px;
         height: auto;
+    }
+    .fas.fa-sign-out-alt{
+        font-size: 30px;
     }
 
 
@@ -660,6 +706,7 @@ header {
     }
     .divContenidoGraficasUser{
         margin-right: 1.2rem;
+        margin-top: 2rem;
     }
 
 

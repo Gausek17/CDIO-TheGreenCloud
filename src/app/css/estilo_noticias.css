@@ -35,7 +35,7 @@
 }
 
 
-
+/* ---------Fuente común----*/
 *{
     font-family: "Trebuchet MS";
 }
@@ -44,6 +44,8 @@ body{
     margin: 0 auto;
     background-color: #3a3a3a;
 }
+
+/*---- Header -------*/
 #textNombreUsuario{
     padding: 5px;
     color: white;
@@ -121,6 +123,7 @@ header{
 
 }
 
+/*--------Menú------*/
 .divUsuario{
 
     display: flex;
@@ -170,6 +173,8 @@ header{
     margin-bottom: 1rem;
 }
 
+
+/*------Pop up---------*/
 .popupParcelas{
     justify-content: center;
 }
@@ -181,7 +186,8 @@ header{
     margin-right: 10px;
     color: white;
 }
-/*seccion que contiene el periodico y intagram*/
+
+/*------Seccion que contiene el periodico e instagram-------*/
 main{
     margin-top: 30px;
     display: flex;
@@ -269,6 +275,8 @@ main{
 
 
 /*------RESPONSIVE----------*/
+
+/*----------Ipad---------*/
 @media only screen and (max-width:900px){
     #a4{
         border: 2px solid black;
@@ -316,7 +324,7 @@ main{
 
 }
 
-
+/*---------Iphone----------*/
 @media only screen and (max-width: 450px) {
     #a4 {
         border: 2px solid black;

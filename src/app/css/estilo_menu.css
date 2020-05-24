@@ -1,16 +1,25 @@
+:root {
+    --principal:#333333 ;
+    /* color principal */
+    --secundario: 
+    /* para el hover */
+    --fondo: #D8E6F4;
+    /* color para los fondos de las páginas */
+    --letras: #005752;
+    /* color para resaltar las letras */
+}
+
 nav{
-    /*
-    border-radius: 15px;
-    border-top-right-radius: 0px;
-    width: 350px;
-    background-color:#009B94;
-    display: table-cell;
-    */
-    border-top-right-radius: 0px;
+
+    border-color: white;
     width: 100%;
-    background-color:#009B94;
+    background-color:#333333;
     justify-content: space-around;
     align-items: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 
 }
 ul li a {
@@ -23,7 +32,7 @@ ul li a {
 }
 ul li {
     align-items: center;
-    padding: 0.25rem;
+    padding: 0.15rem;
     list-style: none;
     width: 100%;
     text-align: center;
@@ -34,6 +43,29 @@ ul{
     justify-content: space-around;
     align-items: center;
 }
+ul li a:hover {
+    color: #87C232;
+    
+}
+.fas.fa-leaf{
+    font-size: 40px;
+    padding: 10px;
+}
+.fas.fa-users{
+    font-size: 40px;
+    padding: 10px;
+}
+.fas.fa-chart-bar{
+    font-size: 40px;
+    padding: 10px;
+    
+}
+.fas.fa-cogs{
+    font-size: 40px;
+    padding: 10px;
+    
+}
+
 
 
 .iconParcelas{
@@ -55,6 +87,11 @@ ul{
     padding: 10px;
     height: 60px;
     width: 60px;
+}
+.iconGestionParcelas{
+    fill: white;
+    width: 60px;
+    height: 60px;
 }
 
 .iconGestionUsuariosSelected{
@@ -96,7 +133,7 @@ ul{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #009B94; /* Black*/
+    background-color: var(--principal); /* Black*/
     overflow-x: hidden;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
