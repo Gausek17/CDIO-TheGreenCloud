@@ -1,9 +1,9 @@
 :root {
-    --principal: #009B94;
+    --principal: #474A4F;
     /* color principal */
     --secundario: #035752;
     /* para el hover */
-    --fondo: #D8E6F4;
+    --fondo: #474A4F;
     /* color para los fondos de las páginas */
     --letras: #005752;
     /* color para resaltar las letras */
@@ -14,7 +14,7 @@
 }
 
 body {
-
+    background-color: #474A4F;
     margin: 0 auto;
 }
 
@@ -61,6 +61,10 @@ header {
     display: flex;
     align-items: center;
 }
+.fas.fa-bars{
+        
+        display: none;
+    }
 
 .seleccion {
     margin-left: 10px;
@@ -72,8 +76,8 @@ header {
 }
 
 .seleccion select {
-    background-color: var(--principal);
-    color: white;
+    background-color: #235138;
+    color: #C7D9CD;
     border-radius: 10px;
     padding: 0.75rem;
     font-weight: bold;
@@ -138,6 +142,14 @@ header {
     padding: 1rem;
 
 }
+.fas.fa-sign-out-alt{
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+.fas.fa-sign-out-alt:hover{
+    color: gray;
+}
 
 .button {
     align-content: space-between;
@@ -162,7 +174,7 @@ header {
 }
 
 .panelActual {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -177,44 +189,43 @@ header {
 }
 
 #linea-titulo {
-    border: 2px solid black;
+    border: 2px solid white;
     margin-left: 3.5rem;
     margin-right: 3.5rem;
 }
 
 .divContenidoUser {
     padding: 1.5rem;
-    height: 580px;
-
+    height: 780px;
+    
 }
+
 
 .navParcela {
     background-color: var(--secundario);
 }
 .navUsuarios{
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-right: 1px solid white;
 }
 
 .navUsuarios:hover{
     background-color:var(--secundario);
 }
 .navMediciones{
-    border: 2px solid black;
+    border-right: 1px solid white;
 }
 
 .navMediciones:hover{
     background-color: var(--secundario);
 }
 .navParcela{
-    border: 2px solid ;
+    border-right: 1px solid white ;
 }
 .navParcela:hover{
     background-color: var(--secundario);
 }
 .navNoticias {
-    border: 2px solid black;
-    border-left: none;
+    
 }
 
 .navNoticias:hover {
@@ -228,7 +239,7 @@ header {
 #map {
     width: inherit;
     height: inherit;
-    border: solid 3px black;
+    
     margin-right: 30px;
 
 }
@@ -244,14 +255,24 @@ header {
 
 .seleccionParcela {
     margin-right: 20px;
+    margin-left: 2rem;
 }
 
 .enlace-graficas {
-    margin-top: 70px;
+    margin-top: 60px;
+    margin-left: 20px;
+    color: #87C232;
+    text-decoration-line: underline;
+    text-decoration-color: #87C232;
 }
 
 .enlace-graficasenUser {
     margin-top: 70px;
+    margin-top: 60px;
+    margin-left: 20px;
+    color: #87C232;
+    text-decoration-line: underline;
+    text-decoration-color: #87C232;
 }
 
 #selectUsuarios {
@@ -266,10 +287,12 @@ header {
 
 .textSeleccionUsuario {
     font-weight: bold;
+    color: white;
 }
 
 .textSeleccionParcela {
     font-weight: bold;
+    color: white;
 }
 
 .textSeleccionMediciones {
@@ -314,10 +337,19 @@ header {
 
 /*------RESPONSIVE----------*/
 @media only screen and (max-width:900px) {
+    body {
+    background-color: #474A4F;
+    margin: 0 auto;
+    }
     #a2 {
         border: 2px solid black;
         border-radius: 15px;
         margin: 25px;
+    }
+    .panelActual {
+    display: flex;
+    flex-direction: column;
+    color: white;
     }
 
     #b1 {
@@ -339,9 +371,15 @@ header {
     }
 
     .logoGTI {
-        width: 180px;
+        width: 120px;
 
 
+    }
+    .fas.fa-bars{
+        color: white;
+        font-size: 40px;
+        margin-left: 15px;
+        display: flex;
     }
 
     .divCentral {
@@ -372,6 +410,7 @@ header {
     .seleccion {
         display: flex;
         justify-content: center;
+        margin-top: 17px;
         
     }
 
@@ -402,10 +441,20 @@ header {
 
 
 @media only screen and (max-width: 450px) {
+    body {
+    background-color: #474A4F;
+    margin: 0 auto;
+    }
+    .panelActual {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    }
     #a2 {
-        border: 2px solid black;
+        border: 2px solid #87C232;
         border-radius: 15px;
         margin: 25px;
+        color: #87C232;
     }
 
     #b1 {
@@ -459,7 +508,7 @@ header {
     }
 
     .logoGTI {
-        width: 140px;
+        width: 70px;
     }
 
     .iconMenu {
@@ -490,7 +539,7 @@ header {
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        margin-top: 7px;
+        margin-top: 17px;
         margin-left: 10px;
 
     }
