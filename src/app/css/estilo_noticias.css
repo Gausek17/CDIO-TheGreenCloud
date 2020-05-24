@@ -46,6 +46,7 @@ body{
 }
 #textNombreUsuario{
     padding: 5px;
+    color: white;
 
 }
 #linea-titulo {
@@ -197,6 +198,9 @@ main{
     display: flex;
     align-items: center;
     align-content: center;
+}
+.infoPeriodicoTexto{
+    color: white;
 }
 #enlaceAlPeriódico{
     color: var(--principal);
