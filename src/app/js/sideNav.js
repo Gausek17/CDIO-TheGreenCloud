@@ -11,7 +11,7 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundColor = "#474A4F";
     var lista = document.getElementsByClassName("divPerson");
     for (let i = 0; i<lista.length; i++){
         lista[i].style.opacity = "1";

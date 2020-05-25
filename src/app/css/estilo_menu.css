@@ -51,6 +51,10 @@ ul li a:hover {
     font-size: 40px;
     padding: 10px;
 }
+.fas.fa-cloud-sun{
+    font-size: 40px;
+    padding: 10px;
+}
 .fas.fa-users{
     font-size: 40px;
     padding: 10px;
@@ -133,7 +137,7 @@ ul li a:hover {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: var(--principal); /* Black*/
+    background-color: #222629; /* Black*/
     overflow-x: hidden;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -151,11 +155,19 @@ ul li a:hover {
 }
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    
     text-decoration: none;
-    font-size: 25px;
+    font-size: 15px;
     color: white;
     transition: 0.3s;
+}
+.fas.fa-sign-out-alt{
+    display: flex;
+    margin-left: 9rem;
+}
+.fas.fa-sign-out-alt:hover{
+    color: #87C232;
+    
 }
 /* When you mouse over the navigation links, change their color */
 .itemMenu:hover {

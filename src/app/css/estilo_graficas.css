@@ -82,7 +82,7 @@
     height: 55vh;
     margin: 1rem auto;
     margin-top: 2rem;
-    background-color: #99d04b;
+    background-color: #222629;
     border-radius: 10px;
 }
 
@@ -326,10 +326,15 @@ header {
 .navMediciones {
    
     border-right: 1px solid white;
+    color: #87C232;
+}
+.navMediciones a{
+    color: #87C232
 }
 
 .navParcela {
     border-right: 1px solid white;
+    
 }
 
 
@@ -526,17 +531,67 @@ header {
     flex-direction: column;
     color: white;
     }
-
+    #a1{
+        border: 2px solid white;
+        border-radius: 10px;
+        margin: 25px; 
+    }
+    #a1:hover{
+        border: 2px solid #87C232;
+        color: #87C232;
+    }
+    #a2{
+       border: 2px solid white;
+        border-radius: 10px;
+        margin: 25px;
+    
+    }
+    #a2:hover{
+        border: 2px solid #87C232;
+        color: #87C232;
+    }
     #a3 {
-        border: 2px solid black;
-        border-radius: 15px;
+        border: 2px solid #87C232;
+        border-radius: 10px;
+        margin: 25px;
+        color: #87C232;
+    }
+    #a4{
+        border: 2px solid white;
+        border-radius: 10px;
         margin: 25px;
     }
-
-    #b2 {
-        border: 2px solid black;
-        border-radius: 15px;
+    #a4:hover{
+        border: 2px solid #87C232;
+        color: #87C232;
+    }
+    #b1{
+        border: 2px solid white;
+         border-radius: 10px;
         margin: 25px;
+    }
+    #b1:hover{
+        border: 2px solid #87C232;
+        border-radius: 10px;
+        margin: 25px;
+        color: #87C232;
+    }
+    #b2 {
+        border: 2px solid #87C232;
+        border-radius: 10px;
+        margin: 25px;
+        color: #87C232;
+    }
+    #b3{
+       border: 2px solid white;
+         border-radius: 10px;
+        margin: 25px; 
+    }
+    #3:hover{
+        border: 2px solid #87C232;
+        border-radius: 10px;
+        margin: 25px;
+        color: #87C232;
     }
 
     .iconSensorSelected {
