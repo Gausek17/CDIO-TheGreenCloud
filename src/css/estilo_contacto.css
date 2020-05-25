@@ -1,11 +1,11 @@
 :root {
-    --principal: #009B94;
+    --principal: #87C232;
     /* color principal */
-    --secundario: #035752;
+    --secundario: #618930;
     /* para el hover */
-    --fondo: #D8E6F4;
+    --fondo: #333333;
     /* color para los fondos de las páginas */
-    --letras: #005752;
+    --letras: white;
     /* color para resaltar las letras */
 }
 
@@ -30,27 +30,25 @@ body {
 }
 
 .textoConsulta{
-    color: #000080;
+    color: var(--principal);
 }
 
 .form-control {
     margin-top: 0.35rem;
-    border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 0.7rem;
     width: 18rem;
-    font-size: 1.05rem;
+    font-size: 0.8rem;
 }
 
 .textAreaConsulta {
     margin-top: 0.25rem;
-    border: 2px solid black;
     resize: none;
     height: 19rem;
     width: 20rem;
     border-radius: 10px;
     padding: 0.5rem;
-    font-size: 1.05rem;
+    font-size: 0.8rem;
 }
 
 .contenedorCamposForm {
@@ -60,6 +58,7 @@ body {
 .contenedorConsulta {
     display: flex;
     flex-direction: column;
+    margin-top: 1.5rem;
 }
 
 .btn_form {
@@ -80,7 +79,7 @@ body {
 }
 
 .form-group{
-    color: #000080;
+    color: white;
 }
 
 .contacto {
@@ -125,6 +124,37 @@ body {
     background-color: var(--secundario);
     color: white;
 }
+.container-dudas{
+    color: white;
+    float: left;
+}
+.container-dudas h4{
+    border-bottom: 2px solid white;
+    width: 130px;
+}
+.container-redes{
+    color: white;
+    float: right;
+    margin-bottom: 20px;
+}
+.container-redes h4{
+    border-bottom: 2px solid white;
+    width: 100px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.twitter{
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+.twitter{
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
 
 
 /*--------------mediaQuery--------------------*/
@@ -156,10 +186,6 @@ body {
         margin: 0;
         display: flex;
         justify-content: center;
-    }
-
-    .form-group {
-        margin-top: 1rem;
     }
 
     .textAreaConsulta {
@@ -206,5 +232,61 @@ body {
         justify-content: center;
         align-items: center;
     }
+    .textAreaConsulta{
+        height: 10rem;
+    }
+    .form-group label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+    .btn_form{
+        justify-content: center;
+    }
+    .btn_form p{
+        display: flex;
+        justify-content: center;
+        margin-top: -5px;
+    }
+    
+.btn_submit,
+.btn_reset {
+    font-size: 1rem;
+    height: 40px;
+    width: 100px;
+}
+    .container-dudas a{
+        font-size: 12px;
+    }
+    .container-dudas{
+    color: white;
+    float: left;
+}
+.container-dudas h4{
+    border-bottom: 2px solid white;
+    width: 130px;
+}
+.container-redes{
+    color: white;
+    float: right;
+    margin-bottom: 20px;
+}
+.container-redes h4{
+    border-bottom: 2px solid white;
+    width: 100px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.twitter{
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+.instagram{
+    margin-left: 10px;
+    width: 34px;
+    height: 34px;
+}
 
 }
