@@ -80,7 +80,11 @@ h3 {
     text-align: center;
     border: none;
     color: white;
+<<<<<<< Updated upstream
 
+=======
+   
+>>>>>>> Stashed changes
     margin-top: 100px;
     -webkit-text-stroke: 2px black;
 }
@@ -144,7 +148,7 @@ h3 {
 .listaCirculos{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     list-style: none;
     padding-bottom: 100px;
@@ -154,9 +158,10 @@ h3 {
 .listaCirculos li {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     justify-content: center;
     margin-top: 20px;
+    flex: 1 ;
 
 }
 .listaCirculos li img {
@@ -172,13 +177,13 @@ h3 {
     color: var(--principal);
     font-size: 45px;
     margin: 10px;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 .listaCirculos li p {
-    margin-top: 10px;
+   /* margin-top: 10px;*/
     padding-left: 2rem;
     padding-right: 2rem ;
-    font-size: 40px;
+    font-size: 30px;
     /*font-weight: bold;*/
     text-align: center;
     color: white;
