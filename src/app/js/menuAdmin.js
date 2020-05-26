@@ -30,8 +30,10 @@ let VistaMenu = {
             <a id="a1" href="index.html" class="itemMenu"><i class="fas fa-users"></i>Gestión Usuarios</span></a>
             <a id="a3" href="graficasAdmin.html" class="itemMenu"><i class="fas fa-chart-bar"></i>Mediciones</span></a>
             <a id="a4" href="gestionParcelas.html" class="itemMenu"><i class="fas fa-cogs"></i>Gestión Parcelas</span></a>
+            <i class="fas fa-sign-out-alt" onclick="deleteSesion()"></i>
 `;
     }
+
 };
 
 /*

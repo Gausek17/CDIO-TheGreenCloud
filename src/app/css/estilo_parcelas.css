@@ -221,6 +221,9 @@ header {
 .navParcela{
     border-right: 1px solid white ;
 }
+.navParcela a{
+    color: #87C232;
+}
 .navParcela:hover{
     background-color: var(--secundario);
 }
@@ -452,15 +455,74 @@ header {
     }
     #a2 {
         border: 2px solid #87C232;
-        border-radius: 15px;
+        border-radius: 10px;
         margin: 25px;
         color: #87C232;
     }
+    #a1{
+       border: 2px solid white;
+        border-radius: 10px;
+        margin: 25px;
+         
+    }
+    #a1:hover{
+        border: 2px solid #87C232;
+        border-radius: 10px;
+        margin: 25px;
+        color: #87C232;
+    }
+    #a3{
+        border: 2px solid white;
+        border-radius: 10px;
+        margin: 25px;
+    }
+    #a3:hover{
+        border: 2px solid #87C232;
+        border-radius: 10px;
+        margin: 25px;
+        color: #87C232;
+    }
+    #a4{
+       border: 2px solid white;
+        border-radius: 10px;
+        margin: 25px; 
+    }
+    #a4:hover{
+       border: 2px solid #87C232;
+        border-radius: 10px;
+        margin: 25px;
+        color: #87C232; 
+    }
 
     #b1 {
-        border: 2px solid black;
-        border-radius: 15px;
+        border: 2px solid #87C232;
+        border-radius: 10px;
         margin: 25px;
+        color: #87C232;
+    }
+    #b2 {
+        border: 2px solid white;
+        border-radius: 10px;
+        margin: 25px;
+        
+    }
+    #b2:hover{
+       border: 2px solid #87C232;
+        border-radius: 10px;
+        margin: 25px;
+        color: #87C232; 
+    }
+    #b3 {
+        border: 2px solid white;
+        border-radius: 10px;
+        margin: 25px;
+        
+    }
+    #b3:hover{
+        border: 2px solid #87C232;
+        border-radius: 10px;
+        margin: 25px;
+        color: #87C232; 
     }
 
     .textSeleccionMediciones {
