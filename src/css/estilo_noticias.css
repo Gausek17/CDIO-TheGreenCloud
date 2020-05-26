@@ -51,6 +51,11 @@ body{
     color: white;
 
 }
+#flechaReturn img {
+    width: 40px;
+   flex: 1;
+
+}
 #linea-titulo {
     border: 2px solid white;
     margin-left: 3.5rem;
@@ -58,12 +63,16 @@ body{
 }
 .panelActual {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
 }
 .titulo-sin-linea {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 3;
 }
 
 .titulo-sin-linea p {
@@ -338,7 +347,11 @@ main{
         border-radius: 15px;
         margin: 25px;
     }
+    #flechaReturn img {
+        width: 20px;
 
+
+    }
     .containerWidgetInsta{
         width: auto;
     }
