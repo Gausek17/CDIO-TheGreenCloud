@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tiempo</title>
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_tiempo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/ico" href="../imagenes/parcelas/favicon.ico">
+    <script src="js/sesion_permisos.js"></script>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div id="mySidenav" class="sidenav">
+            <!-- Nav generado en js-->
+        </div>
+        <header>
+
+            <i class="fas fa-bars" onclick="openNav()"></i>
+            <img class="logoGTI" src="../imagenes/logoGTI.png" onclick="location.href='../index.html'">
+            <div class="divUsuario">
+                
+
+                <i class="fas fa-sign-out-alt" onclick="deleteSesion()"></i> 
+            </div>
+        </header>
+        <nav id="navGeneral">
+            <!-- Nav generado en js-->
+        </nav>
+        <div class="divCentral">
+            <div class="divContenido">
+                <div class="panelActual" id="panelActual">
+                    <div class="titulo-sin-linea">
+                        <i class="fas fa-cloud-sun-rain"></i>
+                        <p>Tiempo</p>
+                    </div>
+
+                    <section id="linea-titulo"></section>
+                </div>
+                
+                <div class="tiempo">
+                  
+            <iframe src="https://www.meteoblue.com/en/weather/widget/three?geoloc=detect&nocurrent=0&noforecast=0&days=7&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 1205px; height: 816px;" id="tiempoUser"></iframe><div><a href="https://www.meteoblue.com/en/weather/week/index?utm_source=weather_widget&utm_medium=linkus&utm_content=three&utm_campaign=Weather%2BWidget" target="_blank"></a></div>
+        
+        
+        </div>
+                      
+           <div class="tiempoMovil">
+               <iframe src="https://www.meteoblue.com/en/weather/widget/three/reykjavik_iceland_3413829?geoloc=fixed&nocurrent=0&noforecast=0&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" id="tiempoUser" style="width: 460px; height: 589px"></iframe><div><a href="https://www.meteoblue.com/en/weather/week/reykjavik_iceland_3413829?utm_source=weather_widget&utm_medium=linkus&utm_content=three&utm_campaign=Weather%2BWidget" target="_blank"></a></div>
+            </div>
+                
+                
+            </div>
+
+                
+            </div>
+        </div>
+    
+    <script src="js/mapaParcelas.js"></script>
+
+    <script src="js/usuarioLogin.js"></script>
+    <script src="js/menuUser.js"></script>
+    <script src="js/sideNav.js"></script>
+
+    <script src="js/coordenadas.js"></script>
+    <script src="js/parcelas_select.js"></script>
+    <script src="js/usuarios_select.js"></script>
+    <script src="js/sonda.js"></script>
+    <script src="js/tiempoUser.js"></script>
+    <script>
+        VistaMenu.setNav("navGeneral");
+        VistaMenu.crearNav();
+        VistaMenu.setSideNav("mySidenav");
+        VistaMenu.crearSideNav();
+
+
+    </script>
+    
+</body>
+
+</html>

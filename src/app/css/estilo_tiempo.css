@@ -17,12 +17,12 @@ body {
     background-color: #474A4F;
     margin: 0 auto;
 }
-.logoGTI{
-    width: 80px;
-    height: 80px;
-}
+
 .logoGTI:hover {
     cursor: pointer;
+}
+.tiempoMovil{
+    display: none;
 }
 
 .cerrar_sesion {
@@ -30,8 +30,11 @@ body {
 }
 
 .cerrar_sesion:hover {
+  
+    
     cursor: pointer;
 }
+
 
 .iconMenu {
     display: none;
@@ -42,11 +45,18 @@ body {
     margin-left: 0.5rem;
 }
 
+
 .container {
     align-items: center;
     margin-right: 7.5rem;
     margin-left: 7.5rem;
     margin-bottom: 0rem;
+}
+.tiempo{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
 }
 
 header {
@@ -76,6 +86,14 @@ header {
 
 #parcela {
     margin-left: 10px;
+}
+.tiempoResponsive{
+    display: none;
+    
+    
+}
+.tiempoResponsiveTablet{
+    display: none;
 }
 
 .seleccion select {
@@ -151,7 +169,7 @@ header {
     cursor: pointer;
 }
 .fas.fa-sign-out-alt:hover{
-    color: gray;
+    color: #87C232;
 }
 
 .button {
@@ -206,31 +224,29 @@ header {
 
 
 .navParcela {
-    background-color: var(--secundario);
+   
 }
 .navUsuarios{
     border-right: 1px solid white;
 }
 
 .navUsuarios:hover{
-    background-color:var(--secundario);
+   
 }
 .navMediciones{
     border-right: 1px solid white;
 }
 
 .navMediciones:hover{
-    background-color: var(--secundario);
+    
 }
 .navParcela{
     border-right: 1px solid white ;
 }
 .navParcela a{
-    color: #87C232;
+    color: white;
 }
-.navParcela:hover{
-    background-color: var(--secundario);
-}
+
 .navNoticias {
     
 }
@@ -240,7 +256,10 @@ header {
 }
 
 .navMediciones:hover {
-    background-color: var(--secundario);
+    
+}
+.navTiempo a{
+    color: #87C232;
 }
 
 #map {
@@ -353,36 +372,35 @@ header {
         border-radius: 15px;
         margin: 25px;
     }
+    .tiempoResponsiveTablet{
+        display: none;
+    }
+    .tiempoResponsive{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        margin-top: 2rem;
+       
+    }
     .panelActual {
     display: flex;
     flex-direction: column;
     color: white;
     }
+    .tiempo{
+        width: 95%;
+        height: 95%;
+        display: flex;
+        zoom: 90%;
+        margin-left: 1.5rem;
+    }
 
     #b1 {
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #b2{
-        border: 4px solid white;
+        border: 2px solid black;
         border-radius: 15px;
         margin: 25px;
     }
-    #b3{
-        border: 4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #b3:hover{
-        color: #87C232;
-        border: 4px solid #87C232;
-    }
-    #b2:hover{
-        color: #87C232;
-        border: 4px solid #87C232;
-    }
+    
 
 
     .divContenidoUser {
@@ -395,6 +413,15 @@ header {
         height: 45px;
 
     }
+    #tiempoUser{
+    /*zoom: 2.89;*/
+-moz-transform: scale(0.89);
+-moz-transform-origin: 0 0;
+-o-transform: scale(0.89);
+-o-transform-origin: 0 0;
+-webkit-transform: scale(0.89);
+-webkit-transform-origin: 0 0;
+    }
 
     .logoGTI {
         width: 120px;
@@ -406,6 +433,10 @@ header {
         font-size: 40px;
         margin-left: 15px;
         display: flex;
+    }
+    .fas.fa-cloud-sun-rain{
+        font-size: 40px;
+        margin-right: 15px;
     }
 
     .divCentral {
@@ -462,6 +493,9 @@ header {
     .textSeleccionParcela {
         font-size: 15px;
     }
+    .divUsuario{
+        display: none;
+    }
 }
 
 
@@ -471,60 +505,88 @@ header {
     background-color: #474A4F;
     margin: 0 auto;
     }
+    .tiempoResponsive{
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 2rem;
+        
+            
+   
+    }
+    .tiempoMovil{
+        display: flex;
+        
+        margin-top: 2rem;
+        margin: 20px;
+        
+    }
+    .tiempoResponsiveTablet{
+        display: none;
+    }
     .panelActual {
     display: flex;
     flex-direction: column;
     color: white;
     }
-    .prueba.fas.fa-sign-out-alt{
+    .divUsuario{
         display: none;
     }
     #a2 {
-        border: 4px solid #87C232;
+        border: 2px solid #87C232;
         border-radius: 10px;
         margin: 25px;
         color: #87C232;
     }
     #a1{
-       border: 4px solid white;
+       border: 2px solid white;
         border-radius: 10px;
         margin: 25px;
          
     }
     #a1:hover{
-        border: 4px solid #87C232;
+        border: 2px solid #87C232;
         border-radius: 10px;
         margin: 25px;
         color: #87C232;
     }
     #a3{
-        border: 4px solid white;
+        border: 2px solid white;
         border-radius: 10px;
         margin: 25px;
     }
     #a3:hover{
-        border: 4px solid #87C232;
+        border: 2px solid #87C232;
         border-radius: 10px;
         margin: 25px;
         color: #87C232;
     }
     #a4{
-       border: 4px solid white;
+       border: 2px solid white;
         border-radius: 10px;
         margin: 25px; 
     }
     #a4:hover{
-       border: 4px solid #87C232;
+       border: 2px solid #87C232;
         border-radius: 10px;
         margin: 25px;
         color: #87C232; 
     }
+    .tiempo{
+        display: none;
+        }
 
     #b1 {
+        border: 4px solid white;
+        border-radius: 10px;
+        margin: 25px;
+        color: white;
+    }
+    #b1:hover{
         border: 4px solid #87C232;
         border-radius: 10px;
         margin: 25px;
-        color: #87C232;
+        color: #87C232; 
     }
     #b2 {
         border: 4px solid white;
@@ -539,9 +601,10 @@ header {
         color: #87C232; 
     }
     #b3 {
-        border: 4px solid white;
+        border: 4px solid #87C232;
         border-radius: 10px;
         margin: 25px;
+        color: #87C232;
         
     }
     #b3:hover{
@@ -596,8 +659,10 @@ header {
     }
 
     .logoGTI {
+        
+        display: flex;
+        
         width: 70px;
-        height: auto;
     }
 
     .iconMenu {

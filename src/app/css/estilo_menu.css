@@ -145,13 +145,13 @@ ul li a:hover {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: 1rem;
 
 }
 .menuTextAdmin{
     font-size: 1.5rem;
-    border-bottom: 2px solid #78cac6;
+   
 }
 /* The navigation menu links */
 .sidenav a {
@@ -163,7 +163,9 @@ ul li a:hover {
 }
 .fas.fa-sign-out-alt{
     display: flex;
-    margin-left: 9rem;
+    justify-content: flex-end;
+    margin-right: 15px;
+    margin-top: 12rem;
 }
 .fas.fa-sign-out-alt:hover{
     color: #87C232;
@@ -190,3 +192,4 @@ ul li a:hover {
     font-size:3rem;
     margin-left: 50px;
 }
+ 
