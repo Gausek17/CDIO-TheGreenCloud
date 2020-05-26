@@ -48,30 +48,33 @@
                 <div class="divContenidoGraficasUser">
                     <div class="divSelectoresUser">
                         <section><p class="textSeleccionParcela">Parcela:</p>
-                            <label><select id="selectParcelas" onchange="actualizarSelectSondas(pintarGraficas)">
+                            <label><select id="selectParcelas" onclick="habilitarSelectSondas()" onchange="actualizarSelectSondas(pintarGraficas)">
                                 <!-- Listado de  parcelas generado en js-->
                             </select>
                             </label>
                         </section>
                         <section><p class="textSeleccionSonda">Sonda:</p>
-                            <label><select id="selectSondas" onchange="pintarGraficas()">
+                            <label><select id="selectSondas" onclick="habilitarFechaInicio()" onchange="pintarGraficas()">
                                 <!-- Listado de sondas generado en js-->
                             </select>
                             </label>
                         </section>
                     </div>
                     <div class="divSelectoresUser">
-                        <section><p class="textSeleccionFecha" id="textSelectorFecha">Fecha:</p>
+                        <section class="seleccionPrimeraFecha">
+                            <p class="textSeleccionFecha" id="textSelectorFecha">Fecha:</p>
                             <div class="divSelectorFecha">
-                                <input class="calendar" type="date" name="field1" id="fechaInicio" onchange="pintarGraficas()"/>
-                                <img src="../imagenes/graficas/DateEnd.png" onclick="changeToDateInterval()" alt="Intervalo de Fechas" class="imgDateSelectorInterval" id="dateIntervalSelector">
+                                <input class="calendar" type="date" name="field1" id="fechaInicio"   onchange="pintarGraficas()"/>
+                                <!--<img src="../imagenes/graficas/DateEnd.png" onclick="changeToDateInterval()" alt="Intervalo de Fechas" class="imgDateSelectorInterval" id="dateIntervalSelector">
+                                -->
                             </div>
 
 
                         </section>
                         <section id="divFechaFin" class="divFechaFinUser">
-                            <p class="textSeleccionFecha">Fecha Fin:</p>
+
                             <div class="divSelectorFecha">
+                                <p class="textSeleccionFecha">Si elige una segunda fecha podrá ver un intervalo de mediciones:</p>
                                 <input class="calendar" type="date" name="fechaFin" id="fechaFin" onchange="pintarGraficas()"/>
                                 <img src="../imagenes/graficas/DataUnique.png" onclick="changeToDateUnique()" alt="Intervalo de Fechas" class="imgDateSelectorUnique" id="dateUniqueSelector">
                             </div>
@@ -114,8 +117,11 @@
         //se hará un callback a la función para inicir el selector de parcelas
         ControladorUsuarioLogin.iniciar(iniciarSelectParcelas);
 
+
+
         function iniciarSelectParcelas() {
             VistaParcelasSelect.iniciar("selectParcelas");
+
             //Segundo callback: Un vez se hayan inciado la infomacion relativa a las parcelas
             //se cargara el select de las sondas
             ControladorSelectParcelas.iniciar(iniciarSelectSondas);
@@ -129,10 +135,16 @@
         }
 
         function iniciarGraficas() {
+
+            deshabilitar("selectSondas");
+            deshabilitar("fechaInicio");
+
             setDateToday();
             VistaMediciones.iniciar("chart");
             controladorMediciones.iniciar();
             pintarGraficas();
+
+
 
 
         }

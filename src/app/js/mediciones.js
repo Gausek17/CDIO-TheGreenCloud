@@ -364,3 +364,21 @@ function changeToDateUnique() {
     document.getElementById("fechaFin").value = "";
     pintarGraficas();
 }
+function habilitar(nombreselect) {
+    document.getElementById(nombreselect).disabled = false;
+    document.getElementById(nombreselect).enabled = true;
+}
+function deshabilitar(nombreselect) {
+
+    document.getElementById(nombreselect).enabled = false;
+    document.getElementById(nombreselect).disabled = true;
+
+
+}
+function habilitarSelectSondas() {
+    habilitar("selectSondas");
+}
+function habilitarFechaInicio() {
+    habilitar("fechaInicio");
+    changeToDateInterval();
+}

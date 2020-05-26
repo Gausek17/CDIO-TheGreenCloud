@@ -162,10 +162,13 @@ header {
 .divSelectoresUser {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
+
 }
 
-.divSelectoresUser section {}
+.seleccionPrimeraFecha{
+
+}
 
 .checkbox {
     display: flex;
@@ -212,10 +215,11 @@ header {
 
 }
 
-#selectUsurios,
-#selectParcelas,
-#selectSondas {
-    background-color: #235138;
+#selectUsurios:enabled,
+#selectParcelas:enabled,
+#fechaInicio.calendar:enabled,
+#selectSondas:enabled{
+    background-color: #618930;
     color: #C7D9CD;
     font-size: 1.3rem;
     font-weight: 500;
@@ -227,8 +231,25 @@ header {
     margin-right: 5rem;
 }
 
+#selectUsurios:disabled,
+#fechaInicio:disabled,
+#selectSondas:disabled{
+    background-color: #222629;
+    color: lightslategrey;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 0.6rem;
+    border: 0px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 5rem;
+}
+
+
+
 .calendar {
-    background-color: #235138;
+    background-color: #618930;
     color: #C7D9CD;
     font-size: 1.3rem;
     font-weight: 500;
@@ -338,10 +359,6 @@ header {
     
 }
 
-
-
-
-
 .divSelectores {
     display: flex;
 }
@@ -367,6 +384,13 @@ header {
 .divSelectorFecha {
     display: flex;
     align-items: center;
+    flex-direction: column;
+
+}
+.divSelectorFecha p{
+    width: 200px;
+    text-align: center;
+    color: white;
 }
 
 .textSeleccionFechaFin {
@@ -549,12 +573,18 @@ header {
     }
 
     .divSelectoresUser {
-        justify-content: space-around;
+        justify-content:stretch;
         margin-top: 2rem;
 
     }
     .divFechaFinUser{
         margin-left: 0;
+
+
+    }
+    .textoIntervalo{
+        color: white;
+        width: 100px;
     }
 
 }

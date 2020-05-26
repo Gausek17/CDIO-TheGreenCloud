@@ -42,6 +42,7 @@ let ControladorSondasSelect = {
 };
 
 function actualizarSelectSondas(callback) {
+   // habilitar("selectSondas");
     var stringSondas='';
     var data = ModeloSondasSelect.datos;
     var idParcela;
