@@ -1,13 +1,4 @@
-:root {
-    --principal: #009B94;
-    /* color principal */
-    --secundario: #035752;
-    /* para el hover */
-    --fondo: #D8E6F4;
-    /* color para los fondos de las páginas */
-    --letras: #005752;
-    /* color para resaltar las letras */
-}
+
 
 /*-------Fuente común-------*/
 * {
@@ -214,10 +205,14 @@ header {
     margin-right: 1rem;
 
 }
+.divSelectoresDerecha{
+    display: flex;
 
+}
 #selectUsurios:enabled,
 #selectParcelas:enabled,
 #fechaInicio.calendar:enabled,
+#fechaFin.calendar:enabled,
 #selectSondas:enabled{
     background-color: #618930;
     color: #C7D9CD;
@@ -228,11 +223,14 @@ header {
     border: 0px;
     cursor: pointer;
     margin-top: 5px;
-    margin-right: 5rem;
+    margin-right: 1rem;
+
 }
 
 #selectUsurios:disabled,
 #fechaInicio:disabled,
+#fechaFin:disabled,
+#selectParcelas:disabled,
 #selectSondas:disabled{
     background-color: #222629;
     color: lightslategrey;
@@ -243,7 +241,10 @@ header {
     border: 0px;
     cursor: pointer;
     margin-top: 5px;
-    margin-right: 5rem;
+   margin-right: 1rem;
+}
+#fechaFinLabel{
+    color: white;
 }
 
 
@@ -383,22 +384,13 @@ header {
 
 .divSelectorFecha {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    /*align-items: center;*/
+    flex-direction: row;
 
 }
-.divSelectorFecha p{
-    width: 200px;
-    text-align: center;
-    color: white;
-}
 
-.textSeleccionFechaFin {
-    margin: 0;
-    font-weight: bold;
-    padding: 5px;
-    color: white;
-}
+
+
 
 .divFechaFin, .divFechaFinUser {
     display: none;
@@ -407,6 +399,84 @@ header {
 .divFechaFinUser{
     margin-left: 5rem;
 }
+.labelYcalendarFechaFin{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.labelYcalendarFechaFin p{
+    margin-bottom: 1px;
+    padding: 5px;
+
+}
+#btn-abrir-popup-mediciones{
+    background-color: #474A4F;
+    border: 0;
+}
+#btn-abrir-popup-mediciones:focus{
+    border: 0;
+    outline: none;
+}
+#btn-abrir-popup-mediciones a{
+    color: #87C232;
+    cursor: pointer;
+}
+.fas fa-info-circle{
+    color: #87C232;
+    width: 20px;
+    cursor: pointer;
+}
+/*------------POP UP----------------------*/
+.overlay{
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+.overlay.active{
+    visibility: visible;
+}
+.popup{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    font-family: "Trebuchet MS",sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+
+
+
+}
+.popup p{
+    text-align: center;
+    color: #3a3a3a;
+}
+.popup .btn-cerrar-popup{
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #3a3a3a;
+}
+.popup .btn-cerrar-popup:hover{
+    color: black;
+}
+.popup h3{
+    color:#618930 ;
+    margin-top: 1rem;
+    font-size: 25px;
+    font-weight: 600;
+}
+
 /*------RESPONSIVE----------*/
 
 /*---------Ipad--------*/
@@ -560,7 +630,7 @@ header {
 
     .divSelectores {
         margin-top: 1.5rem;
-        display: block;
+        /*display: block;*/
     }
 
     .divContenidoGraficas {
@@ -574,7 +644,8 @@ header {
 
     .divSelectoresUser {
         justify-content:stretch;
-        margin-top: 2rem;
+        margin-top: 1rem;
+
 
     }
     .divFechaFinUser{
@@ -683,7 +754,25 @@ header {
     .divSelectores {
         margin-top: 0;
         margin-bottom: 0.5rem;
+        flex-direction: row;
+
     }
+    .divSelectoresDerecha{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .divSelectoresUser {
+        justify-content:center;
+        margin-top: 0px;
+        margin-left: 10px;
+
+
+    }
+    #fechaFinLabel{
+        margin-top: 5px;
+    }
+
 
     .textSeleccionSonda,
     .textSeleccionFecha,
@@ -705,12 +794,26 @@ header {
         font-size: 15px;
     }
 
-    .checkbox {
-        display: flex;
-        margin-top: 5px;
-        justify-content: space-around;
-    }
+    #selectUsurios:enabled,
+    #selectParcelas:enabled,
+    #fechaInicio.calendar:enabled,
+    #fechaFin.calendar:enabled,
+    #selectSondas:enabled{
 
+        font-size: .7rem;
+
+
+    }
+    #selectUsurios:disabled,
+    #selectParcelas:disabled,
+    #fechaInicio.calendar:disabled,
+    #fechaFin.calendar:disabled,
+    #selectSondas:disabled{
+
+        font-size: .7rem;
+
+
+    }
     #grafica {
         padding: 0;
         width: 95%;
@@ -736,7 +839,7 @@ header {
     }
 
     #selectUsurios {
-        width: 150px;
+        width: 100px;
         height: 40px;
         font-size: 13px;
         padding: 0.5rem;
@@ -767,9 +870,8 @@ header {
     }
 
     .seleccion {
-        display: block;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
+
     }
 
     .elementSensores {

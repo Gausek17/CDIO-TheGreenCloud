@@ -45,8 +45,9 @@
 
             <div class="divContenidoGraficas">
                 <div class="divSelectores">
-                    <section class="seleccion"><p class="textSeleccionUser">Usuario:</p>
-                        <label><select id="selectUsurios"
+                    <section class="seleccion">
+                        <p class="textSeleccionUser">Usuario:</p>
+                        <label><select id="selectUsurios" onclick="habilitarSelectParcelas()"
                                        onchange="actualizarSelectParcelas(actualizarSelectSondas, pintarGraficas)">
                             <!-- Listado de usuarios generado en JS-->
                         </select>
@@ -54,41 +55,64 @@
                     </section>
 
                     <section><p class="textSeleccionParcela">Parcela:</p>
-                        <label><select id="selectParcelas" onchange="actualizarSelectSondas(pintarGraficas)">
+                        <label><select id="selectParcelas" onclick="habilitarSelectSondas()" onchange="actualizarSelectSondas(pintarGraficas)">
                             <!-- Listado de  parcelas generado en js-->
                         </select>
                         </label>
                     </section>
                 </div>
-                <div class="divSelectores">
+                <div class="divSelectoresDerecha">
                     <section class="seleccion"><p class="textSeleccionSonda">Sonda:</p>
-                        <label><select id="selectSondas" onchange="pintarGraficas()">
+                        <label><select id="selectSondas"onclick="habilitarFechaInicio()" onchange="pintarGraficas()">
                             <!-- Listado de sondas generado en js-->
                         </select>
                         </label>
                     </section>
 
-                    <section><p class="textSeleccionFecha" id="textSelectorFecha">Fecha:</p>
-                        <div class="divSelectorFecha">
-                            <input class="calendar" type="date" name="field1" id="fechaInicio" onchange="pintarGraficas()"/>
-                            <img src="../imagenes/graficas/DateEnd.png" onclick="changeToDateInterval()" alt="Intervalo de Fechas" class="imgDateSelectorInterval" id="dateIntervalSelector">
-                            <img src="../imagenes/graficas/DataUnique.png" onclick="changeToDateUnique()" alt="Intervalo de Fechas" class="imgDateSelectorUnique" id="dateUniqueSelector">
-                        </div>
-                        <div id="divFechaFin" class="divFechaFin">
-                            <p class="textSeleccionFechaFin">Fecha Fin:</p>
+                    <div class="divSelectoresUser">
+                        <section class="seleccionPrimeraFecha">
+                            <p class="textSeleccionFecha" id="textSelectorFecha">Fecha:</p>
                             <div class="divSelectorFecha">
-                                <input class="calendar" type="date" name="fechaFin" id="fechaFin" onchange="pintarGraficas()"/>
+                                <input class="calendar" type="date" name="field1" id="fechaInicio"   onchange="pintarGraficas()"/>
+                                <!--<img src="../imagenes/graficas/DateEnd.png" onclick="changeToDateInterval()" alt="Intervalo de Fechas" class="imgDateSelectorInterval" id="dateIntervalSelector">
+                                -->
+
                             </div>
-                        </div>
 
 
-                    </section>
+                        </section>
+                        <section id="divFechaFin" class="divFechaFinUser">
+
+                            <div class="divSelectorFecha">
+                                <button  class="btn-abrir-popup" id="btn-abrir-popup-mediciones"><a class="fas fa-info-circle"></a></button>
+                                <div class="labelYcalendarFechaFin">
+                                    <p id="fechaFinLabel">Fecha fin:</p>
+                                    <input class="calendar" type="date" name="fechaFin" id="fechaFin" onchange="pintarGraficas()"/>
+                                </div>
+
+
+                                <div class="overlay" id="overlayMediciones">
+                                    <div class="popup" id="popupMediciones">
+                                        <a href="#" id="btn-cerrar-popup-mediciones" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                                        <h3>Información Intervalos</h3>
+                                        <p>Si eliges una fecha fin , pasarás a ver un intervalo de medidas entre la fecha inicio y la fecha fin</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+
+                    </div>
 
                 </div>
 
 
 
             </div>
+
             <div class="grafica" id="grafica">
                 <canvas id="chart"></canvas>
 
@@ -139,6 +163,11 @@
     }
 
     function iniciarGraficas() {
+        deshabilitar("selectParcelas");
+        deshabilitar("selectSondas");
+        deshabilitar("fechaInicio");
+        deshabilitar("fechaFin");
+        changeToDateInterval();
         setDateToday();
         VistaMediciones.iniciar("chart");
         controladorMediciones.iniciar();

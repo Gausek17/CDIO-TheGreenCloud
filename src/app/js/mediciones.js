@@ -350,10 +350,10 @@ function dateToStringDayMonyh(date){
 }
 function changeToDateInterval() {
     document.getElementById("divFechaFin").style.display="block";
-    document.getElementById("dateIntervalSelector").style.display="none";
-    document.getElementById("dateUniqueSelector").style.display="block";
+    /*document.getElementById("dateIntervalSelector").style.display="none";
+    document.getElementById("dateUniqueSelector").style.display="block";*/
     document.getElementById("textSelectorFecha").innerHTML ="Fecha Inicio:";
-
+    pintarGraficas();
 }
 function changeToDateUnique() {
     document.getElementById("divFechaFin").style.display="none";
@@ -362,7 +362,7 @@ function changeToDateUnique() {
     document.getElementById("textSelectorFecha").innerHTML ="Fecha:";
 
     document.getElementById("fechaFin").value = "";
-    pintarGraficas();
+
 }
 function habilitar(nombreselect) {
     document.getElementById(nombreselect).disabled = false;
@@ -375,10 +375,29 @@ function deshabilitar(nombreselect) {
 
 
 }
+function habilitarSelectParcelas() {
+    habilitar("selectParcelas");
+}
 function habilitarSelectSondas() {
     habilitar("selectSondas");
 }
 function habilitarFechaInicio() {
     habilitar("fechaInicio");
-    changeToDateInterval();
+    habilitar("fechaFin");
+
 }
+/*------------------------pop up para mediciones----------------------------*/
+
+    var btnAbrirPopupMediciones = document.getElementById("btn-abrir-popup-mediciones"),
+        overlayMediciones = document.getElementById("overlayMediciones"),
+        popupMediciones = document.getElementById("popupMediciones"),
+        btnCerrarPopupMediciones = document.getElementById("btn-cerrar-popup-mediciones");
+
+    btnAbrirPopupMediciones.addEventListener('click',function () {
+        overlayMediciones.classList.add('active');
+    });
+    btnCerrarPopupMediciones.addEventListener('click',function () {
+        overlayMediciones.classList.remove('active');
+    });
+
+

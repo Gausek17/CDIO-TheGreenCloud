@@ -46,6 +46,7 @@ body {
     padding: 0.7rem;
     width: 18rem;
     font-size: 0.8rem;
+    border: none;
 }
 
 .textAreaConsulta {
@@ -222,10 +223,22 @@ body {
     .contenedorCamposForm {
         margin: 0;
     }
+    .form-control{
+        width: 25rem;
+    }
+    .textAreaConsulta{
+        width: 25rem;
+    }
+    .contenido-debajo{
+        justify-content: space-around;
+    }
+    .container-redes{
+        margin-left: 3rem;
+    }
 }
 
     
-@media (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     
     /*--------------Movil-----------------*/
 
@@ -279,7 +292,7 @@ body {
     }
     .container-dudas{
     color: white;
-    float: left;
+    margin-right: 0px;;
 }
 .container-dudas h4{
     border-bottom: 2px solid white;
@@ -287,7 +300,6 @@ body {
 }
 .container-redes{
     color: white;
-    float: right;
     margin-bottom: 20px;
 }
 .container-redes h4{
@@ -307,6 +319,27 @@ body {
     margin-left: 10px;
     width: 34px;
     height: 34px;
+}
+.form-control {
+    margin-top: 0.35rem;
+    border-radius: 10px;
+    padding: 0.7rem;
+    width: 18rem;
+    font-size: 0.8rem;
+    border: none;
+}
+    .contenido-debajo{
+    display: flex;
+    justify-content: flex-end;
+}
+    .textAreaConsulta {
+    margin-top: 0.25rem;
+    resize: none;
+    height: 10rem;
+    width: 18rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
 }
 
 }
