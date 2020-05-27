@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Graficas Admin</title>
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_gestionParcelas.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_formalwindow.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" type="image/ico" href="../imagenes/graficas/favicon.ico">
+    <script src="js/sesion_permisos.js"></script>
+
+</head>
+
+<body>
+
+
+<div class="container" id="container">
+    <div id="mySidenav" class="sidenav">
+        <!-- Nav generado en js-->
+    </div>
+    <header>
+        <i class="fas fa-bars" onclick="openNav()"></i>
+        <img class="logoGTI" src="../imagenes/logoGTI.png" onclick="location.href='../index.html'">
+        <div class="divUsuario">
+            <i class="prueba fas fa-sign-out-alt" onclick="deleteSesion()"></i>
+        </div>
+    </header>
+    <nav id="navGeneral">
+        <!-- Nav generado en js-->
+    </nav>
+    <div class="divCentral">
+        <div class="divContenido">
+            <div class="panelActual" id="panelActual">
+                <div class="titulo-sin-linea">
+                    <i class="fas fa-chart-bar"></i>
+                    <p>Gestión Parcelas</p>
+                </div>
+                <section id="linea-titulo"></section>
+            </div>
+            <!-- Introducir cuerpo página-->
+        </div>
+    </div>
+
+
+</div>
+<div id="divPopup" class="w3-modal w3-animate-opacity"></div>
+<script src="js/usuarioLogin.js"></script>
+<script src="js/sideNav.js"></script>
+<script src="js/menuAdmin.js"></script>
+<script src="js/modalConfirm.js"></script>
+<script>
+    VistaMenu.setNav("navGeneral");
+    VistaMenu.crearNav();
+    VistaMenu.setSideNav("mySidenav");
+    VistaMenu.crearSideNav();
+
+    VistaUsuarioLogin.iniciar("textNombreUsuario");
+</script>
+</body>
+
+</html>

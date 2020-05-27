@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/estilo_gestionUsuarios.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
-
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_formalwindow.css">
     <link rel="shortcut icon" type="image/ico" href="../imagenes/admin/favicon.ico">
 
@@ -26,33 +26,28 @@
     </div>
     <header>
         <img onclick="openNav()" src="../imagenes/menu/iconMenu.png" alt="Menu" class="iconMenu">
-        <img class="logoGTI" src="../imagenes/logoGTI.svg" onclick="location.href='../index.html'">
-
+        <img class="logoGTI" src="../imagenes/logoGTI.png" onclick="location.href='../index.html'">
+        <nav id="navGeneral">
+            <!-- Nav generado en js-->
+        </nav>
         <div class="divUsuario">
             <p id="textNombreUsuario">Nombre Usuario</p>
-
-            <img src="../imagenes/parcelas/logout.svg" class="cerrar_sesion" alt="Icono Cerrar sesion"
-                 onclick="deleteSesion()">
+            <i class="iconCerraSesion fas fa-sign-out-alt" onclick="deleteSesion()"></i>
         </div>
     </header>
-    <nav id="navGeneral">
-            <!-- Nav generado en js-->
-        </nav> 
+
     <div class="divCentral">
         <div class="divContenido">
             <div class="panelActual" id="panelActual">
                 <div class="titulo-sin-linea">
-                    <img src="../imagenes/menu/groupIcon-Black.png" alt="icono-sensor"
-                         class="iconGestionUsuariosSelected">
+                    <i class="fas fa-users"></i>
                     <p>Gestión de usuarios</p>
                 </div>
 
                 <section id="linea-titulo"></section>
             </div>
             <div class="divNuevoUsuario" id="divNuevoUsuario">
-                <img src="../imagenes/admin/iconAddUser.png" alt="Añadir usuario" class="iconNuevoUsuario"
-                     onclick="modoNuevoUser()">
-                <p> Añadir usuario</p>
+                <i class="fas fa-user-plus" onclick="modoNuevoUser"></i>
             </div>
 
 
@@ -82,12 +77,10 @@
                 </div>
             </div>
             <!-- Buscador usuarios -->
-            <h4>Introduzca el nombre del usuario que desea buscar</h4>
-            <navbar class="navbar">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Usuario" id="buscador">
-                </form>
-            </navbar>
+
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Usuario" id="buscador">
+            </form>
             <!-- Finaliza buscador -->
             <div class="divContenidoUser" id="divContenidoUser">
                 <!-- Listado de Usuarios-->

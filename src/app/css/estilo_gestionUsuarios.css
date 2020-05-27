@@ -3,38 +3,17 @@
     /* color principal */
     --secundario: #035752;
     /* para el hover */
-    --fondo: #D8E6F4;
+    --fondo: #474A4F;
     /* color para los fondos de las páginas */
     --letras: #005752;
     /* color para resaltar las letras */
 }
 
 /* Navbar */
-.form-control{
-    border-color: var(--principal);
-    margin-left: 25px;
-    width: 250px;
-    height: 35px;
-    border-radius: 5px;
-    font-size: 15px;
-    padding: 0.5rem;
-    margin-top: 25px;
-    margin-bottom: 1rem;
-}
-.form-control-parcelas{
-    border-color: var(--principal);
-    width: 250px;
-    height: 35px;
-    border-radius: 5px;
-    font-size: 15px;
-    padding: 0.5rem;
-}
 .contenidoPopupParcelas{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-
 }
 
 /*Parcelas*/
@@ -225,10 +204,6 @@
 
 
 /*---------------------*/
-.navbar{
-    display: flex;
-    justify-content: center;
-}
 
 h4{
     padding-left: 1rem;
@@ -244,6 +219,7 @@ h4{
     font-family: "Trebuchet MS";
 }
 body{
+    background-color:#474A4F;
     margin: 0 auto;
 }
 #textNombreUsuario{
@@ -256,7 +232,7 @@ body{
     margin-right: 3.5rem;
 }
 .panelActual {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 .titulo-sin-linea {
@@ -652,9 +628,6 @@ header{
         width:60px ;
         height: 60px;
      }
-    .form-control-parcelas{
-        width: 120px;
-    }
     .desplegarParcelas{
         
     }
