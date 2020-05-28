@@ -133,6 +133,7 @@ h3 {
 .containerTitulo h2 {
     padding: 3rem;
     border-radius: 7px;
+    color: white;
 }
 
 .titulo2 {
@@ -191,8 +192,7 @@ h3 {
 /*a partir de aqui es css de que ofrecemos*/
 .que_ofrecemos{
     background-color: #757575;
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
+
     border-radius: 7px;
 }
 
@@ -258,7 +258,7 @@ h3 {
     text-align: center;
     font-size: 30px;
     margin-top: 100px;
-    color: var(--secundario);
+    color: #87C232;
 }
 .contenidoFaqs{
     display: flex;
@@ -293,13 +293,13 @@ h3 {
 
     padding: 1.5rem;
     border-radius: 7px;
-    color: var(--secundario);
+    color: #87C232;
 }
 .textosNosotros{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-bottom: 25px;
 }
 .textosNosotros h3{
     font-weight: normal;
