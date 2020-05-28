@@ -151,6 +151,42 @@ ul li a:hover {
     height: auto;
 }
 
+/*Botonoes genericos para toda la pagina*/
+
+.botonPrincipal{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--principal);
+    width: 150px;
+    height: 35px;
+    border-radius: 15px;
+    border: 0;
+}
+
+.botonPrincipal:hover{
+    background-color: #C7FF00;
+    color: #423f3e;
+    cursor: pointer;
+}
+
+
+.botonSecundario{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--secundario);
+    width: 150px;
+    height: 35px;
+    border-radius: 15px;
+    border: 0;
+}
+
+.botonSecundario:hover{
+    background-color: #5D5D5D;
+    cursor: pointer;
+}
+
 
 
 @media only screen and (max-width:900px) {
@@ -255,7 +291,7 @@ ul li a:hover {
     color: #87C232;
 }
 
-/* When you mouse over the navigation links, change their color */
+
 .itemMenu:hover {
     background-color: rgba(0,0,0,0.5);
 }
@@ -270,7 +306,6 @@ ul li a:hover {
     font-size: 1.2rem;
     padding-left: 1rem;
 }
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     right: 25px;
     font-size:3rem;

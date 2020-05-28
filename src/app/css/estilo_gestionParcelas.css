@@ -73,40 +73,9 @@
 
 
 
-.botonPrincipal{
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: var(--principal);
-    width: 150px;
-    height: 35px;
-    border-radius: 15px;
-    border: 0;
-}
-
-.botonPrincipal:hover{
-    background-color: #C7FF00;
-    color: #423f3e;
-    cursor: pointer;
-}
 
 .contenedorBotonesEscitorio{
     margin-top: 2rem;
-}
-.botonSecundario{
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: var(--secundario);
-    width: 150px;
-    height: 35px;
-    border-radius: 15px;
-    border: 0;
-}
-
-.botonSecundario:hover{
-    background-color: #5D5D5D;
-    cursor: pointer;
 }
 
 /*** Tabla **/
