@@ -141,3 +141,17 @@ function dibujarSondas(listaSondas) {
         listaMarcadores.push(marker);
     }
 }
+function habilitar(nombreselect) {
+    document.getElementById(nombreselect).disabled = false;
+    document.getElementById(nombreselect).enabled = true;
+}
+function deshabilitar(nombreselect) {
+
+    document.getElementById(nombreselect).enabled = false;
+    document.getElementById(nombreselect).disabled = true;
+
+
+}
+function habilitarSelectParcelas() {
+    habilitar("selectParcelas");
+}

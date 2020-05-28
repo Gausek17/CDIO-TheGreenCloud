@@ -50,7 +50,7 @@
 
             <div class="divContenidoGraficas">
                 <div class="divSelectores">
-                    <section class="seleccion">
+                    <section class="seleccion2">
                         <p class="textSeleccionUser">Usuario:</p>
                         <label><select id="selectUsurios" onclick="habilitarSelectParcelas()"
                                        onchange="actualizarSelectParcelas(actualizarSelectSondas, pintarGraficas)">
@@ -58,21 +58,27 @@
                         </select>
                         </label>
                     </section>
-
-                    <section><p class="textSeleccionParcela">Parcela:</p>
-                        <label><select id="selectParcelas" onclick="habilitarSelectSondas()" onchange="actualizarSelectSondas(pintarGraficas)">
-                            <!-- Listado de  parcelas generado en js-->
-                        </select>
-                        </label>
-                    </section>
                 </div>
-                <div class="divSelectoresDerecha">
-                    <section class="seleccion"><p class="textSeleccionSonda">Sonda:</p>
+                <section class="seleccion">
+
+                    <section class="selectorSonda">
+                        <p class="textSeleccionSonda">Sonda:</p>
                         <label><select id="selectSondas"onclick="habilitarFechaInicio()" onchange="pintarGraficas()">
                             <!-- Listado de sondas generado en js-->
                         </select>
                         </label>
                     </section>
+
+                    <section>
+                        <p class="textSeleccionParcela">Parcela:</p>
+                        <label><select id="selectParcelas" onclick="habilitarSelectSondas()" onchange="actualizarSelectSondas(pintarGraficas)">
+                            <!-- Listado de  parcelas generado en js-->
+                        </select>
+                        </label>
+                    </section>
+                </section>
+                <div class="divSelectoresDerecha">
+
 
                     <div class="divSelectoresUser">
                         <section class="seleccionPrimeraFecha">

@@ -113,9 +113,7 @@
 
 }
 
-.seleccionPrimeraFecha{
 
-}
 
 
 
@@ -157,7 +155,7 @@
 #fechaFin.calendar:enabled,
 #selectSondas:enabled{
     background-color: #618930;
-    color: #C7D9CD;
+    color: #ffffff;
     font-size: 1.3rem;
     font-weight: 500;
     border-radius: 10px;
@@ -312,7 +310,10 @@
 
 }
 
-
+.seleccion{
+    display: flex;
+    flex-direction: row;
+}
 
 
 .divFechaFin, .divFechaFinUser {
@@ -620,6 +621,7 @@
     .divSelectoresDerecha{
         flex-direction: column;
         align-items: center;
+        margin-left: 20px;
 
     }
     .divSelectoresUser {
@@ -685,6 +687,10 @@
     .divContenidoGraficas {
         flex-wrap: wrap;
         margin-right: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
     }
 
     .seleccion_calendar {
@@ -728,7 +734,9 @@
     }
 
     .seleccion {
+        display: flex;
         flex-direction: row;
+        margin-left: 33px;
 
     }
 
@@ -782,6 +790,8 @@
     .seleccion {
 
         margin-right: 1rem;
+        flex-direction: row;
+        align-items: stretch;
     }
     .divContenidoGraficasUser{
         margin-right: 1.2rem;
