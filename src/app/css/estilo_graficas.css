@@ -1,10 +1,8 @@
 
-
-/*-------Fuente común-------*/
-* {
-    font-family: "Trebuchet MS";
+.navMediciones a{
+    color: var(--principal);
+    border: 3px solid var(--principal);
 }
-
 
 /*-----Forma de texto------*/
 .textSeleccionParcela {
@@ -89,50 +87,8 @@
 }
 */
 
-/*------Header--------*/
-body {
-    margin: 0 auto;
-    background-color: #474A4F;
-}
-
-.logoGTI:hover {
-    cursor: pointer;
-}
-
-.cerrar_sesion {
-    padding: 5px;
-    width: 30px;
-}
-.fas.fa-bars{
-    display: none;
-}
-
-.cerrar_sesion:hover {
-    cursor: pointer;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-}
-.fas.fa-sign-out-alt{
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-.fas.fa-sign-out-alt:hover{
-    color: gray;
-}
-/*----------------*/
-
-
 /*---------Selectores---------*/
-.iconMenu {
-    display: none;
-    width: 35px;
-    height: auto;
-    margin-top: 0.7rem;
-    margin-left: 0.5rem;
-}
+
 
 
 .divContenidoGraficas {
@@ -161,20 +117,6 @@ header {
 
 }
 
-.checkbox {
-    display: flex;
-    text-align: center;
-    margin-bottom: 1rem;
-    justify-content: center;
-}
-
-
-.container {
-    align-items: center;
-    margin-right: 7.5rem;
-    margin-left: 7.5rem;
-    margin-bottom: 1.5rem;
-}
 
 
 
@@ -339,26 +281,7 @@ header {
 
 
 /*------------Menú----------*/
-.navUsuarios {
-    border-right: 1px solid white;
 
-}
-
-
-
-.navMediciones {
-   
-    border-right: 1px solid white;
-    color: #87C232;
-}
-.navMediciones a{
-    color: #87C232
-}
-
-.navParcela {
-    border-right: 1px solid white;
-    
-}
 
 .divSelectores {
     display: flex;
@@ -495,67 +418,11 @@ header {
     display: flex;
     flex-direction: column;
 }
-
-    #a3 {
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a4{
-        border: 4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #a4:hover{
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a1{
-        border: 4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #a1:hover{
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a2{
-        border: 4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #a2:hover{
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    .prueba.fas.fa-sign-out-alt{
-        display: none;
-    }
-
-    #b2 {
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-   
-
     .grafica {
         overflow: inherit;
         width: 80vw;
     }
 
-    .container {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-    }
 
     .fas.fa-bars{
         color: white;
@@ -564,9 +431,6 @@ header {
         display: flex;
     }
 
-    .logoGTI {
-        width: 110px;
-    }
 
     .iconSensorSelected {
         width: 60px;
@@ -665,10 +529,6 @@ header {
 @media only screen and (max-width: 450px) {
 
     /* Iphone */
-
-    .container {
-        margin-bottom: 0;
-    }
     .panelActual {
     display: flex;
     flex-direction: column;
@@ -782,9 +642,7 @@ header {
     }
     
 
-    header {
-        margin-bottom: 0.5rem;
-    }
+
 
     .seleccion select {
         margin-left: 0px;
@@ -883,16 +741,6 @@ header {
 
     .elementSensores h3 {
         margin: 0;
-    }
-
-    .logoGTI {
-        display: block;
-        width: 90px;
-        height: auto;
-    }
-    .fas.fa-sign-out-alt{
-       
-        display: none;
     }
 
 

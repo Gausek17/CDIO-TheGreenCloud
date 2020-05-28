@@ -13,24 +13,27 @@
 </head>
 
 <body>
+<!-- ******************************* HEADER ********-->
 
-    <div class="container" id="container">
-        <div id="mySidenav" class="sidenav">
-            <!-- Nav generado en js-->
-        </div>
-        <header>
-
-            <i class="fas fa-bars" onclick="openNav()"></i>
+<div class="container" id="container">
+    <div id="mySidenav" class="sidenav">
+        <!-- Nav generado en js-->
+    </div>
+    <header>
+        <div class="divContainerHeader">
+            <i class="fas fa-bars iconMenu" onclick="openNav()"></i>
             <img class="logoGTI" src="../imagenes/logoGTI.png" onclick="location.href='../index.html'">
+            <nav id="navGeneral" class="navGeneral">
+                <!-- Nav generado en js-->
+            </nav>
             <div class="divUsuario">
-                
-
-                <i class="fas fa-sign-out-alt" onclick="deleteSesion()"></i> 
+                <p id="textNombreUsuario" class="textNombreUsuario">User</p>
+                <i class="iconCerrarSesion fas fa-sign-out-alt" onclick="deleteSesion()"></i>
             </div>
-        </header>
-        <nav id="navGeneral">
-            <!-- Nav generado en js-->
-        </nav>
+        </div>
+
+    </header>
+    <!-- ********** FIN HEADER *******************************-->
         <div class="divCentral">
             <div class="divContenido">
                 <div class="panelActual" id="panelActual">

@@ -7,108 +7,112 @@
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_parcelas.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" type="image/ico" href="../imagenes/parcelas/favicon.ico">
     <script src="js/sesion_permisos.js"></script>
 </head>
 
 <body>
-
-    <div class="container" id="container">
-        <div id="mySidenav" class="sidenav">
-            <!-- Nav generado en js-->
-        </div>
-        <header>
-
-            <i class="fas fa-bars" onclick="openNav()"></i>
+<!-- ******************************* HEADER ********-->
+<div class="container" id="container">
+    <div id="mySidenav" class="sidenav">
+        <!-- Nav generado en js-->
+    </div>
+    <header>
+        <div class="divContainerHeader">
+            <i class="fas fa-bars iconMenu" onclick="openNav()"></i>
             <img class="logoGTI" src="../imagenes/logoGTI.png" onclick="location.href='../index.html'">
+            <nav id="navGeneral" class="navGeneral">
+                <!-- Nav generado en js-->
+            </nav>
             <div class="divUsuario">
-                
-
-                <i class="prueba fas fa-sign-out-alt" onclick="deleteSesion()"></i> 
+                <p id="textNombreUsuario" class="textNombreUsuario">User</p>
+                <i class="iconCerrarSesion fas fa-sign-out-alt" onclick="deleteSesion()"></i>
             </div>
-        </header>
-        <nav id="navGeneral">
-            <!-- Nav generado en js-->
-        </nav>
-        <div class="divCentral">
-            <div class="divContenido">
-                <div class="panelActual" id="panelActual">
-                    <div class="titulo-sin-linea">
-                        <i class="fas fa-leaf"></i>
-                        <p>Parcelas</p>
-                    </div>
+        </div>
 
-                    <section id="linea-titulo"></section>
-                </div>
-                
-                <div class="divSeleccion">
-                   
-                   <section class="seleccion">
-                       
-                       <section class="seleccionParcela">
-                            <p class="textSeleccionParcela">Parcela:</p>
-                            <label><select id="selectParcelas" onchange="cambiarCentro()"></select></label>
-                        </section>
-                        <section>
-                            <a href="graficasAdmin.html">
-                                <p class="enlace-graficasenUser">Ver gráficas</p>
-                            </a>
-                        </section>
-                       
-                    </section>                    
-                    
+    </header>
+    <!-- ********** FIN HEADER *******************************-->
+
+    <div class="divCentral">
+        <div class="divContenido">
+            <div class="panelActual" id="panelActual">
+                <div class="titulo-sin-linea">
+                    <i class="fas fa-leaf"></i>
+                    <p>Parcelas</p>
                 </div>
 
-                <div class="divContenidoUser">
-                    <div id="map">
+                <section id="linea-titulo"></section>
+            </div>
 
-                    </div>
+            <div class="divSeleccion">
+
+                <section class="seleccion">
+
+                    <section class="seleccionParcela">
+                        <p class="textSeleccionParcela">Parcela:</p>
+                        <label><select id="selectParcelas" onchange="cambiarCentro()"></select></label>
+                    </section>
+                    <section>
+                        <a href="graficasAdmin.html">
+                            <p class="enlace-graficasenUser">Ver gráficas</p>
+                        </a>
+                    </section>
+
+                </section>
+
+            </div>
+
+            <div class="divContenidoUser">
+                <div id="map">
 
                 </div>
+
             </div>
         </div>
     </div>
-    <script src="js/mapaParcelas.js"></script>
+</div>
+<script src="js/mapaParcelas.js"></script>
 
-    <script src="js/usuarioLogin.js"></script>
-    <script src="js/menuUser.js"></script>
-    <script src="js/sideNav.js"></script>
+<script src="js/usuarioLogin.js"></script>
+<script src="js/menuUser.js"></script>
+<script src="js/sideNav.js"></script>
 
-    <script src="js/coordenadas.js"></script>
-    <script src="js/parcelas_select.js"></script>
-    <script src="js/usuarios_select.js"></script>
-    <script src="js/sonda.js"></script>
-    <script>
-        VistaMenu.setNav("navGeneral");
-        VistaMenu.crearNav();
-        VistaMenu.setSideNav("mySidenav");
-        VistaMenu.crearSideNav();
-        //Se llamara una vez se haya cargado el mapa
-        function iniciarCargaApp() {
-            ModeloCoordenadasParcelaSelect.cargar();
-            VistaUsuarioLogin.iniciar("textNombreUsuario");
-            //Primer callback: Una vez se haya cargado la informacion relativa al usurio (SESION)
-            //se hará un callback a la función para inicir el selector de usuarios
-            ControladorUsuarioLogin.iniciar(iniciarSelectParcelas);
-        }
+<script src="js/coordenadas.js"></script>
+<script src="js/parcelas_select.js"></script>
+<script src="js/usuarios_select.js"></script>
+<script src="js/sonda.js"></script>
+<script>
+    VistaMenu.setNav("navGeneral");
+    VistaMenu.crearNav();
+    VistaMenu.setSideNav("mySidenav");
+    VistaMenu.crearSideNav();
 
-        function iniciarSelectParcelas() {
-            VistaParcelasSelect.iniciar("selectParcelas");
-            //Tercer callback: Un vez se hayan inciado la infomacion relativa a las parcelas
-            //se pintaran las gráficas de la parcela seleccionada
-            ControladorSelectParcelas.iniciar(iniciarSondas);
+    //Se llamara una vez se haya cargado el mapa
+    function iniciarCargaApp() {
+        ModeloCoordenadasParcelaSelect.cargar();
+        VistaUsuarioLogin.iniciar("textNombreUsuario");
+        //Primer callback: Una vez se haya cargado la informacion relativa al usurio (SESION)
+        //se hará un callback a la función para inicir el selector de usuarios
+        ControladorUsuarioLogin.iniciar(iniciarSelectParcelas);
+    }
 
-        }
+    function iniciarSelectParcelas() {
+        VistaParcelasSelect.iniciar("selectParcelas");
+        //Tercer callback: Un vez se hayan inciado la infomacion relativa a las parcelas
+        //se pintaran las gráficas de la parcela seleccionada
+        ControladorSelectParcelas.iniciar(iniciarSondas);
 
-        function iniciarSondas() {
-            //cargar el modelo de sondas
-            ModeloSonda.cargar(dibujarParcelas);
+    }
 
-        }
+    function iniciarSondas() {
+        //cargar el modelo de sondas
+        ModeloSonda.cargar(dibujarParcelas);
 
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 </body>
 
 </html>

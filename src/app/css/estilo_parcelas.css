@@ -1,59 +1,15 @@
-:root {
-    --principal: #474A4F;
-    /* color principal */
-    --secundario: #035752;
-    /* para el hover */
-    --fondo: #474A4F;
-    /* color para los fondos de las páginas */
-    --letras: #005752;
-    /* color para resaltar las letras */
+/*Necesario par indicar en que pagina estamos*/
+.navParcela a{
+    color: var(--principal);
+    border: 3px solid var(--principal);
+}
+#a2{
+    color: var(--principal);
+    border: 3px solid var(--principal);
 }
 
-* {
-    font-family: "Trebuchet MS";
-}
 
-body {
-    background-color: #474A4F;
-    margin: 0 auto;
-}
-.logoGTI{
-    width: 80px;
-    height: 80px;
-}
-.logoGTI:hover {
-    cursor: pointer;
-}
-
-.cerrar_sesion {
-    width: 30px;
-}
-
-.cerrar_sesion:hover {
-    cursor: pointer;
-}
-
-.iconMenu {
-    display: none;
-    padding: 10px;
-    width: 50px;
-    height: 55px;
-    margin-top: 0.7rem;
-    margin-left: 0.5rem;
-}
-
-.container {
-    align-items: center;
-    margin-right: 7.5rem;
-    margin-left: 7.5rem;
-    margin-bottom: 0rem;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-}
-
+/************/
 .divCentral {
     height: 100%;
     display: flex;
@@ -205,48 +161,10 @@ header {
 }
 
 
-.navParcela {
-    background-color: var(--secundario);
-}
-.navUsuarios{
-    border-right: 1px solid white;
-}
-
-.navUsuarios:hover{
-    background-color:var(--secundario);
-}
-.navMediciones{
-    border-right: 1px solid white;
-}
-
-.navMediciones:hover{
-    background-color: var(--secundario);
-}
-.navParcela{
-    border-right: 1px solid white ;
-}
-.navParcela a{
-    color: #87C232;
-}
-.navParcela:hover{
-    background-color: var(--secundario);
-}
-.navNoticias {
-    
-}
-
-.navNoticias:hover {
-    background-color: var(--secundario);
-}
-
-.navMediciones:hover {
-    background-color: var(--secundario);
-}
 
 #map {
     width: inherit;
     height: inherit;
-    
     margin-right: 30px;
 
 }
@@ -348,98 +266,15 @@ header {
     background-color: #474A4F;
     margin: 0 auto;
     }
-    #a2 {
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a1 {
-        border:4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #a1:hover{
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a3 {
-        border:4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #a3:hover{
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a4 {
-        border:4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #a4:hover{
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
     .panelActual {
     display: flex;
     flex-direction: column;
     color: white;
     }
 
-    #b1 {
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #b2{
-        border: 4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #b3{
-        border: 4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #b3:hover{
-        color: #87C232;
-        border: 4px solid #87C232;
-    }
-    #b2:hover{
-        color: #87C232;
-        border: 4px solid #87C232;
-    }
-
-
     .divContenidoUser {
+
         overflow: inherit;
-    }
-
-    .iconMenu {
-        display: block;
-        width: 45px;
-        height: 45px;
-
-    }
-
-    .logoGTI {
-        width: 120px;
-
-
-    }
-    .fas.fa-bars{
-        color: white;
-        font-size: 40px;
-        margin-left: 15px;
-        display: flex;
     }
 
     .divCentral {
@@ -513,77 +348,6 @@ header {
     .prueba.fas.fa-sign-out-alt{
         display: none;
     }
-    #a2 {
-        border: 4px solid #87C232;
-        border-radius: 10px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a1{
-       border: 4px solid white;
-        border-radius: 10px;
-        margin: 25px;
-         
-    }
-    #a1:hover{
-        border: 4px solid #87C232;
-        border-radius: 10px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a3{
-        border: 4px solid white;
-        border-radius: 10px;
-        margin: 25px;
-    }
-    #a3:hover{
-        border: 4px solid #87C232;
-        border-radius: 10px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a4{
-       border: 4px solid white;
-        border-radius: 10px;
-        margin: 25px; 
-    }
-    #a4:hover{
-       border: 4px solid #87C232;
-        border-radius: 10px;
-        margin: 25px;
-        color: #87C232; 
-    }
-
-    #b1 {
-        border: 4px solid #87C232;
-        border-radius: 10px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #b2 {
-        border: 4px solid white;
-        border-radius: 10px;
-        margin: 25px;
-        
-    }
-    #b2:hover{
-       border: 4px solid #87C232;
-        border-radius: 10px;
-        margin: 25px;
-        color: #87C232; 
-    }
-    #b3 {
-        border: 4px solid white;
-        border-radius: 10px;
-        margin: 25px;
-        
-    }
-    #b3:hover{
-        border: 4px solid #87C232;
-        border-radius: 10px;
-        margin: 25px;
-        color: #87C232; 
-    }
 
     .textSeleccionMediciones {
         font-weight: bold;
@@ -621,22 +385,6 @@ header {
     .button {
         margin-left: 0;
         padding-left: 0.5rem;
-    }
-
-
-    header {
-        margin-bottom: 0.5rem;
-
-    }
-
-    .logoGTI {
-        width: 70px;
-        height: auto;
-    }
-
-    .iconMenu {
-        width: 30px;
-        height: 30px;
     }
 
     .iconParcelasSelected {

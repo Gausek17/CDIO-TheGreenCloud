@@ -1,13 +1,3 @@
-:root {
-    --principal: #87c232;
-    /* color principal */
-    --secundario: #035752;
-    /* para el hover */
-    --fondo: #474A4F;
-    /* color para los fondos de las páginas */
-    --letras: #005752;
-    /* color para resaltar las letras */
-}
 
 .botonConfirm {
     margin-right: 3rem;

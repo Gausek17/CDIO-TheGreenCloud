@@ -1,12 +1,13 @@
-:root {
-    --principal: #87c232;
-    /* color principal */
-    --secundario: #035752;
-    /* para el hover */
-    --fondo: #474A4F;
-    /* color para los fondos de las páginas */
-    --letras: #005752;
-    /* color para resaltar las letras */
+/*Necesario par indicar en que pagina estamos*/
+.navUsuarios a{
+    color: var(--principal);
+    border: 3px solid var(--principal);
+}
+#a1{
+    border: 4px solid #87C232;
+    border-radius: 10px;
+    margin: 25px;
+    color: #87C232;
 }
 
 /* Navbar */
@@ -245,9 +246,6 @@ body{
     font-size: 40px;
 }
 
-.logoGTI:hover{
-    cursor: pointer;
-}
 
 
 .titulo-admin{
@@ -260,33 +258,6 @@ body{
 }
 
 
-.cerrar_sesion{
-    width: 30px;
-
-}
-.cerrar_sesion:hover{
-    cursor: pointer;
-}
-.iconMenu{
-    display: none;
-    width: 25px;
-    height: 30px;
-    margin-top: 0.7rem;
-    margin-left: 0.5rem;
-}
-
-.container{
-    align-items: center;
-    margin-right: 7.5rem;
-    margin-left: 7.5rem;
-    margin-bottom: 1.5rem;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
 .divCentral{
     height: 100%;
     display: flex;
@@ -391,37 +362,6 @@ header{
     flex-direction: column;
 }
 
-/*-------Menú----------*/
-.navUsuarios{
-    /*border: 4px solid black; */
-    background-color: var(--secundario);
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-}
-.navUsuarios:hover{
-    background-color:var(--secundario);
-}
-.navMediciones{
-    border: 2px solid black;
-}
-
-.navMediciones:hover{
-    background-color: var(--secundario);
-}
-.navParcela{
-    border: 2px solid black;
-}
-.navParcela:hover{
-    background-color: var(--secundario);
-}
-.navNoticias {
-    border: 2px solid black;
-    border-left: none;
-}
-
-.navNoticias:hover {
-    background-color: var(--secundario);
-}
 /*---------------------------*/
 
 .divPerson{
@@ -560,11 +500,6 @@ header{
 /*------RESPONSIVE----------*/
 /*------Ipad---------*/
 @media only screen and (max-width:900px){
-    #a1{
-    border: 2px solid black;
-    border-radius: 15px;
-        margin: 25px;
-}
     .divContenidoUser{
         overflow: inherit;
     }
@@ -582,9 +517,6 @@ header{
     .iconNuevoUsuario{
         width: 75px;
         height: 75px;
-    }
-    .iconMenu{
-        display: block;
     }
     .divPanelActual {
         border-radius: 0px;
@@ -608,11 +540,6 @@ header{
 
 /*---------Iphone--------*/
 @media only screen and (max-width: 450px) {
-    #a1{
-    border: 2px solid black;
-    border-radius: 15px;
-        margin: 25px;
-}
     .divParcelaAsignada{
         width: 250px;
     }
@@ -643,13 +570,6 @@ header{
     .titulo-admin{
         display: none;
     }
-    .iconMenu{
-        display: block;
-    }
-    .logoGTI{
-        width: 150px;
-        height: auto;
-    }   
     .iconNuevoUsuario{
         width: 45px;
         height: 45px;
@@ -700,10 +620,6 @@ header{
         margin-top: 0.5rem;
     }
 
-
-    header{
-        margin-bottom: 0.5rem;
-    }
     .titulo-sin-linea p {
         font-size: 25px;
     }
