@@ -198,10 +198,10 @@ ul li a:hover {
 
     }
 
-    
-    
-    .divUsuario{
-    
+    .iconMenu{
+        display: block!important;
+        font-size: 35px;
+        color: white;
     }
 
 }
