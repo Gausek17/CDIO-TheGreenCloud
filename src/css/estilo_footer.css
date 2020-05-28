@@ -115,6 +115,7 @@
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
+    margin-left: 6rem;
 }
 
 #phone{
@@ -125,6 +126,7 @@
 .tlf{
     display: flex;
     align-items: center;
+    margin-left: 4rem;
 }
 
 #mail{
@@ -135,11 +137,15 @@
     margin-top: 1rem;
     display: flex;
     align-items: center;
+    margin-left: 4rem;
 }
 
 .divUbicacion{
     margin-bottom: 1rem;
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
 }
 
 #texto-mapa{
@@ -164,12 +170,12 @@
         text-align: left;
         font: bold 16px sans-serif;
         padding: 50px 50px 60px 50px;
+        display: flex;
     }
 
     .footer-distributed .footer-left,
     .footer-distributed .footer-center,
     .footer-distributed .footer-right {
-        display: inline-block;
         vertical-align: top;
     }
 
@@ -194,7 +200,12 @@
 
     .footer-distributed .footer-links {
         color: #ffffff;
-        margin: 10px 0 10px;
+        display: block;
+        margin: 4rem;
+        
+    }
+    #inicio{
+        margin-left: 7.5rem;
     }
 
     .footer-distributed .footer-links a {
@@ -293,7 +304,7 @@
 
 
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     
     /*-----------Portatil (menos resolucion)------------*/
     
@@ -304,22 +315,12 @@
         width: 100%;
         margin-bottom: 10px;
         text-align: center;
+        
     }
 
     .footer-distributed .footer-center i {
         margin-left: 0;
     }
-    .footer-center{
-        margin-left: 115px;
-    }
-
-}
-
-
-@media(max-width:620px) {
-    
-    /*-----------Ipad--------------*/
-    
     .footer-distributed {
         display: flex;
         flex-direction: column;
@@ -329,13 +330,18 @@
         font-size: 2rem;
     }
     .footer-center{
-        margin-left:0px;
+        margin-left: 6rem;
+    }
+    .footer-links{
+        display: none;
     }
 
 }
 
 
-@media(max-width:400px) {
+
+
+@media only screen and (max-width: 450px) {
     
     /*-----------Movil--------------*/
     
@@ -363,6 +369,28 @@
     
     .footer-company-about{
         display: none;
+    }
+    .footer-links{
+        display: none;
+    }
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-left: 0px;
+        
+    }
+    .divUbicacion{
+        margin-left: 0px;
+    }
+    .tlf{
+        margin-left: 0px;
+    }
+    .divMailContacto{
+        margin-left: 0px;
     }
 }
     
