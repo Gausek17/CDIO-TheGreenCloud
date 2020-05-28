@@ -25,17 +25,18 @@ let VistaDivUsuarios = {
                     
                  
                     <div class="divTextoPersona">
-                        <input type="text" class="textNombre" id ="textNombre${datos[i].id_usuario}" value="${datos[i].nombre}">
-                        <input type="text" class="textCorreo" id ="textCorreo${datos[i].id_usuario}" value="${datos[i].mail}">
+                        <label>Nombre</label><input type="text" class="textNombre" id ="textNombre${datos[i].id_usuario}" value="${datos[i].nombre}">
+                        <label>Correo</label><input type="text" class="textCorreo" id ="textCorreo${datos[i].id_usuario}" value="${datos[i].mail}">
                     </div>
+                      
+                       <img src="../imagenes/menu/IconoCampo-White.png" alt="Editar parcelas" class="iconAsign" id="iconSelectParcelas${datos[i].id_usuario}" onclick="modalAsignarParcelas(${datos[i].id_usuario})">
 
-
-                     <img src="../imagenes/admin/iconEdit-white.png" alt="Editar usuario" class="iconEditUser1" id="iconEditar${datos[i].id_usuario}" onclick="editUser(${datos[i].id_usuario})">
+                     <button alt="Editar usuario" class="botonPrincipal" id="iconEditar${datos[i].id_usuario}" onclick="editUser(${datos[i].id_usuario})">Editar</button>
                     
                     <button alt="Aceptar" class="iconAceptarCancel" id="iconAceptar${datos[i].id_usuario}" onclick="aceptar(${datos[i].id_usuario})">Aceptar cambios</button>
                     <button alt="Cancelar" class="iconAceptarCancel"  id="iconCancel${datos[i].id_usuario}" onclick="cancelar(${datos[i].id_usuario})">Cancelar cambios</button>
-                    <img src="../imagenes/menu/IconoCampo-White.png" alt="Editar parcelas" class="iconAsign" id="iconSelectParcelas${datos[i].id_usuario}" onclick="modalAsignarParcelas(${datos[i].id_usuario})">
-                    <img src="../imagenes/admin/iconDelete-white.png" alt="Elimina usuario" class="iconEditUser1"  id="iconDelete${datos[i].id_usuario}" onclick="modalConfirmar(${datos[i].id_usuario})">
+                    
+                    <button alt="Elimina usuario" class="botonSecundario"  id="iconDelete${datos[i].id_usuario}" onclick="modalConfirmar(${datos[i].id_usuario})">Borrar</button>
                     
                 </div>`;
         }
@@ -195,7 +196,7 @@ function filtrar() {
                     
                  
                     <div class="divTextoPersona">
-                        <input type="text" class="textNombre" id ="textNombre${datos[i].id_usuario}" value="${datos[i].nombre}">
+                     <input type="text"  class="textNombre" id ="textNombre${datos[i].id_usuario}" value="${datos[i].nombre}">
                         <input type="text" class="textCorreo" id ="textCorreo${datos[i].id_usuario}" value="${datos[i].mail}">
                     </div>
 
