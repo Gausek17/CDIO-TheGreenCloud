@@ -4,14 +4,14 @@ function modalConfirmar(id){
         <header class="w3-container w3-teal"> 
         <span onclick="closeModal()"
               class="w3-button w3-large w3-display-topright">&times;</span>
-            <h2>¿Estas seguro?</h2>
+            <h2>¿Estás seguro?</h2>
             
         </header>
         
         <div class="w3-container">
             <p>El usuario se borrará permanentemente</p>
-            <button class="botonConfirm" alt="Confirm" onclick="optionConfirm(${id})">Confirmar</button>
-            <button class="botonCancel" alt="Cancel" onclick="closeModal()">Cancelar</button>
+            <button class="botonPrincipal" alt="Confirm" id="botonPrincipal" onclick="optionConfirm(${id})">Confirmar</button>
+            <button class="botonSecundario" alt="Cancel" onclick="closeModal()">Cancelar</button>
             
         </div>
     </div>

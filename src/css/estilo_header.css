@@ -1,6 +1,7 @@
 :root{
     --principal: #87C232; /* color principal */
     --secundario: #618930; /* para el hover */
+    --fondo: #474A4F; /* para el fonso */
 }
 
 * {
@@ -39,6 +40,18 @@ body {
     color: white;
     border: 1.5px solid white;
 }
+.gti-logo{
+    margin: 1rem;
+    width: 300px;
+    height: auto;
+}
+.header {
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: var(--fondo);
+}
 
 @media (max-height: 800px) {
     header {
@@ -61,6 +74,9 @@ body {
         text-align: center;
         font-size: 15px;
     }
+    .gti-logo{
+        width: 215px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -73,5 +89,8 @@ body {
         padding-left: 5px;
         padding-right: 5px;
         padding: 5px;
+    }
+    .gti-logo{
+        width: 150px;
     }
 }

@@ -16,19 +16,19 @@ function modalAsignarParcelas(id_usuario) {
         <div class="contenidoPopupParcelas">
         <div class="menuParcelas"
         <navbar class="navbarParcela">
-                <form class="form-inline">
-                    <input class="form-control-parcelas mr-sm-2" type="search" placeholder="Parcela" id="buscadorParcela"><img src="../imagenes/admin/Lupa.png" alt="buscaParcela" class="iconLupa">
+            
+                         <div id="container2">
+                            <form role="search" method="get" id="searchform2" action="">
+                            <label for="s2">
+                           <i class="icon-search"></i>
+                                </label>
+                    <input type="text" value="" placeholder="Buscar parcela" class="" id="buscadorParcela" />
                     <input type="hidden" id="id_usuario" name="id_usuario" value ="${id_usuario}" />
-                </form>
+                     </form>
+                    </div>
+                
             </navbar>
-            <div class="navParcelas">
-                <button class="desplegarParcelas" onclick="despliegueParcela()" id="buttonFiltro">Todas las parcelas</button>
-                <div class="filtrosParcelas" id="filtrosParcelas">
-                    <button class="todasParcelas" onclick="cambiarModoTodasParcelas()">Todas las parcelas</button>
-                    <button class="misParcelas" onclick="cambiarModoParcelasAsignadas()">Parcelas asignadas</button>
-                    <button class="buttonParcelasNoAsignadas" onclick="cambiarModoParcelasNoAsignadas()">Parcelas no asignadas</button>
-                </div>
-            </div>    
+             
         </div>
         <div class="containerListadoParcelas">
             <div class="listadoParcelas" id="listadoParcelas">
@@ -65,7 +65,7 @@ function llenarDivParcelas() {
                     stringParcelas+=`
             <div class="divParcelaAsignada">
                 <span class="nameParcela">${parcelas[i].nombre}</span>
-                <img src="../imagenes/admin/DesasignarParcela.png" alt="Elimina parcela" class="iconDesasignar" onclick="desasignarParcela(${id_usuario}, ${parcelas[i].id_parcela})">
+                <i class="fas fa-eye" id="vistaOn"></i><button class="desasignarParcela" alt="Elimina parcela" class="botonQuitar" onclick="desasignarParcela(${id_usuario}, ${parcelas[i].id_parcela})">Desasignar</button>
              </div>`;
                 }
             }
@@ -79,8 +79,8 @@ function llenarDivParcelas() {
                 if (!listaParcelas.includes(parcelas[i].id_parcela)){
                     stringParcelas+=`
             <div class="divParcelaDesasignada">
-                <span class="nameParcela">${parcelas[i].nombre}</span>
-                <img src="../imagenes/admin/AsignarParcela.png" alt="Añade parcela" class="iconAsignar" onclick="asignarParcela(${id_usuario}, ${parcelas[i].id_parcela})">
+                <span class="nameParcela2">${parcelas[i].nombre}</span>
+                <i class="fas fa-eye-slash" id="vistaOff"></i><button class="asignarParcela"  alt="Añade parcela" class="botonAñadir" onclick="asignarParcela(${id_usuario}, ${parcelas[i].id_parcela})">Asignar</button>
             </div>`;
                 }
             }

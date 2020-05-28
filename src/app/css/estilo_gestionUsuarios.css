@@ -8,10 +8,42 @@
 
 }
 #buscadorFlex{
-  margin:auto;
+
   padding:0;
-  text-align:left;
+    cursor: pointer;
+
     
+}
+
+.containerBoton{
+    background-color: aqua;
+    margin: 50px auto;
+}
+.botonParcelasGestion{
+    background-color: #222629;
+    display: flex;
+    flex-direction: row;
+    border: 2px white solid;
+    width: 130px;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+}
+.botonParcelasGestion p{
+
+    margin: 0;
+    margin-left: 5px;
+    padding: 10px;
+
+
+}
+
+
+
+.botonParcelasGestion:hover{
+    color: var(--principal);
+    cursor: pointer;
+    border-color: var(--principal) ;
 }
 #s{
   transition:all 0.2s ease-out;
@@ -28,6 +60,22 @@
 #s:focus{
   width:8em;
   opacity:1;
+}
+#s2{
+    transition:all 0.2s ease-out;
+    width:1px;
+    border-radius:0;
+    box-shadow:none;
+    outline: none;
+    padding:0;
+    margin:0;
+    border:0;
+    background-color: transparent;
+    opacity:0;
+}
+#s2:focus{
+    width:8em;
+    opacity:1;
 }
 label{
   padding-left: 1px;
@@ -46,8 +94,57 @@ label{
   box-shadow:0 0 0.3em rgba(60,60,60,0.4);
   padding:0.3em;
   background:#222629;
+
 }
-#s{
+#searchform2{
+    display:inline;
+    font-size:2em;
+    border-radius: 5px;
+    margin-left: 2rem;
+    box-shadow:0 0 0.3em rgba(60,60,60,0.4);
+    padding:0.3em;
+    background:#222629;
+    cursor: pointer;
+
+}
+.asignarParcela{
+    color: white;
+    background-color: #87C232;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    height: 30px;
+    width: 90px;
+    border-radius: 5px;
+}
+.asignarParcela:hover{
+    background-color: #C7FF00;
+    color: #423f3e;
+}
+.desasignarParcela{
+    background-color: #222629;
+    border:0;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    height: 30px;
+    width: 110px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.desasignarParcela:hover{
+    background-color: gray;
+}
+#vistaOn{
+    color: #87C232;
+    font-size: 20px;
+}
+#vistaOff{
+    color: var(--secundario);
+    font-size: 20px;
+}
+#buscador{
   transition:all 0.2s ease-out;
   width:1px;
     font-size: 0.8em;
@@ -61,9 +158,28 @@ label{
   background-color: transparent;
   opacity:0;
 }
-#s:focus{
+#buscador:focus{
   width:8em;
   opacity:1;
+    padding-left: 15px;
+}
+#buscadorParcela{
+    transition:all 0.2s ease-out;
+    width:1px;
+    font-size: 0.8em;
+    border-radius:0;
+    box-shadow:none;
+    outline: none;
+    color: white;
+    padding:0;
+    margin:0;
+    border:0;
+    background-color: transparent;
+    opacity:0;
+}
+#buscadorParcela:focus{
+    width:8em;
+    opacity:1;
     padding-left: 15px;
 }
 label{
@@ -71,9 +187,16 @@ label{
   display:inline-block;
   margin-top:0.3em;
   color:white;
+
   
   position: relative;
   left:0.1em;
+}
+.nameUser{
+    font-size: 1.2rem;
+}
+.emailUser{
+    font-size: 1.2rem;
 }
 #a1{
     border: 4px solid #87C232;
@@ -87,6 +210,7 @@ label{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #474A4F;
 }
 
 /*Parcelas*/
@@ -104,28 +228,32 @@ label{
 }
 
 
+
+
 .divParcelaAsignada{
-    background-color: #63D4B1;
-    border: 1px solid #737373;
+    background-color: inherit;
+    border: 2px solid #87C232;
+    border-radius: 10px;
     margin-top: 1rem;
     color: white;
-    width: 350px;
+    width: 450px;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 .divParcelaDesasignada{
-    background-color: #75A698;
-    border: 1px solid #737373;
+    background-color: inherit;
+    border: 2px solid var(--secundario);
     margin-top: 1rem;
     color: white;
-    width: 350px;
+    width: 450px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border-radius: 10px;
 }
 .headerParcelas{
-    background-color: var(--principal);
+    background-color: #474A4F;
     display: flex;
     justify-content: center;
 }
@@ -135,7 +263,7 @@ label{
 }
 .listadoParcelas{
     font-weight: bold;
-    height: 150px;
+    height: 350px;
     overflow: auto;
     margin: 0;
     display: flex;
@@ -148,6 +276,7 @@ label{
     justify-content: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    height: 400px;
    
 }
 
@@ -176,6 +305,9 @@ label{
     height: 10px;
 
 }
+.botonesUser{
+    display: flex;
+}
 .menuParcelas{
     padding-top: 2rem;
     padding-left: 4rem;
@@ -186,7 +318,7 @@ label{
 }
 
 .listadoParcelas::-webkit-scrollbar-thumb {
-    background-color: var(--principal);
+    background-color: lightgray;
     border-radius: 20px;
 
 }
@@ -194,6 +326,11 @@ label{
     color: white;
     font-size: 40px;
     margin-right: 2rem;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.fas.fa-user-plus:hover{
+    color: #87C232;
 }
 
 .listadoParcelas::-webkit-scrollbar-track {
@@ -203,6 +340,11 @@ label{
 }
 .nameParcela{
     margin-left: 15px;
+    color: #87C232;
+    font-size: 20px;
+}
+.nameParcela2{
+    color: var(--secundario);
 }
 .buttonParcelasNoAsignadas{
     color: white;
@@ -305,9 +447,10 @@ body{
     
 }
 #linea-titulo {
-    border: 2px solid black;
-    margin-left: 3.5rem;
-    margin-right: 3.5rem;
+    border: 2px solid white;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 15px;
 }
 .panelActual {
     display: none;
@@ -377,6 +520,12 @@ body{
     align-items: center;
     background-color: #800053;
 }
+.botones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 750px;
+}
 .divContenidoUserNuevo{
     display: none;
     padding-left: 1.5rem;
@@ -385,14 +534,16 @@ body{
 }
 .divContenidoUser{
     padding: 1.5rem;
-    height: 270px;
+    height: 770px;
     overflow: auto;
 }
 
 .divNuevoUsuario{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 2rem;
+    margin-bottom: 1.5rem;
+
 
 }
 
@@ -459,7 +610,7 @@ body{
 
 .divNuevaPersona{
     display: flex;
-    background-color: #797979;
+    background-color: #222629;
     border-radius: 15px;
     padding: 1rem;
     align-items: center;
@@ -490,7 +641,7 @@ body{
 }
 
 .divContenidoUser::-webkit-scrollbar-thumb {
-    background-color: var(--principal);
+    background-color: lightgray;
     border-radius: 20px;
 
 }
@@ -553,27 +704,38 @@ body{
 
 .iconAceptarCancel{
     display: none;
-    border: 5px;
-    border-color: black;
-    background-color: #333333;
     color: white;
-    font-size: 12px;
-    border-radius: 10px;
-    width: 85px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--principal);
+    width: 150px;
     height: 35px;
-    text-align: center;
-    margin-right: 30px;
-    margin-left: 5px;
+    border-radius: 15px;
+    border: 0;
+    margin-right: 20px;
     
 }
 
 .iconAceptarCancel:hover{
+    background-color: #C7FF00;
+    color: #423f3e;
     cursor: pointer;
-    background: black;
-    color: white;
 }
-
-
+.iconAceptarCancel2{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--secundario);
+    width: 150px;
+    height: 35px;
+    border-radius: 15px;
+    border: 0;
+    display: none;
+}
+.iconAceptarCancel2:hover {
+    background-color: #5D5D5D;
+    cursor: pointer;
+}
 
 /*------RESPONSIVE----------*/
 /*------Ipad---------*/
@@ -588,6 +750,7 @@ body{
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
+
     .iconUseer{
         margin-top: 1rem;
         margin-bottom: 1rem;
@@ -618,8 +781,50 @@ body{
 
 /*---------Iphone--------*/
 @media only screen and (max-width: 450px) {
+    .botones {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        width: auto;
+    }
     .divParcelaAsignada{
         width: 250px;
+    }
+    .divPerson{
+        display: block;
+        padding: 0.7rem;
+    }
+    .botonParcelasGestion{
+        width: 110px;
+        height: 30px;
+    }
+    .nameParcela{
+        font-size: 15px;
+    }
+    .desasignarParcela{
+        font-size: 15px;
+    }
+    #searchform2{
+        font-size: 1em;
+    }
+    .nameParcela2{
+        font-size: 15px;
+        margin-left: 15px;
+    }
+    .asignarParcela{
+        font-size: 15px;
+    }
+    .botonPrincipal{
+        width: 1000px;
+    }
+
+
+
+
+    .aceptarCancelar{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
     }
     .divParcelaDesasignada{
         width: 250px;
@@ -682,10 +887,7 @@ body{
 
     }
    
-    .textNombre{
-        font-size: 1rem;
-        width: 9rem;
-    }
+
     .textCorreo{
         font-size: 1rem;
         width: 9rem;
@@ -728,7 +930,7 @@ body{
 }
 
 .textCorreo{
-
+    padding-left: 15px;
     font-size: 1.2rem;
     border: 0;
     background: transparent;
@@ -737,21 +939,26 @@ body{
     color: white;
 }
 .textNombre{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     border: 0;
     background: transparent;
     margin-bottom: 0.5rem;
+    margin-left: 15px;
 }
 .textNombre:disabled{
     color: white;
+    background-color: transparent;
 }
 .textNombre:enabled{
-    color: white;
-    background: #423f3e;
+    color: #423f3e;
+    background: white;
 }
 .textCorreo:enabled{
-    color: white;
-    background: #423f3e;
+    color: #423f3e;
+    background: white;
+}
+.textCorreo{
+    font-size: 1.1rem;
 }
 
 .textNuevoUser{
@@ -762,6 +969,7 @@ body{
 .textNuevoUser:enabled{
     color: white;
     background: #423f3e;
+    border-radius: 7px;
 }
 
 .textNuevoUser{
