@@ -65,40 +65,65 @@
                                 <input type="text" id ="inputColorParcela" value="#ff8000">
                             </div>
                             <div class="contenedorBotonesEscitorio">
-                                <button class="botonPrincipal">Editar</button>
-                                <button class="botonSecundario">Borrar</button>
+                                <div class="botonesEditar" id="botonesEditar">
+                                    <button class="botonPrincipal" onclick="modoEdicion(event)">Editar</button>
+                                    <button class="botonSecundario">Borrar</button>
+                                </div>
+                                <div class="botonesConfirmar" id="botonesConfirmar">
+                                    <button class="botonPrincipal" onclick="modoEdicionOff(event)">Aceptar</button>
+                                    <button class="botonSecundario" onclick="modoEdicionOff(event)">Cancelar</button>
+                                </div>
+
                             </div>
+
                         </div>
                         <div class="divParcelaDer">
-                            <div class="header">
-                                <span>Sondas</span>
+                            <div class="divHeaderTabla">
+                                <div>Sondas</div>
+                                <div class="botonCoordenadas" id="botonCoordenadas">
+                                    <i class="fas fa-cog"></i>
+                                    <div>Coordenadas</div>
+                                </div>
                             </div>
                             <div>
                                 <div class="divTabla">
-                                    <div class="columnaTabla">
-                                        <div class="tituloTabla">Nombre</div>
-                                        <div class="casillaTabla"><input type="text" id ="inputNombreSonda1" value="Sonda Sud"></div>
-                                        <div class="casillaTabla"><input type="text" id ="inputNombreSonda2" value="Sonda Sud"></div>
-
+                                    <div class="divcolumnaInicio">
+                                        <div class="tituloTabla casillaName">Nombre</div>
+                                        <div class="casillaTabla casillaName"><input type="text" id ="inputNombreSonda1" value="Sonda Sud"></div>
+                                        <div class="casillaTabla casillaName"><input type="text" id ="inputNombreSonda2" value="Sonda Sud"></div>
                                     </div>
-                                    <div class="columnaTabla">
+                                    <div class="divColumna">
                                         <div class="tituloTabla">Latitud</div>
                                         <div class="casillaTabla"><input type="text" id ="latSonda1" value="-55.579"></div>
                                         <div class="casillaTabla"><input type="text" id ="latSonda2" value="34.589"></div>
                                     </div>
-                                    <div class="columnaTabla">
+                                    <div class="divColumnaFin">
                                         <div class="tituloTabla">Longitud</div>
                                         <div class="casillaTabla"><input type="text" id ="longSonda1" value="-55.579"></div>
                                         <div class="casillaTabla"><input type="text" id ="longSonda2" value="34.589"></div>
                                     </div>
+                                    <div class="divColumnaSinBorde" id="divColumanSinBorde">
+                                        <div class="casillaTabla"><i class="fas fa-plus-square"></i></div>
+                                        <div class="divColumnaEdicion">
+                                            <div class="casillaEdicion"><i class="fas fa-minus-square"></i></div>
+                                            <div class="casillaEdicion"><i class="fas fa-minus-square"></i></div>
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>
+                            <div class="contenedorBotonesMobil">
+                                <div class="botonesEditar" id="botonesEditarM">
+                                    <button class="botonPrincipal" onclick="modoEdicion(event)">Editar</button>
+                                    <button class="botonSecundario">Borrar</button>
+                                </div>
+                                <div class="botonesConfirmar" id="botonesConfirmarM">
+                                    <button class="botonPrincipal" onclick="modoEdicionOff(event)">Aceptar</button>
+                                    <button class="botonSecundario" onclick="modoEdicionOff(event)">Cancelar</button>
+                                </div>
 
+                            </div>
                         </div>
-
-
-
                     </form>
 
                 </div>
@@ -129,6 +154,46 @@
     document.getElementById("latSonda2").disabled = true;
     document.getElementById("longSonda1").disabled = true;
     document.getElementById("longSonda2").disabled = true;
+
+function modoEdicion(event) {
+    event.preventDefault();
+    document.getElementById("inputColorParcela").disabled = false;
+    document.getElementById("inputNombreParcela").disabled = false;
+    document.getElementById("inputNombreSonda1").disabled = false;
+    document.getElementById("inputNombreSonda2").disabled = false;
+    document.getElementById("latSonda1").disabled = false;
+    document.getElementById("latSonda2").disabled = false;
+    document.getElementById("longSonda1").disabled = false;
+    document.getElementById("longSonda2").disabled = false;
+
+    document.getElementById("divColumanSinBorde").style.display = "block";
+    document.getElementById("botonCoordenadas").style.display = "flex";
+
+    document.getElementById("botonesEditar").style.display = "none";
+    document.getElementById("botonesConfirmar").style.display = "block";
+}
+
+function modoEdicionOff(event) {
+    event.preventDefault();
+    document.getElementById("inputColorParcela").disabled = true;
+    document.getElementById("inputNombreParcela").disabled = true;
+    document.getElementById("inputNombreSonda1").disabled = true;
+    document.getElementById("inputNombreSonda2").disabled = true;
+    document.getElementById("latSonda1").disabled = true;
+    document.getElementById("latSonda2").disabled = true;
+    document.getElementById("longSonda1").disabled = true;
+    document.getElementById("longSonda2").disabled = true;
+
+    document.getElementById("divColumanSinBorde").style.display = "none";
+    document.getElementById("botonCoordenadas").style.display = "none";
+
+    document.getElementById("botonesEditar").style.display = "block";
+    document.getElementById("botonesConfirmar").style.display = "none";
+
+
+}
+
+
 </script>
 </body>
 
