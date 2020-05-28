@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Graficas Admin</title>
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_gestionParcelas.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_formalwindow.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" type="image/ico" href="../imagenes/graficas/favicon.ico">
+    <script src="js/sesion_permisos.js"></script>
+
+</head>
+
+<body>
+<!-- ******************************* HEADER ********-->
+
+<div class="container" id="container">
+    <div id="mySidenav" class="sidenav">
+        <!-- Nav generado en js-->
+    </div>
+    <header>
+        <div class="divContainerHeader">
+            <i class="fas fa-bars iconMenu" onclick="openNav()"></i>
+            <img class="logoGTI" src="../imagenes/logoGTI.png" onclick="location.href='../index.html'">
+            <nav id="navGeneral" class="navGeneral">
+                <!-- Nav generado en js-->
+            </nav>
+            <div class="divUsuario">
+                <p id="textNombreUsuario" class="textNombreUsuario">User</p>
+                <i class="iconCerrarSesion fas fa-sign-out-alt" onclick="deleteSesion()"></i>
+            </div>
+        </div>
+
+    </header>
+    <!-- ********** FIN HEADER *******************************-->
+    <div class="divCentral">
+        <div class="divContenido">
+            <div class="panelActual" id="panelActual">
+                <div class="titulo-sin-linea">
+                    <i class="fas fa-chart-bar"></i>
+                    <p>Gestión Parcelas</p>
+                </div>
+                <section id="linea-titulo"></section>
+            </div>
+            <div class="divHeaderMain">
+                <!-- CAMBIAR CODIGO PARA INTRODUCIR EL BUSCADOR-->
+                <input type="text"  id="buscadorParcelas">
+                <!--- ******************************************--->
+                <i class="iconNuevaParcela fas fa-map-marked-alt"></i>
+            </div>
+
+            <div class="divListadoParcelas">
+                <div class="divParcela">
+                    <form id="formularioParcela" class="formularioParcela">
+                        <div class="divParcelaIzq">
+                            <div class="divInfoEtiqueta">
+                                <label for="inputNombreParcela">Nombre:</label>
+                                <input type="text" id ="inputNombreParcela" value="Parcela de Zanahorias">
+                            </div>
+                            <div class="divInfoEtiqueta">
+                                <label for="inputColorParcela">Color:</label>
+                                <input type="text" id ="inputColorParcela" value="#ff8000">
+                            </div>
+                            <div class="contenedorBotonesEscitorio">
+                                <button class="botonPrincipal">Editar</button>
+                                <button class="botonSecundario">Borrar</button>
+                            </div>
+                        </div>
+                        <div class="divParcelaDer">
+                            <div class="header">
+                                <span>Sondas</span>
+                            </div>
+                            <div>
+                                <div class="divTabla">
+                                    <div class="columnaTabla">
+                                        <div class="tituloTabla">Nombre</div>
+                                        <div class="casillaTabla"><input type="text" id ="inputNombreSonda1" value="Sonda Sud"></div>
+                                        <div class="casillaTabla"><input type="text" id ="inputNombreSonda2" value="Sonda Sud"></div>
+
+                                    </div>
+                                    <div class="columnaTabla">
+                                        <div class="tituloTabla">Latitud</div>
+                                        <div class="casillaTabla"><input type="text" id ="latSonda1" value="-55.579"></div>
+                                        <div class="casillaTabla"><input type="text" id ="latSonda2" value="34.589"></div>
+                                    </div>
+                                    <div class="columnaTabla">
+                                        <div class="tituloTabla">Longitud</div>
+                                        <div class="casillaTabla"><input type="text" id ="longSonda1" value="-55.579"></div>
+                                        <div class="casillaTabla"><input type="text" id ="longSonda2" value="34.589"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div id="divPopup" class="w3-modal w3-animate-opacity"></div>
+<script src="js/usuarioLogin.js"></script>
+<script src="js/sideNav.js"></script>
+<script src="js/menuAdmin.js"></script>
+<script src="js/modalConfirm.js"></script>
+<script>
+    VistaMenu.setNav("navGeneral");
+    VistaMenu.crearNav();
+    VistaMenu.setSideNav("mySidenav");
+    VistaMenu.crearSideNav();
+
+    VistaUsuarioLogin.iniciar("textNombreUsuario");
+    /**Pruebas**/
+    document.getElementById("inputColorParcela").disabled = true;
+    document.getElementById("inputNombreParcela").disabled = true;
+    document.getElementById("inputNombreSonda1").disabled = true;
+    document.getElementById("inputNombreSonda2").disabled = true;
+    document.getElementById("latSonda1").disabled = true;
+    document.getElementById("latSonda2").disabled = true;
+    document.getElementById("longSonda1").disabled = true;
+    document.getElementById("longSonda2").disabled = true;
+</script>
+</body>
+
+</html>

@@ -15,7 +15,7 @@ let VistaMenu = {
         <li class="navMediciones">
                   <a href="graficasAdmin.html" class="itemNav"><i class="fas fa-chart-bar"></i>Mediciones</span></a>
         </li>
-        <li class="navNoticias">
+        <li class="navGestionParcelas">
                   <a href="gestionParcelas.html" class="itemNav"><i class="fas fa-cogs"></i>Gestión Parcelas</span></a>
         </li>
     </ul>`;
@@ -25,12 +25,14 @@ let VistaMenu = {
         this.sideNav = document.getElementById(idSideNav);
     },
     crearSideNav: function () {
-        this.sideNav.innerHTML = `<div class="headerMenu"><span class="menuTextAdmin">Admin Panel</span><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
+        this.sideNav.innerHTML = `<div class="headerMenu"><span class="menuTextAdmin">Admin Panel</span><span class="closebtn" onclick="closeNav()">&times;</span></div>
             <a id="a2" href="parcelasAdmin.html" class="itemMenu"><i class="fas fa-leaf"></i>Ver Parcelas</span></a>
             <a id="a1" href="index.html" class="itemMenu"><i class="fas fa-users"></i>Gestión Usuarios</span></a>
             <a id="a3" href="graficasAdmin.html" class="itemMenu"><i class="fas fa-chart-bar"></i>Mediciones</span></a>
             <a id="a4" href="gestionParcelas.html" class="itemMenu"><i class="fas fa-cogs"></i>Gestión Parcelas</span></a>
-            <i class="fas fa-sign-out-alt" onclick="deleteSesion()"></i>
+            <div class="divCerrarSesion">
+                <i class="iconCerrarSesionSideNav fas fa-sign-out-alt" onclick="deleteSesion()"></i>
+            </div>
 `;
     }
 

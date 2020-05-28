@@ -1,19 +1,8 @@
-:root {
-    --principal: #009B94;
-    /* color principal */
-    --secundario: #035752;
-    /* para el hover */
-    --fondo: #D8E6F4;
-    /* color para los fondos de las páginas */
-    --letras: #005752;
-    /* color para resaltar las letras */
-}
 
-/*-------Fuente común-------*/
-* {
-    font-family: "Trebuchet MS";
+.navMediciones a{
+    color: var(--principal);
+    border: 3px solid var(--principal);
 }
-
 
 /*-----Forma de texto------*/
 .textSeleccionParcela {
@@ -98,50 +87,8 @@
 }
 */
 
-/*------Header--------*/
-body {
-    margin: 0 auto;
-    background-color: #474A4F;
-}
-
-.logoGTI:hover {
-    cursor: pointer;
-}
-
-.cerrar_sesion {
-    padding: 5px;
-    width: 30px;
-}
-.fas.fa-bars{
-    display: none;
-}
-
-.cerrar_sesion:hover {
-    cursor: pointer;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-}
-.fas.fa-sign-out-alt{
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-.fas.fa-sign-out-alt:hover{
-    color: gray;
-}
-/*----------------*/
-
-
 /*---------Selectores---------*/
-.iconMenu {
-    display: none;
-    width: 35px;
-    height: auto;
-    margin-top: 0.7rem;
-    margin-left: 0.5rem;
-}
+
 
 
 .divContenidoGraficas {
@@ -170,20 +117,6 @@ header {
 
 }
 
-.checkbox {
-    display: flex;
-    text-align: center;
-    margin-bottom: 1rem;
-    justify-content: center;
-}
-
-
-.container {
-    align-items: center;
-    margin-right: 7.5rem;
-    margin-left: 7.5rem;
-    margin-bottom: 1.5rem;
-}
 
 
 
@@ -214,10 +147,14 @@ header {
     margin-right: 1rem;
 
 }
+.divSelectoresDerecha{
+    display: flex;
 
+}
 #selectUsurios:enabled,
 #selectParcelas:enabled,
 #fechaInicio.calendar:enabled,
+#fechaFin.calendar:enabled,
 #selectSondas:enabled{
     background-color: #618930;
     color: #C7D9CD;
@@ -228,11 +165,14 @@ header {
     border: 0px;
     cursor: pointer;
     margin-top: 5px;
-    margin-right: 5rem;
+    margin-right: 1rem;
+
 }
 
 #selectUsurios:disabled,
 #fechaInicio:disabled,
+#fechaFin:disabled,
+#selectParcelas:disabled,
 #selectSondas:disabled{
     background-color: #222629;
     color: lightslategrey;
@@ -243,7 +183,10 @@ header {
     border: 0px;
     cursor: pointer;
     margin-top: 5px;
-    margin-right: 5rem;
+   margin-right: 1rem;
+}
+#fechaFinLabel{
+    color: white;
 }
 
 
@@ -338,26 +281,7 @@ header {
 
 
 /*------------Menú----------*/
-.navUsuarios {
-    border-right: 1px solid white;
 
-}
-
-
-
-.navMediciones {
-   
-    border-right: 1px solid white;
-    color: #87C232;
-}
-.navMediciones a{
-    color: #87C232
-}
-
-.navParcela {
-    border-right: 1px solid white;
-    
-}
 
 .divSelectores {
     display: flex;
@@ -383,22 +307,13 @@ header {
 
 .divSelectorFecha {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    /*align-items: center;*/
+    flex-direction: row;
 
 }
-.divSelectorFecha p{
-    width: 200px;
-    text-align: center;
-    color: white;
-}
 
-.textSeleccionFechaFin {
-    margin: 0;
-    font-weight: bold;
-    padding: 5px;
-    color: white;
-}
+
+
 
 .divFechaFin, .divFechaFinUser {
     display: none;
@@ -407,6 +322,84 @@ header {
 .divFechaFinUser{
     margin-left: 5rem;
 }
+.labelYcalendarFechaFin{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.labelYcalendarFechaFin p{
+    margin-bottom: 1px;
+    padding: 5px;
+
+}
+#btn-abrir-popup-mediciones{
+    background-color: #474A4F;
+    border: 0;
+}
+#btn-abrir-popup-mediciones:focus{
+    border: 0;
+    outline: none;
+}
+#btn-abrir-popup-mediciones a{
+    color: #87C232;
+    cursor: pointer;
+}
+.fas fa-info-circle{
+    color: #87C232;
+    width: 20px;
+    cursor: pointer;
+}
+/*------------POP UP----------------------*/
+.overlay{
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+.overlay.active{
+    visibility: visible;
+}
+.popup{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    font-family: "Trebuchet MS",sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+
+
+
+}
+.popup p{
+    text-align: center;
+    color: #3a3a3a;
+}
+.popup .btn-cerrar-popup{
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #3a3a3a;
+}
+.popup .btn-cerrar-popup:hover{
+    color: black;
+}
+.popup h3{
+    color:#618930 ;
+    margin-top: 1rem;
+    font-size: 25px;
+    font-weight: 600;
+}
+
 /*------RESPONSIVE----------*/
 
 /*---------Ipad--------*/
@@ -425,67 +418,11 @@ header {
     display: flex;
     flex-direction: column;
 }
-
-    #a3 {
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a4{
-        border: 4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #a4:hover{
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a1{
-        border: 4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #a1:hover{
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    #a2{
-        border: 4px solid white;
-        border-radius: 15px;
-        margin: 25px;
-    }
-    #a2:hover{
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-    .prueba.fas.fa-sign-out-alt{
-        display: none;
-    }
-
-    #b2 {
-        border: 4px solid #87C232;
-        border-radius: 15px;
-        margin: 25px;
-        color: #87C232;
-    }
-   
-
     .grafica {
         overflow: inherit;
         width: 80vw;
     }
 
-    .container {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-    }
 
     .fas.fa-bars{
         color: white;
@@ -494,9 +431,6 @@ header {
         display: flex;
     }
 
-    .logoGTI {
-        width: 110px;
-    }
 
     .iconSensorSelected {
         width: 60px;
@@ -560,7 +494,7 @@ header {
 
     .divSelectores {
         margin-top: 1.5rem;
-        display: block;
+        /*display: block;*/
     }
 
     .divContenidoGraficas {
@@ -574,7 +508,8 @@ header {
 
     .divSelectoresUser {
         justify-content:stretch;
-        margin-top: 2rem;
+        margin-top: 1rem;
+
 
     }
     .divFechaFinUser{
@@ -594,10 +529,6 @@ header {
 @media only screen and (max-width: 450px) {
 
     /* Iphone */
-
-    .container {
-        margin-bottom: 0;
-    }
     .panelActual {
     display: flex;
     flex-direction: column;
@@ -683,7 +614,25 @@ header {
     .divSelectores {
         margin-top: 0;
         margin-bottom: 0.5rem;
+        flex-direction: row;
+
     }
+    .divSelectoresDerecha{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .divSelectoresUser {
+        justify-content:center;
+        margin-top: 0px;
+        margin-left: 10px;
+
+
+    }
+    #fechaFinLabel{
+        margin-top: 5px;
+    }
+
 
     .textSeleccionSonda,
     .textSeleccionFecha,
@@ -693,9 +642,7 @@ header {
     }
     
 
-    header {
-        margin-bottom: 0.5rem;
-    }
+
 
     .seleccion select {
         margin-left: 0px;
@@ -705,12 +652,26 @@ header {
         font-size: 15px;
     }
 
-    .checkbox {
-        display: flex;
-        margin-top: 5px;
-        justify-content: space-around;
-    }
+    #selectUsurios:enabled,
+    #selectParcelas:enabled,
+    #fechaInicio.calendar:enabled,
+    #fechaFin.calendar:enabled,
+    #selectSondas:enabled{
 
+        font-size: .7rem;
+
+
+    }
+    #selectUsurios:disabled,
+    #selectParcelas:disabled,
+    #fechaInicio.calendar:disabled,
+    #fechaFin.calendar:disabled,
+    #selectSondas:disabled{
+
+        font-size: .7rem;
+
+
+    }
     #grafica {
         padding: 0;
         width: 95%;
@@ -736,7 +697,7 @@ header {
     }
 
     #selectUsurios {
-        width: 150px;
+        width: 100px;
         height: 40px;
         font-size: 13px;
         padding: 0.5rem;
@@ -767,9 +728,8 @@ header {
     }
 
     .seleccion {
-        display: block;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
+
     }
 
     .elementSensores {
@@ -781,16 +741,6 @@ header {
 
     .elementSensores h3 {
         margin: 0;
-    }
-
-    .logoGTI {
-        display: block;
-        width: 90px;
-        height: auto;
-    }
-    .fas.fa-sign-out-alt{
-       
-        display: none;
     }
 
 
