@@ -383,6 +383,9 @@
         margin-left: 0px;
         
     }
+    .footer-distributed .footer-links{
+        display: none;
+    }
     .divUbicacion{
         margin-left: 0px;
     }

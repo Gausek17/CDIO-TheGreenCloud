@@ -3,7 +3,7 @@
     /* color principal */
     --secundario: #618930;
     /* para el hover */
-    --fondo: #333333;
+    --fondo: ##474A4F;
     /* color para los fondos de las páginas */
     --letras: white;
     /* color para resaltar las letras */
@@ -42,7 +42,7 @@
 
 body{
     margin: 0 auto;
-    background-color: #3a3a3a;
+    background-color: var(--fondo);
 }
 
 /*---- Header -------*/
@@ -87,7 +87,9 @@ body{
 .headerNoticias{
     justify-content: center;
 }
-
+.header{
+    background-color: var(--fondo);
+}
 
 
 ul li{
