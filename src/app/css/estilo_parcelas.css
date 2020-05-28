@@ -1,7 +1,12 @@
-/*Necesario par indicar en que pagina estamos*/
-.navParcela a{
-    color: var(--principal);
-    border: 3px solid var(--principal);
+:root {
+    --principal: #87c232;
+    /* color principal */
+    --secundario: #618930;
+    /* para el hover */
+    --fondo: #333333;
+    /* color para los fondos de las páginas */
+    --letras: #ffffff;
+    /* color para resaltar las letras */
 }
 #a2{
     color: var(--principal);
@@ -34,9 +39,18 @@
     margin-left: 10px;
 }
 
-.seleccion select {
-    background-color: #235138;
-    color: #C7D9CD;
+.seleccion select:enabled {
+    background-color: #618930;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0;
+}
+.seleccion select:disabled{
+    background-color: #222629;
+    color: darkslategrey;
     border-radius: 10px;
     padding: 0.75rem;
     font-weight: bold;
@@ -260,6 +274,7 @@
     align-items: center;
 }
 
+
 /*------RESPONSIVE----------*/
 @media only screen and (max-width:900px) {
     body {
@@ -365,6 +380,7 @@
         margin-top: 8px;
         font-size: 10px;
     }
+
 
     .divContenidoUser {
         padding: 0.5rem;

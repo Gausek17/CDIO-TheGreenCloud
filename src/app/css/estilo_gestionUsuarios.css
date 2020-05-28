@@ -1,9 +1,21 @@
+<<<<<<< HEAD
 /*Necesario par indicar en que pagina estamos*/
 @import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
 
 .navUsuarios a{
     color: var(--principal);
     border: 3px solid var(--principal);
+=======
+:root {
+    --principal: #87c232;
+    /* color principal */
+    --secundario: #618930;
+    /* para el hover */
+    --fondo: #D8E6F4;
+    /* color para los fondos de las páginas */
+    --letras: #005752;
+    /* color para resaltar las letras */
+>>>>>>> develop
 }
 #buscadorFlex{
   margin:auto;

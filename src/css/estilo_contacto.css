@@ -152,6 +152,9 @@ body {
     border-bottom: 2px solid white;
     width: 130px;
 }
+.container-dudas p:hover{
+    color: var(--secundario);
+}
 .container-redes{
     color: white;
     margin-bottom: 20px;
@@ -166,8 +169,9 @@ body {
 .twitter{
     width: 30px;
     height: 30px;
+    /*
     border: 2px solid white;
-    border-radius: 8px;
+    border-radius: 8px;*/
 }
 .instagram{
     width: 35px;
