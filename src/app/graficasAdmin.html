@@ -60,6 +60,13 @@
                     </section>
                 </div>
                 <section class="seleccion">
+                    <section>
+                        <p class="textSeleccionParcela">Parcela:</p>
+                        <label><select id="selectParcelas" onclick="habilitarSelectSondas()" onchange="actualizarSelectSondas(pintarGraficas)">
+                            <!-- Listado de  parcelas generado en js-->
+                        </select>
+                        </label>
+                    </section>
 
                     <section class="selectorSonda">
                         <p class="textSeleccionSonda">Sonda:</p>
@@ -69,13 +76,7 @@
                         </label>
                     </section>
 
-                    <section>
-                        <p class="textSeleccionParcela">Parcela:</p>
-                        <label><select id="selectParcelas" onclick="habilitarSelectSondas()" onchange="actualizarSelectSondas(pintarGraficas)">
-                            <!-- Listado de  parcelas generado en js-->
-                        </select>
-                        </label>
-                    </section>
+
                 </section>
                 <div class="divSelectoresDerecha">
 

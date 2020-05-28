@@ -439,5 +439,9 @@
     .enlace-graficasenUser {
         margin-top: 65px;
     }
+    #selectUsurios {
+        width: 130px;
+        font-size: 10px;
+    }
 
 }
