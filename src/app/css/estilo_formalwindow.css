@@ -611,7 +611,9 @@ a {
 @media (max-width:600px) {
     .w3-modal-content {
         margin: 0 10px;
+        margin-top: 7rem;
         width: auto !important
+
     }
 
     .w3-modal {
@@ -650,9 +652,11 @@ a {
 
 @media (max-width:768px) {
     .w3-modal-content {
-        width: 500px
+        width: 350px
     }
-
+    h2{
+        font-size: 21px;
+    }
     .w3-modal {
         padding-top: 50px
     }

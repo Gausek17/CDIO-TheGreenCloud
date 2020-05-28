@@ -32,7 +32,7 @@
 .botonParcelasGestion p{
 
     margin: 0;
-    margin-left: 5px;
+    margin-left: 0px;
     padding: 10px;
 
 
@@ -95,6 +95,10 @@ label{
   padding:0.3em;
   background:#222629;
 
+}
+.fas.fa-eye{
+    font-size: 20px;
+    margin-left: 15px;
 }
 #searchform2{
     display:inline;
@@ -787,6 +791,13 @@ body{
         align-items: center;
         width: auto;
     }
+    .botonParcelasGestion p{
+        padding: 5px;
+    }
+    .fas.fa-eye{
+        font-size: 10px;
+        margin-left: 0;
+    }
     .divParcelaAsignada{
         width: 250px;
     }
@@ -795,7 +806,7 @@ body{
         padding: 0.7rem;
     }
     .botonParcelasGestion{
-        width: 110px;
+        width: 90px;
         height: 30px;
     }
     .nameParcela{
@@ -821,10 +832,15 @@ body{
 
 
 
+
     .aceptarCancelar{
         display: flex;
         justify-content: center;
         margin-top: 15px;
+    }
+    .aceptarCancelar .botonPrincipal{
+        margin-right: 1rem;
+
     }
     .divParcelaDesasignada{
         width: 250px;
@@ -833,7 +849,7 @@ body{
         font-size: 1rem;
     }
     .fas.fa-user-plus{
-        font-size: 25px;
+        font-size: 30px;
     }
    
     .iconUserPerson{
@@ -845,7 +861,8 @@ body{
         
     }
     #searchform{
-        font-size:1em;
+        font-size:1.4em;
+        margin-left: 15px;
     }
     .menuParcelas{
         display: flex;
@@ -904,6 +921,7 @@ body{
     }
     .containerListadoParcelas{
         margin-top: 0.5rem;
+        height: 250px;
     }
 
     .titulo-sin-linea p {
@@ -943,11 +961,12 @@ body{
     border: 0;
     background: transparent;
     margin-bottom: 0.5rem;
-    margin-left: 15px;
+
 }
 .textNombre:disabled{
     color: white;
     background-color: transparent;
+    margin-left: 5px;
 }
 .textNombre:enabled{
     color: #423f3e;
@@ -956,6 +975,7 @@ body{
 .textCorreo:enabled{
     color: #423f3e;
     background: white;
+    margin-left: 15px;
 }
 .textCorreo{
     font-size: 1.1rem;
@@ -967,8 +987,8 @@ body{
     background: transparent;
 }
 .textNuevoUser:enabled{
-    color: white;
-    background: #423f3e;
+    color: #423f3e;
+    background: white;
     border-radius: 7px;
 }
 
