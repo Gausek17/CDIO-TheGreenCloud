@@ -26,11 +26,7 @@ h3 {
     font-size: 30px;
 
 }
-.gti-logo{
-    margin: 1rem;
-    width: 300px;
-    height: auto;
-}
+
 #maps{
     width: 50px;
     height: 50px;
@@ -451,9 +447,7 @@ h3 {
     #miBoton{
         width: 30px;
     }
-    .gti-logo{
-        width: 215px;
-    }
+    
 }
 
 
@@ -581,9 +575,7 @@ h3 {
         margin-right: 10px;
         height: 35px;
     }
-    .gti-logo{
-        width: 150px;
-    }
+    
 
 
 
