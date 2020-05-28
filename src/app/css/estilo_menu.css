@@ -217,7 +217,26 @@ ul li a:hover {
         display: block;
         color: white;
     }
-
+    .botonPrincipal{
+        width: 100px;
+        height: 25px;
+        font-size: 15px;
+    }
+    .botonSecundario{
+        width: 100px;
+        height: 25px;
+        font-size: 15px;
+    }
+    .iconAceptarCancel{
+        width: 100px;
+        height: 25px;
+        font-size: 15px;
+    }
+    .iconAceptarCancel2{
+        width: 100px;
+        height: 25px;
+        font-size: 15px;
+    }
     .logoGTI{
         height: 60px;
     }

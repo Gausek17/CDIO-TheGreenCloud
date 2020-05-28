@@ -101,24 +101,27 @@ a {
 .w3-btn,
 .w3-button {
     border: none;
+    background-color: inherit;
     display: inline-block;
     padding: 8px 16px;
     vertical-align: middle;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    background-color: inherit;
+
     text-align: center;
     cursor: pointer;
     white-space: nowrap
 }
 
 .w3-btn:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #87C232;
 }
 
 .w3-btn,
 .w3-button {
+    color: white;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -834,7 +837,9 @@ a {
 }
 
 .w3-container {
-    text-align: center
+    text-align: center;
+    background-color: #5D5D5D;
+    color: white;
 }
 
 .w3-panel {
@@ -874,7 +879,8 @@ a {
 }
 
 .w3-card-4 {
-    margin-top: 10rem
+    margin-top: 10rem;
+
 }
 
 .w3-hover-shadow:hover {
@@ -1225,8 +1231,8 @@ a {
 }
 
 .w3-button:hover {
-    color: #000 !important;
-    background-color: #75A698 !important
+    color: #87C232 !important;
+
 }
 
 .w3-transparent,
@@ -1358,7 +1364,7 @@ a {
 .w3-teal,
 .w3-hover-teal:hover {
     color: #fff !important;
-    background-color: #009B94 !important;
+    background-color: #222629 !important;
     text-align: center !important
 }
 
