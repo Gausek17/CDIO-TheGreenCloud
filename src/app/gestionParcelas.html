@@ -52,7 +52,8 @@
                 <i class="iconNuevaParcela fas fa-map-marked-alt"></i>
             </div>
 
-            <div class="divListadoParcelas">
+            <div class="divListadoParcelas" id="divListadoParcelas">
+               <!-- Inicio
                 <div class="divParcela">
                     <form id="formularioParcela" class="formularioParcela">
                         <div class="divParcelaIzq">
@@ -82,7 +83,7 @@
                                 <div>Sondas</div>
                                 <div class="botonCoordenadas" id="botonCoordenadas">
                                     <i class="fas fa-cog"></i>
-                                    <div>Coordenadas</div>
+                                    <div>Localización</div>
                                 </div>
                             </div>
                             <div>
@@ -127,6 +128,7 @@
                     </form>
 
                 </div>
+                 Fin -->
             </div>
         </div>
     </div>
@@ -138,6 +140,10 @@
 <script src="js/sideNav.js"></script>
 <script src="js/menuAdmin.js"></script>
 <script src="js/modalConfirm.js"></script>
+<script src="js/coordenadas.js"></script>
+<script src="js/parcela_gestion.js"></script>
+<script src="js/sonda.js"></script>
+
 <script>
     VistaMenu.setNav("navGeneral");
     VistaMenu.crearNav();
@@ -145,53 +151,16 @@
     VistaMenu.crearSideNav();
 
     VistaUsuarioLogin.iniciar("textNombreUsuario");
-    /**Pruebas**/
-    document.getElementById("inputColorParcela").disabled = true;
-    document.getElementById("inputNombreParcela").disabled = true;
-    document.getElementById("inputNombreSonda1").disabled = true;
-    document.getElementById("inputNombreSonda2").disabled = true;
-    document.getElementById("latSonda1").disabled = true;
-    document.getElementById("latSonda2").disabled = true;
-    document.getElementById("longSonda1").disabled = true;
-    document.getElementById("longSonda2").disabled = true;
+    ControladorUsuarioLogin.iniciar();
 
-function modoEdicion(event) {
-    event.preventDefault();
-    document.getElementById("inputColorParcela").disabled = false;
-    document.getElementById("inputNombreParcela").disabled = false;
-    document.getElementById("inputNombreSonda1").disabled = false;
-    document.getElementById("inputNombreSonda2").disabled = false;
-    document.getElementById("latSonda1").disabled = false;
-    document.getElementById("latSonda2").disabled = false;
-    document.getElementById("longSonda1").disabled = false;
-    document.getElementById("longSonda2").disabled = false;
+    ModeloSonda.cargar(iniciarDivParcleas);
+    function iniciarDivParcleas(){
+        VistaDivParcelas.iniciar("divListadoParcelas");
+        ControladorDivParcelas.iniciar()
+    }
 
-    document.getElementById("divColumanSinBorde").style.display = "block";
-    document.getElementById("botonCoordenadas").style.display = "flex";
+    ModeloCoordenadasParcelaSelect.cargar();
 
-    document.getElementById("botonesEditar").style.display = "none";
-    document.getElementById("botonesConfirmar").style.display = "block";
-}
-
-function modoEdicionOff(event) {
-    event.preventDefault();
-    document.getElementById("inputColorParcela").disabled = true;
-    document.getElementById("inputNombreParcela").disabled = true;
-    document.getElementById("inputNombreSonda1").disabled = true;
-    document.getElementById("inputNombreSonda2").disabled = true;
-    document.getElementById("latSonda1").disabled = true;
-    document.getElementById("latSonda2").disabled = true;
-    document.getElementById("longSonda1").disabled = true;
-    document.getElementById("longSonda2").disabled = true;
-
-    document.getElementById("divColumanSinBorde").style.display = "none";
-    document.getElementById("botonCoordenadas").style.display = "none";
-
-    document.getElementById("botonesEditar").style.display = "block";
-    document.getElementById("botonesConfirmar").style.display = "none";
-
-
-}
 
 
 </script>

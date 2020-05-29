@@ -23,7 +23,7 @@ let VistaUsuarioLogin = {
         this.nombreUsuario = document.getElementById(elementId);
     },
     representar : function (datos) {
-                //this.nombreUsuario.innerHTML =datos[0].nombre;
+                this.nombreUsuario.innerHTML =datos[0].nombre;
     }
 };
 let ControladorUsuarioLogin = {

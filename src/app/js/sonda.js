@@ -13,11 +13,11 @@ let ModeloSonda = {
 
 function getSondas(id_parcela) {
     let listaSondas=[];
-
+    console.log(ModeloSonda.datosSonda);
     let lista = ModeloSonda.datosSonda;
 
     for (let i = 0; i < lista.length ; i++) {
-        if (lista[i].id_parcela === id_parcela) {
+        if (lista[i].id_parcela == id_parcela) {
             listaSondas.push(lista[i])
 
         }

@@ -49,7 +49,6 @@ let ModeloCoordenadasParcelaSelect = {
             listaFinal.push(parcela);
 
             this.datosCoordenadas = listaFinal;
-            console.log(listaFinal);
             if (callback != null) {
                 callback();
             }

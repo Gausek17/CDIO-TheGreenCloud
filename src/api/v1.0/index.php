@@ -24,8 +24,10 @@ $id = -1;
 
 //Comprobamos si la peticion contiene el caracter &, lo que implica que en la peticion habra una id
 if (strpos($recurso, '&') !== false) {
-    $id = str_replace("usuario&", "", $recurso);
-    $recurso = str_replace("&".$id, "", $recurso);
+    //Existe un & en la Uri
+    $fin= strpos($recurso, '&');
+    $id = substr($recurso,$fin+1,strlen($recurso));
+    $recurso = substr($recurso,0,$fin);
 }
 
 @include "modelos/$operacion-$recurso.php";

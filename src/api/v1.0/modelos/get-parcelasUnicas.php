@@ -1,7 +1,7 @@
 <?php
 session_start();
 $idCliente = $_SESSION['usuario']['id_cliente'];
-$sql = "SELECT p.id_parcela, p.nombre FROM parcela p
+$sql = "SELECT p.id_parcela, p.nombre, p.color FROM parcela p
 	INNER JOIN permisos_usuarios pu
     on p.id_parcela = pu.id_parcela
     INNER JOIN usuario u
