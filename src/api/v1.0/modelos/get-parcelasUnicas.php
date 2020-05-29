@@ -1,13 +1,7 @@
 <?php
 session_start();
 $idCliente = $_SESSION['usuario']['id_cliente'];
-$sql = "SELECT p.id_parcela, p.nombre, p.color FROM parcela p
-	INNER JOIN permisos_usuarios pu
-    on p.id_parcela = pu.id_parcela
-    INNER JOIN usuario u
-    on u.id_usuario = pu.id_usuario
-    WHERE u.id_cliente =".$idCliente.
-    " GROUP by id_parcela";
+$sql = "SELECT * FROM parcela WHERE id_campo = 1";
 
 $res = mysqli_query($conexion, $sql);
 

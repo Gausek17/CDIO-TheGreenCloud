@@ -46,10 +46,88 @@
                 <section id="linea-titulo"></section>
             </div>
             <div class="divHeaderMain">
-                <!-- CAMBIAR CODIGO PARA INTRODUCIR EL BUSCADOR-->
-                <input type="text"  id="buscadorParcelas">
+                <!-- BUSCADOR-->
+                <div id="buscadorFlex">
+                    <form role="search" method="get" id="searchform" action="">
+                        <label for="buscador">
+                            <i class="icon-search"></i>
+                        </label>
+                        <input type="text" value="" placeholder="Nombre usuario" class="" id="buscador" />
+                    </form>
+                </div>
                 <!--- ******************************************--->
-                <i class="iconNuevaParcela fas fa-map-marked-alt"></i>
+                <i class="iconNuevaParcela fas fa-map-marked-alt" onclick="modoNuevaParcela()"></i>
+            </div>
+
+            <div class="divParcela " id="divNuevaParcela">
+                <div class="headerNuevaParcela">
+                    <i class="iconNuevaParcela fas fa-map-marked-alt"></i>
+                    <div>Nueva Parcela</div>
+                </div>
+
+
+                <form id="formularioParcela" class="formularioParcela">
+                    <div class="divParcelaIzq">
+                        <div class="divInfoEtiqueta">
+                            <label for="inputNombreParcelaNueva">Nombre:</label>
+                            <input type="text" id ="inputNombreParcelaNueva" value="">
+                        </div>
+                        <div class="divInfoEtiqueta">
+                            <label for="inputColorParcelaNueva">Color:</label>
+                            <input type="text" id ="inputColorParcelaNueva" value="">
+                        </div>
+                        <div>
+                            <div class="contenedorBotonesEscitorio">
+                                <button class="botonPrincipal" onclick="nuevaParcela(event)">Aceptar</button>
+                                <button class="botonSecundario" onclick="cancelarNueaParcela(event)">Cancelar</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="divParcelaDer">
+                        <div class="divHeaderTabla">
+                            <div>Coordenadas</div>
+                        </div>
+                        <div>
+                            <div class="divTabla">
+                                <div class="divcolumnaInicio" id="divColumnaInicioNuevaP">
+                                    <div class="tituloTabla casillaNumero">Nº</div>
+                                    <div class="casillaTabla casillaNumero"><input type="text" value="1" disabled></div>
+                                    <div class="casillaTabla casillaNumero"><input type="text" value="2" disabled></div>
+                                    <div class="casillaTabla casillaNumero"><input type="text" value="3" disabled></div>
+                                </div>
+                                <div class="divColumna" id="divColumnaNuevaP">
+                                    <div class="tituloTabla">Latitud</div>
+                                    <div class="casillaTabla"><input type="text" id ="latCoordenada1" value="0.000"></div>
+                                    <div class="casillaTabla"><input type="text" id ="latCoordenada2" value="0.000"></div>
+                                    <div class="casillaTabla"><input type="text" id ="latCoordenada3" value="0.000"></div>
+                                </div>
+                                <div class="divColumnaFin" id="divColumnaFinNuevaP">
+                                    <div class="tituloTabla">Longitud</div>
+                                    <div class="casillaTabla"><input type="text" id ="longCoordenada1" value="0.000"></div>
+                                    <div class="casillaTabla"><input type="text" id ="longCoordenada2" value="0.000"></div>
+                                    <div class="casillaTabla"><input type="text" id ="longCoordenada3" value="0.000"></div>
+                                </div>
+                                <div class="divColumnaSinBordeNuevo" id="divColumanSinBorde">
+                                    <div class="casillaTabla"><i class="fas fa-plus-square"></i></div>
+                                    <div class="divColumnaEdicion" id="divColumnaEdicionNuevaP">
+                                        <div class="casillaEdicion"><i class="fas fa-minus-square"></i></div>
+                                        <div class="casillaEdicion"><i class="fas fa-minus-square"></i></div>
+                                        <div class="casillaEdicion"><i class="fas fa-minus-square"></i></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="divTextoIndicaciones">* Se necesitan al menos 3 vertices (latitud y londitud) para crear una parcela</div>
+                        <div class="contenedorBotonesMobil">
+                                <button class="botonPrincipal" onclick="nuevaParcela(event)">Aceptar</button>
+                                <button class="botonSecundario" onclick="cancelarNueaParcela(event)">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+
             </div>
 
             <div class="divListadoParcelas" id="divListadoParcelas">
@@ -160,7 +238,7 @@
     }
 
     ModeloCoordenadasParcelaSelect.cargar();
-
+    document.getElementById("buscador").addEventListener('keyup', filtrarParcelas);
 
 
 </script>

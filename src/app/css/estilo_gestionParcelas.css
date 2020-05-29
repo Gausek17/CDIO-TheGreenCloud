@@ -1,3 +1,5 @@
+
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
 /*Necesario par indicar en que pagina estamos*/
 .navGestionParcelas a{
     color: var(--principal);
@@ -11,6 +13,8 @@
     color: #87C232;
 
 }
+/*Version User*/
+
 
 /*************************** HEADER MAIN*************************/
 .titulo-sin-linea p {
@@ -40,28 +44,85 @@
     justify-content: space-between;
 }
 /**CSS BUSCADOR**/
+#buscadorFlex{
+
+    padding:0;
+    cursor: pointer;
+}
+#buscadorFlex i{
+    color: white;
+}
+#buscador{
+    transition:all 0.2s ease-out;
+    width:1px;
+    font-size: 0.8em;
+    border-radius:0;
+    box-shadow:none;
+    outline: none;
+    color: white;
+    padding:0;
+    margin:0;
+    border:0;
+    background-color: transparent;
+    opacity:0;
+}
+#buscador:focus{
+    width:8em;
+    opacity:1;
+    padding-left: 15px;
+}
+#searchform{
+    display:inline;
+    font-size:2em;
+    border-radius: 5px;
+    margin-left: 2rem;
+    box-shadow:0 0 0.3em rgba(60,60,60,0.4);
+    padding:0.3em;
+    background:#222629;
+
+}
 
 /** -----------**/
 .iconNuevaParcela{
     color: white;
-    font-size: 40px;
+    font-size: 37px;
 }
+.iconNuevaParcela:hover{
+    color: var(--principal);
+    cursor: pointer;
+}
+#divNuevaParcela{
+    padding-top: 0.5rem;
+}
+
+#divNuevaParcela .divParcelaDer{
+
+}
+
 
 /*************************** MAIN *************************/
 .divListadoParcelas{
-
-    max-width: 1050px;
     margin: 2rem auto;
+}
+.casillaNumero{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.casillaNumero input{
+    width: 15px;
 }
 
 .divParcela{
+    max-width: 1050px;
     font-size: 21px;
     font-weight: bold;
     color: white;
     background-color: #222629;
     padding: 2rem;
     border-radius: 15px;
-    margin-bottom: 1rem;
+
+    margin: 1rem auto;
 }
 .divParcela input{
     font-size: 19px;
@@ -78,7 +139,7 @@
     display: flex;
 }
 .divParcelaIzq{
-    margin-right: 2rem;
+    margin-right: 4rem;
 }
 
 .divInfoEtiqueta{
@@ -96,9 +157,8 @@
 .divHeaderTabla{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 1rem;
-    height: 45px;
 }
 .botonCoordenadas{
     display: none;
@@ -120,7 +180,18 @@
     display: none;
 }
 
-
+.headerNuevaParcela{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.headerNuevaParcela i{
+    margin-right: 1rem;
+}
+#divNuevaParcela{
+    display: none;
+}
 /*** Tabla **/
 .divTabla{
     display: flex;
@@ -178,9 +249,24 @@
 .contenedorBotonesMobil{
     display: none;
 }
+.divTextoIndicaciones{
+    margin-top: 1rem;
+    font-size: 15px;
+}
 
 /***VERSION MOVIl ***/
 @media only screen and (max-width: 450px) {
+    #searchform{
+        font-size:1.4em;
+        margin-left: 15px;
+    }
+
+    .divTextoIndicaciones{
+        font-size: 12px;
+    }
+
+
+
     .formularioParcela{
         display: block;
     }
@@ -251,5 +337,19 @@
         margin-right: 1.5rem;
         justify-content: flex-end;
     }
+
+    .casillaNumero input{
+        width: 25px;
+        font-size: 18px;
+
+    }
+    #divNuevaParcela .divColumna input,#divNuevaParcela .divColumnaFin input{
+      width: 95px;
+      font-size: 18px;
+  }
+
+  #divNuevaParcela .divParcelaDer{
+        margin-top: 2rem;
+  }
 
 }

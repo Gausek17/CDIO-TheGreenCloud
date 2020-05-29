@@ -5,15 +5,17 @@ let ModeloSonda = {
             return respuesta.json();
         }).then((datosJson) => {
             this.datosSonda = datosJson;
-            callback();
+            if (callback!=null){
+                callback();
+            }
+
 
         })
     }
-}
+};
 
 function getSondas(id_parcela) {
     let listaSondas=[];
-    console.log(ModeloSonda.datosSonda);
     let lista = ModeloSonda.datosSonda;
 
     for (let i = 0; i < lista.length ; i++) {

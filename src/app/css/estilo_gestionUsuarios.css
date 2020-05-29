@@ -1,6 +1,6 @@
-
-/*Necesario par indicar en que pagina estamos*/
 @import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+/*Necesario par indicar en que pagina estamos*/
+
 
 .navUsuarios a {
     color: var(--principal);
@@ -11,8 +11,6 @@
 
   padding:0;
     cursor: pointer;
-
-    
 }
 
 .containerBoton{

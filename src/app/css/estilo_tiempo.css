@@ -20,20 +20,10 @@
     border-radius: 30px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-}
-
 .divCentral {
     height: 100%;
     display: flex;
     border-radius: 15px;
-}
-
-.divUsuario {
-    display: flex;
-    align-items: center;
 }
 .fas.fa-bars{
         
@@ -78,10 +68,6 @@ header {
     border-bottom: 2px solid white;
     border-right: 2px solid white;
     text-align: center;
-}
-
-#textNombreUsuario {
-    padding: 10px;
 }
 
 .boton {
@@ -184,46 +170,6 @@ header {
     padding: 1.5rem;
     height: 780px;
     
-}
-
-
-.navParcela {
-   
-}
-.navUsuarios{
-    border-right: 1px solid white;
-}
-
-.navUsuarios:hover{
-   
-}
-.navMediciones{
-    border-right: 1px solid white;
-}
-
-.navMediciones:hover{
-    
-}
-.navParcela{
-    border-right: 1px solid white ;
-}
-.navParcela a{
-    color: white;
-}
-
-.navNoticias {
-    
-}
-
-.navNoticias:hover {
-    background-color: var(--secundario);
-}
-
-.navMediciones:hover {
-    
-}
-.navTiempo a{
-    color: #87C232;
 }
 
 #map {
@@ -452,9 +398,7 @@ header {
     .textSeleccionParcela {
         font-size: 15px;
     }
-    .divUsuario{
-        display: none;
-    }
+
 }
 
 
@@ -499,9 +443,7 @@ header {
     flex-direction: column;
     color: white;
     }
-    .divUsuario{
-        display: none;
-    }
+
     #a2 {
         border: 2px solid #87C232;
         border-radius: 10px;
@@ -623,10 +565,6 @@ header {
     }
 
 
-    header {
-        margin-bottom: 0.5rem;
-
-    }
 
     .iconMenu {
         width: 30px;
