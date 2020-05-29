@@ -2,8 +2,29 @@
     font-family: "Trebuchet MS";
 }
 
-body {
+.fondo {
+    /* Gradiente del fondo */
+    background: rgba(12, 176, 255, 1);
+    background: -moz-linear-gradient(-45deg, rgba(12, 176, 255, 1) 0%, rgba(104, 205, 253, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(12, 176, 255, 1)), color-stop(100%, rgba(104, 205, 253, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(12, 176, 255, 1) 0%, rgba(104, 205, 253, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(12, 176, 255, 1) 0%, rgba(104, 205, 253, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(12, 176, 255, 1) 0%, rgba(104, 205, 253, 1) 100%);
+    background: linear-gradient(135deg, rgba(12, 176, 255, 1) 0%, rgba(104, 205, 253, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0cb0ff', endColorstr='#68cdfd', GradientType=1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.body {
     margin: 20px;
+}
+
+.contenido {
+    background-color: #474A4F;
 }
 
 .divTitulo {
@@ -11,67 +32,51 @@ body {
     justify-content: center;
 }
 
-.textoConsulta {
-    color: #000080;
-    font-size: 35px;
-}
-
-.Faqs {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: baseline;
-    margin-right: 15px;
-}
-
 .FuncionamientoGeneral {
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 490px;
+    width: 700px;
     margin-bottom: 40px;
     margin-left: 30px;
-}
-
-.tituloGeneral {
-    margin-left: 10px;
-    color: #000080;
-    font-size: 27px;
-}
-
-.texto {
-    background-color: #F2F2F2;
-    font-size: 20px;
-}
-
-.textFuncionamiento {
-    margin-left: 10px;
-    margin-top: 26px;
-    margin-bottom: 26px;
-    margin-right: 10px;
-}
-
-.ComoFunciona {
-    font-size: 19px;
 }
 
 .Privacidad {
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 490px;
-    margin-bottom: 20px;
-    margin-left: 20px;
+    width: 700px;
+    margin-bottom: 40px;
+    margin-left: 30px;
 }
 
-.textPrivacidad {
+.mantenimientoSeguridad {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 500px;
+    margin-bottom: 40px;
+}
+
+.listaMantenimiento {
+    display: flex;
+    flex-direction: row;
+}
+
+.tituloGeneral {
     margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
 }
 
-.FaqsSegundos{
+.textoConsulta {
+    color: #87C232;
+    font-size: 43px;
+}
+
+.faqs {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -79,66 +84,105 @@ body {
     margin-right: 15px;
 }
 
-.mantenimientoSeguridad {
+.ul.lista {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    color: #000080;
-    font-size: 20px;
+    align-items: flex-end;
+    margin-right: 15px;
+    flex-wrap: wrap;
 }
 
-.textRobo {
-    margin-left: 10px;
-    margin-top: 52px;
-    margin-bottom: 52px;
-    margin-right: 10px;
+.listaMantenimiento {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.robo{
+.preguntayrespuesta {
     display: flex;
     flex-direction: column;
-    width: 490px;
-    margin-bottom: 10px;
-    margin-left: 30px;
+    width: 450px;
+    margin-top: 20px;
 }
 
-.estropea{
+.faqsMantenimientoySeguridad {
     display: flex;
-    flex-direction: column;
-    width: 490px;
-    margin-bottom: 40px;
-    margin-left: 30px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 15px;
 }
 
-.textEstropea{
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+.pregunta9 {
+    margin-top: 75px;
 }
 
-/*--------------mediaQuery--------------------*/
+.pregunta {
+    padding: 9px;
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+    color: white;
+}
 
+.pregunta i {
+    font-size: 28px;
+    transition: .3s;
+}
 
-@media (max-height: 800px) {
+.pregunta span {
+    transition: .3s;
+}
 
-    /*-----------Portatil--------------*/
+.pregunta:hover span {
+    color: #71A92B;
+}
 
+.pregunta:last-child {
+    border: none;
+}
+
+.respuesta {
+    text-align: justify;
+    background: #f3f3f3;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    padding: 0 14px;
+    font-size: 13px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Estilos para una pregunta seleccionada */
+.resp_act {
+    padding-top: 2px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.ico_resp_act {
+    transform: rotate(180deg);
+}
+
+/*-------------- mediaQuery -----------------*/
+
+@media (max-width: 1300px) {
+
+    /*------------ Portatil ------------------*/
 
     .divTitulo {
         display: flex;
-        margin-bottom: 2rem;
         justify-content: center;
     }
+
 }
 
-@media (max-width: 880px) {
-    
-    /*-------------Portatil(mas resolucion)-------*/
-    
-}
+@media (max-width: 800px) {
 
-@media (max-width: 620px) {
-    
     /*-------------Ipad------------------*/
 
     .divTitulo {
@@ -146,19 +190,70 @@ body {
         display: flex;
         justify-content: center;
     }
+    
+    .faqs{
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        
+    }
+    
+    .Privacidad{
+        width: 300px;
+    }
+    
+    .preguntayrespuesta{
+        width: 350px;
+        margin-left: 
+    }
+    
+}
 
 @media (max-width: 400px) {
-    
+
     /*--------------Movil-----------------*/
+
+    .divTitulo {
+        display: flex;
+        justify-content: center;
+        font-size: 10px;
+    }
     
-    .Faqs{
+    .textoConsulta{
+        font-size: 30px;
+    }
+    
+    .faqs {
         display: flex;
         flex-wrap: wrap;
     }
     
-    .FaqsSegundos{
+    .tituloGeneral{
+        font-size: 20px;
+    }
+    
+    .ul.lista{
+        margin-left: 0px;
+    }
+
+    .faqsMantenimientoySeguridad {
         display: flex;
         flex-wrap: wrap;
     }
+
+    .preguntayrespuesta {
+        width: 250px;
+        margin-right: 30px;
+    }
+
+    .pregunta9 {
+        margin-top: 0px;
+    }
     
-    
+    .mantenimientoSeguridad{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1px;
+        margin-left: 18px;
+    }
+}
