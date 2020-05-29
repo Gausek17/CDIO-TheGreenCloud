@@ -21,6 +21,10 @@
 
 .body {
     margin: 20px;
+    background: #474A4F;
+}
+.header{
+    margin-bottom: 0px!important;
 }
 
 .contenido {
@@ -181,7 +185,7 @@
 
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 900px) {
 
     /*-------------Ipad------------------*/
 
@@ -194,7 +198,7 @@
     .faqs{
         display: flex;
         justify-content: center;
-        width: 300px;
+        width: 600px;
         
     }
     
@@ -203,13 +207,18 @@
     }
     
     .preguntayrespuesta{
-        width: 350px;
+        width: 300px;
         margin-left: 
     }
-    
+    .tituloGeneral{
+        font-size: 20px;
+    }
+    .pregunta9{
+        margin-right: 3rem;
+    }
 }
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 450px) {
 
     /*--------------Movil-----------------*/
 
@@ -226,6 +235,7 @@
     .faqs {
         display: flex;
         flex-wrap: wrap;
+        width: 300px;
     }
     
     .tituloGeneral{
@@ -248,6 +258,7 @@
 
     .pregunta9 {
         margin-top: 0px;
+        margin-right: 0px;
     }
     
     .mantenimientoSeguridad{
