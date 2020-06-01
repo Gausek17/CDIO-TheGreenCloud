@@ -202,6 +202,7 @@ function pintarGraficas() {
                     pointHoverRadius: 5,
                     pointBackgroundColor: 'orange',
                     fill: false,
+
                 },
                 {
                     label: 'Salinidad',
@@ -236,9 +237,10 @@ function pintarGraficas() {
             legend: {
                 labels: {
                     fontColor: 'white',
-                    letterSpacing: 10,
-                    fontSize: 15,
+                    letterSpacing: 8 ,
+                    fontSize: 9,
                     fontWeight: 350,
+                    padding:20
                 }
             },
             scales: {
