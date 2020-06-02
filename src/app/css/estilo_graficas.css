@@ -70,9 +70,10 @@
     width: 80%;
     height: 55vh;
     margin: 1rem auto;
-    margin-top: 2rem;
+    margin-top: 0px;
     background-color: #222629;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 0px;
 }
 
 /*
@@ -400,6 +401,67 @@
     font-size: 25px;
     font-weight: 600;
 }
+/*---------NUEVA LEYENDA ----------*/
+.nuevaLeyenda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+
+}
+.listaLeyenda{
+    background-color: #222629;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    color: grey;
+    border-radius: 10px 10px 0 0 ;
+    margin-bottom: 0;
+    width: 78.8%;
+
+}
+.listaLeyenda li {
+    display: flex;
+    flex-direction: row;
+    padding: .5rem 1.5rem;
+
+}
+#primerLiLeyenda{
+    margin-left: 70px;
+}
+
+.listaLeyenda li p{
+    margin: 0;
+}
+.listaLeyenda li i{
+
+
+    width: 20px;
+    padding: .5rem;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+#rectanguloTemperatura{
+/*rojo*/
+    background-color: red;
+}
+#rectanguloHumedad{
+/*amarillo*/
+    background-color: orange;
+}
+#rectanguloSalinidad{
+/*verde*/
+    background-color: green;
+}
+#rectanguloLuminosidad{
+    /*violeta*/
+    background-color: purple;
+}
+
+
 
 /*------RESPONSIVE----------*/
 
@@ -422,6 +484,7 @@
     .grafica {
         overflow: inherit;
         width: 80vw;
+
     }
 
 
@@ -796,6 +859,33 @@
     .divContenidoGraficasUser{
         margin-right: 1.2rem;
         margin-top: 2rem;
+    }
+    /*nueva leyenda*/
+    .nuevaLeyenda{
+
+    }
+    .listaLeyenda{
+        width: 325px;
+        border: 0px;
+    }
+    .listaLeyenda li{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    #primerLiLeyenda{
+        margin-left: 0;
+    }
+    .listaLeyenda li p{
+        font-size: 10px;
+        padding: 5px;
+    }
+    .listaLeyenda li i {
+        width: 5px;
+        height: 5px;
     }
 
 
