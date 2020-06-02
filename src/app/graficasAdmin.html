@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/estilo_menu.css">
     <link rel="stylesheet" type="text/css" href="css/estilo_formalwindow.css">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="shortcut icon" type="image/ico" href="../imagenes/graficas/favicon.ico">
     <script src="js/sesion_permisos.js"></script>
 
@@ -124,8 +125,34 @@
 
 
             </div>
+            <div>
+                <div class="nuevaLeyenda">
+                    <ul class="listaLeyenda">
+                        <li id="primerLiLeyenda">
+                            <p>Temperatura</p>
 
+                            <i class="fas fa-rectangle-wide" id="rectanguloTemperatura" ></i>
+                        </li>
+                        <li>
+                            <p>Salinidad</p>
+
+                            <i class="fas fa-rectangle-wide" id="rectanguloSalinidad"></i>
+                        </li>
+                        <li>
+                            <p>Humedad</p>
+
+                            <i class="fas fa-rectangle-wide" id="rectanguloHumedad"></i>
+                        </li>
+                        <li>
+                            <p>Luminosidad</p>
+
+                            <i class="fas fa-rectangle-wide" id="rectanguloLuminosidad"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="grafica" id="grafica">
+
                 <canvas id="chart"></canvas>
 
             </div>

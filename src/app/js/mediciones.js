@@ -235,12 +235,14 @@ function pintarGraficas() {
             maintainAspectRatio: false,
             responsive: true,
             legend: {
+                display:false,
                 labels: {
                     fontColor: 'white',
                     letterSpacing: 8 ,
                     fontSize: 9,
                     fontWeight: 350,
                     padding:20
+
                 }
             },
             scales: {
