@@ -19,6 +19,13 @@
     color: white;
 }
 
+.textSeleccionMedicion {
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 1px;
+    color: white;
+}
+
 .textSeleccionFecha {
     font-weight: bold;
     padding: 5px;
@@ -116,9 +123,6 @@
 
 
 
-
-
-
 .divCentral {
     height: 100%;
     display: flex;
@@ -152,9 +156,10 @@
 }
 #selectUsurios:enabled,
 #selectParcelas:enabled,
+#selectMedicion:enabled,
 #fechaInicio.calendar:enabled,
 #fechaFin.calendar:enabled,
-#selectSondas:enabled{
+#selectSondas:enabled {
     background-color: #618930;
     color: #ffffff;
     font-size: 1.3rem;
@@ -172,7 +177,8 @@
 #fechaInicio:disabled,
 #fechaFin:disabled,
 #selectParcelas:disabled,
-#selectSondas:disabled{
+#selectSondas:disabled
+#selectMedicion:disabled{
     background-color: #222629;
     color: lightslategrey;
     font-size: 1.3rem;
@@ -473,7 +479,8 @@
     .textSeleccionSonda,
     .textSeleccionFecha,
     .textSeleccionUser,
-    .textSeleccionParcela {
+    .textSeleccionParcela
+    .textSeleccionMedicion{
         margin: 0;
     }
     .panelActual {
@@ -702,7 +709,8 @@
     .textSeleccionSonda,
     .textSeleccionFecha,
     .textSeleccionUser,
-    .textSeleccionParcela {
+    .textSeleccionParcela
+    .textSeleccionMedicion{
         margin: 0;
     }
     
@@ -721,7 +729,8 @@
     #selectParcelas:enabled,
     #fechaInicio.calendar:enabled,
     #fechaFin.calendar:enabled,
-    #selectSondas:enabled{
+    #selectSondas:enabled
+    #selectMedicion:enabled{
 
         font-size: .7rem;
 
@@ -731,7 +740,8 @@
     #selectParcelas:disabled,
     #fechaInicio.calendar:disabled,
     #fechaFin.calendar:disabled,
-    #selectSondas:disabled{
+    #selectSondas:disabled
+    #selectMedicion:disabled{
 
         font-size: .7rem;
 
@@ -784,7 +794,13 @@
         width: 146px;
         height: 40px;
         font-size: 13px;
-
+        padding: 0.5rem;
+    }
+    
+    #selectMedicion {
+        width: 146px;
+        height: 40px;
+        font-size: 13px;
         padding: 0.5rem;
     }
 
