@@ -14,7 +14,6 @@ let ModeloDivParcelas = {
     },
     controlador: {}
 };
-let contadorNuevasSondas = 0;
 
 let VistaDivParcelas = {
     divParcela: {},
@@ -45,8 +44,9 @@ let VistaDivParcelas = {
                                 <input type="text" id ="inputNombreParcela${datos[i].id_parcela}" value="${datos[i].nombre}">
                             </div>
                             <div class="divInfoEtiqueta">
-                                <label for="inputColorParcela${datos[i].id_parcela}">Color:</label>
-                                <input type="text" id ="inputColorParcela${datos[i].id_parcela}" value="${datos[i].color}">
+                                <label class="labelColor" for="inputColorParcela${datos[i].id_parcela}">Color:</label>
+                                <input type="text"  class="inputColor" id ="inputColorParcela${datos[i].id_parcela}" value="${datos[i].color}">
+                                <input type="color" class="inputColorPicker" value="${datos[i].color}" id="inputColorPicker${datos[i].id_parcela}" onchange="setColorParcela(${datos[i].id_parcela})">
                             </div>
                             <div class="contenedorBotonesEscitorio" id="contenedorBotonesEscitorio${datos[i].id_parcela}">
                                 <div class="botonesEditar" id="botonesEditar${datos[i].id_parcela}">
@@ -130,11 +130,19 @@ let ControladorDivParcelas = {
     }
 };
 
+//Lista para controlar si se han creado nuevas sondas para cada parcela
+//la posicion en la lista sera el mismo que la id de la parcela
+let listaContadorNuevasSondas=[];
+let contadorNuevasCoordendas=[];
+
+function setColorParcela(id) {
+    document.getElementById("inputColorParcela"+id).value= document.getElementById("inputColorPicker" + id).value;
+}
 function inputsActivados(activado, id_parcela) {
     var estado = !activado;
     document.getElementById("inputNombreParcela" + id_parcela).disabled = estado;
     document.getElementById("inputColorParcela" + id_parcela).disabled = estado;
-
+    document.getElementById("inputColorPicker" + id_parcela).disabled = estado;
     var listaSondas = getSondas(id_parcela);
 
     for (var x = 0; x < listaSondas.length; x++) {
@@ -153,6 +161,7 @@ function editParcelaOn(event, id) {
     document.getElementById("botonesConfirmar" + id).style.display = "block";
     document.getElementById("botonesEditar" + id).style.display = "none";
     document.getElementById("divColumanSinBorde" + id).style.display = "block";
+    listaContadorNuevasSondas[id]=[];
 }
 
 
@@ -169,26 +178,48 @@ function deleteParcela(id) {
 
 }
 
-function deleteSonda(id) {
+function deleteSonda(id, idNuevaSonda) {
+    if (idNuevaSonda==null){
+        fetch('../api/v1.0/sonda&' + id, {
+            method: "delete"
+        }).then(function (respuesta) {
+            if (respuesta.status === 200) {
+                ModeloSonda.cargar();
+                document.getElementById("casillaTablaNombre" + id).remove();
+                document.getElementById("casillaTablaLat" + id).remove();
+                document.getElementById("casillaTablaLong" + id).remove();
+                document.getElementById("casillaTablaRemove" + id).remove();
+            } else {
+                alert("Se ha producido un error en el proceso de borrar.");
+            }
+        })
+    }else{
+        var posicionElementoBorrar;
 
-    fetch('../api/v1.0/sonda&' + id, {
-        method: "delete"
-    }).then(function (respuesta) {
-        if (respuesta.status === 200) {
-            ModeloSonda.cargar();
-            document.getElementById("casillaTablaNombre" + id).remove();
-            document.getElementById("casillaTablaLat" + id).remove();
-            document.getElementById("casillaTablaLong" + id).remove();
-            document.getElementById("casillaTablaRemove" + id).remove();
-        } else {
-            alert("Se ha producido un error en el proceso de borrar.");
+        for (var i =0; i <listaContadorNuevasSondas[id].length;i++){
+            if (listaContadorNuevasSondas[id][i] === idNuevaSonda){
+                    posicionElementoBorrar=i;
+            }
         }
-    })
-
+        //Borramos la casilla donde se encuentre el elemento nuevo
+        listaContadorNuevasSondas[id].splice(posicionElementoBorrar, 1);
+        document.getElementById("casillaTablaNombreNuevo" + idNuevaSonda).remove();
+        document.getElementById("casillaTablaLatNuevo" + idNuevaSonda).remove();
+        document.getElementById("casillaTablaLongNuevo" + idNuevaSonda).remove();
+        document.getElementById("casillaTablaRemoveNuevo" + idNuevaSonda).remove();
+    }
 }
 
 function aceptar(event, id) {
     event.preventDefault();
+
+    var tieneSondasPrevias;
+    var listaSondas = getSondas(id);
+    if (listaSondas.length>0){
+        tieneSondasPrevias= true;
+     }else{
+        tieneSondasPrevias = false;
+    }
 
     var formData = new FormData();
     formData.append("nombre", document.getElementById("inputNombreParcela" + id).value);
@@ -203,25 +234,27 @@ function aceptar(event, id) {
         } else {
             //Para las nuevas sondas
 
-            for (var i = 0; i < contadorNuevasSondas; i++) {
+            for (var i = 0; i < listaContadorNuevasSondas[id].length; i++) {
                 console.log("creando...")
                 var formData = new FormData();
-                formData.append("nombre", document.getElementById("inputNombreNuevaSonda" + i).value);
-                formData.append("lat", document.getElementById("latSondaNuevo" + i).value);
-                formData.append("lng", document.getElementById("longSondaNuevo" + i).value);
+                formData.append("nombre", document.getElementById("inputNombreNuevaSonda" + listaContadorNuevasSondas[id][i]).value);
+                formData.append("lat", document.getElementById("latSondaNuevo" + listaContadorNuevasSondas[id][i]).value);
+                formData.append("lng", document.getElementById("longSondaNuevo" + listaContadorNuevasSondas[id][i]).value);
                 formData.append("id_parcela", id);
                 fetch('../api/v1.0/sonda&' + 0, {
                     method: 'post',
                     body: formData
                 }).then(function (respuesta) {
                     if (respuesta.status !== 200) {
-                        window.alert("Se ha producido un error a la hora de insertar una parcela");
+                        window.alert("Se ha producido un error a la hora de actualizar una parcela");
+                    } else {
+                        actualizarListadoParcelas(id);
                     }
                 });
             }
 
-            var listaSondas = getSondas(id);
-            for (var i = 0; i < listaSondas.length; i++) {
+            //Para actualizar las nuevas sondas
+            for ( i = 0; i < listaSondas.length; i++) {
                 var formData = new FormData();
                 formData.append("nombre", document.getElementById("inputNombreSonda" + listaSondas[i].id_sonda).value);
                 formData.append("lat", document.getElementById("latSonda" + listaSondas[i].id_sonda).value);
@@ -231,52 +264,92 @@ function aceptar(event, id) {
                     body: formData
                 }).then(function (respuesta) {
                     if (respuesta.status !== 200) {
-                        window.alert("Se ha producido un error a la hora de modificar el usuario.");
+                        window.alert("Se ha producido un error a la hora de modificar una sonda.");
                     } else {
-
-                        ModeloSonda.cargar();
-                        ModeloDivParcelas.cargar();
+                        actualizarListadoParcelas(id);
                     }
                 });
+
             }
 
 
         }
 
     });
+    //Si no tiene sondas prevaias, entonces se debera recargar el listado de parcelas y sondas
+    //En caso contrario, que si tenga sondas previas se actualiza en el momento de crear las sondas
+    if (tieneSondasPrevias===false){
+        actualizarListadoParcelas(id);
+    }
 
+
+}
+
+function actualizarListadoParcelas(id) {
+    function cargarParcelas(){
+        ModeloDivParcelas.cargar();
+        listaContadorNuevasSondas[id]=[];
+    }
+    //Una vez se hayan incertado las Sondas, deberan cargar las parcelas
+    ModeloSonda.cargar(cargarParcelas);
 
 }
 
 function cancelerEditParcela(event, id) {
     event.preventDefault();
     VistaDivParcelas.representarParcelas(ModeloDivParcelas.parcelas);
-    //inputsActivados(false,id);
+    listaContadorNuevasSondas[id]=[];
 }
 
 function nuevaSonda(event, id) {
     event.preventDefault();
+    var ultimaPos;
+
+    if (listaContadorNuevasSondas[id].length>=1){
+        ultimaPos = listaContadorNuevasSondas[id][listaContadorNuevasSondas[id].length-1];
+        ultimaPos++;
+    }else{
+        ultimaPos=0;
+    }
+    listaContadorNuevasSondas[id].push(ultimaPos);
     //Columna Nombre
-    var string = document.getElementById("divColumnaInicio" + id).innerHTML;
-    string += `<div class="casillaTabla casillaName" id="casillaTablaNombreNuevo${contadorNuevasSondas}"><input type="text" id ="inputNombreNuevaSonda${contadorNuevasSondas}" value=""></div>`;
-    document.getElementById("divColumnaInicio" + id).innerHTML = string;
+    let newItem = document.createElement("div");
+    newItem.className = "casillaTabla casillaName";
+    newItem.id="casillaTablaNombreNuevo"+ultimaPos;
+    let newInput = document.createElement("input");
+    newInput.id="inputNombreNuevaSonda"+ultimaPos;
+    newItem.appendChild(newInput);
+    let parent = document.getElementById("divColumnaInicio" + id);
+    parent.insertBefore(newItem, parent.childNodes[parent.childElementCount+1]);
+
     //Columna Latitud
-    string = document.getElementById("divColumna" + id).innerHTML;
-    string += `<div class="casillaTabla" id="casillaTablaLatNuevo${contadorNuevasSondas}"><input type="text" id ="latSondaNuevo${contadorNuevasSondas}" value="0.000"></div>`;
-    document.getElementById("divColumna" + id).innerHTML = string;
+
+    newItem = document.createElement("div");
+    newItem.className = "casillaTabla";
+    newItem.id="casillaTablaLatNuevo"+ultimaPos;
+    newInput = document.createElement("input");
+    newInput.id="latSondaNuevo"+ultimaPos;
+    newInput.value="0.00";
+    newItem.appendChild(newInput);
+    parent = document.getElementById("divColumna" + id);
+    parent.insertBefore(newItem, parent.childNodes[parent.childElementCount+1]);
+
 
     //Columna longitud
-    string = document.getElementById("divColumnaFin" + id).innerHTML;
-    string += `<div class="casillaTabla" id="casillaTablaLongNuevo${contadorNuevasSondas}"><input type="text" id ="longSondaNuevo${contadorNuevasSondas}" value="0.000"></div>`;
-    document.getElementById("divColumnaFin" + id).innerHTML = string;
+    newItem = document.createElement("div");
+    newItem.className = "casillaTabla";
+    newItem.id="casillaTablaLongNuevo"+ultimaPos;
+    newInput = document.createElement("input");
+    newInput.id="longSondaNuevo"+ultimaPos;
+    newInput.value="0.00";
+    newItem.appendChild(newInput);
+    parent = document.getElementById("divColumnaFin" + id);
+    parent.insertBefore(newItem, parent.childNodes[parent.childElementCount+1]);
 
     //ColumnaBorrar
-    string = document.getElementById("divColumnaEdicion" + id).innerHTML;
-    string += `<div class="casillaEdicion" id="casillaTablaRemoveNuevo${contadorNuevasSondas}"><i class="fas fa-minus-square" onclick="modalConfirmarSonda(event, null)"></i></div>`;
-    ;
+    let string = document.getElementById("divColumnaEdicion" + id).innerHTML;
+    string += `<div class="casillaEdicion" id="casillaTablaRemoveNuevo${ultimaPos}"><i class="fas fa-minus-square" onclick="modalConfirmarSonda(event, ${id}, ${ultimaPos})"></i></div>`;
     document.getElementById("divColumnaEdicion" + id).innerHTML = string;
-
-    contadorNuevasSondas++;
 }
 
 
@@ -290,12 +363,29 @@ function nuevaParcela(event) {
     var formData = new FormData();
     formData.append("nombre", document.getElementById("inputNombreParcelaNueva").value);
     formData.append("color", document.getElementById("inputColorParcelaNueva").value);
-    //Se hace la peticion con id_Usuario 0, por lo que implica que se creara un usuario
+    var listaCoordenadas= [];
+
+    for (let i  = 1; i<=3;i++){
+        var coordenada= {lat:0,lng:0};
+        coordenada.lat =document.getElementById("latCoordenada"+i).value;
+        coordenada.lng =document.getElementById("longCoordenada"+i).value;
+        listaCoordenadas.push(coordenada);
+    }
+    for (let i  = 0; i<contadorNuevasCoordendas.length;i++){
+        var coordenada= {lat:0,lng:0};
+        coordenada.lat =document.getElementById("latCoordenadaNuevo"+i).value;
+        coordenada.lng =document.getElementById("longCoordenadaNuevo"+i).value;
+        listaCoordenadas.push(coordenada);
+    }
+    formData.append("coordenadas", JSON.stringify(listaCoordenadas));
+
+    //Se hace la peticion con id_Usuario 0, por lo que implica que se creara una parcela
     fetch('../api/v1.0/parcela&0', {
         method: 'post',
         body: formData
     }).then(function (respuesta) {
         if (respuesta.status === 200) {
+            /*
             for (var i = 1; i<=3;i++){
 
             }
@@ -314,7 +404,8 @@ function nuevaParcela(event) {
                 } else {
                     alert("Se ha producido un error a la hora de crear una coordenada.")
                 }
-            });
+            });*/
+            ModeloDivParcelas.cargar();
             document.getElementById("divNuevaParcela").style.display = "none";
         } else {
             alert("Se ha producido un error a la hora de crear la parcela.")
@@ -325,6 +416,7 @@ function nuevaParcela(event) {
 function cancelarNueaParcela(event) {
     event.preventDefault();
     document.getElementById("divNuevaParcela").style.display = "none";
+
 
 }
 
@@ -360,10 +452,12 @@ function filtrarParcelas() {
                             <div class="divInfoEtiqueta">
                                 <label for="inputNombreParcela${datos[i].id_parcela}">Nombre:</label>
                                 <input type="text" id ="inputNombreParcela${datos[i].id_parcela}" value="${datos[i].nombre}">
+                                <input type="color" value="${datos[i].color}" id="inputColorPicker${datos[i].id_parcela}" onchange="setColorParcela(${datos[i].id_parcela})">
                             </div>
                             <div class="divInfoEtiqueta">
-                                <label for="inputColorParcela${datos[i].id_parcela}">Color:</label>
-                                <input type="text" id ="inputColorParcela${datos[i].id_parcela}" value="${datos[i].color}">
+                                <label class="labelColor" for="inputColorParcela${datos[i].id_parcela}">Color:</label>
+                                <input type="text" class="inputColor" id ="inputColorParcela${datos[i].id_parcela}" value="${datos[i].color}">
+                                <input type="color" class="inputColorPicker" value="${datos[i].color}">
                             </div>
                             <div class="contenedorBotonesEscitorio" id="contenedorBotonesEscitorio${datos[i].id_parcela}">
                                 <div class="botonesEditar" id="botonesEditar${datos[i].id_parcela}">
@@ -424,7 +518,7 @@ function filtrarParcelas() {
         }
     }
     if (stringParcelas === '') {
-        stringParcelas += `<p>parcela no encontrado</p>`
+        stringParcelas += `<p>Parcela no encontrado</p>`
     }
 
     VistaDivParcelas.divParcela.innerHTML = stringParcelas;
@@ -432,4 +526,73 @@ function filtrarParcelas() {
     for (var j = 0; j < listaTmp.length; j++) {
         inputsActivados(false, listaTmp[j].id_parcela);
     }
+}
+
+function nuevaCoordenada(){
+    let id=0;
+
+    if (contadorNuevasCoordendas.length>=1){
+        id = contadorNuevasCoordendas[contadorNuevasCoordendas.length-1];
+        id++;
+    }else{
+        id=0;
+    }
+    contadorNuevasCoordendas.push(id);
+
+    let newItem = document.createElement("div");
+    //  Columna numeración Corrdenada
+    newItem.className = "casillaTabla casillaNumero";
+    newItem.id="idCoordenada"+id;
+
+    let newInput = document.createElement("input");
+    newInput.value= ""+(id+4);
+    newInput.disabled=true;
+
+    newItem.appendChild(newInput);
+    let parent = document.getElementById("divColumnaInicioNuevaCordenada");
+    console.log(parent.childElementCount);
+    parent.insertBefore(newItem, parent.lastChild);
+
+    //Columna Latitud
+
+    newItem = document.createElement("div");
+    newItem.className = "casillaTabla";
+    newItem.id="casillaCoordenadaLatNuevo"+id;
+    newInput = document.createElement("input");
+    newInput.id="latCoordenadaNuevo"+id;
+    newInput.value="0.00";
+    newItem.appendChild(newInput);
+    parent = document.getElementById("divColumnaNuevaCoordenada");
+    parent.insertBefore(newItem, parent.lastChild);
+
+
+    //Columna longitud
+    newItem = document.createElement("div");
+    newItem.className = "casillaTabla";
+    newItem.id="casillaCoordenadaLongNuevo"+id;
+    newInput = document.createElement("input");
+    newInput.id="longCoordenadaNuevo"+id;
+    newInput.value="0.00";
+    newItem.appendChild(newInput);
+    parent = document.getElementById("divColumnaFinNuevaCoordenada");
+    parent.insertBefore(newItem, parent.lastChild);
+
+    //ColumnaBorrar
+    let string = document.getElementById("divColumnaEdicionNuevaCoordenada").innerHTML;
+    string += `<div class="casillaEdicion" id="casillaCordenadaRemoveNuevo${id}"><i class="fas fa-minus-square" onclick="borrarCoordenada(${id})"></i></div>`;
+    document.getElementById("divColumnaEdicionNuevaCoordenada").innerHTML = string;
+
+
+}
+
+function borrarCoordenada(id) {
+    listaContadorNuevasSondas.splice(id, 1);
+    document.getElementById("idCoordenada" + id).remove();
+    document.getElementById("casillaCoordenadaLatNuevo" + id).remove();
+    document.getElementById("casillaCoordenadaLongNuevo" + id).remove();
+    document.getElementById("casillaCordenadaRemoveNuevo" + id).remove();
+}
+
+function setColorParcelaNueva() {
+    document.getElementById("inputColorParcelaNueva").value= document.getElementById("inputColorPickerParcelaNueva").value;
 }

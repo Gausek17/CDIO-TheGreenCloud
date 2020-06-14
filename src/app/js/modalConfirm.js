@@ -115,7 +115,7 @@ function optionConfirmParcela(id) {
 }
 
 //Modal Confirm Borrar Sonda
-function modalConfirmarSonda(event, id){
+function modalConfirmarSonda(event, id, idNuevaSonda){
     event.preventDefault();
     let stringPopUp = `
     <div class="w3-modal-content w3-card-4">
@@ -128,7 +128,7 @@ function modalConfirmarSonda(event, id){
         
         <div class="w3-container">
             <p>La sonda y toda su información se borraran permanentemente</p>
-            <button class="botonPrincipal" alt="Confirm" id="botonPrincipal" onclick="optionConfirmSonda(${id})">Confirmar</button>
+            <button class="botonPrincipal" alt="Confirm" id="botonPrincipal" onclick="optionConfirmSonda(${id}, ${idNuevaSonda})">Confirmar</button>
             <button class="botonSecundario" alt="Cancel" onclick="closeModal()">Cancelar</button>
             
         </div>
@@ -139,8 +139,8 @@ function modalConfirmarSonda(event, id){
     element.style.display = "block";
 }
 
-function optionConfirmSonda(id) {
-    deleteSonda(id);
+function optionConfirmSonda(id, idNuevaSonda) {
+    deleteSonda(id, idNuevaSonda);
     closeModal();
 
 }

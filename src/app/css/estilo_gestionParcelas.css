@@ -129,11 +129,13 @@
     border-radius: 5px;
     padding:0.3rem 0.3rem ;
     border: 0;
+
 }
 .divParcela input:disabled{
     background-color: transparent;
     color: white;
 }
+
 
 .formularioParcela{
     display: flex;
@@ -205,15 +207,22 @@
 }
 
 .divcolumnaInicio, .divColumna, .divColumnaFin{
-    border: 3px solid white;
+    border: 2px solid white;
 }
+.divcolumna{
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+
 .divcolumnaInicio{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    border-right: 1px solid white;
 }
 .divColumnaFin{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-left: 1px solid white;
 }
 
 .divColumnaEdicion{
@@ -252,6 +261,12 @@
 .divTextoIndicaciones{
     margin-top: 1rem;
     font-size: 15px;
+}
+
+.inputColor{
+    width: 115px;
+    margin-right: 4rem;
+
 }
 
 /***VERSION MOVIl ***/
@@ -351,5 +366,13 @@
   #divNuevaParcela .divParcelaDer{
         margin-top: 2rem;
   }
+    .inputColor{
+        width: 100px!important;
+        margin-right: 2.5rem;
+
+    }
+    .labelColor{
+        margin-left: 2.25rem;
+    }
 
 }
