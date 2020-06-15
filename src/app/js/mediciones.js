@@ -104,8 +104,11 @@ function pintarGraficas() {
             }
 
         });
-    } else {
 
+        document.getElementById("infoFecha").innerHTML = "Modo: Fecha única";
+
+    } else {
+        document.getElementById("infoFecha").innerHTML = "Modo: Intervalo de Fechas";
         var fechaInicio = Date.parse(document.getElementById("fechaInicio").value);
         var fechaFin = Date.parse(document.getElementById("fechaFin").value);
 

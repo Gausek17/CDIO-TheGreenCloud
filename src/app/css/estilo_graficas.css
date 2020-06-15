@@ -19,13 +19,6 @@
     color: white;
 }
 
-.textSeleccionMedicion {
-    font-weight: bold;
-    padding: 5px;
-    margin-bottom: 1px;
-    color: white;
-}
-
 .textSeleccionFecha {
     font-weight: bold;
     padding: 5px;
@@ -120,6 +113,14 @@
     align-items: flex-end;
 
 }
+#infoFecha{
+    color: white;
+    margin-top: 8rem;
+
+
+}
+
+
 
 
 
@@ -156,10 +157,9 @@
 }
 #selectUsurios:enabled,
 #selectParcelas:enabled,
-#selectMedicion:enabled,
 #fechaInicio.calendar:enabled,
 #fechaFin.calendar:enabled,
-#selectSondas:enabled {
+#selectSondas:enabled{
     background-color: #618930;
     color: #ffffff;
     font-size: 1.3rem;
@@ -177,8 +177,7 @@
 #fechaInicio:disabled,
 #fechaFin:disabled,
 #selectParcelas:disabled,
-#selectSondas:disabled
-#selectMedicion:disabled{
+#selectSondas:disabled{
     background-color: #222629;
     color: lightslategrey;
     font-size: 1.3rem;
@@ -479,8 +478,7 @@
     .textSeleccionSonda,
     .textSeleccionFecha,
     .textSeleccionUser,
-    .textSeleccionParcela
-    .textSeleccionMedicion{
+    .textSeleccionParcela {
         margin: 0;
     }
     .panelActual {
@@ -605,6 +603,13 @@
     flex-direction: column;
     color: white;
     }
+    #infoFecha{
+        color: white;
+
+        font-size: 12px;
+        margin-top: 2rem;
+    }
+
     #a1{
         border: 2px solid white;
         border-radius: 10px;
@@ -709,8 +714,7 @@
     .textSeleccionSonda,
     .textSeleccionFecha,
     .textSeleccionUser,
-    .textSeleccionParcela
-    .textSeleccionMedicion{
+    .textSeleccionParcela {
         margin: 0;
     }
     
@@ -729,8 +733,7 @@
     #selectParcelas:enabled,
     #fechaInicio.calendar:enabled,
     #fechaFin.calendar:enabled,
-    #selectSondas:enabled
-    #selectMedicion:enabled{
+    #selectSondas:enabled{
 
         font-size: .7rem;
 
@@ -740,8 +743,7 @@
     #selectParcelas:disabled,
     #fechaInicio.calendar:disabled,
     #fechaFin.calendar:disabled,
-    #selectSondas:disabled
-    #selectMedicion:disabled{
+    #selectSondas:disabled{
 
         font-size: .7rem;
 
@@ -794,13 +796,7 @@
         width: 146px;
         height: 40px;
         font-size: 13px;
-        padding: 0.5rem;
-    }
-    
-    #selectMedicion {
-        width: 146px;
-        height: 40px;
-        font-size: 13px;
+
         padding: 0.5rem;
     }
 
