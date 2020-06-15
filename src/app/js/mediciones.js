@@ -355,6 +355,7 @@ function dateToStringDayMonyh(date){
     }
     return month + "-" + day;
 }
+
 function changeToDateInterval() {
     document.getElementById("divFechaFin").style.display="block";
     /*document.getElementById("dateIntervalSelector").style.display="none";
