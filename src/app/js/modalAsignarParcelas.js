@@ -10,7 +10,7 @@ function modalAsignarParcelas(id_usuario) {
         
         <span onclick="closeModal()"
               class="w3-button w3-large w3-display-topright">&times;</span>
-            <h2 class="gestionParcelas">Gestión de Parcelas - ${user.nombre}</h2>
+            <h2 class="gestionParcelas">${user.nombre} - Gestión de Parcelas</h2>
             
         </header>
         <div class="contenidoPopupParcelas">

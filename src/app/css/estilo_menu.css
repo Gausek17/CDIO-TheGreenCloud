@@ -258,6 +258,21 @@ ul li a:hover {
     .textNombreUsuario{
         display: block;
     }
+    .fas.fa-leaf{
+        font-size: 30px;
+    }
+    .fas.fa-users{
+        font-size: 30px;
+    }
+    .fas.fa-chart-bar{
+        font-size: 30px;
+    }
+    .fas.fa-cogs{
+        font-size: 30px;
+    }
+    .fas.fa-sign-out-alt{
+        font-size: 30px;
+    }
     .iconCerrarSesion{
 
         display: none !important;

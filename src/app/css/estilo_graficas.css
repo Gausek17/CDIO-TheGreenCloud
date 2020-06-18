@@ -116,6 +116,11 @@
 #infoFecha{
     color: white;
     margin-top: 8rem;
+    display: flex;
+    align-content: center;
+    background-color: #0d1d10;
+    border-radius: 7px;
+    padding: 10px;
 
 
 }
