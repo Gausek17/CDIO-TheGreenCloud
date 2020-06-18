@@ -69,14 +69,14 @@
 
 .tituloGeneral {
     margin-left: 10px;
-    color: white;
+    color: #87c232;
     font-size: 30px;
     display: flex;
     justify-content: center;
 }
 
 .textoConsulta {
-    color: #87C232;
+    color: #89e519;
     font-size: 43px;
 }
 
@@ -151,7 +151,8 @@
 
 .respuesta {
     text-align: justify;
-    background: #f3f3f3;
+    color: white;
+    background: #222629;
     height: 0;
     overflow: hidden;
     transition: .5s;
@@ -165,7 +166,8 @@
 .resp_act {
     padding-top: 2px;
     padding-bottom: 7px;
-    border-bottom: 1px solid lightgrey;
+    padding: 15px;
+    
 }
 
 .ico_resp_act {
